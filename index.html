@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta property="og:title" content="unnamed multivar website">
+  <meta property="og:description" content="Learn and study multivariable calculus for free with interactive tools and simple explanations!">
+  <meta property="og:image" content="https://chaddypratt.org/multivar/images/favicon.png">
+  <title>unnamed multivar website</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon-precomposed" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="multivar.css">
+</head>
+<body id="body">
+  <div id="backgroundImage"></div>
+  <div id="content">
+  <!-- Menu stuff -->
+  <div id="menuIcon" class="menu-icon-normal" onclick="toggleSidebar()">
+    <div class="no-permanent-hide" id="hamburgerIcon">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div id="xIcon" class="x-icon hidden-by-default no-permanent-show">
+      <div class="x-icon1">
+        <div class="x-icon2"></div>
+      </div>
+    </div>
+  </div>
+  <div id="keyboardShortcutPopup" class="popup hidden-by-default no-permanent-show">
+    <div id="keyboardShortcutPopupContent" class="popup-content">
+      <div class="popup-text">
+        <h2 class="ntm">Keyboard Shortcuts</h2>
+        <p>
+          <strong>Note:</strong> These shortcuts only work on the U.S. QWERTY keyboard layout. You might need to scroll to view all keyboard shortcuts.
+        </p>
+        <p>
+          <span class="key">`</span> (key to the left of <span class="key">1</span>): Jump to top of website
+        </p>
+        <p>
+          <span class="key">1</span><span class="monospace">-</span><span class="key">0</span>: Jump to unit 1-10 (unit depends on key pressed)
+        </p>
+        <p>
+          <span class="key">Shift</span><span class="monospace">+</span><span class="key">1</span><span class="monospace">-</span><span class="key">Shift</span><span class="monospace">+</span><span class="key">0</span>: Hide all sections within unit 1-10 (unit depends on key pressed)
+        </p>
+        <p>
+          <span class="key">Shift</span><span class="monospace">+</span><span class="key">Q</span><span class="monospace">-</span><span class="key">Shift</span><span class="monospace">+</span><span class="key">P</span>: Show all sections within unit 1-10 (unit depends on key pressed)
+        </p>
+        <p>
+          <span class="key">Shift</span><span class="monospace">+</span><span class="key">-</span>: Hide all sections within all units
+        </p>
+        <p>
+          <span class="key">Shift</span><span class="monospace">+</span><span class="key">[</span>: Show all sections within all units
+        </p>
+        <p>
+          <span class="key">Shift</span><span class="monospace">+</span><span class="key">=</span>: Hide all units
+        </p>
+        <p>
+          <span class="key">Shift</span><span class="monospace">+</span><span class="key">]</span>: Show all units
+        </p>
+        <p>
+          <span class="key">Shift</span><span class="monospace">+</span><span class="key">\</span>: Hide all sections before Unit 1
+        </p>
+        <p>
+          <span class="key">s</span>: Open search bar interface 
+        </p>
+        <p>
+          <span class="key">Shift</span>+<span class="key">K</span>: Open keyboard shortcuts
+        </p>
+        <p>
+          <span class="key">Shift</span>+<span class="key">S</span>: Jump to website settings
+        </p>
+        <p>
+          <span class="key">Shift</span>+<span class="key">D</span>: Enable or disable dark mode
+        </p>
+        <p>
+          <span class="key">]</span>: Jump to website update history
+        </p>
+        <p class="nbm">
+          <span class="key">\</span>: Jump to website progress table
+        </p>
+      </div>
+      <button class="large-button" onclick="hideElement('keyboardShortcutPopup')">Close</button>
+    </div>
+  </div>
+  <div id="searchPopup" class="popup hidden-by-default no-permanent-show">
+    <div id="searchPopupContent" class="popup-content">
+      <div class="popup-text">
+        <h2 class="ntm">Search This Website</h2>
+        <p>Need help with a particular topic?</p>
+        <p class="keyboard-only">Press <span class="key">Enter</span>/<span class="key">Return</span> to jump to the top result.</p>
+        <p><input id="searchInput" type="text" placeholder="Search here..." oninput="searchInput()"></p>
+        <div>
+          <ul class="link-ul" id="searchResults"></ul>
+        </div>
+        <p id="searchMessage"></p>
+      </div>
+      <button class="large-button" onclick="hideElement('searchPopup')">Close</button>
+    </div>
+  </div>
+  <!-- Intro Popup -->
+  <div id="introPopupDiv" class="hidden-by-default hidden-until-load">
+    <div id="introPopup" class="popup">
+      <div id="introPopupContent" class="popup-content">
+        <div class="popup-text">
+          <h2 class="ntm">Welcome to unnamed multivar website!</h2>
+          <p>
+            This is a website where I teach multivariable calculus concepts in easy-to-understand language. This is a continuation of my single-variable calculus website, <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://chaddypratt.org/calculus">unnamed calc website</a>.
+          </p>
+          <p>
+            If you find this website useful, I would really appreciate it if you shared it with some of your friends! I created this website with my community in mind and I want to help as many calculus students as possible.
+          </p>
+          <p class="nbm">
+            More information can be found in the “What Is This Website?” section on this page.
+          </p>
+        </div>
+        <button class="large-button" onclick="showHide('introPopup')">Close</button>
+      </div>
+    </div>
+  </div>
+  <!-- Sidebar -->
+  <div id="sidebar" class="sidebar sidebar-hidden">
+    <img id="sidebarLogo" class="top-margin" src="images/logo_transparent.png">
+    <button id="keyboardShortcutButton" class="sidebar-unit-text sidebar-button" onclick="keyboardShortcutButton()">
+      <div class="button-container">
+        <div class="icon-container">
+          <img id="keyboardIcon" class="icon" src="images/keyboard.svg">
+        </div>
+        <div class="icon-text">
+          Keyboard Shortcuts
+        </div>
+      </div>
+    </button>
+    <button id="searchButton" class="sidebar-unit-text sidebar-button" onclick="searchButton()">
+      <div class="button-container">
+        <div class="icon-container">
+          <img id="searchIcon" class="icon" src="images/search.svg">
+        </div>
+        <div class="icon-text">
+          Search This Website
+        </div>
+      </div>
+    </button>
+    <button class="sidebar-button" onclick="jumpTo('unit1'); toggleSidebar()">
+      <p class="sidebar-unit">Unit 1</p>
+      <p class="sidebar-unit-text">Vectors and 3D Space</p>
+    </button>
+    <button class="sidebar-button" onclick="jumpTo('unit2'); toggleSidebar()">
+      <p class="sidebar-unit">Unit 2</p>
+      <p class="sidebar-unit-text">Vector-Valued Functions</p>
+    </button>
+  </div>
+  <!-- Website Header (title, subtitle, search bar) -->
+  <div id="websiteHeader">
+    <img id="logo" src="images/logo_transparent.png">
+    <noscript class="warning">
+      <h2>
+        JavaScript is required for this page to function and display properly. Please enable JavaScript in your browser settings.
+      </h2>
+    </noscript>
+    <p class="medium-text">
+      <strong>unnamed <span class="red">multivar</span> website</strong>: Interactive and simple multivariable calculus explanations!
+    </p>
+    <p>
+      This is a work in progress, and a continuation of <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://chaddypratt.org/calculus">unnamed calc website</a>, my website for single-variable calculus explanations.
+    </p>
+  </div>
+  <hr class="heavy-hr">
+  <!-- Table Of Contents -->
+  <div id="tocDiv">
+    <h2 id="tocHeader">
+      <span onclick="showHide('toc')">Table of Contents</span>
+      <button id="tocButton" onclick="showHide('toc')">Hide</button>
+    </h2>
+    <div id="toc" class="link-ul">
+      <h3 class="nm">Website Info <span class="medium-text">(start here!)</span></h3>
+      <ul class="ntm">
+        <li><a href="#updateHistoryHeader" onclick="jumpTo('updateHistory')">Website Update History</a></li>
+        <li><a href="#whatHeader" onclick="jumpTo('what')">What Is This Website?</a></li>
+        <li><a href="#linksHeader" onclick="jumpTo('links')">Before You Start Reading</a></li>
+      </ul>
+      <h3 class="nm">Units</h3>
+      <ul class="ntm">
+        <li><a href="#unit1Header" onclick="jumpTo('unit1')"><strong>Unit 1</strong>: Vectors and 3D Space</a></li>
+        <li><a href="#unit2Header" onclick="jumpTo('unit2')"><strong>Unit 2</strong>: Vector-Valued Functions</a></li>
+        <li><a href="#guestExplanationsHeader" onclick="jumpTo('guestExplanations')">Guest Explanations</a></li>
+      </ul>
+      <h3 class="nm">Credits</h3>
+      <ul class="ntm">
+        <li><a href="#creditsHeader" onclick="jumpTo('credits')">Credits / Special Thanks</a></li>
+      </ul>
+    </div>
+  </div>
+  <hr class="heavy-hr">
+  <!-- Update History -->
+  <h2 id="updateHistoryHeader">
+    <span onclick="showHide('updateHistory')">
+      Website Update History <span id="lastUpdate" class="medium-text">(Last update: <span id="updateDays"></span>)</span>
+    </span>
+    <button id="updateHistoryButton" onclick="showHide('updateHistory')">Show</button>
+  </h2>
+  <div class="hidden-by-default" id="updateHistory">
+    <p>
+      <strong>Important: You might have to refresh the tab to view the latest updates to this website.</strong>
+    </p>
+    <h3>2025-??-??: Initial Release <button id="updateButton" onclick="showHide('update')">Show</button></h3>
+    <div id="update" class="hidden-by-default">
+      <p>
+        This is the first version of this website to be released. It features some explanations about vectors and the 3D coordinate system.
+      </p>
+      <h4 class="nm">Website Content</h4>
+      <ul>
+        <li><strong>Unit 1: Vectors and 3D Space</strong>: In order to understand many of the concepts in multivariable calculus, you need to know about vectors and how to visualize graphs in 3D space. That’s what this unit is for!</li>
+        <li><strong>Guest Explanations</strong>: Why should I be the only one making calculus explanations? I plan on letting some of my friends contribute their own calculus explanations to this website. This first release comes with three explanations (Green’s Theorem, Stokes’ Theorem, and Generalized Stokes’ Theorem) from one of my friends Sami.</li>
+      </ul>
+    </div>
+  </div>
+  <hr class="heavy-hr">
+  <!-- Website Settings -->
+  <h2 id="settingsHeader">
+    <span onclick="showHide('settings')">
+      Website Settings
+    </span>
+    <button id="settingsButton" onclick="showHide('settings')">Show</button>
+  </h2>
+  <div class="hidden-by-default" id="settings">
+    <p>
+      Switch to a dark theme for those of you studying calculus late at night! (This setting does not affect any of the images on this page, so they will stay bright.)
+    </p>
+    <p>
+      <label for="darkModeCheckbox" class="large-text">Dark Mode</label> &nbsp;<input type="checkbox" id="darkModeCheckbox" oninput="toggleDarkMode()">
+    </p>
+    <hr>
+    <p>
+      If the bright images in dark mode bother you, you can invert the colors of graphs using this setting. <strong><span class="warning">Warning</span>: this will change the colors of points and curves on each graph, making graph captions inaccurate in some cases.</strong>
+    </p>
+    <p>
+      <label for="invertColorsCheckbox" class="large-text">Invert Graph Colors</label> &nbsp;<input type="checkbox" id="invertColorsCheckbox" oninput="invertGraphs()">
+    </p>
+    <!-- <hr>
+    <p>
+      Example of what a graph and its caption look like now:
+    </p>
+    <img class="graph" src="images/tangent.png">
+    <p class="ntm sn">
+      The <span class="blue">blue line</span> is a tangent line because it is tangent to the <span class="red">function</span>!
+    </p> -->
+    <hr>
+    <p class="large-text">
+      Scientific Notation Format
+    </p>
+    <p>
+      Control the way very large and small numbers are displayed on this website. (Primarily intended for those of you who enjoy incremental games!)
+    </p>
+    <select name="largeNumFormat" id="largeNumFormat" onchange="setLargeNumFormat()">
+      <option value="default">Default (e.g. 1.2 × 10^19)</option>
+      <option value="e">Lowercase “e” (e.g. 1.2e19)</option>
+      <option value="defaultEngineering">Engineering (e.g. 12 × 10^18)</option>
+      <option value="eEngineering">Engineering (with “e”) (e.g. 12e18)</option>
+    </select>
+  </div>
+  <hr class="heavy-hr">
+  <!-- What Is This Website -->
+  <h2 id="whatHeader">
+    <span onclick="showHide('what')">What Is This Website?</span>
+    <button id="whatButton" onclick="showHide('what')">Hide</button>
+  </h2>
+  <div id="what">
+    <p>
+      A note about links on this page: Internal links (links that bring you to another spot on this page) are colored in <a href="#" onclick="return false;">light blue</a>. External links (links that open a different website) are colored in <a class="external-link" href="#" onclick="return false;">dark blue</a>. External links will always open in a new tab.
+    </p>
+    <p>
+      This is a continuation of my single-variable calculus website, <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://chaddypratt.org/calculus">unnamed calc website</a>, but this time with multivariable calculus! You can look at that page for more information on what this website is and why I made it.
+    </p>
+    <button class="large-button" onclick="showHide('progress')" id="progressButton">Show Current Progress</button>
+    <div class="hidden-by-default" id="progress">
+      <p>
+        This progress table is based on the <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://www.stewartcalculus.com/media/11_inside_homework_hints.php">Stewart Calculus</a> textbook.
+      </p>
+      <table id="progressTable">
+        <tr>
+          <th>Unit</th>
+          <th>Progress</th>
+        </tr>
+        <tr>
+          <td>12. Vectors and the Geometry of Space</td>
+          <td>6/6</td>
+        </tr>
+        <tr>
+          <td>13. Vector Functions</td>
+          <td>0/4</td>
+        </tr>
+        <tr>
+          <td>14. Partial Derivatives</td>
+          <td>0/8</td>
+        </tr>
+        <tr>
+          <td>15. Multiple Integrals</td>
+          <td>0/10</td>
+        </tr>
+        <tr>
+          <td>16. Vector Calculus</td>
+          <td>0/9</td>
+        </tr>
+        <tr class="bold">
+          <td>All Units</td>
+          <td id="totalProgress"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <hr class="heavy-hr">
+  <!-- Unit 1 -->
+  <div class="unit" id="unit1Unit">
+    <h2 id="unit1Header">
+      <span onclick="showHideUnit('unit1')"><span class="gray">Unit 1:</span> Vectors and 3D Space</span>
+      <button id="unit1Button" onclick="showHideUnit('unit1')">Show</button>
+    </h2>
+    <div class="hidden-by-default" id="unit1">
+      <div>
+        <button class="large-button" onclick="toggleAllSections('unit1', 'show')">Show All Sections</button>
+        <div class="button-spacing"></div>
+        <button class="large-button" onclick="toggleAllSections('unit1', 'hide')">Hide All Sections</button>
+      </div>
+      <!-- <h3 id="khanLimitsHeader">
+        Unit Information
+        <button id="khanLimitsButton" onclick="showHide('khanLimits')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="khanLimits">
+        <p class="khanLink">
+          Khan Academy Link: <a href="https://www.khanacademy.org/math/ap-calculus-ab/ab-limits-new" class="external-link" target="_blank" rel="noopener noreferrer">Limits and continuity</a>
+        </p>
+        <p>
+          <strong>All topics covered in Khan Academy:</strong><br>
+          <span class="lesson-complete">Green underlined</span> topics are topics at least partially covered on my website and <span class="lesson-incomplete">red</span> topics are topics not yet covered on my website. Note that even <span class="lesson-complete">green</span> topics might not be covered in full detail on my page.
+        </p>
+        <ol id="progress1">
+          <li class="lesson-complete">Defining limits and using limit notation</li>
+          <li class="lesson-complete">Estimating limit values from graphs</li>
+          <li class="lesson-complete">Estimating limit values from tables</li>
+          <li class="lesson-complete">Determining limits using algebraic properties of limits: limit properties</li>
+          <li class="lesson-complete">Determining limits using algebraic properties of limits: direct substitution</li>
+          <li class="lesson-complete">Determining limits using algebraic manipulation</li>
+          <li class="lesson-complete">Selecting procedures for determining limits</li>
+          <li class="lesson-complete">Determining limits using the squeeze theorem</li>
+          <li class="lesson-complete">Exploring types of discontinuities</li>
+          <li class="lesson-complete">Defining continuity at a point</li>
+          <li class="lesson-complete">Confirming continuity over an interval</li>
+          <li class="lesson-complete">Removing discontinuities</li>
+          <li class="lesson-complete">Connecting infinite limits and vertical asymptotes</li>
+          <li class="lesson-complete">Connecting limits at infinity and horizontal asymptotes</li>
+          <li class="lesson-complete">Working with the intermediate value theorem</li>
+          <li class="lesson-complete optional">(Optional) Formal definition of limits</li>
+        </ol>
+      </div> -->
+      <h3 class="section-header" id="vectorBasicsHeader">
+        Vector Basics <button id="vectorBasicsButton" onclick="showHide('vectorBasics')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="vectorBasics">
+        <p>
+          Multivariable calculus involves functions that have multiple inputs or output a list of multiple numbers. Because of this, the concept of vectors appears a lot in multivariable calculus.
+        </p>
+        <p>
+          There are two ways of thinking about what a vector is:
+        </p>
+        <ul>
+          <li>A vector is a list of numbers (but can sometimes contain other things).</li>
+          <li>A vector is a quantity with magnitude and direction.</li>
+        </ul>
+        <p>
+          I’m going to focus on the second way of thinking about vectors: that a vector is a quantity with magnitude and direction. What exactly does that mean? Usually, we think of vectors graphically as arrows on the coordinate plane.
+        </p>
+        <p>
+          I will be discussing 2D vectors here (vectors with 2 values that can be drawn in 2 dimensions), but a lot of the concepts are similar for 3D vectors and vectors with even more dimensions.
+        </p>
+        <img class="graph" src="images/2d_vector.png">
+        <p class="ntm sn">
+          The arrow from <span class="red">point A</span> to <span class="blue">point B</span> is a vector since it has a magnitude (i.e. length) and a direction. It is a 2D vector since it is on a 2-dimensional coordinate plane. (Note: vectors can begin anywhere on the coordinate plane. In this diagram, <span class="red">point A</span> is at the origin, but it doesn’t have to be. What determines the vector is the displacement between the two points.)
+        </p>
+        <p>
+          2D vectors have an \(x\)-component and a \(y\)-component. The \(x\)-component is the horizontal displacement of the vector and the \(y\)-component is the vertical displacement. In the diagram above, the vector has an \(x\)-component of 3 and a \(y\)-component of 4. The \(x\)-component and \(y\)-component can also be negative (represented by an arrow pointing to the left or down respectively).
+        </p>
+        <p>
+          Vectors are usually notated with a letter in bold, such as \(\mathbf{v}\). There are multiple ways to notate the components of a vector. One way is to write them like coordinates, so for example the vector in the above diagram is \(\mathbf{v} = (3, 4)\). The first value is the \(x\)-component and the second value is the \(y\)-component of the vector.
+        </p>
+        <p>
+          Another way is to write the vector in terms of the unit vectors \(\mathbf{i} = (1, 0)\) and \(\mathbf{j} = (0, 1)\). In this notation, our vector can be written as \(\mathbf{v} = (3, 4) = (3, 0) + (0, 4) = 3\mathbf{i} + 4\mathbf{j}\). The coefficient of \(\mathbf{i}\) is the \(x\)-component and the coefficient of \(\mathbf{j}\) is the \(y\)-component of the vector.
+        </p>
+        <p>
+          To find the magnitude (i.e. length) of a vector (denoted by \(||\mathbf{v}||\)), we can use the Pythagorean Theorem. Notice how in the diagram above, the \(x\)- and \(y\)-components form a right triangle with the vector. In this case, the magnitude of the vector \(\mathbf{v} = (3, 4)\) is \(||\mathbf{v}|| = \sqrt{3^2 + 4^2} = 5\).
+        </p>
+        <p class="large-text bold">Vector operations</p>
+        <p>
+          We can multiply a vector by a scalar (i.e. a single number). To do that, we just multiply each component of the vector by the scalar. If \(\mathbf{v} = (1, 2)\), then \(4\mathbf{v} = (4\cdot 1, 4\cdot 2) = (4, 8)\). This scalar can also be -1, i.e. we can find the negative of a vector by multiplying all components by -1. In our example, \(-\mathbf{v} = (-1, -2)\).
+        </p>
+        <p>
+          We can add two vectors by adding their components together. For example, if \(\mathbf{v} = (1, 2)\) and \(\mathbf{w} = (3, 4)\), then \(\mathbf{v} + \mathbf{w} = (1 + 3, 2 + 4) = (4, 6)\).
+        </p>
+        <p>
+          To add two vectors visually, first place the tail of the second vector at the head of the first vector. Then the sum of the vectors will be the vector that goes from the tail of the first vector to the head of the second vector.
+        </p>
+        <img class="graph" src="images/vector_addition.png">
+        <p>
+          Similarly, we can subtract two vectors by subtracting their components. If \(\mathbf{v} = (1, 2)\) and \(\mathbf{w} = (3, 4)\), then \(\mathbf{w} - \mathbf{v} = (3 - 1, 4 - 2) = (2, 2)\).
+        </p>
+        <p>
+          There are two ways to visualize this: the first is to add the vectors \(\mathbf{w}\) and \(-\mathbf{v}\) to get \(\mathbf{w} - \mathbf{v}\).
+        </p>
+        <img class="graph" src="images/vector_subtraction_2.png">
+        <p>
+          The second way is to draw the vectors for \(\mathbf{v}\) and \(\mathbf{w}\). The vector that goes from the head of \(\mathbf{v}\) to the head of \(\mathbf{w}\) is \(\mathbf{w} - \mathbf{v}\).
+        </p>
+        <img class="graph" src="images/vector_subtraction_1.png">
+        <p class="ntm sn">
+          This diagram shows that \(\mathbf{v} + (\mathbf{w} - \mathbf{v}) = \mathbf{w}\).
+        </p>
+      </div>
+      <h3 class="section-header" id="threeDimsHeader">
+        The 3D Coordinate System <button id="threeDimsButton" onclick="showHide('threeDims')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="threeDims">
+        <p>
+          In previous calculus classes, you dealt with functions involving a single input and a single output. These are known as single-variable functions, and the way we typically visualize them is with 2-dimensional graphs: one dimension for the input variable and one dimension for the output variable.
+        </p>
+        <p>
+          But in multivariable calculus, we often deal with functions with more than one input (these are known as multivariable functions). To visualize these functions, we need more than 2 dimensions!
+        </p>
+        <p>
+          Often, we use 3-dimensional graphs to visualize functions with two inputs. But how do 3D graphs work? That’s what I’m going to discuss now!
+        </p>
+        <p>
+          In two-dimensional graphs, we have two axes: the \(x\)-axis and the \(y\)-axis. When we introduce a third dimension, we need to add a new axis: the \(z\)-axis, that is perpendicular to the other two axes.
+        </p>
+        <img class="graph" src="images/3d_axes.png">
+        <p>
+          In two dimensions, the point \((x, y)\) would be plotted \(x\) units along the \(x\)-axis and \(y\) units along the \(y\)-axis. In three dimensions, we do something similar: the point \((x, y, z)\) would be plotted \(x\) units along the \(x\)-axis, \(y\) units along the \(y\)-axis, and \(z\) units along the \(z\)-axis.
+        </p>
+        <img class="graph" src="images/3d_point.png">
+        <p class="ntm sn">
+          This is the point \((\class{blue}{1}, \class{green}{2}, \class{purple}{3})\) plotted in 3D space. It is plotted <span class="blue">1 unit along the \(x\)-axis</span>, <span class="green">2 units along the \(y\)-axis</span>, and <span class="purple">3 units along the \(z\)-axis</span>.
+        </p>
+        <p>
+          We can also create vectors in 3D space. For example, this is the vector \((1, 2, 3)\):
+        </p>
+        <img class="graph" src="images/3d_vector.png">
+        <p>
+          In 3D space, the unit vectors are \(\mathbf{i} = (1, 0, 0)\), \(\mathbf{j} = (0, 1, 0)\), and \(\mathbf{k} = (0, 0, 1)\).
+        </p>
+      </div>
+      <h3 class="section-header" id="dotProductHeader">
+        Vectors: Dot Product <button id="dotProductButton" onclick="showHide('dotProduct')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="dotProduct">
+        <p>
+          There are some operations we can perform between two vectors. One of the most common operations is the <strong>dot product</strong>. The dot product of two vectors \(\mathbf{a}\) and \(\mathbf{b}\) is denoted by \(\mathbf{a} \cdot \mathbf{b}\).
+        </p>
+        <p>
+          There are two ways of thinking of the dot product.
+        </p>
+        <p class="bold large-text">
+          The dot product as a sum of products
+        </p>
+        <p class="nbm">
+          To find the dot product of two vectors, you multiply corresponding components together, then sum up all of the products. Here’s an example:
+        </p>
+        <div class="mj">
+          \[ \mathbf{a} = (\class{red}{1}, \class{blue}{2}, \class{purple}{3}) \]
+          \[ \mathbf{b} = (\class{red}{4}, \class{blue}{5}, \class{purple}{6}) \]
+          \[ \begin{flalign}
+          \mathbf{a} \cdot \mathbf{b} &= (\class{red}{1 \cdot 4}) + (\class{blue}{2\cdot 5}) + (\class{purple}{3\cdot 6})\\
+          &= 4 + 10 + 18\\
+          &= 32
+          \end{flalign}\]
+        </div>
+        <p class="ntm">
+          Notice that the result of a dot product is a scalar (a single number), not a vector.
+        </p>
+        <p class="bold large-text">
+          The geometric meaning of the dot product
+        </p>
+        <p class="nbm">
+          The dot product can also be found with this formula:
+        </p>
+        <div class="mj">
+          \[ \mathbf{a} \cdot \mathbf{b} = ||\mathbf{a}||\:||\mathbf{b}|| \cos(\theta)\]
+        </div>
+        <p class="ntm sn">
+          In this formula, \(\theta\) is the angle between the two vectors \(\mathbf{a}\) and \(\mathbf{b}\).
+        </p>
+        <p>
+          Notice that \(\cos(\theta)\) is close to 1 if \(\theta\) is close to 0, and \(\cos(\theta)\) is close to 0 if \(\theta\) is close to 90 degrees. So in general, if two vectors are pointing in roughly the same direction, their dot product will be larger. If two vectors are pointing in exactly the same direction, then the dot product is the product of the vectors’ magnitudes.
+        </p>
+        <p>
+          If \(\theta\) is exactly 90 degrees (or \(\frac{\pi}{2}\) radians), then \(\cos(\theta) = 0\). This means that the dot product between two perpendicular vectors is zero. Two vectors are called <strong>orthogonal</strong> if this is the case (i.e. if \(\mathbf{a} \cdot \mathbf{b} = 0\), then \(\mathbf{a}\) and \(\mathbf{b}\) are orthogonal vectors).
+        </p>
+        <p>
+          The dot product can also be negative if \(\cos(\theta)\) is negative. This happens when \(\theta\) is in between 90 and 180 degrees (\(\frac{\pi}{2}\) and \(\pi\) radians).
+        </p>
+        <div>
+          <hr>
+          <p>
+            Play around with these two unit vectors (vectors with magnitude 1). What do you notice about the dot product?
+          </p>
+          <p>
+            <canvas id="dotProductCanvas" class="canvas-graph"></canvas>
+          </p>
+          <p>
+            Control the vectors’ angles using these sliders:
+          </p>
+          <p>
+            <input id="dotProductSlider" class="slider" type="range" max="1" step="any" value="0" oninput="updateSliders()">
+          </p>
+          <p>
+            <input id="dotProductSlider2" class="slider" type="range" max="1" step="any" value="0" oninput="updateSliders()">
+          </p>
+          <button class="large-button" onclick="randomVectors()">Random Vectors</button>
+          <div class="button-spacing"></div>
+          <button class="large-button" onclick="orthogonalVectors()">Orthogonal Vectors</button>
+          <p>
+            \(\theta \approx\) <span id="dotProductTheta" class="output-value"></span>
+          </p>
+          <p>
+            \(\theta \approx\) <span id="dotProductThetaDegrees" class="output-value"></span>
+          </p>
+          <p>
+            Dot Product \(\approx\) <span id="dotProductVal" class="output-value"></span>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-header" id="crossProductHeader">
+        Vectors: Cross Product <button id="crossProductButton" onclick="showHide('crossProduct')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="crossProduct">
+        <p>
+          The <strong>cross product</strong> is another operation we can perform between two vectors. The cross product of \(\mathbf{a}\) and \(\mathbf{b}\) is denoted by \(\mathbf{a} \times \mathbf{b}\).
+        </p>
+        <p>
+          While the dot product works with vectors with any number of dimensions (as long as the two vectors have the same number of dimensions), the cross product only works with two 3D vectors.
+        </p>
+        <p>
+          While the dot product of two vectors is a scalar, the cross product of two vectors is another vector. Specifically, the cross product of two vectors is a third vector that is perpendicular to the other two vectors.
+        </p>
+        <p>
+          There are once again two formulas for the cross product.
+        </p>
+        <p class="bold large-text">
+          The cross product as a determinant
+        </p>
+        <p class="nbm">
+          The cross product of two vectors can be calculated with a few multiplications and subtractions. If \(\mathbf{a} = (a_1, a_2, a_3)\) and \(\mathbf{b} = (b_1, b_2, b_3)\), then:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \mathbf{a} \times \mathbf{b} &= (a_2 b_3 - a_3 b_2) \mathbf{i} + (a_3 b_1 - a_1 b_3) \mathbf{j} + (a_1 b_2 - a_2 b_1) \mathbf{k}\\
+          &= (a_2 b_3 - a_3 b_2,\, a_3 b_1 - a_1 b_3,\, a_1 b_2 - a_2 b_1)
+          \end{flalign} \]
+        </div>
+        <p class="ntm">
+          This is not an easy formula to remember! Luckily, there is an easier way to remember this, but it does require you to know a little bit about matrices.
+        </p>
+        <p class="nbm">
+          This formula can be written as the determinant of a \(3\times 3\) matrix as follows:
+        </p>
+        <div class="mj">
+          \[ \mathbf{a} \times \mathbf{b} = \det\left(\begin{bmatrix} 
+          \mathbf{i} & \mathbf{j} & \mathbf{k}\\
+          a_1 & a_2 & a_3 \\
+          b_1 & b_2 & b_3
+          \end{bmatrix}\right)\]
+        </div>
+        <p class="ntm">
+          The first row of the matrix contains the unit vectors, the second row of the matrix contains the components of the first vector, and the third row contains the components of the second vector.
+        </p>
+        <button class="large-button" onclick="showHide('determinantExplanation')" id="determinantExplanationButton">What is a matrix? What is a determinant?</button>
+        <div id="determinantExplanation" class="hidden-by-default">
+          <p class="nbm">
+            A <strong>matrix</strong> is a 2D grid of numbers. Here’s an example of a matrix:
+          </p>
+          <div class="mj">
+            \[ \begin{bmatrix} 
+            1 & 2 & 3 \\
+            4 & 5 & 6 \\
+            7 & 8 & 9
+            \end{bmatrix} \]
+          </div>
+          <p class="ntm">
+            A matrix that has \(m\) rows and \(n\) columns is known as an \(m \times n\) matrix.
+          </p>
+          <p class="nbm">
+            Imagine we have this \(2 \times 2\) matrix:
+          </p>
+          <div class="mj">
+            \[ A = \begin{bmatrix} 
+            a & b \\
+            c & d
+            \end{bmatrix} \]
+          </div>
+          <p class="nm">
+            The <strong>determinant</strong> of this matrix, denoted by \(\det(A)\), is calculated as follows:
+          </p>
+          <div class="mj">
+            \[ \det(A) = ad - bc \]
+          </div>
+          <p class="nm">
+            The determinant of a \(3 \times 3\) matrix is more complicated:
+          </p>
+          <div class="mj">
+            \[ A = \begin{bmatrix} 
+            a_{11} & a_{12} & a_{13} \\
+            a_{21} & a_{22} & a_{23} \\
+            a_{31} & a_{32} & a_{33}
+            \end{bmatrix} \]
+            \[ \begin{flalign}
+            \det(A) &= a_{11}(-1)^{1+1}\det\begin{bmatrix} 
+            a_{22} & a_{23} \\
+            a_{32} & a_{33}
+            \end{bmatrix} + a_{12}(-1)^{1+2}\det\begin{bmatrix} 
+            a_{21} & a_{23} \\
+            a_{31} & a_{33}
+            \end{bmatrix} + a_{13}(-1)^{1+3}\det\begin{bmatrix} 
+            a_{21} & a_{22} \\
+            a_{31} & a_{32}
+            \end{bmatrix}\\
+            &= a_{11}\det\begin{bmatrix} 
+            a_{22} & a_{23} \\
+            a_{32} & a_{33}
+            \end{bmatrix} - a_{12}\det\begin{bmatrix} 
+            a_{21} & a_{23} \\
+            a_{31} & a_{33}
+            \end{bmatrix} + a_{13}\det\begin{bmatrix} 
+            a_{21} & a_{22} \\
+            a_{31} & a_{32}
+            \end{bmatrix}\\
+            \end{flalign} \]
+          </div>
+          <p class="ntm">
+            That just looks like a huge mess at first! Let’s break it down.
+          </p>
+          <p class="nbm">
+            The first term in the sum is:
+          </p>
+          <div class="mj">
+            \[ a_{\class{red}{1}\class{blue}{1}}(-1)^{\class{red}{1}+\class{blue}{1}}\det\begin{bmatrix} 
+            a_{22} & a_{23} \\
+            a_{32} & a_{33} 
+            \end{bmatrix} \] 
+          </div>
+          <p class="ntm">
+            Notice how the exponent on the -1 term is \(\class{red}{1} + \class{blue}{1}\), while the coefficient in front of it is \(a_{\class{red}{1}\class{blue}{1}}\), corresponding to the element on the <span class="red">1</span>st row and <span class="blue">1</span>st column of the matrix.
+          </p>
+          <p>
+            What about the determinant part? Notice how we’re finding the determinant of a smaller \(2 \times 2\) matrix. This matrix is just the \(3 \times 3\) matrix \(A\) but without the elements in the <span class="red">1</span>st row and the <span class="blue">1</span>st column.
+          </p>
+          <p class="nbm">
+            The next term is:
+          </p>
+          <div class="mj">
+            \[ a_{\class{red}{1}\class{blue}{2}}(-1)^{\class{red}{1}+\class{blue}{2}}\det\begin{bmatrix} 
+            a_{21} & a_{23} \\
+            a_{31} & a_{33} 
+            \end{bmatrix} \] 
+          </div>
+          <p class="ntm">
+            Once again, the exponent on the -1 term (\(\class{red}{1} + \class{blue}{2}\)) is the sum of the row and column number of the coefficient \(a_{\class{red}{1}\class{blue}{2}}\). We are multiplying these terms by the determinant of a \(2 \times 2\) matrix which is matrix \(A\) but without the <span class="red">1</span>st row and <span class="blue">2</span>nd column.
+          </p>
+          <p class="nbm">
+            Finally, we see this pattern continue with the last term:
+          </p>
+          <div class="mj">
+            \[ a_{\class{red}{1}\class{blue}{3}}(-1)^{\class{red}{1}+\class{blue}{3}}\det\begin{bmatrix} 
+            a_{21} & a_{22} \\
+            a_{31} & a_{32} 
+            \end{bmatrix} \] 
+          </div>
+          <p class="ntm">
+            The exponent on the -1 is the sum of the row and column number, and we are once again multiplying by a modified version of matrix \(A\) without the <span class="red">1</span>st row and <span class="blue">3</span>rd column.
+          </p>
+          <p>
+            However, this isn’t the only way we can calculate the determinant of \(A\). In the previous example, we used what’s known as the <strong>Laplace expansion</strong> along the first row of the matrix (since the coefficients \(a_{11}\), \(a_{12}\), \(a_{13}\) come from the first row of matrix \(A\)).
+          </p>
+          <p class="nbm">
+            The Laplace expansion works for any row or any column of the matrix! For example, here’s the expansion along the 2nd column:
+          </p>
+          <div class="mj">
+            \[ \det(A) = a_{12}(-1)^{1+2}\det\begin{bmatrix}
+            a_{21} & a_{23} \\
+            a_{31} & a_{33}
+            \end{bmatrix} + a_{22}(-1)^{2+2}\det\begin{bmatrix}
+            a_{11} & a_{13} \\
+            a_{31} & a_{33}
+            \end{bmatrix} + a_{32}(-1)^{3+2}\det\begin{bmatrix}
+            a_{11} & a_{13} \\
+            a_{21} & a_{23}
+            \end{bmatrix}\]
+          </div>
+          <hr>
+        </div>
+        <p class="bold large-text">
+          The geometric meaning of the cross product
+        </p>
+        <p class="nbm">
+          Just like the dot product, there is a geometric formula for the cross product:
+        </p>
+        <div class="mj">
+          \[ \mathbf{a} \times \mathbf{b} = ||\mathbf{a}|| \: ||\mathbf{b}|| \sin(\theta) \mathbf{n} \]
+        </div>
+        <p class="ntm sn">
+          \(\theta\) is the angle between \(\mathbf{a}\) and \(\mathbf{b}\), and \(\mathbf{n}\) is a unit vector perpendicular to both \(\mathbf{a}\) and \(\mathbf{b}\) (the exact vector to use is based on the right-hand rule - more on that later).
+        </p>
+        <p>
+          The cross product of two vectors is a third vector that is perpendicular to both of them. However, in 3D space, there are two vectors that are perpendicular to any set of two nonzero vectors. How do we know which one to use?
+        </p>
+        <p>
+          That’s what the <strong>right-hand rule</strong> tells us. If you point the index finger of your right hand in the direction of \(\mathbf{a}\), then point your middle finger in the direction of \(\mathbf{b}\), then extend your thumb, your thumb will point in the direction of \(\mathbf{a} \times \mathbf{b}\).
+        </p>
+        <img class="graph" src="images/cross_product.png">
+        <p>
+          Here’s an example of how we would find the cross product of two vectors.
+        </p>
+        <p class="ntm sn">
+          The cross product \(\mathbf{a} \times \mathbf{b}\) is perpendicular to both the vectors \(\mathbf{a}\) and \(\mathbf{b}\).
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: What is the cross product of the vectors \(\mathbf{a} = (5, -2, 8)\) and \(\mathbf{b} = (10, 0, 1)\)?
+        </p>
+        <p class="nbm">
+          Using the formula directly:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \mathbf{a} \times \mathbf{b} &= (a_2 b_3 - a_3 b_2) \mathbf{i} + (a_3 b_1 - a_1 b_3) \mathbf{j} + (a_1 b_2 - a_2 b_1) \mathbf{k}\\
+          &= [-2(1) - (8)(0)]\mathbf{i} + [8(10) - 5(1)]\mathbf{j} + [5(0) - (-2)(10)]\mathbf{k}\\
+          &= -2\mathbf{i} + 75\mathbf{j} + 20\mathbf{k}\\
+          &= (-2, 75, 20)
+          \end{flalign} \]
+        </div>
+        <p class="nm">
+          Using the determinant form of the formula:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \mathbf{a} \times \mathbf{b} &= \det\begin{bmatrix} 
+          \mathbf{i} & \mathbf{j} & \mathbf{k}\\
+          a_1 & a_2 & a_3 \\
+          b_1 & b_2 & b_3
+          \end{bmatrix}\\
+          &= \det\begin{bmatrix} 
+          \mathbf{i} & \mathbf{j} & \mathbf{k}\\
+          5 & -2 & 8 \\
+          10 & 0 & 1
+          \end{bmatrix}\\
+          &= \det\begin{bmatrix}
+          -2 & 8\\
+          0 & 1
+          \end{bmatrix}\mathbf{i} - \det\begin{bmatrix}
+          5 & 8\\
+          10 & 1
+          \end{bmatrix}\mathbf{j} + \det\begin{bmatrix}
+          5 & -2\\
+          10 & 0
+          \end{bmatrix}\mathbf{k}\\
+          &= [-2(1) - 8(0)]\mathbf{i} - [5(1) - 8(10)]\mathbf{j} + [5(0) - (-2)(10)]\mathbf{k}\\
+          &= -2\mathbf{i} + 75\mathbf{j} + 20\mathbf{k}\\
+          &= (-2, 75, 20)
+          \end{flalign}\]
+        </div>
+        <p class="ntm sn">
+          Don’t forget the negative sign before the second term when calculating the determinant (in this case, the coefficient of \(\mathbf{j}\))!
+        </p>
+      </div>
+      <h3 class="section-header" id="lines3DHeader">
+        3D Space: Equations of Lines <button id="lines3DButton" onclick="showHide('lines3D')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="lines3D">
+        <p>
+          How do we graph a line in 3D space? Before we answer this, let’s first think about how we could graph a line in 2D.
+        </p>
+        <p class="nbm">
+          In two dimensions, we can graph a line by choosing a point on that line, then specifying the slope of the line. This is the point-slope form of a line: the line that passes through the point \((x_0, y_0)\) with slope \(m\) is:
+        </p>
+        <div class="mj">
+          \[ y - y_0 = m(x-x_0) \]
+        </div>
+        <p class="ntm">
+          In three dimensions, however, we can’t just describe the slope of a line with one number. Instead, we need to use a 3D vector to describe the direction that the line goes in.
+        </p>
+        <p>
+          So what we could do instead is take two points that are on the line, then draw a vector between those two. Let’s see how this would work in 2D first.
+        </p>
+        <p>
+          Let’s say we want to find the equation of the line that passes through point \(A = (1, 2)\) and point \(B = (2, 5)\). We can get a vector parallel to this line by subtracting one point from the other. In this case, that vector would be \(\mathbf{v} = (2-1, 5-2) = (1, 3)\).
+        </p>
+        <img class="graph" src="images/2d_vector_line.png">
+        <p>
+          Now let’s imagine a point moving with this velocity vector. As time passes, the point will trace out our line.
+        </p>
+        <canvas id="2dVectorLineCanvas" class="canvas-graph"></canvas>
+        <p>
+          How can we describe the movement of this point with a function? We can use a vector-valued function - a function that outputs a vector.
+        </p>
+        <p class="nbm">
+          Imagine a point at point \(A\) and moving towards point \(B\). Its velocity vector would be equal to the vector \(\mathbf{v}\) we found before. Its position at time \(t\) would be:
+        </p>
+        <div class="mj">
+          \[ f(t) = \mathbf{a} + t\mathbf{v}\]
+        </div>
+        <p class="ntm sn">
+          \(\mathbf{a}\) is the position vector corresponding to point \(A\) (in this case, \((1, 2)\)).
+        </p>
+        <p>
+          This is known as the <strong>vector form</strong> for the equation of a line. As \(t\) ranges across all real numbers (negative and positive), the point corresponding to \(f(t)\) will draw out the line.
+        </p>
+        <div>
+          <p>
+            <canvas id="2dVectorLineInteractiveCanvas" class="canvas-graph"></canvas>
+          </p>
+          <input id="2dVectorLineInteractiveSlider" class="slider" type="range" max="1" step="any" value="0" oninput="updateSliders()">
+          <p>
+            \(t =\) <span id="2dVectorLineInteractiveVal1" class="output-value"></span>
+          </p>
+        </div>
+        <p>
+          We can generalize this concept to three dimensions. Let me demonstrate this with an example:
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: What is the equation of the line that passes through the points \(A = (-2, 3, 2)\) and \(B = (3, 0, 1)\)?
+        </p>
+        <p class="nbm">
+          First, we need to find a vector that is parallel to the line. The easiest way to do this is to find the vector that goes from point \(A\) to point \(B\) (since this vector is on the line, it will also be parallel to the line). To find this vector, we subtract the coordinates of point \(A\) from point \(B\).
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \mathbf{v} &= (3 - (-2), 0 - 3, 1 - 2)\\
+          &= (5, -3, -1)
+          \end{flalign}\]
+        </div>
+        <img class="graph" src="images/line_vector.png">
+        <p class="ntm sn">
+          The vector \(\class{green}{\mathbf{v} = (5, -3, -1)}\) starts at <span class="red">point \(A\)</span> and ends at <span class="blue">point \(B\)</span>, and it is parallel to the line since it’s on the line.
+        </p>
+        <p class="nbm">
+          The vector form for the equation of a line in 3D space is:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \mathbf{r} &= \mathbf{r_0} + t\mathbf{v}\\
+          &= (x_0, y_0, z_0) + t(a, b, c)\\
+          &= (x_0 + ta, y_0 + tb, z_0 + tc)
+          \end{flalign} \]
+        </div>
+        <p class="ntm sn">
+          \((x_0, y_0, z_0)\) is a point on the line (with \(\mathbf{r_0}\) being the corresponding position vector), and \(\mathbf{v} = (a, b, c)\) is a vector that is parallel to the line. Just like with the 2D equation, as \(t\) ranges across all real numbers, the vector \(\mathbf{r}\) traces out the line.
+        </p>
+        <p class="nbm">
+          Back to our example now. \(\mathbf{r_0}\) can be the position vector corresponding to either of our points. So for our example, the vector form based on point \(A\) is:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \mathbf{r} &= (-2, 3, 2) + t(5, -3, -1)\\
+          &= (-2 + 5t, 3 - 3t, 2 - t)
+          \end{flalign}\]
+        </div>
+        <p class="nm">
+          And the vector form based on point \(B\) is:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \mathbf{r} &= (3, 0, 1) + t(5, -3, -1)\\
+          &= (3 + 5t, -3t, 1 - t)
+          \end{flalign}\]
+        </div>
+        <p class="nm">
+          This is not the only way we can describe a line in 3D. We can convert this vector form into a set of parametric equations:
+        </p>
+        <div class="mj">
+          \[ x = x_0 + ta \]
+          \[ y = y_0 + tb \]
+          \[ z = x_0 + tc \]
+        </div>
+        <p class="nm">
+          This is the <strong>parametric form</strong> for the equation of a line. For our problem, the parametric form based on point \(A\) is: 
+        </p>
+        <div class="mj">
+          \[ x = -2 + 5t \]
+          \[ y = 3 - 3t \]
+          \[ z = 2 - t \]
+        </div>
+        <p class="nm">
+          Based on point \(B\), the parametric equations are:
+        </p>
+        <div class="mj">
+          \[ x = 3 + 5t \]
+          \[ y = - 3t \]
+          \[ z = 1 - t \]
+        </div>
+        <p class="nm">
+          Finally, if we solve for \(t\) in each of the equations in the parametric form, we get these equations:
+        </p>
+        <div class="mj">
+          \[ t = \frac{x - x_0}{a} \]
+          \[ t = \frac{y - y_0}{b} \]
+          \[ t = \frac{z - z_0}{c} \]
+        </div>
+        <p class="nm">
+          The right-hand sides of all three of these equations are equal to \(t\), so they are equal to each other. Therefore:
+        </p>
+        <div class="mj">
+          \[ \frac{x - x_0}{a} = \frac{y - y_0}{b} = \frac{z - z_0}{c} \]
+        </div>
+        <p class="nm">
+          This is the <strong>symmetric equation</strong> of a line. In this case, the symmetric equations that pass through \((-2, 3, 2)\) and \((3, 0, 1)\) are:
+        </p>
+        <div class="mj">
+          \[ \frac{x + 2}{5} = \frac{y - 3}{-3} = \frac{z - 2}{-1} \]
+        </div>
+        <p class="nm sn">
+          This equation is using point \(A\) for the coordinates \((x_0, y_0, z_0)\).
+        </p>
+        <div class="mj">
+          \[ \frac{x - 3}{5} = \frac{y}{-3} = \frac{z - 1}{-1} \]
+        </div>
+        <p class="nm sn">
+          This equation is using point \(B\) for the coordinates \((x_0, y_0, z_0)\).
+        </p>
+      </div>
+      <h3 class="section-header" id="planes3DHeader">
+        3D Space: Equations of Planes <button id="planes3DButton" onclick="showHide('planes3D')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="planes3D">
+        <p>
+          We can also find the equations of planes in 3D space.
+        </p>
+        <p>
+          One way to uniquely identify a plane in 3D is to specify three points on that plane (as long as they’re not on the same line). However, to actually find the equation of a plane, there is another, more helpful way to define a plane.
+        </p>
+        <p>
+          All we need is one point on the plane and a normal vector to that plane (a vector perpendicular to the plane).
+        </p>
+        <img class="graph" src="images/plane_normal_vector.png">
+        <p class="ntm sn">
+          We can define a plane using <span class="green">a point on the plane</span> and a <span class="blue">normal vector</span>.
+        </p>
+        <p>
+          Let’s call this point \(P_0\), the vector corresponding to this point \(\mathbf{r_0}\), and the normal vector \(\mathbf{n}\).
+        </p>
+        <p>
+          Why is this useful? Because if we choose a second point on the plane, then draw a vector from the first point to the second, that vector will lie completely within the plane. So this vector will be orthogonal to the normal vector, which means that the dot product of the two vectors will be zero.
+        </p>
+        <img class="graph" src="images/plane_normal_vector_2.png">
+        <p class="ntm sn">
+          The <span class="blue">normal vector</span> and the <span class="red">vector between the two points</span> are orthogonal, so their dot product is zero.
+        </p>
+        <p class="nbm">
+          So we can define this plane as the set of all possible points \(P\) such that the vector between \(P\) and \(P_0\) is orthogonal to the normal vector (i.e. the dot product is zero). If we define the vector \(\mathbf{r}\) to be the vector corresponding to \(P\), this means:
+        </p>
+        <div class="mj">
+          \[ \mathbf{n} \cdot (\mathbf{r} - \mathbf{r_0}) = 0 \]
+          \[ \mathbf{n} \cdot \mathbf{r} - \mathbf{n} \cdot \mathbf{r_0} = 0 \]
+          \[ \mathbf{n} \cdot \mathbf{r} = \mathbf{n} \cdot \mathbf{r_0} \]
+        </div>
+        <p class="nm">
+          This is the <strong>vector equation</strong> of a plane. If we write out the components of the vectors with \(\mathbf{n} = (a, b, c)\), \(\mathbf{r} = (x, y, z)\), and \(\mathbf{r_0} = (x_0, y_0, z_0)\), we get:
+        </p>
+        <div class="mj">
+          \[ (a, b, c) \cdot (x, y, z) = (a, b, c) \cdot (x_0, y_0, z_0) \]
+          \[ ax + by + cz = ax_0 + by_0 + cz_0 \]
+          \[ a(x - x_0) + b(y - y_0) + c(z - z_0) = 0 \]
+        </div>
+        <p class="ntm">
+          This is the <strong>scalar equation</strong> of a plane.
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: What is the equation of the plane that passes through the points \(A = (4, -2, 3)\), \(B = (0, 1, 3)\), and \(C = (-1, -5, 1)\)?
+        </p>
+        <p>
+          First, we need to find a normal vector for this plane. How could we do this?
+        </p>
+        <p>
+          If we had two vectors that were on the plane, then found the cross product of those two vectors, that would give us a vector that is perpendicular to both of those vectors (and the plane itself), which would be a normal vector!
+        </p>
+        <p class="nbm">
+          So let’s find two vectors that are on the plane. We can do that by finding vectors between two of our points. Here’s the vector that goes from point \(A\) to point \(B\):
+        </p>
+        <div class="mj">
+          \[ \mathbf{AB} = (0 - 4, 1 - (-2), 3 - 3) = (-4, 3, 0) \]
+        </div>
+        <p class="nm">
+          And here’s the vector that goes from point \(A\) to point \(C\):
+        </p>
+        <div class="mj">
+          \[ \mathbf{AC} = (-1 - 4, -5 - (-2), 1 - 3) = (-5, -3, -2) \]
+        </div>
+        <p class="ntm">
+          These are not the only two vectors we can use; there are many more possible pairs of points we can use to define our vectors.
+        </p>
+        <p class="nbm">
+          Now let’s find the cross product of these vectors:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \mathbf{AB} \times \mathbf{AC} &= \det\left(\begin{bmatrix}
+          \mathbf{i} & \mathbf{j} & \mathbf{k}\\
+          -4 & 3 & 0\\
+          -5 & -3 & -2\\
+          \end{bmatrix}\right)\\
+          &= -6\mathbf{i} - 8\mathbf{j} + 27\mathbf{k}\\
+          &= (-6, -8, 27)
+          \end{flalign}\]
+        </div>
+        <p class="nm">
+          Remember that in the scalar equation of the plane \((a,b,c)\) is the normal vector and \((x_0, y_0, z_0)\) is any point on the plane (we’ll use point \(A\) for this example, but points \(B\) and \(C\) would also work). So the equation is:
+        </p>
+        <div class="mj">
+          \[ a(x - x_0) + b(y - y_0) + c(z - z_0) = 0 \]
+          \[ -6(x - 4) - 8(y + 2) + 27(z - 3) = 0 \]
+        </div>
+      </div>
+      <h3 class="section-header" id="quadricHeader">
+        3D Space: Quadric Surfaces <button id="quadricButton" onclick="showHide('quadric')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="quadric">
+        <p class="nbm">
+          <strong>Quadric surfaces</strong> are graphs in 3D space that are defined by an equation in the form:
+        </p>
+        <div class="mj">
+          \[ P(x, y, z) = 0 \]
+        </div>
+        <p class="nm">
+          Here, \(P(x, y, z)\) is a quadratic polynomial in terms of \(x\), \(y\), and \(z\). This can also be written as:
+        </p>
+        <div class="mj">
+          \[ Ax^2 + By^2 + Cz^2 + Dxy + Exz + Fyz + Gx + Hy + Iz + J = 0\]
+        </div>
+        <p class="ntm sn">
+          The values \(A\) through \(J\) are constants.
+        </p>
+        <p>
+          Here are some examples of different types of quadric surfaces, along with their general equations.
+        </p>
+        <p class="bold large-text">
+          Ellipsoid, \(\displaystyle\frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} = 1\)
+        </p>
+        <img class="graph" src="images/quadric_ellipsoid.png">
+        <p>
+          Note: If \(a = b = c\), then the ellipsoid is a sphere.
+        </p>
+        <p class="bold large-text">
+          Cone, \(\displaystyle\frac{x^2}{a^2} + \frac{y^2}{b^2} = \frac{z^2}{c^2}\)
+        </p>
+        <img class="graph" src="images/quadric_cone.png">
+        <p class="bold large-text">
+          Cylinder, \(\displaystyle\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1\)
+        </p>
+        <img class="graph" src="images/quadric_cylinder.png">
+        <p class="bold large-text">
+          Hyperboloid of One Sheet, \(\displaystyle\frac{x^2}{a^2} + \frac{y^2}{b^2} - \frac{z^2}{c^2} = 1\)
+        </p>
+        <img class="graph" src="images/quadric_hyperboloid_1.png">
+        <p class="bold large-text">
+          Hyperboloid of Two Sheets, \(\displaystyle-\frac{x^2}{a^2} - \frac{y^2}{b^2} + \frac{z^2}{c^2} = 1\)
+        </p>
+        <img class="graph" src="images/quadric_hyperboloid_2.png">
+        <p class="bold large-text">
+          Elliptic Paraboloid, \(\displaystyle\frac{x^2}{a^2} + \frac{y^2}{b^2} = \frac{z}{c}\)
+        </p>
+        <img class="graph" src="images/quadric_elliptic_paraboloid.png">
+        <p class="bold large-text">
+          Hyperbolic Paraboloid, \(\displaystyle\frac{x^2}{a^2} - \frac{y^2}{b^2} = \frac{z}{c}\)
+        </p>
+        <img class="graph" src="images/quadric_hyperbolic_paraboloid.png">
+        <p><a class="external-link" target="_blank" rel="noopener noreferrer" href="https://www.desmos.com/3d/fhvnums8p3">Explore these quadric surfaces on Desmos!</a></p>
+      </div>
+    </div>
+  </div>
+  <hr class="heavy-hr">
+  <div class="unit" id="unit2Unit">
+    <h2 id="unit2Header">
+      <span onclick="showHideUnit('unit2')"><span class="gray">Unit 2:</span> Vector-Valued Functions</span>
+      <button id="unit2Button" onclick="showHideUnit('unit2')">Show</button>
+    </h2>
+    <div class="hidden-by-default" id="unit2">
+      <p>
+        Vector-valued functions are already covered in some detail in Unit 9 of <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://chaddypratt.org/calculus">unnamed calc website</a>, so for now, I’m not going to add content to this unit. I recognize that there are some vector-valued function topics that aren’t covered yet on unnamed calc website (such as 3D vectors), so I will eventually start working on this unit.
+      </p>
+    </div>
+  </div>
+  <hr class="heavy-hr">
+  <!-- Guest Explanations -->
+  <div class="unit" id="guestExplanationsUnit">
+    <h2 id="guestExplanationsHeader">
+      <span onclick="showHideUnit('guestExplanations')">Guest Explanations</span>
+      <button id="guestExplanationsButton" onclick="showHideUnit('guestExplanations')">Show</button>
+    </h2>
+    <div class="hidden-by-default" id="guestExplanations">
+      <div>
+        <button class="large-button" onclick="toggleAllSections('guestExplanations', 'show')">Show All Sections</button>
+        <div class="button-spacing"></div>
+        <button class="large-button" onclick="toggleAllSections('guestExplanations', 'hide')">Hide All Sections</button>
+      </div>
+      <p>
+        These are explanations written by people other than me, typically my friends. <span class="sn">(Note: These explanations might involve concepts or terminology not yet covered on this website.)</span>
+      </p>
+      <h3 class="section-header" id="guestGreenHeader">
+        Green’s Theorem <button id="guestGreenButton" onclick="showHide('guestGreen')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="guestGreen">
+        <p class="sn">
+          Explanation written by Sami Khan
+        </p>
+        <p class="bold large-text">
+          Formal definition of Green’s Theorem
+        </p>
+        <p class="nbm">
+          Green’s Theorem states that the line integral of the vector field \(F\) over the boundary of your region \(D\) is equivalent to the double integral of the curl of the vector field \(F\) over the region \(D\). Green’s Theorem is the 2D incarnation of the Generalized Stokes Theorem.
+        </p>
+        <div class="mj">
+          \[ \oint_{\partial D}\mathbf{F} \cdot \dd{\mathbf{s}} = \iint_D (\nabla \times \mathbf{F})\cdot \dd{\mathbf{a}} \]
+        </div>
+        <p class="ntm bold large-text">
+          Intuitive explanation of Green’s Theorem
+        </p>
+        <p>
+          Essentially what Green’s theorem is doing is displaying that the combination of local data is equivalent to the global phenomenon. The curl of the vector field \(F\) is local meaning it is dependent on the location of the point in \(F\). Essentially what the double integral is doing is just combining the curl over the region \(D\) and saying that it is equal to the line integral of the vector field over the boundary curve of the region.
+        </p>
+      </div>
+      <h3 class="section-header" id="guestStokesHeader">
+        Stokes’ Theorem <button id="guestStokesButton" onclick="showHide('guestStokes')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="guestStokes">
+        <p class="sn">
+          Explanation written by Sami Khan
+        </p>
+        <p class="bold large-text">
+          Formal definition of Stokes’ Theorem
+        </p>
+        <p class="nbm">
+          Stokes’ Theorem is another incarnation of generalized stokes theorem. Stokes’ Theorem exists in 3D space. Stokes’ Theorem relates a line integral to a surface integral stating that the line integral of the vector field \(F\) dotted with the parameterized function of the closed boundary curve \(C\) over said curve is equivalent to the surface integral (a double integral over a 3D surface) of the curl of \(F\) over the surface \(S\). One important thing to know is that \(S\) can be any surface with the boundary curve \(C\).
+        </p>
+        <div class="mj">
+          \[ \iint_\Sigma (\nabla \times \mathbf{F})\cdot \dd{\mathbf{\Sigma}} = \oint_{\partial \Sigma}\mathbf{F} \cdot \dd{\mathbf{\Gamma}} \]
+        </div>
+        <p class="ntm bold large-text">
+          Intuitive explanation of Stokes’ Theorem
+        </p>
+        <p>
+          Visualize a surface \(S\) in some vector field \(F\). Each point on \(S\) has some curl associated with it. Now think about any point \(P\) within the surface but not on the boundary. This point \(P\) has its own curl and is surrounded by points which have similar curl. Now these curls end up cancelling out everywhere except the boundary curve of the surface. Because of this the surface integral of the curl of \(F\) over \(S\) is equivalent to the line integral of \(F\) over the boundary curve.
+        </p>
+      </div>
+      <h3 class="section-header" id="guestGeneralStokesHeader">
+        Generalized Stokes’ Theorem <button id="guestGeneralStokesButton" onclick="showHide('guestGeneralStokes')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="guestGeneralStokes">
+        <p class="sn">
+          Explanation written by Sami Khan
+        </p>
+        <p class="sn">
+          (Note: Generalized Stokes’ Theorem is considered beyond the scope of multivariable calculus.)
+        </p>
+        <p class="bold large-text">
+          Formal definition of Generalized Stokes’ Theorem
+        </p>
+        <p class="nbm">
+          Generalized Stokes’ Theorem is generalized for \(n\) dimensions. The generalized form of this theorem states that the integral of some differential form over the boundary of your manifold is equivalent to the integral of the differential forms exterior derivative over the entirety of the manifold.
+        </p>
+        <div class="mj">
+          \[ \int_{\partial \Omega} \omega = \int_{\Omega} \dd{\omega} \]
+        </div>
+        <p class="ntm bold large-text">
+          Intuitive explanation of Stokes’ Theorem
+        </p>
+        <p>
+          Imagine an \(n\)-dimensional infinitesimal parallelotope composed of \(n\) vectors. Now this parallelotope has some average flux. Now imagine you compose your manifold of an infinite amount of these parallelepipeds composing your manifold. Essentially the combination of these average fluxes (via integration) of all the parallelepipeds within the manifold cancel out leaving us with the overall flux on the boundary of the manifold.
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="unit" id="unit3Unit">
+    <h2 id="unit3Header">
+      <span onclick="showHideUnit('unit3')"><span class="gray">Unit 3:</span></span>
+      <button id="unit1Button" onclick="showHideUnit('unit3')">Show</button>
+    </h2>
+    <div class="hidden-by-default" id="unit3">
+
+    </div>
+  </div>
+  <div class="unit" id="unit4Unit">
+    <h2 id="unit4Header">
+      <span onclick="showHideUnit('unit4')"><span class="gray">Unit 4:</span></span>
+      <button id="unit1Button" onclick="showHideUnit('unit4')">Show</button>
+    </h2>
+    <div class="hidden-by-default" id="unit4">
+
+    </div>
+  </div> -->
+  <hr class="heavy-hr">
+  <!-- Credits / Special Thanks -->
+  <h2 id="creditsHeader">
+    <span onclick="showHide('credits')">Credits / Special Thanks</span>
+    <button id="creditsButton" onclick="showHide('credits')">Hide</button>
+  </h2>
+  <div id="credits">
+    <p>
+      All code, diagrams, and explanations (except those in the “Guest Explanations” section) were created by Eldrick Chen (also known as “calculus gaming”). This page is open-source - <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/chaddypioneers/unnamed-multivar-website">view the GitHub repository here.</a>
+    </p>
+    <p>
+      👋 Hello! I’m Eldrick, and I originally started making calculus websites as a passion project to help people at my school.
+    </p>
+    <p>
+      Despite being (mostly) the only one to directly work on this project, it wouldn’t have been possible if it wasn’t for the work of many others. Here are some people and organizations I want to credit for allowing me to build this website in the first place.
+    </p>
+    <h3>Tools used to create this page</h3>
+    <ul>
+      <li>
+        Tools used to create the images and animations on this page:
+        <ul class="link-ul">
+          <li><a class="external-link" target="_blank" rel="noopener noreferrer" href="https://www.desmos.com/calculator">Desmos Graphing Calculator</a> for 2D graphs</li>
+          <li><a class="external-link" target="_blank" rel="noopener noreferrer" href="https://www.desmos.com/3d">Desmos 3D Graphing Calculator</a> for 3D graphs</li>
+          <li><a class="external-link" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/drawings/">Google Drawings</a> for extra annotations, other types of diagrams, and sidebar icons</li>
+          <li><a class="external-link" target="_blank" rel="noopener noreferrer" href="https://imgonline.tools/remove-color">imgonline.tools</a> to make the website logo transparent</li>
+        </ul>
+      </li>
+      <li>
+        JavaScript libraries used to make this website do cool things (these are all licensed under <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://www.apache.org/licenses/LICENSE-2.0">Apache License 2.0</a>):
+      </li>
+      <ul class="link-ul">
+        <li>
+          <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://www.mathjax.org/">MathJax</a> to display mathematical formulas and expressions
+        </li>
+        <li>
+          <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://mathjs.org/">Math.js</a> for additional math functions</a>
+        </li>
+      </ul>
+    </ul>
+    <h3>Fonts used on this page</h3>
+    <ul>
+      <li>
+        The font used for this page is <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://www.fontsquirrel.com/fonts/monospacetypewriter">Monospace Typewriter</a>, was created by Manfred Klein.
+      </li>
+      <li>
+        The font used in some of my diagrams is <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://fonts.google.com/specimen/Open+Sans">Open Sans</a>.
+      </li>
+    </ul>
+    <h3>Special thanks</h3>
+    <ul>
+      <li>
+        <span class="bold">Resources that I used to learn calculus:</span> Huge thanks to <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://www.khanacademy.org">Khan Academy</a> and <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://tutorial.math.lamar.edu/">Paul’s Online Notes</a> for providing multivariable calculus lessons for free, allowing me to create this website in the first place!
+      </li>
+      <li>
+        Thanks to the creators of the <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Fast_inverse_square_root">Fast Inverse Square Root</a> algorithm. I was inspired to create calculus websites after creating <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://chaddypratt.org/fisr.html">a page explaining this algorithm</a>. Researching this algorithm ignited my passion for calculus and inspired me to create calculus websites!
+        <ul>
+          <li>
+            Thanks to YouTuber <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/@Nemean/videos">Nemean</a> for introducing me to the Fast Inverse Square Root algorithm with his <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://youtu.be/p8u_k2LIZyo">amazing video on the subject</a>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        Thanks to Hevipelle and many others for creating the awesome game <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://ivark.github.io/AntimatterDimensions/">Antimatter Dimensions</a>. This game inspired me to use this font for this website and also inspired the idea of naming each update in the <a href="#updateHistoryHeader" onclick="showElement('updateHistory')">update notes</a> with a word or phrase rather than with a version number. Both of these things are done in Antimatter Dimensions and I’ve decided to do them on my website too!
+      </li>
+    </ul>
+    <h3>Legal information</h3>
+    <ul>
+      <li><a class="external-link" target="_blank" rel="noopener noreferrer" href="https://www.fontsquirrel.com/license/MonospaceTypewriter">View Monospace Typewriter (this font)’s license here.</a></li>
+      <li>Open Sans is licensed under the <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL">Open Font License</a>. <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://fonts.google.com/specimen/Open+Sans/about">License details on Google Fonts</a></li>
+      <li>Math.js copyright notice:
+        <ul>
+          <li>
+            <div class="overflow">
+              <pre>
+math.js
+https://github.com/josdejong/mathjs
+
+Copyright (C) 2013-2023 Jos de Jong &lt;wjosdejong@gmail.com&gt;
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    https://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+              </pre>
+            </div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div id="footer" class="footer">
+    <p id="loading" class="warning nm">
+      Loading scripts (0/3)... Some features will not work properly until loading finishes.
+    </p>
+    <a href="#tocDiv" onclick="showElement('toc')">Table of Contents</a> | <a id="footerLink" href="#limitsUnit">Top of Unit 1</a>
+  </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/mathjs@12.2.1/lib/browser/math.min.js"></script>
+  <script>
+    function loadScript(url) {
+      var script = document.createElement('script');
+      script.src = url;
+      document.getElementsByTagName('body')[0].appendChild(script);
+    }
+    document.getElementById('loading').innerText = 'Loading scripts (1/3)... Some features will not work properly until loading finishes.';
+    setTimeout(loadScript('multivar.js'));
+  </script>
+</body>
+</html>
