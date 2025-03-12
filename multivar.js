@@ -104,6 +104,39 @@ const sliderSettings = {
     'sliderRange': [0, 2 * Math.PI],
     'inputPlaces': 2,
     'outputPlaces': 2
+  },
+  'partialDiffX': {
+    'func': x => x ** 2 * 2,
+    'sliderRange': [-10, 10]
+  },
+  'partialDiffY': {
+    'func': y => 4 * y,
+    'sliderRange': [-10, 10]
+  },
+  'multivarFunc1': {
+    'func': x => x ** 2,
+    'sliderRange': [-10, 10]
+  },
+  'multivarFunc2X': {
+    'sliderRange': [-10, 10]
+  },
+  'multivarFunc2Y': {
+    'sliderRange': [-10, 10]
+  },
+  'multivarFunc3X': {
+    'sliderRange': [-10, 10]
+  },
+  'multivarFunc3Y': {
+    'sliderRange': [-10, 10]
+  },
+  'multivarFunc3Z': {
+    'sliderRange': [-10, 10]
+  },
+  'linearApproxX': {
+    'sliderRange': [0.5, 1.5]
+  },
+  'linearApproxY': {
+    'sliderRange': [0.5, 1.5]
   }
 };
 
@@ -238,7 +271,12 @@ function jumpTo(element) {
     typesetUnit(unit.replace(/Unit$/, ''));
   }
   showElement(element);
-  get(header).scrollIntoView();
+  if (elementsExist(header)) {
+    get(header).scrollIntoView();
+  }
+  else {
+    get(element).scrollIntoView();
+  }
 }
 
 function saveHiddenElements() {
@@ -1267,6 +1305,12 @@ function setSliderValue(id, value) {
   updateSliderValues(id);
 }
 
+function getSliderValue(id) {
+  var min = sliderSettings[id]['sliderRange'][0];
+  var max = sliderSettings[id]['sliderRange'][1];
+  return parseFloat(get(id + 'Slider').value) * (max - min) + min;
+}
+
 function updateSliderValues(id, inputX=false, forceUpdate=false) {
   var sliderID = id + 'Slider';
   var outputID = id + 'Val';
@@ -1382,8 +1426,11 @@ function updateSliderValues(id, inputX=false, forceUpdate=false) {
   }
 
   // Update f(x) value
-  var f_x = func(x);
-  if (f_x !== undefined) {
+  var f_x = null;
+  if (func !== undefined) {
+    f_x = func(x);
+  }
+  if (f_x !== null && f_x !== undefined) {
     f_x = round(f_x, outputPlaces);
     if (elementsExist(outputID + '2') && instantUpdate) {
       get(outputID + '2').innerText = formatNum(f_x, outputPlaces, maxSigFigs);
@@ -1425,6 +1472,36 @@ function updateSliderValues(id, inputX=false, forceUpdate=false) {
     get('dotProductTheta').innerText = `${formatNum(theta, inputPlaces)} radians`;
     get('dotProductThetaDegrees').innerText = `${formatNum(theta * 180 / Math.PI, 0)} degrees`;
     get('dotProductVal').innerText = formatNum(Math.cos(theta), outputPlaces);
+  }
+  else if (id === 'partialDiffX') {
+    get(id + 'Derivative').innerText = formatNum(4 * x, outputPlaces);
+  }
+  else if (id === 'partialDiffY') {
+    get(id + 'Derivative').innerText = formatNum(4, outputPlaces);
+  }
+  else if (['multivarFunc2X', 'multivarFunc2Y'].includes(id)) {
+    var xVal = getSliderValue('multivarFunc2X');
+    var yVal = getSliderValue('multivarFunc2Y');
+    get('multivarFunc2XVal').innerText = formatNum(xVal, outputPlaces);
+    get('multivarFunc2YVal').innerText = formatNum(yVal, outputPlaces);
+    get('multivarFunc2Val').innerText = formatNum(xVal ** 2 + yVal ** 2, outputPlaces);
+  }
+  else if (['multivarFunc3X', 'multivarFunc3Y', 'multivarFunc3Z'].includes(id)) {
+    var xVal = getSliderValue('multivarFunc3X');
+    var yVal = getSliderValue('multivarFunc3Y');
+    var zVal = getSliderValue('multivarFunc3Z');
+    get('multivarFunc3XVal').innerText = formatNum(xVal, outputPlaces);
+    get('multivarFunc3YVal').innerText = formatNum(yVal, outputPlaces);
+    get('multivarFunc3ZVal').innerText = formatNum(zVal, outputPlaces);
+    get('multivarFunc3Val').innerText = formatNum(xVal ** 2 + yVal ** 2 + zVal ** 2, outputPlaces);
+  }
+  else if (['linearApproxX', 'linearApproxY'].includes(id)) {
+    var xVal = getSliderValue('linearApproxX');
+    var yVal = getSliderValue('linearApproxY');
+    get('linearApproxXVal').innerText = formatNum(xVal, outputPlaces);
+    get('linearApproxYVal').innerText = formatNum(yVal, outputPlaces);
+    get('linearApproxFuncVal').innerText = formatNum(Math.sqrt(xVal) + Math.log(yVal), outputPlaces);
+    get('linearApproxVal').innerText = formatNum(1 + 0.5 * (xVal - 1) + (yVal - 1), outputPlaces);
   }
 }
 
@@ -1737,6 +1814,9 @@ function keyToUnit(key) {
 
   if (unit === 0) {
     unit = 10;
+  }
+  if (unit >= unitElementIDs.length) {
+    return null;
   }
   return unitElementIDs[unit - 1].replace('Unit', '');
 }
