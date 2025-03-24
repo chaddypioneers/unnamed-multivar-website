@@ -11,7 +11,7 @@
   <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="apple-touch-icon" type="image/png" href="images/favicon.png">
   <link rel="apple-touch-icon-precomposed" type="image/png" href="images/favicon.png">
-  <link rel="stylesheet" href="multivar.css">
+  <link rel="stylesheet" href="multivar.css?20250324">
 </head>
 <body id="body">
   <div id="backgroundImage"></div>
@@ -151,6 +151,14 @@
       <p class="sidebar-unit">Unit 2</p>
       <p class="sidebar-unit-text">Vector-Valued Functions</p>
     </button>
+    <button class="sidebar-button" onclick="jumpTo('unit3'); toggleSidebar()">
+      <p class="sidebar-unit">Unit 3</p>
+      <p class="sidebar-unit-text">Multivariable Derivatives</p>
+    </button>
+    <button class="sidebar-button" onclick="jumpTo('unit4'); toggleSidebar()">
+      <p class="sidebar-unit">Unit 4</p>
+      <p class="sidebar-unit-text">Multiple Integrals</p>
+    </button>
   </div>
   <!-- Website Header (title, subtitle, search bar) -->
   <div id="websiteHeader">
@@ -185,6 +193,8 @@
       <ul class="ntm">
         <li><a href="#unit1Header" onclick="jumpTo('unit1')"><strong>Unit 1</strong>: Vectors and 3D Space</a></li>
         <li><a href="#unit2Header" onclick="jumpTo('unit2')"><strong>Unit 2</strong>: Vector-Valued Functions</a></li>
+        <li><a href="#unit3Header" onclick="jumpTo('unit3')"><strong>Unit 3</strong>: Multivariable Derivatives</a></li>
+        <li><a href="#unit4Header" onclick="jumpTo('unit4')"><strong>Unit 4</strong>: Multiple Integrals</a></li>
         <li><a href="#guestExplanationsHeader" onclick="jumpTo('guestExplanations')">Guest Explanations</a></li>
       </ul>
       <h3 class="nm">Credits</h3>
@@ -205,10 +215,70 @@
     <p>
       <strong>Important: You might have to refresh the tab to view the latest updates to this website.</strong>
     </p>
-    <h3>2025-??-??: Initial Release <button id="updateButton" onclick="showHide('update')">Show</button></h3>
-    <div id="update" class="hidden-by-default">
+    <h3>2025-03-24: “Double Integrals” Update <button id="update20250324Button" onclick="showHide('update20250324')">Hide</button></h3>
+    <div id="update20250324">
       <p>
-        This is the first version of this website to be released. It features some explanations about vectors and the 3D coordinate system.
+        This update focuses on the different types of double integrals, as well as Lagrange multipliers, a technique to solve some types of optimization problems. <a href="#progress" onclick="jumpTo('progress')">Current progress: 16/37 sections covered.</a>
+      </p>
+      <h4 class="nm">New Sections</h4>
+      <ul>
+        <li>
+          New sections added:
+          <ul class="link-ul">
+            <li><a href="#lagrangeMultHeader" onclick="jumpTo('lagrangeMult')">Finding Extrema Using Lagrange Multipliers</a></li>
+            <li><a href="#doubleIntHeader" onclick="jumpTo('doubleInt')">Finding Volume Using Double Integrals (Rectangular Regions)</a></li>
+            <li><a href="#doubleIntGeneralHeader" onclick="jumpTo('doubleIntGeneral')">Finding Volume Using Double Integrals (General Regions)</a></li>
+            <li><a href="#doubleIntPolarHeader" onclick="jumpTo('doubleIntPolar')">Finding Volume Using Double Integrals (Polar Coordinates)</a></li>
+          </ul>
+        </li>
+      </ul>
+      <h4 class="nm">Section Improvements</h4>
+      <ul>
+        <li><strong>Unit 1: Directional Derivatives and Gradient</strong>: now explains that gradients are perpendicular to contour lines</li>
+      </ul>
+    </div>
+    <h3>2025-03-12: “More Multivariable Derivative Stuff” Update <button id="update20250312Button" onclick="showHide('update20250312')">Show</button></h3>
+    <div id="update20250312" class="hidden-by-default">
+      <p>
+        This update features more sections about multivariable derivatives and their applications. <a href="#progress" onclick="jumpTo('progress')">Current progress: 12/37 sections covered.</a>
+      </p>
+      <h4 class="nm">New Sections</h4>
+      <ul>
+        <li>
+          New sections added:
+          <ul class="link-ul">
+            <li><a href="#contourHeader" onclick="jumpTo('contour')">Contour Maps and Level Curves</a></li>
+            <li><a href="#multivarChainHeader" onclick="jumpTo('multivarChain')">The Multivariable Chain Rule</a></li>
+            <li><a href="#implicitDiffHeader" onclick="jumpTo('implicitDiff')">Implicit Differentiation with Partial Derivatives</a></li>
+            <li><a href="#directionalDiffHeader" onclick="jumpTo('directionalDiff')">Directional Derivatives and Gradient</a></li>
+            <li><a href="#higherOrderDiffHeader" onclick="jumpTo('higherOrderDiff')">Higher-Order Partial Derivatives</a></li>
+            <li><a href="#localExtremaHeader" onclick="jumpTo('localExtrema')">Finding Local/Relative Extrema of Functions</a></li>
+            <li><a href="#globalExtremaHeader" onclick="jumpTo('globalExtrema')">Finding Global/Absolute Extrema of Functions</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <h3>2025-03-07: “Partial Derivatives” Update <button id="update20250307Button" onclick="showHide('update20250307')">Show</button></h3>
+    <div id="update20250307" class="hidden-by-default">
+      <p>
+        This update features new sections about partial derivatives, the extension of the derivative to functions of multiple variables! <a href="#progress" onclick="jumpTo('progress')">Current progress: 9/37 sections covered.</a>
+      </p>
+      <h4 class="nm">New Sections</h4>
+      <ul>
+        <li>
+          New sections added:
+          <ul class="link-ul">
+            <li><a href="#multivarFuncHeader" onclick="jumpTo('multivarFunc')">Functions of Multiple Variables</a></li>
+            <li><a href="#partialDiffHeader" onclick="jumpTo('partialDiff')">Intro to Partial Derivatives</a></li>
+            <li><a href="#tangentPlanesHeader" onclick="jumpTo('tangentPlanes')">Partial Derivatives: Tangent Planes and Linear Approximations</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <h3>2025-03-03: Initial Release <button id="update20250303Button" onclick="showHide('update20250303')">Show</button></h3>
+    <div id="update20250303" class="hidden-by-default">
+      <p>
+        This is the first version of this website to be released. It features some explanations about vectors and the 3D coordinate system. <a href="#progress" onclick="jumpTo('progress')">Current progress: 6/37 sections covered.</a>
       </p>
       <h4 class="nm">Website Content</h4>
       <ul>
@@ -274,6 +344,9 @@
     <p>
       This is a continuation of my single-variable calculus website, <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://chaddypratt.org/calculus">unnamed calc website</a>, but this time with multivariable calculus! You can look at that page for more information on what this website is and why I made it.
     </p>
+    <p>
+      The content on this page is heavily based on <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://www.khanacademy.org">Khan Academy</a> and <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://tutorial.math.lamar.edu/">Paul’s Online Notes</a>. I recommend visiting these sites for more detailed multivariable calculus explanations!
+    </p>
     <button class="large-button" onclick="showHide('progress')" id="progressButton">Show Current Progress</button>
     <div class="hidden-by-default" id="progress">
       <p>
@@ -294,11 +367,11 @@
         </tr>
         <tr>
           <td>14. Partial Derivatives</td>
-          <td>0/8</td>
+          <td>7/8</td>
         </tr>
         <tr>
           <td>15. Multiple Integrals</td>
-          <td>0/10</td>
+          <td>3/10</td>
         </tr>
         <tr>
           <td>16. Vector Calculus</td>
@@ -324,37 +397,6 @@
         <div class="button-spacing"></div>
         <button class="large-button" onclick="toggleAllSections('unit1', 'hide')">Hide All Sections</button>
       </div>
-      <!-- <h3 id="khanLimitsHeader">
-        Unit Information
-        <button id="khanLimitsButton" onclick="showHide('khanLimits')">Show</button>
-      </h3>
-      <div class="hidden-by-default" id="khanLimits">
-        <p class="khanLink">
-          Khan Academy Link: <a href="https://www.khanacademy.org/math/ap-calculus-ab/ab-limits-new" class="external-link" target="_blank" rel="noopener noreferrer">Limits and continuity</a>
-        </p>
-        <p>
-          <strong>All topics covered in Khan Academy:</strong><br>
-          <span class="lesson-complete">Green underlined</span> topics are topics at least partially covered on my website and <span class="lesson-incomplete">red</span> topics are topics not yet covered on my website. Note that even <span class="lesson-complete">green</span> topics might not be covered in full detail on my page.
-        </p>
-        <ol id="progress1">
-          <li class="lesson-complete">Defining limits and using limit notation</li>
-          <li class="lesson-complete">Estimating limit values from graphs</li>
-          <li class="lesson-complete">Estimating limit values from tables</li>
-          <li class="lesson-complete">Determining limits using algebraic properties of limits: limit properties</li>
-          <li class="lesson-complete">Determining limits using algebraic properties of limits: direct substitution</li>
-          <li class="lesson-complete">Determining limits using algebraic manipulation</li>
-          <li class="lesson-complete">Selecting procedures for determining limits</li>
-          <li class="lesson-complete">Determining limits using the squeeze theorem</li>
-          <li class="lesson-complete">Exploring types of discontinuities</li>
-          <li class="lesson-complete">Defining continuity at a point</li>
-          <li class="lesson-complete">Confirming continuity over an interval</li>
-          <li class="lesson-complete">Removing discontinuities</li>
-          <li class="lesson-complete">Connecting infinite limits and vertical asymptotes</li>
-          <li class="lesson-complete">Connecting limits at infinity and horizontal asymptotes</li>
-          <li class="lesson-complete">Working with the intermediate value theorem</li>
-          <li class="lesson-complete optional">(Optional) Formal definition of limits</li>
-        </ol>
-      </div> -->
       <h3 class="section-header" id="vectorBasicsHeader">
         Vector Basics <button id="vectorBasicsButton" onclick="showHide('vectorBasics')">Show</button>
       </h3>
@@ -447,6 +489,26 @@
         <img class="graph" src="images/3d_vector.png">
         <p>
           In 3D space, the unit vectors are \(\mathbf{i} = (1, 0, 0)\), \(\mathbf{j} = (0, 1, 0)\), and \(\mathbf{k} = (0, 0, 1)\).
+        </p>
+        <p>
+          In 3D space, there are three coordinate planes - planes formed by two of the axes:
+        </p>
+        <ul>
+          <li>The \(xy\)-plane contains the \(x\)- and \(y\)-axes and contains all points with a \(z\)-coordinate of 0.</li>
+          <li>The \(yz\)-plane contains the \(y\)- and \(z\)-axes and contains all points with an \(x\)-coordinate of 0.</li>
+          <li>The \(xz\)-plane contains the \(x\)- and \(z\)-axes and contains all points with a \(y\)-coordinate of 0.</li>
+        </ul>
+        <img class="graph" src="images/xy_plane.png">
+        <p class="ntm sn">
+          A graph of the \(xy\)-plane.
+        </p>
+        <img class="graph" src="images/yz_plane.png">
+        <p class="ntm sn">
+          A graph of the \(yz\)-plane.
+        </p>
+        <img class="graph" src="images/xz_plane.png">
+        <p class="ntm sn">
+          A graph of the \(xz\)-plane.
         </p>
       </div>
       <h3 class="section-header" id="dotProductHeader">
@@ -1072,9 +1134,46 @@
         <img class="graph" src="images/quadric_hyperbolic_paraboloid.png">
         <p><a class="external-link" target="_blank" rel="noopener noreferrer" href="https://www.desmos.com/3d/fhvnums8p3">Explore these quadric surfaces on Desmos!</a></p>
       </div>
+      <h3 class="section-header" id="contourHeader">
+        Contour Maps and Level Curves <button id="contourButton" onclick="showHide('contour')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="contour">
+        <p>
+          Contour maps are an alternative to graphing functions of two variables. Instead of using three dimensions to graph both the inputs and outputs of the function, we use two dimensions and graph all input points that result in a certain output.
+        </p>
+        <p>
+          This will make more sense with an example. Here’s how we would create a contour map for the function \(f(x, y) = x^2 + y^2\).
+        </p>
+        <p>
+          First, we graph all of the input points that result in \(f(x, y)\) having a certain value (let’s say 1). Here’s what that looks like:
+        </p>
+        <img class="graph" src="images/contour_map_1.png">
+        <p class="ntm sn">
+          These are all of the input points \((x, y)\) which will cause \(f(x, y) = x^2 + y^2\) to equal 1. This is just the graph of \(x^2 + y^2 = 1\).
+        </p>
+        <p>
+          A curve like this is known as a <strong>level curve</strong>, <strong>contour line</strong>, or <strong>contour curve</strong>.
+        </p>
+        <p>
+          Now let’s do the same, but with a different value. Here’s what the graph looks like after adding the level curve for \(f(x, y) = 2\):
+        </p>
+        <img class="graph" src="images/contour_map_2.png">
+        <p class="ntm sn">
+          We’ve added the input points \((x, y)\) which will cause \(f(x, y) = x^2 + y^2\) to equal 2.
+        </p>
+        <p>
+          We can continue to add these level curves. Here’s the result after adding a few more level curves:
+        </p>
+        <img class="graph" src="images/contour_map.png">
+        <p>
+          This is just one of the possible contour maps we can create for the function \(f(x, y) = x^2 + y^2\). We can create different contour maps using different level curves. For example, here’s a contour map, this time going by intervals of 2 (so we have level curves for \(f(x, y) = 2\), \(f(x, y) = 4\), etc.)
+        </p>
+        <img class="graph" src="images/contour_map_3.png">
+      </div>
     </div>
   </div>
   <hr class="heavy-hr">
+  <!-- Unit 2 -->
   <div class="unit" id="unit2Unit">
     <h2 id="unit2Header">
       <span onclick="showHideUnit('unit2')"><span class="gray">Unit 2:</span> Vector-Valued Functions</span>
@@ -1082,11 +1181,2289 @@
     </h2>
     <div class="hidden-by-default" id="unit2">
       <p>
-        Vector-valued functions are already covered in some detail in Unit 9 of <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://chaddypratt.org/calculus">unnamed calc website</a>, so for now, I’m not going to add content to this unit. I recognize that there are some vector-valued function topics that aren’t covered yet on unnamed calc website (such as 3D vectors), so I will eventually start working on this unit.
+        Vector-valued functions are already covered in some detail in Unit 9 of <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://chaddypratt.org/calculus">unnamed calc website</a>, so for now, I’m not going to add content to this unit.
+      </p>
+      <p>
+        I recognize that there are some vector-valued function topics that aren’t covered yet on unnamed calc website (such as 3D vectors, tangent/normal vectors, and curvature), so I will eventually start working on this unit.
       </p>
     </div>
   </div>
   <hr class="heavy-hr">
+  <!-- Unit 3 -->
+  <div class="unit" id="unit3Unit">
+    <h2 id="unit3Header">
+      <span onclick="showHideUnit('unit3')"><span class="gray">Unit 3:</span> Multivariable Derivatives</span>
+      <button id="unit3Button" onclick="showHideUnit('unit3')">Show</button>
+    </h2>
+    <div class="hidden-by-default" id="unit3">
+      <div>
+        <button class="large-button" onclick="toggleAllSections('unit3', 'show')">Show All Sections</button>
+        <div class="button-spacing"></div>
+        <button class="large-button" onclick="toggleAllSections('unit3', 'hide')">Hide All Sections</button>
+      </div>
+      <h3 class="section-header" id="multivarFuncHeader">
+        Functions of Multiple Variables <button id="multivarFuncButton" onclick="showHide('multivarFunc')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="multivarFunc">
+        <p class="large-text bold">What is a multivariable function?</p>
+        <p>
+          Up until now, you’ve likely only studied functions with one input, such as \(f(x) = x^2\). However, in multivariable calculus, we study functions with multiple inputs, such as \(f(x, y) = x^2 + y^2\).
+        </p>
+        <p>
+          Functions of a single variable take a single input and perform some operations on it to turn it into a different number. 
+        </p>
+        <div>
+          <hr>
+          <p>
+            Here’s an example of a single-variable function. Use the slider to control the value of the input \(x\).
+          </p>
+          <p>
+            \(f(x) = x^2\)
+          </p>
+          <p>
+            <input id="multivarFunc1Slider" class="slider" type="range" max="1" step="any" value="0.5" oninput="updateSliders()">
+          </p>
+          <p>
+            \(x =\) <span id="multivarFunc1Val1" class="output-value"></span>
+          </p>
+          <p>
+            \(f(x) \approx\) <span id="multivarFunc1Val2" class="output-value"></span>
+          </p>
+          <hr>
+        </div>
+        <p>
+          However, functions of multiple variables (also known as multivariable functions) take in multiple inputs and perform operations on them to produce a single output number.
+        </p>
+        <div>
+          <hr>
+          <p>
+            Here’s an example of a function of two variables. Use the sliders to control the value of the two inputs \(x\) and \(y\).
+          </p>
+          <p>
+            \(f(x, y) = x^2 + y^2\)
+          </p>
+          <p>
+            <input id="multivarFunc2XSlider" class="slider" type="range" max="1" step="any" value="0.5" oninput="updateSliders()">
+          </p>
+          <p>
+            \(x =\) <span id="multivarFunc2XVal" class="output-value"></span>
+          </p>
+          <p>
+            <input id="multivarFunc2YSlider" class="slider" type="range" max="1" step="any" value="0.5" oninput="updateSliders()">
+          </p>
+          <p>
+            \(y =\) <span id="multivarFunc2YVal" class="output-value"></span>
+          </p>
+          <p>
+            \(f(x, y) \approx\) <span id="multivarFunc2Val" class="output-value"></span>
+          </p>
+          <hr>
+        </div>
+        <p>
+          Multivariable functions can have more than two inputs. For example, here’s one with three variables:
+        </p>
+        <div>
+          <hr>
+          <p>
+            \(f(x, y, z) = x^2 + y^2 + z^2\)
+          </p>
+          <p>
+            <input id="multivarFunc3XSlider" class="slider" type="range" max="1" step="any" value="0.5" oninput="updateSliders()">
+          </p>
+          <p>
+            \(x =\) <span id="multivarFunc3XVal" class="output-value"></span>
+          </p>
+          <p>
+            <input id="multivarFunc3YSlider" class="slider" type="range" max="1" step="any" value="0.5" oninput="updateSliders()">
+          </p>
+          <p>
+            \(y =\) <span id="multivarFunc3YVal" class="output-value"></span>
+          </p>
+          <p>
+            <input id="multivarFunc3ZSlider" class="slider" type="range" max="1" step="any" value="0.5" oninput="updateSliders()">
+          </p>
+          <p>
+            \(z =\) <span id="multivarFunc3ZVal" class="output-value"></span>
+          </p>
+          <p>
+            \(f(x, y, z) \approx\) <span id="multivarFunc3Val" class="output-value"></span>
+          </p>
+          <hr>
+        </div>
+        <p class="large-text bold">Graphing multivariable functions</p>
+        <p>
+          Now let’s move on to graphing functions of two variables. Let’s review how we graph functions of a single variable, such as \(f(x) = x^2\). One way we can do so is by making a table of values for \(x\) and \(f(x)\). Each row in the table corresponds to a point \((x, f(x))\).
+        </p>
+        <table>
+          <tr>
+            <th>\(x\)</th>
+            <th>\(f(x)\)</th>
+            <th>\((x, f(x))\)</th>
+          </tr>
+          <tr>
+            <td>-2</td>
+            <td>4</td>
+            <td>(-2, 4)</td>
+          </tr>
+          <tr>
+            <td>-1</td>
+            <td>1</td>
+            <td>(-1, 1)</td>
+          </tr>
+          <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>(0, 0)</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>(1, 1)</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>4</td>
+            <td>(2, 4)</td>
+          </tr>
+        </table>
+        <p>
+          We can graph the function by plotting these points.
+        </p>
+        <img class="graph" src="images/2d_graph_points.png">
+        <p>
+          As we plot more points, the graph becomes a smooth curve. You can imagine the graph of the function as all possible points of the form \((x, f(x)\)).
+        </p>
+        <img class="graph" src="images/2d_graph_points_2.png">
+        <p>
+          The equation of this line is \(y = x^2\). Notice how this is the same as the function definition \(f(x) = x^2\), except we’ve replaced \(f(x)\) with \(y\). This is because when we’re graphing a single-variable function in 2D, we use the \(y\)-axis to represent the output values of the function (i.e. the values that \(f(x)\) takes on for all \(x\)-values).
+        </p>
+        <p>
+          We can do something similar for a function of two variables, such as \(f(x, y) = x^2 + y^2\). This time, instead of plotting the points \((x, f(x))\), we’re going to plot the points \((x, y, f(x, y))\). Since we now have two inputs to our function, we need the first two coordinates to correspond to our inputs, and the third coordinate to correspond to the output.
+        </p>
+        <table>
+          <tr>
+            <th>\(x\)</th>
+            <th>\(y\)</th>
+            <th>\(f(x, y)\)</th>
+            <th>\((x, y, f(x, y))\)</th>
+          </tr>
+          <tr>
+            <td>-1</td>
+            <td>-1</td>
+            <td>2</td>
+            <td>(-1, -1, 2)</td>
+          </tr>
+          <tr>
+            <td>0</td>
+            <td>-1</td>
+            <td>1</td>
+            <td>(0, -1, 1)</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>-1</td>
+            <td>2</td>
+            <td>(1, -1, 2)</td>
+          </tr>
+          <tr>
+            <td>-1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>(-1, 0, 1)</td>
+          </tr>
+          <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>(0, 0, 0)</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>(1, 0, 1)</td>
+          </tr>
+          <tr>
+            <td>-1</td>
+            <td>1</td>
+            <td>2</td>
+            <td>(-1, 1, 2)</td>
+          </tr>
+          <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>(0, 1, 1)</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>2</td>
+            <td>(1, 1, 2)</td>
+          </tr>
+        </table>
+        <p>
+          This is the result of graphing these points:
+        </p>
+        <img class="graph" src="images/3d_graph_points.png">
+        <p>
+          If we graph all possible points of the form \((x, y, f(x, y))\), we get the 3D graph of the function:
+        </p>
+        <img class="graph" src="images/3d_graph_points_2.png">
+        <p>
+          The equation of this graph is \(z = x^2 + y^2\), which is the same as the function definition \(f(x, y) = x^2 + y^2\) except that \(f(x, y)\) is replaced with \(z\). That’s because for functions of 2 variables, we use the \(z\)-axis to represent the possible output values of the function, with the \(x\)- and \(y\)-axis being used to represent each input variable of the function.
+        </p>
+        <p>
+          Graphing functions of 3 or more variables takes at least 4 dimensions this way, so we’re not going to be graphing these types of functions like this.
+        </p>
+      </div>
+      <h3 class="section-header" id="partialDiffHeader">
+        Intro to Partial Derivatives <button id="partialDiffButton" onclick="showHide('partialDiff')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="partialDiff">
+        <p>
+          Recall that a derivative tells you the rate of change of a function as you change its input. But so far, we’ve only worked with functions that take in one variable as input, like \(f(x) = x^2\). Can we still find derivatives for functions with inputs of multiple variables, like \(f(x, y) = x^2y\)? 
+        </p>
+        <p>
+          The answer is yes, and to do so, we’ll have to use partial derivatives. A <strong>partial derivative</strong> tells you how a function of multiple variables changes as you change one of the variables.
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: Find the partial derivative with respect to \(x\) of the function \(f(x, y) = x^2y\).
+        </p>
+        <p>
+          We want to find how this function’s value changes as we change \(x\), so let’s keep \(y\) constant. What if we keep \(y\) at a constant value of 2?
+        </p>
+        <p>
+          Notice that if we fix \(y\) at a value of 2, our function essentially becomes \(f(x) = 2x^2\). We have a function of one variable now, so we can differentiate it as we normally would.
+        </p>
+        <p>
+          In this case, the derivative with respect to \(x\) is \(4x\). What this means is that when we keep \(y\) at a constant value of 2, as we change \(x\), the expression \(4x\) will tell us the rate of change of the function’s value.
+        </p>
+        <div>
+          <hr>
+          <p>
+            If we keep \(y\) fixed at 2, what happens to the function’s value as we change \(x\)?
+          </p>
+          <p>
+            <input id="partialDiffXSlider" class="slider" type="range" max="1" step="any" value="0" oninput="updateSliders()">
+          </p>
+          <p>
+            \(f(x, y) = x^2y\)
+          </p>
+          <p>
+            \(x =\) <span id="partialDiffXVal1" class="output-value"></span>
+          </p>
+          <p>
+            \(f(x, 2)\) = <span id="partialDiffXVal2" class="output-value"></span>
+          </p>
+          <p>
+            Partial derivative (rate of change) with respect to \(x\): <span id="partialDiffXDerivative" class="output-value"></span>
+          </p>
+          <hr>
+        </div>
+        <p>
+          But what if \(y\) wasn’t fixed at 2, but another value? Let’s say that we fixed the value \(y\) at an arbitrary constant \(c\).
+        </p>
+        <p>
+          Doing this means our function becomes \(f(x) = cx^2\) (we got this by replacing \(y\) in our original function \(f(x,y) = x^2y\) with \(c\)). Differentiating this with respect to \(x\), treating \(c\) as a constant, gives us the expression \(2cx\).
+        </p>
+        <p>
+          This means that whatever constant \(c\) we set \(y\) to, as we change \(x\), the function’s value changes at a rate of \(2cx\).
+        </p>
+        <p>
+          When we find expressions for partial derivatives, we don’t change \(y\) to \(c\), so the partial derivative with respect to \(x\) would actually be written as \(2xy\).
+        </p>
+        <p class="nbm">
+          Here are two of the ways to denote this partial derivative:
+        </p>
+        <div class="mj">
+          \[ \pdv{x}f(x, y) = 2xy \]
+          \[ f_x\,(x, y) = 2xy \]
+        </div>
+        <p class="ntm">
+          What this is saying is that if we keep \(y\) fixed at a value and change \(x\), the rate of change of \(f(x, y)\) is equal to \(2x\) times whatever value we kept \(y\) at.
+        </p>
+        <p class="nbm">
+          A faster way we could have found this partial derivative is to treat \(y\) as a constant and differentiate with respect to \(x\).
+        </p>
+        <div class="mj">
+          \[ f(x, y) = x^2y \]
+          \[ f_x\,(x, y) = 2xy \]
+        </div>
+        <p class="ntm sn">
+          Here, we treat \(y\) as a constant, so we don’t need to use the product rule.
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: Find the partial derivative with respect to \(y\) of the function \(f(x, y) = x^2y\).
+        </p>
+        <p class="nbm">
+          To find the partial derivative with respect to \(y\), we treat \(x\) as a constant and differentiate with respect to \(y\):
+        </p>
+        <div class="mj">
+          \[ f(x, y) = x^2y \]
+          \[ f_y\,(x, y) = x^2 \]
+        </div>
+        <div>
+          <hr>
+          <p>
+            Now we’re keeping \(x\) fixed at 2 and changing \(y\). What is the rate of change of the function as we change \(y\)?
+          </p>
+          <p>
+            <input id="partialDiffYSlider" class="slider" type="range" max="1" step="any" value="0" oninput="updateSliders()">
+          </p>
+          <p>
+            \(f(x, y) = x^2y\)
+          </p>
+          <p>
+            \(y =\) <span id="partialDiffYVal1" class="output-value"></span>
+          </p>
+          <p>
+            \(f(2, y)\) = <span id="partialDiffYVal2" class="output-value"></span>
+          </p>
+          <p>
+            Partial derivative (rate of change) with respect to \(y\): <span id="partialDiffYDerivative" class="output-value"></span>
+          </p>
+          <p class="ntm sn">
+            Notice how the rate of change stays fixed at 4. This makes sense because the partial derivative of \(f(x, y)\) with respect to \(y\) is \(x^2\), and because we’re keeping \(x\) fixed at 2, in this case the rate of change is \(2^2 = 4\).
+          </p>
+          <hr>
+        </div>
+        <p>
+          Since we’re going to be finding a lot of partial derivatives in multivariable calculus, let’s do some more examples.
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: Find the partial derivatives of \(f(x, y) = x^2\sin(y)\).
+        </p>
+        <p class="medium-text bold">
+          The partial derivative with respect to \(x\)
+        </p>
+        <p class="nbm">
+          To find the partial derivative with respect to \(x\), we treat \(y\) as a constant. Because of this, \(\sin(y)\) is a constant, and so we don’t need to use the product rule. We can simply differentiate \(x^2\) with respect to \(x\) to get \(2x\), then multiply our result by \(\sin(y)\) (which we are treating as a constant).
+        </p>
+        <div class="mj">
+          \[ f(x, y) = x^2\sin(y) \]
+          \[ f_x(x, y) = 2x\sin(y) \]
+        </div>
+        <p class="ntm sn">
+          Notice how we’re not differentiating \(\sin(y)\) with respect to \(y\), since we treat it as a constant when we’re finding the partial derivative with respect to \(x\).
+        </p>
+        <p class="ntm medium-text bold">
+          The partial derivative with respect to \(y\)
+        </p>
+        <p class="nbm">
+          To find the partial derivative with respect to \(y\), we treat \(x\) as a constant, and so we can also treat \(x^2\) as a constant. So we differentiate \(\sin(y)\) with respect to \(y\), then multiply by \(x^2\).
+        </p>
+        <div class="mj">
+          \[ f(x, y) = x^2\sin(y) \]
+          \[ f_y(x, y) = x^2\cos(y) \]
+        </div>
+        <p class="ntm sn">
+          Notice how we’re not differentiating \(x^2\) with respect to \(x\), since we treat it as a constant when we’re finding the partial derivative with respect to \(y\).
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: Find the partial derivatives of \(f(x, y) = \displaystyle\frac{x^3}{x + \ln(y)}\).
+        </p>
+        <p class="medium-text bold">
+          The partial derivative with respect to \(x\)
+        </p>
+        <p class="nbm">
+          Here, we still have to use the quotient rule even if we treat \(y\) as a constant. When you do use the quotient rule, remember to treat \(y\) as a constant (so for example, the derivative of \(x + \ln(y)\) with respect to \(x\) is simply 1).
+        </p>
+        <div class="mj">
+          \[ f(x, y) = \frac{x^3}{x + \ln(y)} \]
+          \[ \begin{flalign}
+          f_x(x, y) &= \frac{3x^2[x+\ln(y)] - x^3(1)}{[x + \ln(y)]^2}\\
+          &= \frac{3x^3 + 3x^2 \ln(y) - x^3}{[x + \ln(y)]^2}\\
+          &= \frac{2x^3 + 3x^2 \ln(y)}{[x + \ln(y)]^2}
+          \end{flalign} \]
+        </div>
+        <p class="ntm medium-text bold">
+          The partial derivative with respect to \(y\)
+        </p>
+        <p class="nbm">
+          We’re now going to use the quotient rule again, but this time we’re treating \(x\) as a constant.
+        </p>
+        <div class="mj">
+          \[ f(x, y) = \frac{x^3}{x + \ln(y)} \]
+          \[ \begin{flalign}
+          f_y(x, y) &= \frac{x^3}{x + \ln(y)}\\
+          &= \frac{0[x+\ln(y)] - x^3(1/y)}{[x + \ln(y)]^2}\\
+          &= \frac{-\frac{x^3}{y}}{[x + \ln(y)]^2}\\
+          &= -\frac{x^3}{y[x + \ln(y)]^2}\\
+          \end{flalign} \]
+        </div>
+        <p class="ntm bold large-text">
+          Interpretations of partial derivatives
+        </p>
+        <p>
+          I’m going to go over a few different ways you can interpret a partial derivative now. Let’s start with an example.
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: How can we interpret the partial derivatives of \(f(x, y) = x^2y\) at the point \((1, 2)\)?
+        </p>
+        <p class="medium-text bold">
+          The partial derivative with respect to \(x\)
+        </p>
+        <p>
+          We found that the partial derivative of \(f(x, y) = x^2y\) with respect to \(x\) is \(2xy\), so if we keep \(y\) fixed at 2, the partial derivative is equal to \(4x\). So at the point \((1, 2)\), the partial derivative with respect to \(x\) is equal to 4. 
+        </p>
+        <p>
+          We can interpret this as saying that if we start at the point \((1, 2)\) and we change \(x\) ever so slightly, the value of the function \(f(x, y)\) changes by about 4 times the amount of change (i.e. the function increases at a rate of 4).
+        </p>
+        <p class="medium-text bold">
+          The partial derivative with respect to \(y\)
+        </p>
+        <p>
+          We found that the partial derivative of \(f(x, y) = x^2y\) with respect to \(y\) is \(x^2\), so if we keep \(x\) fixed at 1, the partial derivative is equal to 1. So at the point \((1, 2)\), the partial derivative with respect to \(y\) is equal to 1. 
+        </p>
+        <p>
+          We can interpret this as saying that if we start at the point \((1, 2)\) and we change \(x\) by a tiny amount, the value of the function \(f(x, y)\) changes by about that amount (i.e. the function increases at a rate of 1).
+        </p>
+        <p>
+          We can interpret a partial derivative as the slope of a trace of a function’s graph. A <strong>trace</strong> is the intersection of a 3D graph and a line that is parallel to either the \(x\)- or \(y\)-axis. 
+        </p>
+        <p>
+          For example, here is the trace of the function \(f(x, y) = x^2y\) for \(y = 2\). You can think of this as either the intersection of the plane \(y = 2\) with the function’s graph, or all points on the function’s graph with a \(y\)-coordinate of 2.
+        </p>
+        <img class="graph" src="images/trace.png">
+        <p>
+          We found that the partial derivative of \(f(x, y)\) with respect to \(x\) is <span class="green">4</span> at the point \((\class{red}{1}, \class{blue}{2})\), i.e. as we increase \(x\), the function increases at a rate of <span class="green">4</span>. We can interpret this as saying that the trace of the function for \(y = \class{blue}{2}\) has a slope of <span class="green">4</span> at \(x = \class{red}{1}\).
+        </p>
+        <img class="graph" src="images/trace_tangent.png">
+        <p class="ntm sn">
+          The <span class="blue">trace</span> at \(y = 2\) has a slope of 4 at \(x = 1\), as shown by the <span class="purple">tangent line</span>.
+        </p>
+        <p>
+          The partial derivative of \(f(x, y)\) with respect to \(y\) is <span class="green">1</span> at the point \((\class{red}{1}, \class{blue}{2})\), i.e. as we increase \(y\), the function increases at a rate of <span class="green">1</span>. We can interpret this as saying that the trace of the function for \(x = \class{red}{1}\) has a slope of <span class="green">1</span> at \(y = \class{blue}{2}\).
+        </p>
+        <img class="graph" src="images/trace_2.png">
+        <p class="ntm sn">
+          The <span class="blue">trace</span> at \(x = 1\) has a slope of 1 at \(y = 2\).
+        </p>
+      </div>
+      <h3 class="section-header" id="tangentPlanesHeader">
+        Partial Derivatives: Tangent Planes and Linear Approximations <button id="tangentPlanesButton" onclick="showHide('tangentPlanes')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="tangentPlanes">
+        <p>
+          With single-variable functions, we were able to use derivatives to find the tangent lines of functions, and these tangent lines served as linear approximations of functions.
+        </p>
+        <p>
+          We can do something similar with functions of two variables. However, in 3D space, not only can we find tangent lines, we can also find tangent planes.
+        </p>
+        <p>
+          Just like a tangent line just barely touches a graph at a single point, a tangent plane just barely touches a 3D graph at a single point.
+        </p>
+        <img class="graph" src="images/tangent_plane.png">
+        <p>
+          How can we find this tangent plane? Let’s say that our point is at the coordinates \((x_0, y_0)\). We can consider the traces of this graph for \(x = x_0\) and \(y = y_0\).
+        </p>
+        <img class="graph" src="images/tangent_plane_traces.png">
+        <p class="ntm sn">
+          These are the traces of the graph at \(\class{blue}{x = x_0}\) and \(\class{green}{y = y_0}\).
+        </p>
+        <p>
+          Now let’s consider the tangent lines to these traces at \((x_0, y_0)\). As we saw in the previous section, the slopes of these tangent lines are the partial derivatives of \(f(x, y)\) at \((x_0, y_0)\).
+        </p>
+        <img class="graph" src="images/trace_tangents.png">
+        <p class="ntm sn">
+          These are the <span class="red">tangent lines</span> at \((x_0, y_0)\) to the traces of the graph at \(\class{blue}{x = x_0}\) and \(\class{green}{y = y_0}\).
+        </p>
+        <p>
+          Specifically:
+        </p>
+        <ul>
+          <li>The slope of the tangent line to the \(\class{green}{y = y_0}\) trace at \((x_0, y_0)\) is the partial derivative with respect to \(x\) evaluated at \(y = y_0\) (i.e. \(f_x(x_0, y_0)\))</li>
+          <li>The slope of the tangent line to the \(\class{blue}{x = x_0}\) trace at \((x_0, y_0)\) is the partial derivative with respect to \(y\) evaluated at \(x = x_0\) (i.e. \(f_y(x_0, y_0)\))
+          </li>
+        </ul>
+        <p>
+          The tangent plane is the plane that contains both of these tangent lines.
+        </p>
+        <p class="nbm">
+          To find the equation of this plane, we need to remember the equation of a plane in general:
+        </p>
+        <div class="mj">
+          \[ a(x - x_0) + b(y - y_0) + c(z - z_0) = 0 \]
+        </div>
+        <p class="nm">
+          Now let’s solve for \(z\):
+        </p>
+        <div class="mj">
+          \[ c(z - z_0) = -a(x-x_0) - b(y-y_0) \]
+          \[ z - z_0 = -\frac{a}{c}(x-x_0) - \frac{b}{c}(y-y_0) \]
+          \[ z = z_0 -\frac{a}{c}(x-x_0) - \frac{b}{c}(y-y_0) \]
+        </div>
+        <p class="nm">
+          Just to make things simpler, let’s replace the coefficients of \(x-x_0\) and \(y-y_0\) with \(A\) and \(B\) (i.e. \(A = -\frac{a}{c}\) and \(B = -\frac{b}{c}\)).
+        </p>
+        <div class="mj">
+          \[ z = z_0 + A(x-x_0) + B(y-y_0) \]
+        </div>
+        <p class="ntm">
+          Now we just need to find the values of \(A\) and \(B\).
+        </p>
+        <p>
+          If we keep \(y\) fixed at \(y = y_0\), we are essentially just looking at points on the tangent plane where \(y = y_0\). This is just the tangent line to the trace at \(y = y_0\). The slope of this line is \(f_x(x_0, y_0)\).
+        </p>
+        <p>
+          Therefore, the coefficient \(A\) has to be \(f_x(x_0, y_0)\).
+        </p>
+        <p>
+          Similarly, if we keep \(x\) fixed at \(x = x_0\), we’re now looking at the tangent line to the trace at \(x = x_0\). The slope in this case is \(f_y(x_0, y_0)\). 
+        </p>
+        <p class="nbm">
+          Therefore, the coefficient \(B\) has to be \(f_y(x_0, y_0)\). So the equation of the tangent plane is:
+        </p>
+        <div class="mj">
+          \[ z = z_0 + f_x(x_0, y_0)(x-x_0) + f_y(x_0, y_0)(y-y_0) \]
+        </div>
+        <p class="nm">
+          \(z_0\) is the \(z\)-coordinate of the point at \((x_0, y_0)\), which is given by \(f(x_0, y_0)\). So our final equation is:
+        </p>
+        <div class="mj">
+          \[ z = f(x_0, y_0) + f_x(x_0, y_0)(x-x_0) + f_y(x_0, y_0)(y-y_0) \]
+        </div>
+        <p class="ntm">
+          Let’s do an example problem now.
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: Find the tangent plane to \(f(x, y) = \sqrt{x} + \ln(y)\) at \((1, 1)\).
+        </p>
+        <p class="nbm">
+          First, we need to find the partial derivatives of \(f\) with respect to \(x\) and \(y\).
+        </p>
+        <div class="mj">
+          \[ f_x(x, y) = \frac{1}{2\sqrt{x}} \]
+          \[ f_y(x, y) = \frac{1}{y} \]
+        </div>
+        <p class="nm">
+          Now, we can use the equation of the tangent plane by plugging in the point \((1, 1)\) into \(f\) and its partial derivatives:
+        </p>
+        <div class="mj">
+          \[ f(1, 1) = \sqrt{1} + \ln(1) = 1\]
+          \[ f_x(1, 1) = \frac{1}{2\sqrt{1}} = \frac{1}{2}\]
+          \[ f_y(1, 1) = \frac{1}{y} = 1\]
+        </div>
+        <p class="nm">
+          Therefore, the equation of the tangent plane is:
+        </p>
+        <div class="mj">
+          \[ z = \class{red}{f(x_0, y_0)} + \class{blue}{f_x(x_0, y_0)}(x-x_0) + \class{green}{f_y(x_0, y_0)}(y-y_0) \]
+          \[ z = \class{red}{1} + \class{blue}{\frac{1}{2}}(x-1) + \class{green}{1}(y-1) \]
+          \[ z = 1 + \frac{1}{2}(x-1) + (y-1) \]
+        </div>
+        <img class="graph" src="images/tangent_plane_2.png">
+        <p class="ntm sn">
+          A graph of the <span class="blue">tangent plane</span> to \(\class{red}{f(x, y) = \sqrt{x} + \ln(y)}\) at \(\class{green}{(1, 1)}\).
+        </p>
+        <p class="large-text bold">
+          Tangent planes as linear approximations
+        </p>
+        <p>
+          Tangent planes also serve as linear approximations of functions. In other words, you can use the tangent plane at a point to approximate the value of that function near that point.
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: Given that \(f(x,y) = \sqrt{x} + \ln(y)\), approximate \(f(1.1, 1.1)\) using a linear approximation at \((1, 1)\).
+        </p>
+        <p class="nbm">
+          The linear approximation of \(f(x, y)\) at \((1, 1)\) is the tangent plane to the function at that point, which we found was \(z = 1 + \frac{1}{2}(x-1) + (y-1)\). So we just need to find the \(z\)-value of this tangent plane at \((1.1, 1.1)\).
+        </p>
+        <div class="mj">
+          \[ z = 1 + \frac{1}{2}(x-1) + (y-1) \]
+          \[ z = 1 + \frac{1}{2}(1.1-1) + (1.1-1) \]
+          \[ z = 1 + 0.05 + 0.1 \]
+          \[ z = 1.15 \]
+        </div>
+        <p class="ntm">
+          So our approximation of \(f(1.1, 1.1) = \sqrt{1.1} + \ln(1.1)\) is 1.15. For reference, the actual value of \(f(1.1, 1.1)\) is about 1.144.
+        </p>
+        <div>
+          <hr>
+          <p>
+            Experiment with the linear approximation to \(f(x, y) = \sqrt{x} + \ln(y)\) at \((1, 1)\). Use the sliders to control the values of \(x\) and \(y\). What happens to the function’s value and the linear approximation?
+          </p>
+          <p>
+            <input id="linearApproxXSlider" class="slider" type="range" max="1" step="any" value="0.5" oninput="updateSliders()">
+          </p>
+          <p>
+            \(x =\) <span id="linearApproxXVal" class="output-value"></span>
+          </p>
+          <p>
+            <input id="linearApproxYSlider" class="slider" type="range" max="1" step="any" value="0.5" oninput="updateSliders()">
+          </p>
+          <p>
+            \(y =\) <span id="linearApproxYVal" class="output-value"></span>
+          </p>
+          <p>
+            \(f(x, y) = \sqrt{x} + \ln(y) \approx\) <span id="linearApproxFuncVal" class="output-value"></span>
+          </p>
+          <p>
+            Linear Approximation = \(1 + \frac{1}{2}(x-1) + (y-1) \approx\) <span id="linearApproxVal" class="output-value"></span>
+          </p>
+          <p class="ntm sn">
+            The linear approximation is the \(z\)-value of the tangent plane at the point \((x, y)\).
+          </p>
+        </div>
+      </div>
+      <h3 class="section-header" id="multivarChainHeader">
+        The Multivariable Chain Rule <button id="multivarChainButton" onclick="showHide('multivarChain')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="multivarChain">
+        <p class="nbm">
+          Just like how there is an extension of the derivative to multivariable functions, there is also an extension of the chain rule to multiple variables. Recall that the standard chain rule can be written in one of two ways:
+        </p>
+        <div class="mj">
+          \[ \dv{x}f(g(x)) = f'(g(x))g'(x) \]
+          \[ \dv{y}{t} = \dv{y}{x}\cdot \dv{x}{t} \]
+        </div>
+        <p class="ntm">
+          In single-variable calculus, the chain rule is useful to differentiate composite functions of the form \(f(g(x))\). However, in the land of multivariable calculus, we can have functions that look like \(f(g(t), h(t))\). How can we differentiate these functions?
+        </p>
+        <p class="nbm">
+          This is where the multivariable chain rule comes into play. In this case, if we have \(x = g(t)\), \(y = h(t)\), and \(z = f(g(t), h(t)) = f(x, y)\), the multivariable chain rule tells us that:
+        </p>
+        <div class="mj">
+          \[ \dv{z}{t} = \pdv{f}{x}\cdot\dv{x}{t} + \pdv{f}{y}\cdot\dv{y}{t}\]
+        </div>
+        <p class="ntm sn">
+          Here, I’m using \(f\) as a shorthand for \(f(g(t), h(t))\).
+        </p>
+        <p class="ntm">
+          This chain rule is useful when we have a function \(f\) of two variables with inputs \(g(t)\) and \(h(t)\) that are the outputs of two single-variable functions.
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: Let \(z = x^2 + y^3\), where \(x = \sin(t)\) and \(y = 3\ln(t)\). What is \(\displaystyle\dv{z}{t}\)?
+        </p>
+        <p class="nbm">
+          You can think of the value of \(z\) as a function of two variables (i.e. \(z = f(x, y) = x^2 + y^3\)) with the variables \(x\) and \(y\) being functions of a third variable \(t\), so we can use the multivariable chain rule for this problem. We first need to find \(\pdv{f}{x}\), \(\pdv{f}{y}\), \(\dv{x}{t}\), and \(\dv{y}{t}\).
+        </p>
+        <div class="mj">
+          \[ \pdv{f}{x} = 2x \]
+          \[ \pdv{f}{y} = 2y \]
+          \[ \dv{x}{t} = \cos(t) \]
+          \[ \dv{y}{t} = \frac{3}{t} \]
+        </div>
+        <p class="nm">
+          Now we can plug these values in:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \dv{z}{t} &= \pdv{f}{x}\cdot\dv{x}{t} + \pdv{f}{y}\cdot\dv{y}{t}\\
+          &= 2x\cos(t) + 3y^2\left(\frac{3}{t}\right)\\
+          &= 2x\cos(t) + \frac{9y^2}{t}\\
+          &= 2\sin(t)\cos(t) + \frac{9[3\ln(t)]^2}{t}\\
+          &= 2\sin(t)\cos(t) + \frac{81[\ln(t)]^2}{t}
+          \end{flalign}\]
+        </div>
+        <p class="ntm">
+          What does this derivative tell us? This tells us that as we change \(t\), the value of \(z = x^2 + y^3\) (where \(x = \sin(t)\) and \(y = 3\ln(t)\)) changes at a rate of \(2\sin(t)\cos(t) + \frac{81[\ln(t)]^2}{t}\). <span class="sn">(Note that we write \(\dv{z}{t}\) instead of \(\pdv{z}{t}\) because \(z\) isn’t directly defined using \(t\).)</span>
+        </p>
+        <p class="nbm">
+          Note that there is another way to solve this problem using single-variable calculus: by plugging in the expressions for \(x\) and \(y\) into the expression for \(z\).
+        </p>
+        <div class="mj">
+          \[ z = x^2 + y^3 \]
+          \[ x = \sin(t) \]
+          \[ y = 3\ln(t) \]
+          \[ \begin{flalign}
+          z &= \sin^2(t) + [3\ln(t)]^3\\
+          &= \sin^2(t) + 27[\ln(t)]^3
+          \end{flalign}\]
+        </div>
+        <p class="nm">
+          Now we can differentiate this with respect to \(t\) directly using the standard chain rule.
+        </p>
+        <div class="mj">
+          \[ \dv{z}{t} = 2\sin(t)\cos(t) + \frac{81[\ln(t)]^2}{t} \]
+        </div>
+        <p class="ntm">
+          Both of these methods work, but one might be easier to use than the other (or you might simply prefer one over the other).
+        </p>
+        <p class="nbm">
+          Now let’s look at a special case of this chain rule. If we have \(x = t\), \(y = g(t)\), and \(z = f(x, y) = f(t, g(t))\), then the chain rule becomes:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \dv{z}{t} &= \pdv{f}{x}\cdot\dv{x}{t} + \pdv{f}{y}\cdot\dv{y}{t}\\
+          &= \pdv{f}{t}\cdot\dv{t}{t} + \pdv{f}{y}\cdot\dv{y}{t} \quad (\text{since }x=t)\\
+          &= \pdv{f}{t} + \pdv{f}{y}\cdot\dv{y}{t}
+          \end{flalign}\]
+        </div>
+        <p class="nm">
+          Note that \(t\) here can really be any variable we want. So we can replace \(t\) with \(x\) to get:
+        </p>
+        <div class="mj">
+          \[ \dv{z}{x} = \pdv{f}{x} + \pdv{f}{y}\cdot\dv{y}{x}\]
+        </div>
+        <p class="ntm">
+          This form of the chain rule can be used when we have \(z = f(x, y)\) and \(y = g(x)\).
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: If \(z = \sin(x) + \cos(y)\) and \(y = 4x^5 + \sqrt{x}\), then what is \(\dv{z}{x}\)?
+        </p>
+        <p class="nbm">
+          You can think of \(z\) as being a function of two variables: \(z = f(x, y) = \sin(x) + \cos(y)\). However, notice that we don’t have the third variable \(t\) this time: instead, we just have \(y\) being defined in terms of \(x\). Therefore, we can use the special case of the multivariable chain rule we just found.
+        </p>
+        <p class="nbm">
+          To use the formula, we need to find \(\pdv{f}{x}\), \(\pdv{f}{y}\), and \(\dv{y}{x}\). Let’s do that now:
+        </p>
+        <div class="mj">
+          \[ \pdv{f}{x} = \cos(x) \]
+          \[ \pdv{f}{y} = -\sin(y) \]
+          \[ \dv{y}{x} = 20x^4 + \frac{1}{2\sqrt{x}} \]
+        </div>
+        <p class="nm">
+          Now let’s plug these values in:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \dv{z}{x} &= \pdv{f}{x} + \pdv{f}{y}\cdot\dv{y}{x} \\
+          &= \cos(x) - \sin(y)\left[20x^4 + \frac{1}{2\sqrt{x}}\right]\\
+          &= \cos(x) - 20x^4\sin(y) - \frac{\sin(y)}{2\sqrt{x}}\\
+          &= \cos(x) - 20x^4\sin(4x^5 + \sqrt{x}) - \frac{\sin(4x^5 + \sqrt{x})}{2\sqrt{x}}\\
+          \end{flalign}\]
+        </div>
+        <p class="ntm">
+          We’re not done with the multivariable chain rule just yet. What if we have a situation like \(f(g(s, t), h(s, t))\), where we have a function \(f\) of two variables with inputs \(g(s, t)\) and \(h(s, t)\) that are both outputs of functions of two variables?
+        </p>
+        <p class="nbm">
+          The multivariable chain rule in this case, where \(x = g(s, t)\), \(y = h(s, t)\), and \(z = f(x, y)\), is:
+        </p>
+        <div class="mj">
+          \[ \dv{z}{s} = \pdv{z}{x} \cdot \pdv{x}{s} + \pdv{z}{y}\cdot\pdv{y}{s} \]
+          \[ \dv{z}{t} = \pdv{z}{x} \cdot \pdv{x}{t} + \pdv{z}{y}\cdot\pdv{y}{t} \]
+        </div>
+        <p class="ntm sn">
+          Notice that we can differentiate \(z\) with respect to either \(s\) or \(t\), so there are two possible chain rules.
+        </p>
+        <p class="nbm">
+          We can also extend the multivariable chain rule to functions of three or more variables. For example, if \(w = f(x, y, z)\) with \(x\), \(y\), and \(z\) being functions of \(t\), then:
+        </p>
+        <div class="mj">
+          \[ \dv{w}{t} = \pdv{w}{x}\cdot\dv{x}{t} + \pdv{w}{y}\cdot\dv{y}{t} + \pdv{w}{z}\cdot\dv{z}{t} \]
+        </div>
+      </div>
+      <h3 class="section-header" id="implicitDiffHeader">
+        Implicit Differentiation with Partial Derivatives <button id="implicitDiffButton" onclick="showHide('implicitDiff')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="implicitDiff">
+        <p>
+          We can use the multivariable chain rule to derive an alternative way to perform implicit differentiation. Let’s start off with how would we normally perform implicit differentiation using single-variable calculus.
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: Given that \(x^3 + y^4 = 2\), find \(\displaystyle\dv{y}{x}\) using implicit differentiation.
+        </p>
+        <p class="nbm">
+          The way we would normally do this is by differentiating both sides, using the ordinary chain rule for the left-hand side, then solving for \(\dv{y}{x}\).
+        </p>
+        <div class="mj">
+          \[ \dv{x}(x^3 + y^4) = \dv{x}(2) \]
+          \[ 3x^2 + 4y^3\dv{y}{x} = 0 \]
+          \[ 4y^3\dv{y}{x} = -3x^2 \]
+          \[ \dv{y}{x} = -\frac{3x^2}{4y^3} \]
+        </div>
+        <p class="ntm">
+          If you look very closely at this answer, you may notice a potential shortcut: \(3x^2\) is the partial derivative of \(x^3 + y^4\) with respect to \(x\), and \(4y^3\) is the partial derivative of \(x^3 + y^4\) with respect to \(y\).
+        </p>
+        <p>
+          Using the multivariable chain rule, we can create this shortcut! Let’s say we have a relation in the form \(F(x, y) = c\), where \(c\) is a constant. <span class="sn">(In our problem, \(F(x, y) = x^3 + y^4\) and \(c = 2\).)</span> Here, \(y\) is a function of \(x\) (although we often can’t find an explicit formula for \(y\) in terms of \(x\)).
+        </p>
+        <p class="nbm">
+          Remember this special case of the multivariable chain rule, which is applicable when \(z = f(x, y)\) and \(y = g(x)\) (which is the exact situation we have here: we have a function of two variables \(F(x, y)\) where \(y\) is a function of \(x\)):
+        </p>
+        <div class="mj">
+          \[ \dv{z}{x} = \pdv{f}{x} + \pdv{f}{y}\cdot\dv{y}{x} \]
+        </div>
+        <p class="nm">
+          Starting with \(F(x, y) = c\), let’s define \(z = F(x, y)\) and then differentiate both sides with respect to \(x\).
+        </p>
+        <div class="mj">
+          \[ F(x, y) = c \]
+          \[ z = c \]
+          \[ \dv{z}{x} = \dv{x}(c) \]
+          \[ \pdv{F}{x} + \pdv{F}{y}\dv{y}{x} = 0 \]
+          \[ F_x + F_y\dv{y}{x} = 0 \]
+          \[ \dv{y}{x} = -\frac{F_x}{F_y} \]
+        </div>
+        <p class="ntm sn">
+          \(F_x\) is the partial derivative of \(F(x, y)\) with respect to \(x\) and \(F_y\) is the partial derivative of \(F(x, y)\) with respect to \(y\).
+        </p>
+        <p class="nbm">
+          Here’s how we would find \(\dv{y}{x}\) for \(x^3 + y^4 = 2\) using this new formula. First, we find \(F_x\) and \(F_y\):
+        </p>
+        <div class="mj">
+          \[ F(x, y) = x^3 + y^4 \]
+          \[ F_x = 3x^2 \]
+          \[ F_y = 4y^3 \]
+        </div>
+        <p class="nm">
+          Here’s the result of plugging these values into the formula:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \dv{y}{x} &= -\frac{F_x}{F_y} \\
+          &= -\frac{3x^2}{4y^3}
+          \end{flalign}\]
+        </div>
+        <p class="ntm">
+          This is the same as the result we got with the traditional method.
+        </p>
+        <p class="large-text bold">
+          Finding partial derivatives using implicit differentiation
+        </p>
+        <p>
+          Now let’s move on to implicit differentiation involving partial derivatives. Here’s an example problem:
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: Given \(\ln(x) - y^4 + \sin(z) = 0\), what is \(\displaystyle\pdv{z}{x}\) and \(\displaystyle\pdv{z}{y}\)?
+        </p>
+        <p class="nbm">
+          Notice that we have an equation of the form \(F(x, y, z) = c\), with \(y\) and \(z\) being functions of \(x\), and we want to find \(\pdv{z}{x}\) and \(\pdv{z}{y}\). Let’s use the multivariable chain rule here:
+        </p>
+        <div class="mj">
+          \[ \pdv{x}F(x, y, z) = \dv{x}(c) \]
+          \[ \pdv{F}{x}\pdv{x}{x} + \pdv{F}{y}\pdv{y}{x} + \pdv{F}{z}\pdv{z}{x} = 0 \]
+        </div>
+        <p class="nm">
+          Here, \(\pdv{x}{x} = 1\) and \(\pdv{y}{x} = 0\) (since we treat \(y\) as a constant when finding a partial derivative with respect to \(x\)). Therefore:
+        </p>
+        <div class="mj">
+          \[ \pdv{F}{x} + \pdv{F}{z}\pdv{z}{x} = 0 \]
+          \[ F_x + F_z\pdv{z}{x} = 0 \]
+          \[ \pdv{z}{x} = -\frac{F_x}{F_z} \]
+        </div>
+        <p class="nm">
+          We can use a very similar method to find the partial derivative with respect to \(y\).
+        </p>
+        <div class="mj">
+          \[ \pdv{z}{y} = -\frac{F_y}{F_z} \]
+        </div>
+        <p class="nm">
+          Now we’re ready to solve the problem. Let’s first find the partial derivatives of \(F(x, y, z)\):
+        </p>
+        <div class="mj">
+          \[ F(x, y, z) = \ln(x) - y^4 + \sin(z) \]
+          \[ F_x = \frac{1}{x} \]
+          \[ F_y = -4y^3 \]
+          \[ F_z = \cos(z) \]
+        </div>
+        <p class="nm">
+          This is what we get when we plug into the formulas for \(\pdv{z}{x}\) and \(\pdv{z}{y}\): 
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \pdv{z}{x} &= -\frac{F_x}{F_z}\\
+          &= -\frac{1/x}{\cos(z)}\\
+          &= -\frac{1}{x\cos(z)}
+          \end{flalign}\]
+          \[ \begin{flalign}
+          \pdv{z}{y} &= -\frac{F_y}{F_z}\\
+          &= -\frac{-4y^3}{\cos(z)}\\
+          &= \frac{4y^3}{\cos(z)}
+          \end{flalign}\]
+        </div>
+      </div>
+      <h3 class="section-header" id="directionalDiffHeader">
+        Directional Derivatives and Gradient <button id="directionalDiffButton" onclick="showHide('directionalDiff')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="directionalDiff">
+        <p>
+          Partial derivatives tell us what happens to the value of a multivariable function as we change one of the variables. But what if multiple variables are changing at the same time? Can we still find the rate of change of the function? 
+        </p>
+        <p>
+          The <strong>directional derivative</strong> is the tool we need to do this. As the name suggests, the directional derivative tells you how a function changes as its input moves in a certain direction. Here’s an example:
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: How does the function \(f(x, y) = e^{xy}\) change if we start at the input point \((2, 1)\) and increase both \(x\) and \(y\) at the same rate?
+        </p>
+        <p class="nbm">
+          Let’s first analyze how this function changes when we only change one of the variables at a time. We can do this by finding the partial derivatives at \((2, 1)\).
+        </p>
+        <div class="mj">
+          \[ f_x(x, y) = ye^{xy} \]
+          \[ f_y(x, y) = xe^{xy} \]
+          \[ f_x(2, 1) = 1e^{2(1)} = e^2 \]
+          \[ f_y(2, 1) = 2e^{2(1)} = 2e^2 \]
+        </div>
+        <p class="ntm">
+          What this means is that if we set the input to our function to \((2, 1)\) and increase \(x\) by a tiny amount, then \(f(x, y)\) will increase at a rate of \(e^2\). If we increase \(y\) by a tiny amount, the function increases at a rate of \(2e^2\). So what happens if we increase both \(x\) and \(y\) at the same time and at the same rate?
+        </p>
+        <p>
+          Well, the increase in \(x\) will cause the function to increase at a rate of \(e^2\), and the increase in \(y\) will cause the function to increase at a rate of \(2e^2\). So applying both increases at the same time will cause the function to increase at a total rate of \(e^2 + 2e^2 = 3e^2\).
+        </p>
+        <p>
+          Another way of wording our problem is “How does the function \(f(x, y) = e^{xy}\) change if our input starts at the point \((2, 1)\) and moves along the \(xy\)-plane with a velocity vector of \((1, 1)\)?”
+        </p>
+        <img class="graph" src="images/directional_derivative_vector.png">
+        <p class="ntm sn">
+          What happens as the input to \(f\) (represented by the point in the graph) moves with velocity vector \((1, 1)\)? This is the same as saying that both \(x\) and \(y\) increase at the same rate.
+        </p>
+        <p>
+          The value we just found, \(3e^2\), is known as the <strong>directional derivative</strong> of \(f(x, y)\) in the direction of the vector \((1, 1)\) at the point \((2, 1)\). The directional derivative tells us how fast the function increases as the input moves along a vector.
+        </p>
+        <p>
+          Here’s a very similar problem:
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: How does the function \(f(x, y) = e^{xy}\) change if our input starts at the point \((2, 1)\) and moves along the \(xy\)-plane with a velocity vector of \((4, -3)\)?
+        </p>
+        <p>
+          Here’s another way to look at this problem: consider a tiny number \(h\). If we set the input to \(f(x,y)\) at \((2, 1)\), then increase the \(x\)-value by 4 times \(h\) and decrease the \(y\)-value by 3 times \(h\), how much will \(f(x, y)\) change as a result?
+        </p>
+        <p class="nbm">
+          The partial derivatives of \(f(x, y)\) tell us how much \(f\) changes when we change either variable by a tiny amount. In this case, we previously found that the partial derivative with respect to \(x\) at \((2, 1)\) is \(e^2\), and the partial derivative with respect to \(y\) at \((2, 1)\) is \(2e^2\).
+        </p>
+        <div class="mj">
+          \[ \pdv{f}{x} = e^2 \]
+          \[ \pdv{f}{y} = 2e^2 \]
+        </div>
+        <p class="ntm">
+          What this means is if we increase \(x\) by a tiny amount \(h\), then \(f\) will increase by about \(e^2\) times \(h\) (that’s what the partial derivative with respect to \(x\) tells us). Similarly, if we increase \(y\) by \(h\), then \(f\) will increase by about \(2e^2\) times \(h\) (that’s what the partial derivative with respect to \(y\) tells us).
+        </p>
+        <p>
+          So if we increase \(x\) by 4 times \(h\), we would expect that \(f\) increases by about \(4e^2\) times \(h\). And if we decrease \(y\) by 3 times \(h\), we would expect that \(f\) decreases by about \(3\) times \(2e^2\) times \(h\), which is \(6e^2h\). So overall, combining the effects of changing both variables, \(f\) will change by about \(4e^2h - 6e^2h = -2e^2h\). 
+        </p>
+        <p>
+          The directional derivative is defined as the the change in \(f\) divided by \(h\) (just like how the ordinary derivative is defined). So the directional derivative in this case is \(-2e^2\).
+        </p>
+        <p class="nbm">
+          To summarize, the way we calculated this directional derivative along the vector \((\class{red}{4}, \class{blue}{-3})\) is by taking <span class="red">4</span> times the partial derivative with respect to \(x\) and adding it to <span class="blue">-3</span> times the partial derivative with respect to \(y\). In symbols:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \text{directional derivative} &= \class{red}{4}\pdv{f}{x} + (\class{blue}{-3})\pdv{f}{y}\\
+          &= 4(e^2) + (-3)(2e^2)\\
+          &= -2e^2
+          \end{flalign}\]
+        </div>
+        <p class="nm">
+          In general, to find the directional derivative of \(f(x, y)\) along the vector \(\mathbf{v} = (a, b)\), we use this formula:
+        </p>
+        <div class="mj">
+          \[ D_\mathbf{v}f(x, y) = \nabla_\mathbf{v}f(x, y) = a\pdv{f}{x} + b\pdv{f}{y} \]
+        </div>
+        <p class="ntm sn">
+          Here, I’ve introduced two different notations that are used for the directional derivative for \(f\) along the vector \(\mathbf{v}\): \(D_\mathbf{v}f(x, y)\) and  \(\nabla_\mathbf{v}f(x, y)\).
+        </p>
+        <p>
+          There is something important to note about this definition of a directional derivative: it depends on the magnitude of \(\mathbf{v}\) and not just the direction. For example, if we double the magnitude of \(\mathbf{v}\), then the directional derivative will also double (since the components of the vector \(a\) and \(b\) will be twice as large).
+        </p>
+        <p class="nbm">
+          Here’s an example: let \(\mathbf{v} = (1, 1)\) and \(\mathbf{w} = (2, 2)\). Here are the directional derivatives of \(f(x, y) = e^{xy}\) at \((2, 1)\) for these vectors:
+        </p>
+        <div class="mj">
+          \[ \nabla_\mathbf{v}f(x, y) = 3e^2 \]
+          \[ \nabla_\mathbf{w}f(x, y) = 6e^2 \]
+        </div>
+        <p class="ntm sn">
+          The directional derivative for \(\mathbf{w}\) is twice the directional derivative for \(\mathbf{v}\) even though both vectors point in the same direction.
+        </p>
+        <p class="ntm">
+          Sometimes we just want to know how fast the function will increase when we move in a certain direction, regardless of the actual magnitude of the vector we’re using to define that direction. One example is if we want to find how “steep” the function is at a certain point, i.e. the slope of the function in a certain direction.
+        </p>
+        <p>
+          To do this, we need to add on an additional restriction that \(\mathbf{v}\) must be a unit vector. <span class="sn">(Sometimes the directional derivative is even defined with this restriction, so if you’re solving problems involving directional derivatives, pay attention to which definition the problem is using!)</span>
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: What is the slope of the function \(f(x, y) = e^{xy}\) at \((2, 1)\) in the direction of the vector \(\mathbf{v} = (3, 5)\)?
+        </p>
+        <p class="nbm">
+          First, we need to normalize the vector to a unit vector \(\mathbf{u}\). To do this, we divide the vector \(\mathbf{v}\) by its magnitude.
+        </p>
+        <div class="mj">
+          \[ ||\mathbf{v}|| = \sqrt{3^2 + 5^2} = \sqrt{34} \]
+          \[ \mathbf{u} = \frac{\mathbf{v}}{||\mathbf{v}||} = \left(\frac{3}{\sqrt{34}}, \frac{5}{\sqrt{34}}\right) \]
+        </div>
+        <p class="nm">
+          Now we can calculate the directional derivative using the partial derivatives we’ve found before:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \nabla_\mathbf{u}f(x, y) &= \frac{3}{\sqrt{34}}\pdv{f}{x} + \frac{5}{\sqrt{34}}\pdv{f}{y}\\
+          &= \frac{3}{\sqrt{34}}e^2  + \frac{5}{\sqrt{34}}2e^2\\
+          &= \frac{13e^2}{\sqrt{34}}
+          \end{flalign} \]
+        </div>
+        <img class="graph" src="images/directional_derivative_slope.png">
+        <p class="ntm sn">
+          The slope of this function along the vector \((3, 5)\) at the point \((2, 1)\) is \(\frac{13e^2}{\sqrt{34}}\).
+        </p>
+        <img class="graph" src="images/directional_derivative_slope_2.png">
+        <p class="ntm sn">
+          An alternate view that shows the slope of the tangent line more clearly.
+        </p>
+        <p class="nbm">
+          We can generalize the directional derivative to functions of more variables. Here’s the three-variable case, where \(\mathbf{v} = (a, b, c)\):
+        </p>
+        <div class="mj">
+          \[ \nabla_\mathbf{v}f(x, y, z) = a\pdv{f}{x} + b\pdv{f}{y} + c\pdv{f}{z} \]
+        </div>
+        <p class="nm">
+          There is a way to concisely write this formula for any number of variables. To do that, we need to notice that the directional derivative is a sum of products, which is exactly what the dot product is! We can write the two-variable directional derivative formula like this:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \nabla_\mathbf{v}f(x, y, z) &= a\pdv{f}{x} + b\pdv{f}{y}\\
+          &= \left(\pdv{f}{x}, \pdv{f}{y}\right) \cdot (a, b)\\
+          &= \left(\pdv{f}{x}, \pdv{f}{y}\right) \cdot \mathbf{v}
+          \end{flalign} \]
+        </div>
+        <p class="nm">
+          The three-variable case can be written like this:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \nabla_\mathbf{v}f(x, y, z) &= a\pdv{f}{x} + b\pdv{f}{y} + c\pdv{f}{z}\\
+          &= \left(\pdv{f}{x}, \pdv{f}{y}, \pdv{f}{z}\right) \cdot (a, b, c)\\
+          &= \left(\pdv{f}{x}, \pdv{f}{y}, \pdv{f}{z}\right) \cdot \mathbf{v}
+          \end{flalign} \]
+        </div>
+        <p class="nm">
+          In general, if we have a function of \(n\) variables \(f(x_1, x_2, ..., x_n)\), the directional derivative along the vector \(\mathbf{v} = (v_1, v_2, ..., v_n)\) is:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \nabla_\mathbf{v}f(x_1, x_2, ...,  x_n) &= v_1\pdv{f}{x_1} + v_2\pdv{f}{x_2} + \cdots + v_n\pdv{f}{x_n}\\
+          &= \left(\pdv{f}{x_1}, \pdv{f}{x_2}, ...,  \pdv{f}{x_n}\right) \cdot (v_1, v_2, ..., v_n)\\
+          &= \left(\pdv{f}{x_1}, \pdv{f}{x_2}, ...,  \pdv{f}{x_n}\right) \cdot \mathbf{v}
+          \end{flalign}\]
+        </div>
+        <p class="ntm">
+          It would be really nice if we had a notation for this vector of partial derivatives \(\left(\pdv{f}{x_1}, \pdv{f}{x_2}, ...,  \pdv{f}{x_n}\right)\), and it turns out that we do.
+        </p>
+        <p class="large-text bold">
+          Introducing: the gradient
+        </p>
+        <p>
+          This vector of partial derivatives is known as the <strong>gradient</strong> of \(f\), and it’s denoted by \(\nabla f = \left(\pdv{f}{x_1}, \pdv{f}{x_2}, ...,  \pdv{f}{x_n}\right)\) (the symbol \(\nabla\) is called nabla).
+        </p>
+        <p class="nbm">
+          Using this gradient notation, we can define the directional derivative as follows:
+        </p>
+        <div class="mj">
+          \[ \nabla_\mathbf{v}f = \nabla f \cdot \mathbf{v} \]
+        </div>
+        <p class="ntm">
+          You can think of the gradient as a vector that lists out all of a function’s partial derivatives. 
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: What is the gradient of \(f(x, y) = e^{xy}\)? What does the gradient tell us about the function at the point \((2, 1)\)?
+        </p>
+        <p>
+          Remember that the gradient is just a vector with all of a function’s partial derivatives. Because \(f\) is a function of two variables, the gradient in this case is \(\nabla f = (\pdv{f}{x}, \pdv{f}{y})\). We previously found that \(\pdv{f}{x} = ye^{xy}\) and \(\pdv{f}{y} = xe^{xy}\), so the gradient is \(\nabla f = (ye^{xy}, xe^{xy})\).
+        </p>
+        <p>
+          We can find the gradient at a specific point, in this case \((2, 1)\). If we plug in \(x = 2\) and \(y = 1\) in the gradient, we get \((1e^{2(1)}, 2e^{2(1)}) = (e^2, 2e^2)\). What this tells us is that at the point \((2, 1)\) the partial derivative with respect to \(x\) is \(e^2\) and the partial derivative with respect to \(y\) is \(2e^2\).
+        </p>
+        <p>
+          One interesting fact about the gradient is that it can tell you how you can change the inputs of a multivariable function to increase its value the fastest.
+        </p>
+        <p>
+          The gradient of a function \(f\) is a vector, and the direction that the input must travel to increase the value of the function the fastest is given by this vector. Another way of saying this is that the gradient points in the direction of steepest ascent (i.e. the function increases the fastest along this direction).
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: Starting at the input \((2, 1)\), in what direction should we change the input to increase the value of \(f(x, y) = e^{xy}\) the fastest?
+        </p>
+        <p>
+          The answer is given by the gradient at \((2, 1)\), which we found was \((e^2, 2e^2)\). So if we move in the direction given by this vector, the function will increase the fastest. <span class="sn">(If we want, we can normalize this vector to a unit vector by dividing by its magnitude \(\sqrt{(e^2)^2 + (2e^2)^2} = \sqrt{5e^4} = \sqrt{5}e^2\), giving the vector \((\frac{e^2}{\sqrt{5}e^2}, \frac{2e^2}{\sqrt{5}e^2}) = (\frac{1}{\sqrt{5}}, \frac{2}{\sqrt{5}})\).)</span>
+        </p>
+        <img class="graph" src="images/steepest_ascent.png">
+        <p class="ntm sn">
+          By moving along the \(xy\)-plane in the direction given by the vector \((e^2, 2e^2)\), we can increase the function’s value the fastest. This is shown by the <span class="green">vector</span> in the image above.
+        </p>
+        <p>
+          Another property of the gradient vector is that it is always perpendicular to contour lines. The gradient evaluated at a point produces a vector that is perpendicular to the contour line that passes through that point.
+        </p>
+        <img class="graph" src="images/contour_gradient.png">
+        <p class="ntm sn">
+          These are some contour lines for the function \(f(x, y) = \ln(xy)\), as well as the gradient vectors at some points. Notice how the gradient vector at each point is perpendicular to the contour line that passes through that point.
+        </p>
+      </div>
+      <h3 class="section-header" id="higherOrderDiffHeader">
+        Higher-Order Partial Derivatives <button id="higherOrderDiffButton" onclick="showHide('higherOrderDiff')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="higherOrderDiff">
+        <p>
+          Just like how we can find the second derivatives of single-variable functions, we can also find the second partial derivatives of functions.
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: What are the second partial derivatives of the function \(f(x, y) = \sin(xy)\)?
+        </p>
+        <p class="nbm">
+          Let’s start by finding the first partial derivatives:
+        </p>
+        <div class="mj">
+          \[ \pdv{x}f(x, y) = f_x(x, y) = y\cos(xy) \]
+          \[ \pdv{y}f(x, y) = f_y(x, y) = x\cos(xy) \]
+        </div>
+        <p class="ntm">
+          To find a second derivative, we have to differentiate a first derivative. But which first derivative do we differentiate, and what variable do we differentiate with respect to? We can actually differentiate either of these first derivatives with respect to either \(x\) or \(y\).
+        </p>
+        <p class="nbm">
+          This means we have four possibilities for second partial derivatives. First, let’s differentiate \(\pdv{f}{x}\) with respect to \(x\):
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \pdv{x}\pdv{x}f(x, y) &= \pdv{x}[y\cos(xy)]\\
+          &= -y^2\sin(xy)
+          \end{flalign}\]
+        </div>
+        <p class="nm">
+          Here are the two standard notations for this second partial derivative:
+        </p>
+        <div class="mj">
+          \[ \pdv[2]{x} f(x, y) = f_{xx}(x, y) = -y^2\sin(xy) \]
+        </div>
+        <p class="nm">
+          We can also differentiate \(\pdv{f}{y}\) with respect to \(y\):
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \pdv{y}\pdv{y}f(x, y) &= \pdv{y}[x\cos(xy)]\\
+          &= -x^2\sin(xy)
+          \end{flalign}\]
+        </div>
+        <p class="nm">
+          Here are the notations for this derivative:
+        </p>
+        <div class="mj">
+          \[ \pdv[2]{y} f(x, y) = f_{yy}(x, y) = -x^2\sin(xy) \]
+        </div>
+        <p class="nm">
+          Next, we can differentiate \(\pdv{f}{x}\) with respect to \(y\). Here is the result:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \pdv{y}\pdv{x}f(x, y) &= \pdv{y}[y\cos(xy)]\\
+          &= \left[\pdv{y}(y)\right]\cos(xy) + y\pdv{y}[\cos(xy)]\\
+          &= \cos(xy) - xy\sin(xy)
+          \end{flalign} \]
+        </div>
+        <p class="nm">
+          This partial derivative, obtained by first differentiating \(f\) with respect to \(x\), then differentiating with respect to \(y\), can be notated like this:
+        </p>
+        <div class="mj">
+          \[ \pdv{}{y}{x}f(x,y) = f_{xy}(x, y) = \cos(xy) - xy\sin(xy) \]
+        </div>
+        <p class="nm">
+          Here’s the second partial derivative obtained by differentiating \(\pdv{f}{y}\) with respect to \(x\):
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \pdv{x}\pdv{y}f(x, y) &= \pdv{x}[x\cos(xy)]\\
+          &= \left[\pdv{x}(x)\right]\cos(xy) + x\pdv{x}[\cos(xy)]\\
+          &= \cos(xy) - xy\sin(xy)
+          \end{flalign} \]
+        </div>
+        <p class="nm">
+          And here’s the notation for this derivative:
+        </p>
+        <div class="mj">
+          \[ \pdv{}{x}{y}f(x,y) = f_{yx}(x, y) = \cos(xy) - xy\sin(xy) \]
+        </div>
+        <p class="ntm">
+          Notice how the second partial derivative \(f_{xy}\) is the same as \(f_{yx}\). This will actually be true for most functions!
+        </p>
+        <p>
+          If the second partial derivatives \(f_{xy}\) and \(f_{yx}\) are continuous around a point \((x_0, y_0)\), then then \(f_{xy}(x_0, y_0) = f_{yx}(x_0, y_0)\). This fact is known as <strong>Clairaut’s theorem</strong> or <strong>Schwarz’s theorem</strong>.
+        </p>
+        <p class="large-text bold">
+          Interpreting second partial derivatives
+        </p>
+        <p>
+          Let’s look at how we can interpret second partial derivatives.
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: How can we interpret the second partial derivatives of \(f(x, y) = \sin(xy)\) at \((\frac{\pi}{2}, \frac{1}{2})\)?
+        </p>
+        <p class="nbm">
+          Let’s recall the second partial derivatives we found:
+        </p>
+        <div class="mj">
+          \[ f_{xx}(x, y) = -y^2\sin(xy) \]
+          \[ f_{yy}(x, y) = -x^2\sin(xy) \]
+          \[ f_{xy}(x, y) = \cos(xy) - xy\sin(xy) \]
+          \[ f_{yx}(x, y) = \cos(xy) - xy\sin(xy) \]
+        </div>
+        <p class="nm">
+          These are the values at the point \((\frac{\pi}{2}, \frac{1}{2})\):
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          f_{xx}\left(\frac{\pi}{2}, \frac{1}{2}\right) &= -y^2\sin(xy)\\
+          &= -\frac{1}{4}\sin\left(\frac{\pi}{4}\right)\\
+          &= -\frac{\sqrt{2}}{8}\\
+          &\approx -0.177
+          \end{flalign} \]
+          \[ \begin{flalign}
+          f_{yy}\left(\frac{\pi}{2}, \frac{1}{2}\right) &= -x^2\sin(xy)\\
+          &= -\frac{\pi^2}{4}\sin\left(\frac{\pi}{4}\right)\\
+          &= -\frac{\pi^2\sqrt{2}}{8}\\
+          &\approx -1.745
+          \end{flalign} \]
+          \[ \begin{flalign}
+          f_{xy}\left(\frac{\pi}{2}, \frac{1}{2}\right) &= \cos(xy) - xy\sin(xy)\\
+          &= \cos\left(\frac{\pi}{4}\right) - \frac{\pi}{4}\sin\left(\frac{\pi}{4}\right)\\
+          &= \frac{\sqrt{2}}{2} - \frac{\pi}{4}\cdot\frac{\sqrt{2}}{2}\\
+          &= \frac{\sqrt{2}}{2} - \frac{\pi\sqrt{2}}{8}\\
+          &\approx 0.152
+          \end{flalign} \]
+          \[ \begin{flalign}
+          f_{yx}\left(\frac{\pi}{2}, \frac{1}{2}\right) &= f_{xy}\left(\frac{\pi}{2}, \frac{1}{2}\right)\\
+          &= \frac{\sqrt{2}}{2} - \frac{\pi\sqrt{2}}{8}\\
+          &\approx 0.152
+          \end{flalign} \]
+        </div>
+        <p class="ntm">
+          Remember that the first partial derivatives give us the slopes of traces. For example, the value of \(f_x(x_0, y_0)\) tells us the slope of the trace \(y = y_0\) at \(x = x_0\).
+        </p>
+        <p>
+          So what does the second derivative \(f_{xx}(x_0, y_0)\) tell us? Well, \(f_{xx}(x, y)\) is just the derivative of \(f_x(x, y)\) with respect to \(x\), so \(f_{xx}(x, y)\) tells us how the first derivative \(f_x(x, y)\) changes as we change \(x\).
+        </p>
+        <p>
+          The first derivative \(f_x(x_0, y_0)\) tells us the slope of the trace \(y = y_0\) at \(x = x_0\), so the second derivative \(f_{xx}(x_0, y_0)\) tells us how this slope changes as \(x\) changes.
+        </p>
+        <p>
+          So in our case, \(f_{xx}(\frac{\pi}{2}, \frac{1}{2}) \approx -0.177\) tells us that as we start our input at \((\frac{\pi}{2}, \frac{1}{2})\) and increase \(x\), then the slope of the trace \(y = y_0\) at our \(x\)-value decreases at a rate of about 0.177.
+        </p>
+        <img class="graph" src="images/xx_derivative_trace.png">
+        <p class="ntm sn">
+          The <span class="red">trace</span> highlighted is \(y = \frac{1}{2}\), and the <span class="blue">point</span> has coordinates \((\frac{\pi}{2}, \frac{1}{2})\). Notice how the slope of the trace decreases as \(x\) increases (i.e. the trace is concave down). This is because the second derivative \(f_{xx}(\frac{\pi}{2}, \frac{1}{2})\) is negative.
+        </p>
+        <p>
+          The derivative \(f_{xx}(x_0, y_0)\) can also be interpreted as the concavity of the trace \(y = y_0\) at \(x = x_0\). If the derivative is positive, the trace is concave up, and if the derivative is negative, the trace is concave down.
+        </p>
+        <p>
+          The derivative \(f_{yy}(x_0, y_0)\) can be interpreted in a similar way. This derivative tells how the slope of the trace \(x = x_0\) changes as \(y\) changes.
+        </p>
+        <p>
+          In our case, \(f_{xx}(\frac{\pi}{2}, \frac{1}{2}) \approx -1.745\), meaning that as \(y\) increases, the slope of the trace \(x = x_0\) at our \(y\)-value decreases at a rate of about 1.745.
+        </p>
+        <img class="graph" src="images/yy_derivative_trace.png">
+        <p class="ntm sn">
+          As we increase the \(y\)-value of <span class="blue">this point</span>, the slope of the trace decreases.
+        </p>
+        <p>
+          The derivative \(f_{xy}(x_0, y_0)\) is harder to interpret visually. It tells us how the slope of the trace \(y = y_0\) at \(x = x_0\) changes as we increase the \(y\)-value (which causes the trace itself to move).
+        </p>
+        <img class="graph" src="images/xx_derivative_trace.png">
+        <p class="ntm sn">
+          Imagine increasing the \(y\)-value of this trace. The derivative \(f_{xy}(x_0, y_0)\) tells us how the slope of <span class="red">the \(y = y_0\) trace</span> at \(x = x_0\) changes as we increase the \(y\)-value of the trace.
+        </p>
+        <p>
+          Similarly, the derivative \(f_{yx}(x_0, y_0)\) tells us how the slope of the trace \(x = x_0\) at \(y = y_0\) changes as we increase the \(x\)-value of the trace.
+        </p>
+        <img class="graph" src="images/yy_derivative_trace.png">
+        <p class="ntm sn">
+          The derivative \(f_{yx}(x_0, y_0)\) tells us how the slope of the <span class="green">\(x = x_0\) trace</span> at \(y = y_0\) changes as the \(x\)-value of the trace increases.
+        </p>
+      </div>
+      <h3 class="section-header" id="localExtremaHeader">
+        Finding Local/Relative Extrema of Functions <button id="localExtremaButton" onclick="showHide('localExtrema')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="localExtrema">
+        <p>
+          In single-variable calculus, we used the second derivative test to find the local extrema (minima and maxima) of functions. We can do something similar in multivariable calculus.
+        </p>
+        <p>
+          Remember that a local minimum is a place where the function takes on a lower value than on all nearby points, and a local maximum is a place where the function takes on a higher value than on all nearby points. This idea holds even for functions of multiple variables.
+        </p>
+        <img class="graph" src="images/local_extrema.png">
+        <p class="ntm sn">
+          An example of a <span class="red">local maximum</span> and a <span class="blue">local minimum</span>.
+        </p>
+        <p>
+          With functions of one variable, we had to analyze the function’s critical points to find local extrema. For functions of one variable, critical points are points where the function’s derivative is 0 or undefined.
+        </p>
+        <p>
+          The idea of critical points still exists for multivariable functions, but we need to adjust it a little bit. For a function of two variables \(f(x, y)\), for a point \((a, b)\) to be a critical point, one of two conditions need to be met:
+        </p>
+        <ol>
+          <li>All partial derivatives of \(f\) must equal 0, i.e. the entire gradient of \(f\) must equal zero (or more formally, the zero vector).</li>
+          <li>One or more of the partial derivatives of \(f\) are undefined.</li>
+        </ol>
+        <p>
+          For multivariable functions, it’s not enough that one of the partial derivatives equals zero, <strong>all of them must equal 0</strong> at a point for it to be a critical point.
+        </p>
+        <p>
+          Using critical points, we can create a multivariable version of the second derivative test. Let’s first review how the single-variable second derivative test works.
+        </p>
+        <p>
+          The second derivative test says that if \(f'(c) = 0\) at a point \(x = c\):
+        </p>
+        <ul>
+          <li>If \(f''(x) \gt 0\), then \(x = c\) is a local minimum.</li>
+          <li>If \(f''(x) \lt 0\), then \(x = c\) is a local maximum.</li>
+          <li>If \(f''(x) = 0\), then the test is indeterminate.</li>
+        </ul>
+        <p>
+          The second derivative test works by using what \(f''(x)\) tells us about the function’s concavity: if \(f''(c) \gt 0\), \(f(x)\) is concave up at \(x = c\), and so if \(x = c\) is a critical point, then it must also be a local minimum. If \(f''(c) \lt 0\), the function is concave down at the critical point \(x = c\), and so \(x = c\) must be a local maximum.
+        </p>
+        <p>
+          Let’s look closer at a local maximum of a function of two variables. Let’s say that this local maximum occurs at the point \((x_0, y_0)\).
+        </p>
+        <img class="graph" src="images/local_maximum.png">
+        <p>
+          One observation we can make is that the function is concave down in the \(x\)-direction (i.e. the second derivative with respect to \(x\) is negative), and the function is concave down in the \(y\)-direction (i.e. the second derivative with respect to \(y\) is negative).
+        </p>
+        <img class="graph" src="images/local_maximum_traces.png">
+        <p class="ntm sn">
+          This function is concave down in both the \(x\)-direction and \(y\)-direction at the local maximum, as shown by the \(\class{purple}{x = x_0}\) and \(\class{green}{y = y_0}\) traces.
+        </p>
+        <p>
+          What this means is that \(f_{xx}(x_0, y_0)\) is negative, and \(f_{yy}(x_0, y_0)\) is also negative.
+        </p>
+        <p>
+          Similarly for a local minimum, both \(f_{xx}\) and \(f_{yy}\) is positive.
+        </p>
+        <p>
+          This means that a local extremum typically results in both \(f_{xx}\) and \(f_{yy}\) having the same signs, resulting in \(f_{xx}\cdot f_{yy}\) being positive.
+        </p>
+        <p>
+          So you might think that if \(f_{xx}(x_0,y_0)f_{yy}(x_0,y_0)\) is positive, then \((x_0, y_0)\) is a local extremum. But this isn’t quite true, because of functions like this:
+        </p>
+        <img class="graph" src="images/saddle_point.png">
+        <div class="ntm sn">
+          This is the graph of \(f(x, y) = x^2 + y^2 + 3xy\). At the point \((0, 0)\), both \(f_{xx}\) and \(f_{yy}\) are positive (as shown by the traces being concave up), but the point is not a local minimum!
+        </div>
+        <p>
+          A point like this is known as a <strong>saddle point</strong>. Saddle points are points that function as a local minimum along one direction but as a local maximum along another direction.
+        </p>
+        <p>
+          The reason this function has a saddle point is because the function is concave down along the line \(y = -x\), causing there to be points near \((0, 0)\) with a lower function value.
+        </p>
+        <img class="graph" src="images/saddle_point_2.png">
+        <p class="ntm sn">
+          The function is concave down at \((0, 0)\) along the line \(\class{purple}{y = -x}\), making the point act as a local maximum along this line.
+        </p>
+        <p>
+          However, the second partial derivatives don’t give us enough information to detect this, since they only measure the concavity in the \(x\)-direction and \(y\)-direction and not any of the diagonal directions!
+        </p>
+        <p>
+          So to correct for this, we need to use the second derivative \(f_{xy}\). The finalized test for finding extrema of two-variable functions (known as the <strong>second partial derivative test</strong>) looks like this:
+        </p>
+        <p>
+          Suppose \((x_0, y_0)\) is a critical point of \(f(x, y)\) (specifically one where the gradient is zero). Define the value \(D = f_{xx}(x_0, y_0)f_{yy}(x_0, y_0) - [f_{xy}(x_0, y_0)]^2\). There are three possibilities from here:
+        </p>
+        <ul>
+          <li>\(D \gt 0\): This means there is a local extremum at \((x_0, y_0)\).
+            <ul>
+              <li>If \(f_{xx}(x_0, y_0) \gt 0\), then \((x_0, y_0)\) is a local minimum.</li>
+              <li>If \(f_{xx}(x_0, y_0) \lt 0\), then \((x_0, y_0)\) is a local maximum.</li>
+            </ul>
+          </li>
+          <li>\(D \lt 0\): This means \((x_0, y_0)\) is a saddle point.</li>
+          <li>\(D = 0\): The second partial derivative test is indeterminate and doesn’t give us enough information to tell.</li>
+        </ul>
+        <p>
+          Here’s an example problem:
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: Identify all of the local extrema for the function \(f(x, y) = x^3 - x + y^3 - y\).
+        </p>
+        <p class="nbm">
+          The first step is to find all of the critical points of this function. To do that, we need the function’s first derivatives:
+        </p>
+        <div class="mj">
+          \[ f_x = 3x^2 - 1 \]
+          \[ f_y = 3y^2 - 1 \]
+        </div>
+        <p class="nm">
+          Now we have to find points where both of these derivatives are zero. Let’s start with the first equation and set \(f_x\) to 0: 
+        </p>
+        <div class="mj">
+          \[ 3x^2 - 1 = 0 \]
+          \[ x^2 = \frac{1}{3} \]
+          \[ x = \pm\frac{1}{\sqrt{3}} \]
+        </div>
+        <p class="nm">
+          These are the \(x\)-values that will cause \(f_x\) to equal 0. Keep in mind however that we also need \(f_y\) to equal 0 for a point to be a critical point, so let’s set \(f_y\) to 0:
+        </p>
+        <div class="mj">
+          \[ 3y^2 - 1 = 0 \]
+          \[ y^2 = \frac{1}{3} \]
+          \[ y = \pm\frac{1}{\sqrt{3}} \]
+        </div>
+        <p class="ntm">
+          So we now have four possible ordered pairs that will cause both \(f_x\) and \(f_y\) to equal 0: \((-\frac{1}{\sqrt{3}}, -\frac{1}{\sqrt{3}})\), \((-\frac{1}{\sqrt{3}}, \frac{1}{\sqrt{3}})\), \((\frac{1}{\sqrt{3}}, -\frac{1}{\sqrt{3}})\), and \((\frac{1}{\sqrt{3}}, \frac{1}{\sqrt{3}})\).
+        </p>
+        <p class="nbm">
+          Now we have to use the second partial derivative test on each of these critical points. Here are the second partial derivatives we’ll need:
+        </p>
+        <div class="mj">
+          \[ f_{xx} = 6x \]
+          \[ f_{yy} = 6y \]
+          \[ f_{xy} = 0 \]
+        </div>
+        <p class="nm">
+          Now let’s find \(D\) for each point. We can do that by finding an expression for \(D\) given any point \((x, y)\).
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          D &= f_{xx}(x, y)f_{yy}(x, y) - [f_{xy}(x, y)]^2\\
+          &= (6x)(6y) - 0^2\\
+          &= 36xy
+          \end{flalign} \]
+        </div>
+        <p class="ntm">
+          Now we plug in the \(x\)- and \(y\)-coordinates of each point into this expression \(36xy\) to find each point’s \(D\)-value:
+        </p>
+        <div class="table-div">
+          <table>
+            <tr>
+              <th>Point</th>
+              <th>\(D\)-value</th>
+            </tr>
+            <tr>
+              <td>\((-\frac{1}{\sqrt{3}}, -\frac{1}{\sqrt{3}})\)</td>
+              <td>\(36(-\frac{1}{\sqrt{3}})(-\frac{1}{\sqrt{3}}) = 12 \gt 0\)</td>
+            </tr>
+            <tr>
+              <td>\((-\frac{1}{\sqrt{3}}, \frac{1}{\sqrt{3}})\)</td>
+              <td>\(36(-\frac{1}{\sqrt{3}})(\frac{1}{\sqrt{3}}) = -12 \lt 0\)</td>
+            </tr>
+            <tr>
+              <td>\((\frac{1}{\sqrt{3}}, -\frac{1}{\sqrt{3}})\)</td>
+              <td>\(36(\frac{1}{\sqrt{3}})(-\frac{1}{\sqrt{3}}) = -12 \lt 0\)</td>
+            </tr>
+            <tr>
+              <td>\((\frac{1}{\sqrt{3}}, \frac{1}{\sqrt{3}})\)</td>
+              <td>\(36(\frac{1}{\sqrt{3}})(\frac{1}{\sqrt{3}}) = 12 \gt 0\)</td>
+            </tr>
+          </table>
+        </div>
+        <p>
+          The points with \(D \lt 0\) are saddle points (in this case \((\frac{1}{\sqrt{3}}, -\frac{1}{\sqrt{3}})\) and \((-\frac{1}{\sqrt{3}}, \frac{1}{\sqrt{3}})\)), and the points with \(D \gt 0\) are local extrema.
+        </p>
+        <p>
+          To figure out whether each extremum is a minimum or maximum, we need to find the value of \(f_{xx}(x, y)\) at each point.
+        </p>
+        <div class="table-div">
+          <table>
+            <tr>
+              <th>Point</th>
+              <th>\(f_{xx}(x, y)\)</th>
+            </tr>
+            <tr>
+              <td>\((-\frac{1}{\sqrt{3}}, -\frac{1}{\sqrt{3}})\)</td>
+              <td>\(6x = -\frac{6}{\sqrt{3}} \lt 0\)</td>
+            </tr>
+            <tr>
+              <td>\((\frac{1}{\sqrt{3}}, \frac{1}{\sqrt{3}})\)</td>
+              <td>\(6x = \frac{6}{\sqrt{3}} \gt 0\)</td>
+            </tr>
+          </table>
+        </div>
+        <p>
+          \(f_{xx}\) is less than 0 at the point \((-\frac{1}{\sqrt{3}}, -\frac{1}{\sqrt{3}})\), so it is a local maximum. \(f_{xx}\) is greater than 0 at the point \((\frac{1}{\sqrt{3}}, \frac{1}{\sqrt{3}})\), so it is a local minimum.
+        </p>
+        <p class="nbm">
+          To get the actual values the function reaches at these points, we can plug in these points into the definition of \(f(x, y)\):
+        </p>
+        <div class="mj">
+          \[ f(x, y) = x^3 - x + y^3 - y \]
+          \[ \begin{flalign}
+          f\left(-\frac{1}{\sqrt{3}}, -\frac{1}{\sqrt{3}}\right) &= \left(-\frac{1}{\sqrt{3}}\right)^3 - \left(-\frac{1}{\sqrt{3}}\right) + \left(-\frac{1}{\sqrt{3}}\right)^3 - \left(-\frac{1}{\sqrt{3}}\right)\\
+          &= -\frac{2}{3\sqrt{3}} + \frac{2}{\sqrt{3}}\\
+          &\approx 0.77
+          \end{flalign}\]
+          \[ \begin{flalign}
+          f\left(\frac{1}{\sqrt{3}}, \frac{1}{\sqrt{3}}\right) &= \left(\frac{1}{\sqrt{3}}\right)^3 - \left(\frac{1}{\sqrt{3}}\right) + \left(\frac{1}{\sqrt{3}}\right)^3 - \left(\frac{1}{\sqrt{3}}\right)\\
+          &= \frac{2}{3\sqrt{3}} - \frac{2}{\sqrt{3}}\\
+          &\approx -0.77
+          \end{flalign}\]
+        </div>
+        <img class="graph" src="images/local_extrema_2.png">
+        <p class="ntm sn">
+          The <span class="blue">local extrema</span> and <span class="red">saddle points</span> of this function.
+        </p>
+      </div>
+      <h3 class="section-header" id="globalExtremaHeader">
+        Finding Global/Absolute Extrema of Functions <button id="globalExtremaButton" onclick="showHide('globalExtrema')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="globalExtrema">
+        <p>
+          Now let’s move on to finding the global extrema of functions over a certain region - points where the function achieves the highest or lowest value within a certain region.
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: Identify the global extrema of the function \(f(x, y) = 2x^2 + \frac{4}{3}y^3 - y\) in the region \(x^2 + y^2 \le 1\).
+        </p>
+        <img class="graph" src="images/global_extrema.png">
+        <p class="ntm sn">
+          What are the highest and lowest values this function achieves within this cylinder (i.e. points where \(x^2 + y^2 \le 1\))?
+        </p>
+        <p>
+          With single-variable functions, to find global extrema in an interval, we had to check the function’s value at all critical points within that interval, as well as both of the interval’s endpoints.
+        </p>
+        <p>
+          With multivariable functions, we do something very similar. We first find all of the critical points in the region. However, to check the function’s value at the “endpoints” of the region, it’s not enough to just plug in two points: we need to check the function’s value at all possible points along the boundary of the region (in this case \(x^2 + y^2 = 1)\).
+        </p>
+        <p>
+          So our goal is to find all points in this region that could potentially be local extrema.
+        </p>
+        <p class="large-text bold">
+          Step 1: Find all critical points in the region
+        </p>
+        <p class="nbm">
+          Let’s start by finding the first derivatives of this function:
+        </p>
+        <div class="mj">
+          \[ f_x(x, y) = 4x \]
+          \[ f_y(x, y) = 4y^2 - 1 \]
+        </div>
+        <p class="ntm">
+          Setting \(f_x\) to 0, we find that \(x\) must equal 0. Setting \(f_y\) to 0, we find that \(y\) must equal either \(\frac{1}{2}\) or \(-\frac{1}{2}\).
+        </p>
+        <p>
+          Our critical points are where both \(f_x\) and \(f_y\) equal 0, which are \((0, \frac{1}{2})\) and \((0, -\frac{1}{2})\). Both of these critical points are within the region \(x^2 + y^2 \le 1\) (you can check this by plugging in the \(x\)- and \(y\)-coordinates of each point into the inequality).
+        </p>
+        <p class="bold large-text">
+          Step 2: Find potential global extremum points on the boundary of the region
+        </p>
+        <p>
+          Now we need to check the function’s value along the boundary \(x^2 + y^2 = 1\).
+        </p>
+        <p>
+          In this case, the way we can do this is by creating a single-variable function \(g(y)\) that takes in a \(y\)-value of a point on the circle \(x^2 + y^2 = 1\) and outputs what the function’s value would be at a point with that \(y\)-value.
+        </p>
+        <p class="nbm">
+          To do this, we can find an expression for \(x^2\) in terms of \(y\), then plug this into the function definition \(f(x, y) = 2x^2 + \frac{4}{3}y^3 - y\) to get it in terms of \(y\).
+        </p>
+        <div class="mj">
+          \[ x^2 = 1 - y^2 \]
+          \[ \begin{flalign}
+          g(y) &= 2(1 - y^2) + \frac{4}{3}y^3 - y\\
+          &= \frac{4}{3}y^3 - 2y^2 - y + 2
+          \end{flalign} \]
+        </div>
+        <p class="ntm">
+          As an example, \(g(0.8) \approx 0.603\). What this means is that if a point on the circle \(x^2 + y^2 = 1\) has a \(y\)-coordinate of 0.8, evaluating \(f(x, y)\) at that point will give a value of 0.603. <span class="sn">(There are two possible points on the circle with a \(y\)-coordinate of 0.8, but the function has the same value on both points.)</span>
+        </p>
+        <p class="nm">
+          We need to find the global extrema of this \(g(y)\) function on the interval \(-1 \le y \le 1\) (this is because there are no points on the circle \(x^2 + y^2 = 1\) with a \(y\)-coordinate outside this interval). This is just finding the global extrema of a single-variable function. So we first need to find the critical points, then check the function’s value at the endpoints.
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          g'(y) &= 4y^2 - 4y - 1
+          \end{flalign} \]
+        </div>
+        <p class="nm">
+          Setting \(g'(y)\) to 0 and using the quadratic formula, we find that the critical points of \(g(y)\) are \(y = \frac{1\pm\sqrt{2}}{2}\). However, only one critical point, \(y = \frac{1-\sqrt{2}}{2}\), is within the interval \(-1 \le y \le 1\), so we can disregard the other critical point.
+        </p>
+        <p class="nbm">
+          Now let’s find the value of \(g(y)\) at the critical point we found and the endpoints of the interval \(-1 \le y \le 1\).
+        </p>
+        <div class="mj">
+          \[ g(y) = \frac{4}{3}y^3 - 2y^2 - y + 2 \]
+          \[ g(-1) = -\frac{1}{3} \]
+          \[ g(1) = \frac{1}{3} \]
+          \[ g\left(\frac{1-\sqrt{2}}{2}\right) \approx 2.109 \]
+        </div>
+        <p class="ntm">
+          The smallest of these values is \(-\frac{1}{3}\), so the global minimum of \(g(y)\) occurs at \(y = -1\). The largest of these values is \(2.109\), so the global maximum of \(g(y)\) occurs at \(y = \frac{1-\sqrt{2}}{2} \approx -0.207\).
+        </p>
+        <p class="nbm">
+          Now let’s find the \(x\)-values corresponding to each of these \(y\)-values.
+        </p>
+        <div class="mj">
+          \[ x^2 = 1 - y^2 \]
+          \[ x = \pm\sqrt{1-y^2} \]
+        </div>
+        <p class="nm">
+          For \(y = \frac{1-\sqrt{2}}{2}\):
+        </p>
+        <div class="mj">
+          \[ x = \pm\sqrt{1-\left(\frac{1-\sqrt{2}}{2}\right)^2} \]
+          \[ x \approx \pm 0.978 \]
+        </div>
+        <p class="nm">
+          For \(y = -1\):
+        </p>
+        <div class="mj">
+          \[ x = \sqrt{1-(-1)^2} \]
+          \[ x = 0 \]
+        </div>
+        <p class="ntm">
+          So the points on the boundary \(x^2 + y^2 = 1\) that could potentially be global extrema are \((-0.978, -0.207)\), \((0.978, -0.207)\), and \((0, -1)\).
+        </p>
+        <p>
+          Finally, let’s list out all of the points we’ve found that could potentially be global extrema, along with the function’s value at these points.
+        </p>
+        <div class="table-div">
+          <table>
+            <tr>
+              <th>\((x, y)\)</th>
+              <th>\(f(x, y)\)</th>
+            </tr>
+            <tr>
+              <td>(-0.978, -0.207)</td>
+              <td>2.109</td>
+            </tr>
+            <tr>
+              <td>(0.978, -0.207)</td>
+              <td>2.109</td>
+            </tr>
+            <tr>
+              <td>(0, 0.5)</td>
+              <td>-0.333</td>
+            </tr>
+            <tr>
+              <td>(0, -0.5)</td>
+              <td>0.333</td>
+            </tr>
+            <tr>
+              <td>(0, -1)</td>
+              <td>-0.333</td>
+            </tr>
+          </table>
+        </div>
+        <p>
+          The smallest function value in this list, which is the global minimum of \(f(x, y)\) in the region \(x^2 + y^2 \le 1\), is -0.333, achieved at the points \((0, \frac{1}{2})\) and \((0, -1)\). The largest function value (i.e. the global maximum) is 2.109, achieved at the points \((-0.978, -0.207)\) and \((0.978, -0.207)\).
+        </p>
+        <img class="graph" src="images/global_extrema_2.png">
+        <p class="ntm sn">
+          This is the graph of the function \(f(x, y) = 2x^2 + \frac{4}{3}y^3 - y\) for \(x^2 + y^2 \le 1\). The <span class="red">global minima</span> and <span class="blue">global maxima</span> are plotted.
+        </p>
+      </div>
+      <h3 class="section-header" id="lagrangeMultHeader">
+        Finding Extrema Using Lagrange Multipliers <button id="lagrangeMultButton" onclick="showHide('lagrangeMult')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="lagrangeMult">
+        <p>
+          We previously saw how to find the extrema of a function given a certain constraint, such as \(x^2 + y^2 \le 1\). This is known as <strong>constrained optimization</strong>.
+        </p>
+        <p>
+          An important step in the process is finding the extrema on the boundary \(x^2 + y^2 = 1\). In the previous section, we found this by creating a single-variable function \(g(y)\) that tells us the corresponding function value for a point with that \(y\)-coordinate on the boundary, but there is an alternative way to do this. That’s what we’re going to explore in this section!
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: What is the maximum and minimum value of \(f(x, y) = x^3 + y^2\) given the constraint \(x^2 + y^2 = 1\)?
+        </p>
+        <p>
+          We’re going to use what’s known as <strong>Lagrange multipliers</strong> to solve this problem. To understand how this technique works, let’s look at a contour map of the function \(f(x, y)\) and plot our constraint \(x^2 + y^2 = 1\) over it.
+        </p>
+        <img class="graph" src="images/lagrange_contour_1.png">
+        <p class="ntm sn">
+          Some contour lines for \(f(x, y) = x^3 + y^2\), along with the constraint <span class="purple">\(x^2 + y^2 = 1\).</span>
+        </p>
+        <p>
+          Let’s focus on finding the maximum value of \(f(x, y)\) given this constraint. This is essentially asking “out of all points on this circle \(x^2 + y^2 = 1\), which one of them results in the largest function value?”
+        </p>
+        <p>
+          Looking back at this contour map, we are trying to find points on the circle above that are associated with the highest function value. This is the same as trying to find points on the circle that intersect the contour line with the highest value. In this case, the highest-valued contour line that the circle intersects is the line for \(f(x, y) = 1\).
+        </p>
+        <img class="graph" src="images/contour_maxima.png">
+        <p class="ntm sn">
+          These are the points that intersect the highest-valued contour line, i.e. the points that maximize our function’s value given the constraint.
+        </p>
+        <p>
+          Notice that the graph of the constraint \(x^2 + y^2 = 1\) (which we can think of as a contour line for the function \(g(x, y) = x^2 + y^2\)) is tangent to the contour line for \(f(x,y)\) at these maximum points. Remember that one property of the gradient is that the gradient vector at a point is always perpendicular to the contour line that passes through that point. 
+        </p>
+        <p>
+          So if the contour lines for two functions are tangent at a point (in this case, \(f(x, y)\) and our constraint function \(g(x, y)\)), the gradient vectors for both functions at this point will be parallel to each other, meaning that one gradient is a constant multiple of the other. In this case, the gradients of \(f(x, y)\) and \(g(x, y)\) are constant multiples of each other.
+        </p>
+        <p class="nbm">
+          If we call \(\lambda\) (lambda) the ratio between the two vectors, we can mathematically write this relationship as:
+        </p>
+        <div class="mj">
+          \[ \nabla f(x, y) = \lambda \nabla g(x, y) \]
+        </div>
+        <p class="ntm">
+          The same observation also applies for minima.
+        </p>
+        <img class="graph" src="images/lagrange_contour_2.png">
+        <p class="ntm sn">
+          At the <span class="green">minimum point</span> (where the constraint \(x^2 + y^2 = 1\) intersects the \(f(x, y) = -1\) contour line), the contour line is tangent to the constraint.
+        </p>
+        <p class="nbm">
+          So to find the extrema of a function \(f(x, y)\) given a constraint \(g(x, y) = k\) where \(k\) is a constant, this is the system of equations we need to solve:
+        </p>
+        <div class="mj">
+          \[ \nabla f(x, y) = \lambda \nabla g(x, y) \]
+          \[ g(x, y) = k \]
+        </div>
+        <p class="ntm sn">
+          \(\nabla f(x, y) = \lambda \nabla g(x, y)\) is the requirement that the gradient vectors of \(f(x, y)\) and \(g(x, y)\) be parallel (which happens at extrema), and \(g(x, y) = k\) is the constraint that our point has to satisfy.
+        </p>
+        <p class="nbm">
+          Now let’s use this technique to actually find the maximum of our function \(f(x, y) = x^3+y^2\) given the constraint \(x^2+y^2=1\). First, we need to find \(\nabla f(x, y)\) and \(\lambda\nabla g(x, y)\):
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \nabla f(x, y) &= (f_x, f_y)\\
+          &= (3x^2, 2y)\\
+          \end{flalign}\]
+          \[ \begin{flalign}
+          \lambda\nabla g(x, y) &= \lambda(g_x, g_y)\\
+          &= \lambda(2x, 2y)\\
+          &= (2x\lambda, 2y\lambda)
+          \end{flalign}\]
+        </div>
+        <p class="nm">
+          In order for both of these vectors to be equal, we need each of their components to be equal. Therefore, we need \(3x^2 = 2x\lambda\) and \(2y = 2y\lambda\). So this is the system of equations we have to solve:
+        </p>
+        <div class="mj">
+          \[ 3x^2 = 2x\lambda \]
+          \[ 2y = 2y\lambda \]
+          \[ x^2 + y^2 = 1 \]
+        </div>
+        <p class="nm">
+          We need to find all possible ordered pairs \((x, y)\) which satisfy this system of equations. To start, we can factor the second equation:
+        </p>
+        <div class="mj">
+          \[ 2y = 2y\lambda \]
+          \[ 2y - 2y\lambda = 0 \]
+          \[ 2y(1 - \lambda) = 0 \]
+          \[ \lambda = 1 \text{ or } y = 0 \]
+        </div>
+        <p class="nm">
+          Let’s investigate both of these possibilities which will cause \(2y = 2y\lambda\) to be true.
+        </p>
+        <ul>
+          <li>If \(y = 0\), then \(x = \pm 1\) because of the constraint \(x^2 + y^2 = 1\). So both \((-1, 0)\) and \((1, 0)\) are solutions to our system of equations. <span class="sn">(Note: If \(y = 0\), then it doesn’t matter what \(\lambda\) is, so we can always make the first equation \(3x^2 = 2x\lambda\) true.)</span></li>
+          <li>If \(\lambda = 1\), we can directly solve for \(x\) using the first equation \(3x^2 = 2x\lambda\).</li>
+        </ul>
+        <div class="mj">
+          \[ 3x^2 = 2x\lambda \]
+          \[ 3x^2 = 2x(1) \]
+          \[ 3x^2 - 2x = 0 \]
+          \[ x(3x - 2) = 0 \]
+          \[ x = 0, x = \frac{2}{3} \]
+        </div>
+        <p class="ntm">
+          Let’s get the \(y\)-values associated with each of these \(x\)-values.
+        </p>
+        <p class="nbm">
+          For \(x = 0\):
+        </p>
+        <div class="mj">
+          \[ x^2 + y^2 = 1 \]
+          \[ 0^2 + y^2 = 1 \]
+          \[ y = \pm 1 \]
+        </div>
+        <p class="nm">
+          For \(x = \frac{2}{3}\):
+        </p>
+        <div class="mj">
+          \[ \left(\frac{2}{3}\right)^2 + y^2 = 1 \]
+          \[ y^2 = \frac{5}{9} \]
+          \[ y = \pm \frac{\sqrt{5}}{3} \]
+        </div>
+        <p class="ntm">
+          So our possible points are \((-1, 0)\), \((1, 0)\), \((0, -1)\), \((0, 1)\), \((\frac{2}{3}, -\frac{\sqrt{5}}{3})\), and \((\frac{2}{3}, \frac{\sqrt{5}}{3})\). These are points that could potentially be our maximum or minimum. Let’s find the value of \(f(x, y)\) at each of these points:
+        </p>
+        <div class="table-div">
+          <table>
+            <tr>
+              <th>\((x, y)\)</th>
+              <th>\(f(x, y)\)</th>
+            </tr>
+            <tr>
+              <td>(-1, 0)</td>
+              <td>-1</td>
+            </tr>
+            <tr>
+              <td>(1, 0)</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>(0, -1)</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>(0, 1)</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>\((\frac{2}{3}, -\frac{\sqrt{5}}{3})\)</td>
+              <td>\(\frac{23}{27} \approx 0.852\)</td>
+            </tr>
+            <tr>
+              <td>\((\frac{2}{3}, \frac{\sqrt{5}}{3})\)</td>
+              <td>\(\frac{23}{27} \approx 0.852\)</td>
+            </tr>
+          </table>
+        </div>
+        <p>
+          The smallest function value of 1 occurs at \((-1, 0)\), so this is the minimum value of the function given our constraint. The largest function value of 1 occurs at three points: \((1, 0)\), \((0, -1)\), and \((0, 1)\), so this is our maximum given the constraint.
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: What is the maximum value of \(f(x, y) = \ln(x^3y)\) given the constraint \(x^3 + y^3 = 4\)?
+        </p>
+        <p class="nbm">
+          We first need to find the gradients of both the function and the constraint, which requires us to find the following partial derivatives:
+        </p>
+        <div class="mj">
+          \[ \pdv{f}{x} = \frac{3x^2y}{x^3y} = \frac{3}{x}\]
+          \[ \pdv{f}{y} = \frac{x^3}{x^3y} = \frac{1}{y}\]
+          \[ \pdv{x}(x^3 + y^3) = 3x^2 \]
+          \[ \pdv{y}(x^3 + y^3) = 3y^2 \]
+        </div>
+        <p class="nm">
+          Therefore, the gradients are:
+        </p>
+        <div class="mj">
+          \[ \nabla f(x, y) = \left(\frac{3}{x}, \frac{1}{y}\right) \]
+          \[ \nabla g(x, y) = (3x^2, 3y^2) \]
+        </div>
+        <p class="nm">
+          So the system of equations we need to solve is:
+        </p>
+        <div class="mj">
+          \[ \left(\frac{3}{x}, \frac{1}{y}\right) = \lambda(3x^2, 3y^2) \]
+          \[ x^3 + y^3 = 4 \]
+        </div>
+        <p class="nm">
+          This is what it looks like when we expand the first equation into two equations:
+        </p>
+        <div class="mj">
+          \[ \frac{3}{x} = 3x^2\lambda \]
+          \[ \frac{1}{y} = 3y^2\lambda \]
+          \[ x^3 + y^3 = 4 \]
+        </div>
+        <p class="ntm sn">
+          (Note that \(\lambda \ne 0\) because it’s impossible for \(\frac{3}{x}\) or \(\frac{1}{y}\) to equal 0.)
+        </p>
+        <p class="nbm">
+          Now let’s start solving this system! We can multiply the first equation by \(x\) and the second equation by \(y\):
+        </p>
+        <div class="mj">
+          \[ 3 = 3x^3 \lambda \]
+          \[ 1 = x^3 \lambda \]
+          \[ 1 = 3y^3 \lambda \]
+        </div>
+        <p class="nm">
+          Now let’s try to get \(3y^3\) in terms of \(x\). We can do that using the constraint:
+        </p>
+        <div class="mj">
+          \[ x^3 + y^3 = 4 \]
+          \[ y^3 = 4 - x^3 \]
+          \[ 1 = 3(4 - x^3)\lambda \]
+        </div>
+        <p class="nm">
+          So now we know that \(1 = x^3\lambda\) and \(1 = 3(4-x^3)\lambda\), so we can set the right-hand sides equal to each other:
+        </p>
+        <div class="mj">
+          \[ x^3 \lambda = 3(4-x^3)\lambda \]
+          \[ x^3\lambda = (12-3x^3)\lambda \]
+          \[ x^3 = 12 - 3x^3 \]
+          \[ 4x^3 = 12 \]
+          \[ x^3 = 3 \]
+          \[ x = \sqrt[3]{3} \]
+        </div>
+        <p class="ntm sn">
+          We can divide both sides by \(\lambda\) because we know that \(\lambda \ne 0\).
+        </p>
+        <p class="nbm">
+          Let’s solve for the \(y\)-value associated with \(x = \sqrt[3]{3}\):
+        </p>
+        <div class="mj">
+          \[ (\sqrt[3]{3})^3 + y^3 = 4\]
+          \[ y^3 = 1 \]
+          \[ y = 1 \]
+        </div>
+        <p class="ntm">
+          The only point produced by the Lagrange multiplier technique is \((\sqrt[3]{3}, 1)\), so we know it is an extremum. But is this point a maximum or a minimum? To find out, we need to plug in another point that satisfies the constraint into our function \(f(x, y) = \ln(x^3y)\). If this point has a larger function value, our extremum is a minimum, and if the point has a smaller function value, our extremum is a maximum.
+        </p>
+        <p class="nbm">
+          We can plug in any point that satisfies \(x^3 + y^3 = 4\). I’m going to be plugging in \((1, \sqrt[3]{3})\), since it’s relatively easy to evaluate the function at this point.
+        </p>
+        <div class="mj">
+          \[ f(\sqrt[3]{3}, 1) = \ln(3) \approx 1.099 \]
+          \[ f(1, \sqrt[3]{3}) = \ln(\sqrt[3]{3}) \approx 0.366 \]
+        </div>
+        <p class="ntm">
+          The function value is smaller at \((1, \sqrt[3]{3})\), so we know that the point \((\sqrt[3]{3}, 1)\) is a maximum. So the maximum value of \(f(x, y) = \ln(x^3y)\) given the constraint \(x^3 + y^3 = 4\) is about 1.099, and it occurs at the point \((\sqrt[3]{3}, 1)\).
+        </p>
+      </div>
+    </div>
+  </div>
+  <hr class="heavy-hr">
+  <div class="unit" id="unit4Unit">
+    <h2 id="unit4Header">
+      <span onclick="showHideUnit('unit4')"><span class="gray">Unit 4:</span> Multiple Integrals</span>
+      <button id="unit4Button" onclick="showHideUnit('unit4')">Show</button>
+    </h2>
+    <div class="hidden-by-default" id="unit4">
+      <div>
+        <button class="large-button" onclick="toggleAllSections('unit4', 'show')">Show All Sections</button>
+        <div class="button-spacing"></div>
+        <button class="large-button" onclick="toggleAllSections('unit4', 'hide')">Hide All Sections</button>
+      </div>
+      <h3 class="section-header" id="doubleIntHeader">
+        Finding Volume Using Double Integrals (Rectangular Regions) <button id="doubleIntButton" onclick="showHide('doubleInt')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="doubleInt">
+        <p>
+          You’ve learned about how you can use integrals to find the area under curves, and you most likely have seen how they can be used to find the volume of solids of revolution. But now we’re going to use integrals to find the volume under functions of two variables (i.e. under 3D curves).
+        </p>
+        <p>
+          Let’s start with an example problem:
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: What is the volume under \(f(x, y) = \sin(x)\cos(y) + 1\) over the rectangle defined by \(0 \le x \le \pi\) and \(0 \le y \le \frac{\pi}{2}\)?
+        </p>
+        <img class="graph" src="images/double_integral_volume.png">
+        <p class="ntm sn">
+          What is the <span class="blue">volume</span> under the function <span class="red">\(f(x, y) = \sin(x)\cos(y) + 1\)</span> over the region \(0 \le x \le \pi\) and \(0 \le y \le \frac{\pi}{2}\)?
+        </p>
+        <p>
+          When we found areas under curves, we approximated the area using rectangles, then made the rectangles smaller and smaller. We can do something similar in three dimensions: we can consider small slices of this volume perpendicular to the \(x\)-axis.
+        </p>
+        <img class="graph" src="images/double_integral_slice.png">
+        <p class="ntm sn">
+          This is a tiny slice of the volume we’re trying to find.
+        </p>
+        <p>
+          If we divide the volume into these small slices, then sum up the volumes of all of these slices, then we will get an approximation of the total volume. As we make these slices smaller and smaller, our volume approximation will approach the actual volume.
+        </p>
+        <p>
+          So we just need to find the volume of each tiny slice, then add up all of the slices to get the total volume.
+        </p>
+        <p>
+          Let’s take a closer look at one of our slices.
+        </p>
+        <img class="graph" src="images/double_integral_slice_2.png">
+        <p>
+          Let’s say that our slice is sitting along the \(x\)-value \(x = x_0\). To find the volume of this slice, we first need to find the area that is indicated in the diagram above.
+        </p>
+        <p class="nbm">
+          Finding this area is just like finding the area under a single-variable function. In this case, we are finding the area under \(f(x_0, y)\) as \(y\) ranges from 0 to \(\frac{\pi}{2}\) (because the region we are finding the volume under goes from \(y = 0\) to \(y = \frac{\pi}{2}\)).
+        </p>
+        <div class="mj">
+          \[ A = \int_0^{\pi/2} f(x_0, y) \dd{y} \]
+        </div>
+        <p class="nm">
+          In our case, our function is \(f(x, y) = \sin(x)\cos(y) + 1\), so let’s substitute that in:
+        </p>
+        <div class="mj">
+          \[ A = \int_0^{\pi/2} [\sin(x_0)\cos(y) + 1] \dd{y} \]
+        </div>
+        <p class="nm">
+          Notice how we have an integral with two variables, \(x_0\) and \(y\). However, the \(\dd{y}\) tells us we are integrating with respect to \(y\). In this case, we can treat all other variables (in this case \(x_0\)) as constants (similar to what we would do with a partial derivative with respect to \(y\)).
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          A &= \int_0^{\pi/2} [\sin(x_0)\cos(y) + 1] \dd{y}\\
+          &= [\sin(x_0)\sin(y) + y]\bigg|_0^{\pi/2}\\
+          &= \left[\sin(x_0)\sin\left(\frac{\pi}{2}\right) + \frac{\pi}{2}\right] - \left[\sin(x_0)\sin(0) + 0\right]\\
+          &= \sin(x_0) + \frac{\pi}{2}
+          \end{flalign} \]
+        </div>
+        <p class="nm">
+          What this tells us is that in general, for any \(x\)-value the slice is sitting on, the area is \(\sin(x) + \frac{\pi}{2}\). So we can create a function for the area of any given slice given its \(x\)-value:
+        </p>
+        <div class="mj">
+          \[ A(x) = \sin(x) + \frac{\pi}{2}\]
+        </div>
+        <p class="ntm">
+          The volume of each slice is \(\Delta x\) times this area (where \(\Delta x\) is the width of each slice), which is \([\sin(x) + \frac{\pi}{2}]\Delta x\). As we make the slices smaller and smaller, we can treat this \(\Delta x\) as the differential \(\dd{x}\).
+        </p>
+        <p class="nbm">
+          To find the volume of the solid, we need to add up the volume of all of these tiny slices across the range of \(x\)-values given (which in this case is \(0 \le x \le \pi)\). Remember that we are making these slices infinitesimally thin, so we can use an integral to find the total volume. The volume of each slice is given by the area function \(A(x)\) we found before, times an infinitesimally small width \(\dd{x}\), so that’s what we need to integrate.
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          V &= \int_0^\pi A(x) \dd{x}\\
+          &= \int_0^\pi \left[\sin(x) + \frac{\pi}{2}\right] \dd{x}\\
+          &= \left[-\cos(x) + \frac{\pi}{2}x\right]\bigg|_0^\pi\\
+          &= \left[-\cos(\pi) + \frac{\pi}{2}(\pi)\right] - \left[-\cos(0) + \frac{\pi}{2}(0)\right]\\
+          &= \left(1 + \frac{\pi^2}{2}\right) - (-1)\\
+          &= 2 + \frac{\pi^2}{2}\\
+          &\approx 6.935
+          \end{flalign}\]
+        </div>
+        <p class="ntm">
+          To summarize, what we did here was consider the volume of tiny slices perpendicular to the \(x\)-axis, then sum them along the \(y\)-axis using an integral.
+        </p>
+        <p>
+          There is another way we can find the volume: by first considering slices perpendicular to the \(y\)-axis, then summing them up along the \(x\)-axis.
+        </p>
+        <img class="graph" src="images/double_integral_slice_y.png">
+        <p class="ntm sn">
+          A slice perpendicular to the \(y\)-axis.
+        </p>
+        <p class="nbm">
+          The area for each slice at \(y = y_0\) is the integral of \(f(x, y_0)\) from \(x = 0\) to \(x = \pi\).
+        </p>
+        <div class="mj">
+          \[ A = \int_0^\pi f(x, y_0) \dd{x} \]
+        </div>
+        <p class="nm">
+          So here is our area function given the \(y\)-value of any slice:
+        </p>
+        <div class="mj">
+          \[ A(y) = \int_0^\pi f(x, y) \dd{x} \]
+        </div>
+        <p class="nm">
+          To get the total volume, we integrate this area function across the values of \(x\) our solid covers, which is \(x = 0\) to \(x = \frac{\pi}{2}\). This time, instead of finding an expression for \(A(y)\) first, let’s do the entire integral all at once:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          V &= \int_0^{\pi/2} A(y) \dd{y}\\
+          &= \int_0^{\pi/2}\int_0^\pi f(x, y) \dd{x}\dd{y}\\
+          &= \int_0^{\pi/2}\int_0^\pi [\sin(x)\cos(y) + 1] \dd{x}\dd{y}\\
+          &= \int_0^{\pi/2}[-\cos(x)\cos(y) + x]\bigg|_{x=0}^{x=\pi}\dd{y}\\
+          &= \int_0^{\pi/2}\left([-\cos(\pi)\cos(y) + \pi] - [-\cos(0)\cos(y) + 0 ]\right)\dd{y}\\
+          &= \int_0^{\pi/2}[2\cos(y) + \pi]\dd{y}\\
+          &= [2\sin(y) + \pi y]\bigg|_0^{\pi/2}\\
+          &= [2\sin\left(\frac{\pi}{2}\right) + \pi \left(\frac{\pi}{2}\right)] - [2\sin(0) + \pi(0)]\\
+          &= 2 + \frac{\pi^2}{2}\\
+          &\approx 6.935
+          \end{flalign}\]
+        </div>
+        <p class="ntm">
+          Notice how we need to perform two integrals to find the volume. Because of this, we call these <strong>double integrals</strong>.
+        </p>
+        <p class="large-text bold">
+          Double integral notation
+        </p>
+        <p class="nbm">
+          There is a more general notation for a double integral:
+        </p>
+        <div class="mj">
+          \[ \iint_C f(x, y) \dd{A} \]
+        </div>
+        <p class="ntm">
+          \(C\) represents the region we are integrating over, and \(\dd{A}\) represents an infinitesimal area (which in rectangular coordinates is equivalent to \(\dd{x}\dd{y}\) or \(\dd{y}\dd{x}\)).
+        </p>
+        <p>
+          If we divide the region we are integrating over into a bunch of tiny squares, you can think of \(\dd{A}\) as representing the area of each of these squares. So the double integral \(\iint_C f(x, y) \dd{A}\) is multiplying the function’s value at each of these squares by the area of each square, then summing them up to calculate a volume. (To be more precise, the integral is the limit of this sum as the squares become infinitesimally small.)
+        </p>
+        <img class="graph" src="images/square_regions.png">
+        <p class="ntm sn">
+          An example of a region \(C\) divided into many small squares. \(\dd{A}\) represents the area of each of these tiny squares.
+        </p>
+        <p class="large-text bold">
+          Summary
+        </p>
+        <p>
+          To summarize, there are two ways to find the area under a function of two variables over a rectangular region:
+        </p>
+        <ul>
+          <li>Consider slices perpendicular to the \(x\)-axis. Find the area of any slice given its \(x\)-value (this will be given by an integral with respect to \(y\)), then integrate this area along the range of \(x\)-values that the solid covers.</li>
+          <li>Consider slices perpendicular to the \(y\)-axis. Find the area of any slice given its \(y\)-value (this will be given by an integral with respect to \(x\)), then integrate this area along the range of \(y\)-values that the solid covers.</li>
+        </ul>
+      </div>
+      <h3 class="section-header" id="doubleIntGeneralHeader">
+        Finding Volume Using Double Integrals (General Regions) <button id="doubleIntGeneralButton" onclick="showHide('doubleIntGeneral')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="doubleIntGeneral">
+        <p>
+          In the previous section, we saw how we could find the volume under surfaces over rectangular regions. Now we’re going to explore how we can do the same for non-rectangular regions.
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: What is the volume under \(f(x, y) = x^2 + xy^3 + 1\) over the region \(x^2 + y^2 \le 1\)?
+        </p>
+        <img class="graph" src="images/double_integral_circle.png">
+        <p>
+          We can once again consider tiny slices of this solid perpendicular to the \(x\)-axis.
+        </p>
+        <img class="graph" src="images/double_integral_circle_slice.png">
+        <p>
+          To find the area of a slice at \(x = x_0\), we once again need to integrate \(f(x_0, y)\) with respect to \(y\). But what values of \(y\) do we need to integrate over? This time, our region \(x^2 + y^2 = 1\) doesn’t have constant \(y\)-bounds, so we need to determine the \(y\)-bounds depending on the \(x\)-value of our slice.
+        </p>
+        <p>
+          Let’s look at a top-down view of our solid.
+        </p>
+        <img class="graph" src="images/double_integral_circle_points.png">
+        <p class="nbm">
+          We need to determine the \(y\)-values that this slice covers, which are the \(y\)-coordinates of the <span class="green">two points</span> in the image above. Both of the points lie on the circle \(x^2 + y^2 = 1\), and we know that they both have an \(x\)-value of \(x_0\), so we can solve for their \(y\)-values:
+        </p>
+        <div class="mj">
+          \[ x_0^2 + y^2 = 1 \]
+          \[ y^2 = 1 - x_0^2 \]
+          \[ y = \pm\sqrt{1-x_0^2} \]
+        </div>
+        <img class="graph" src="images/double_integral_circle_points_2.png">
+        <p class="nbm">
+          So for any slice at \(x = x_0\), the area is:
+        </p>
+        <div class="mj">
+          \[ \int_{-\sqrt{1-x_0^2}}^{\sqrt{1-x_0^2}}f(x_0, y) \dd{y} \]
+        </div>
+        <p class="nm">
+          Therefore, our area function is:
+        </p>
+        <div class="mj">
+          \[ A(x) = \int_{-\sqrt{1-x^2}}^{\sqrt{1-x^2}}f(x, y) \dd{y} \]
+        </div>
+        <p class="nm">
+          We need to integrate this area function over all values of \(x\) that our circular region covers, which is \(-1 \le x \le 1\). So our volume is:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          V &= \int_{-1}^1 A(x) \dd{x}\\
+          &= \int_{-1}^1 \int_{-\sqrt{1-x^2}}^{\sqrt{1-x^2}}f(x, y) \dd{y} \dd{x}\\
+          &= \int_{-1}^1 \int_{-\sqrt{1-x^2}}^{\sqrt{1-x^2}}(x^2 + xy^3 + 1) \dd{y} \dd{x}\\
+          &= \int_{-1}^1 \left(x^2y + \frac{xy^4}{4} + y\right)\bigg|_{y=-\sqrt{1-x^2}}^{y=\sqrt{1-x^2}} \dd{x}\\
+          &= \int_{-1}^1 \left[\left(x^2\sqrt{1-x^2} + \frac{x(\sqrt{1-x^2})^4}{4} + \sqrt{1-x^2}\right) - \left(-x^2\sqrt{1-x^2} + \frac{x(-\sqrt{1-x^2})^4}{4} - \sqrt{1-x^2}\right)\right] \dd{x}\\
+          &= \int_{-1}^1 \left[2x^2\sqrt{1-x^2} + 2\sqrt{1-x^2}\right] \dd{x}\\
+          \end{flalign} \]
+        </div>
+        <p class="ntm">
+          This is a complicated integral to perform by hand, so I’m not going to do that here. By plugging this integral into a calculator, we get a result of \(\frac{5\pi}{4} \approx 3.927\).
+        </p>
+        <p>
+          Once again, there is another way we can find this volume: by first considering slices perpendicular to the \(y\)-axis.
+        </p>
+        <img class="graph" src="images/double_integral_circle_slice_y.png">
+        <p class="nbm">
+          Here is the area function for each slice:
+        </p>
+        <div class="mj">
+          \[ A(y) = \int_{-\sqrt{1-y^2}}^{\sqrt{1-y^2}}f(x, y)\dd{x} \]
+        </div>
+        <p class="nm">
+          And here is the volume integral:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          V &= \int_{-1}^1 A(y) \dd{y}\\
+          &= \int_{-1}^1 \int_{-\sqrt{1-y^2}}^{\sqrt{1-y^2}}f(x, y)\dd{x} \dd{y}\\
+          &= \int_{-1}^1 \int_{-\sqrt{1-y^2}}^{\sqrt{1-y^2}}(x^2 + xy^3 + 1)\dd{x} \dd{y}\\
+          &= \int_{-1}^1 (\frac{x^3}{3} + \frac{x^2y^3}{2} + x)\bigg|_{x={-\sqrt{1-y^2}}}^{x=\sqrt{1-y^2}} \dd{y}\\
+          &= \int_{-1}^1 \left[\left(\frac{(\sqrt{1-y^2})^3}{3} + \frac{(\sqrt{1-y^2})^2y^3}{2} + \sqrt{1-y^2}\right) - \left(\frac{(-\sqrt{1-y^2})^3}{3} + \frac{(-\sqrt{1-y^2})^2y^3}{2} - \sqrt{1-y^2}\right)\right] \dd{y}\\
+          &= \int_{-1}^1 \left[\frac{2}{3}(\sqrt{1-y^2})^3 + 2\sqrt{1-y^2}\right] \dd{y}
+          \end{flalign} \]
+        </div>
+        <p class="ntm">
+          This integral is equal to \(\frac{5\pi}{4}\), the same result we got before.
+        </p>
+      </div>
+      <h3 class="section-header" id="doubleIntPolarHeader">
+        Finding Volume Using Double Integrals (Polar Coordinates) <button id="doubleIntPolarButton" onclick="showHide('doubleIntPolar')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="doubleIntPolar">
+        <p>
+          When we performed a double integral over a circular region in the last section, we had to write the bounds of the inner integral in terms of a variable, resulting in messy bounds like \(\sqrt{1-x^2}\) and \(\sqrt{1-y^2}\). However, there is an alternate way to do this, and it involves polar coordinates. <span class="sn">(You can review polar coordinates in Unit 9 of <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://chaddypratt.org/calculus">unnamed calc website</a>.)</span>
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: What is the volume under \(f(x, y) = \sqrt{x^2 + y^2}\) over the region \(x^2 + y^2 \le 4\)?
+        </p>
+        <img class="graph" src="images/polar_double_integral.png">
+        <p class="ntm sn">
+          What is the volume between the cone defined by \(\class{red}{f(x, y) = \sqrt{x^2 + y^2}}\) over the region \(x^2 + y^2 \le 4\) and the \(xy\)-plane?
+        </p>
+        <p>
+          This time, we’re going to express our region and our function in terms of polar coordinates. Let’s handle the region first: the region is a circle with radius 2, so we can represent this region in polar coordinates as \(r \le 2\) (i.e. all of the points that are a distance of less than 2 away from the origin).
+        </p>
+        <p>
+          Now for the function. Remember that the equation \(r^2 = x^2 + y^2\) can help us convert between rectangular and polar coordinates. Therefore, \(\sqrt{x^2 + y^2} = r\), so our new function in terms of polar coordinates is \(f(r, \theta) = r\).
+        </p>
+        <p class="nbm">
+          Let’s go back to the general form of a double integral:
+        </p>
+        <div class="mj">
+          \[ \iint_C f \dd{A} \]
+        </div>
+        <p class="ntm">
+          Normally, we would replace \(\dd{A}\) with either \(\dd{x}\dd{y}\) or \(\dd{y}\dd{x}\), but since we’re working with polar coordinates instead of rectangular coordinates, we can’t do that here. Instead, let’s consider what \(\dd{A}\) actually represents: a tiny area in the region we’re integrating over. How can we write this in terms of polar coordinates?
+        </p>
+        <p>
+          Let’s look at the region we are integrating over. With rectangular coordinates, we divided this region into small squares, each with an infinitesimal area \(\dd{A} = \dd{x}\dd{y}\).
+        </p>
+        <p>
+          However, with polar coordinates, it’s more helpful to divide the region like this:
+        </p>
+        <img class="graph" src="images/polar_regions.png">
+        <p>
+          Why is this helpful? Well, let’s take a closer look at one of these small pieces.
+        </p>
+        <img class="graph" src="images/polar_region.png">
+        <p>
+          Notice that this piece is similar to a rectangle, so we can approximate it with a rectangle. The height of this rectangle can be thought of as a small change in \(r\), or \(\Delta r\). You might think then that the width is a small change in \(\theta\), or \(\Delta \theta\), but this isn’t quite right. That’s because \(\Delta\theta\) is an angle, not a length.
+        </p>
+        <p>
+          Our width is actually the length of an arc of a circle with radius \(r\). Remember that the length of an arc of a circle with radius \(r\) is \(r\theta\), where \(\theta\) is the angle of the arc in radians (i.e. to convert an angle to an arc length, we need to multiply by \(r\)). So our arc length in this case is \(r\Delta\theta\).
+        </p>
+        <p>
+          Therefore, the area of each piece is about \(r\Delta \theta\Delta r\).
+        </p>
+        <img class="graph" src="images/polar_region_2.png">
+        <p class="ntm sn">
+          The area of each piece can be approximated by \(\class{blue}{r\Delta\theta}\class{green}{\Delta r}\).
+        </p>
+        <p>
+          As we make these pieces smaller and smaller, we can replace \(\Delta \theta\) and \(\Delta r\) by the differentials \(\dd{\theta}\) and \(\dd{r}\). Therefore, the area of one of these infinitesimally small pieces is \(r\dd{\theta}\dd{r}\). This is our expression for \(\dd{A}\).
+        </p>
+        <p class="nbm">
+          So to perform a double integral in polar coordinates, we replace \(\dd{A}\) with \(r\dd{\theta}\dd{r}\):
+        </p>
+        <div class="mj">
+          \[ \iint_C f(r, \theta) r\dd{\theta}\dd{r} \]
+        </div>
+        <p class="ntm sn">
+          Don’t forget about the additional \(r\) at the end! \(\dd{A}\) is <strong>not</strong> equal to \(\dd{\theta}\dd{r}\).
+        </p>
+        <p>
+          Let’s solve our original problem now. Our function in polar coordinates is \(f(r, \theta) = r\). But what are the bounds? We already found that our region can be represented as \(r \le 2\) in polar coordinates, so we are integrating from \(r = 0\) to \(r = 2\).
+        </p>
+        <p>
+          We are integrating over an entire circle, so the range of \(\theta\) values is \(\theta = 0\) to \(\theta = 2\pi\). So our region can be represented as \(0 \le r \le 2\) and \(0 \le \theta \le 2\pi\).
+        </p>
+        <p class="nbm">
+          Just like how we can choose to integrate with respect to either \(x\) or \(y\) first with standard double integrals, we can choose to integrate with respect to either \(r\) or \(\theta\) first. Let’s first try integrating with respect to \(r\) first.
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          V &= \int_0^{2\pi}\int_0^2 f(r, \theta)r\dd{r}\dd{\theta} \\
+          &= \int_0^{2\pi}\int_0^2 r\cdot r\dd{r}\dd{\theta} \\
+          &= \int_0^{2\pi}\int_0^2 r^2\dd{r}\dd{\theta} \\
+          &= \int_0^{2\pi}\frac{r^3}{3}\bigg|_0^2\dd{\theta} \\
+          &= \int_0^{2\pi}\frac{8}{3}\dd{\theta} \\
+          &= \frac{8}{3}\theta\bigg|_0^{2\pi}\\
+          &= \frac{16\pi}{3}\\
+          &\approx 16.755
+          \end{flalign}\]
+        </div>
+        <p class="nm">
+          Here’s what happens if we integrate with respect to \(\theta\) first:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          V &= \int_0^2\int_0^{2\pi} f(r, \theta)r\dd{\theta}\dd{r} \\
+          &= \int_0^2\int_0^{2\pi} r^2\dd{\theta}\dd{r} \\
+          &= \int_0^2 r^2\theta\bigg|_{\theta=0}^{\theta=2\pi}\dd{r} \\
+          &= \int_0^2 2\pi r^2\dd{r} \\
+          &= 2\pi\frac{r^3}{3}\bigg|_0^2\\
+          &= \frac{16\pi}{3}\\
+          &\approx 16.755
+          \end{flalign}\]
+        </div>
+        <p class="ntm">
+          As expected, this gives the same result as before.
+        </p>
+        <p class="nbm">
+          In case you’re curious, here is what this same double integral would look like in rectangular coordinates:
+        </p>
+        <div class="mj">
+          \[ V = \int_{-2}^2\int_{-\sqrt{4-x^2}}^\sqrt{4-x^2} \sqrt{x^2+y^2}\dd{y}\dd{x} \quad(\text{integrating with respect to }y\text{ first})\]
+          \[ V = \int_{-2}^2\int_{-\sqrt{4-y^2}}^\sqrt{4-y^2} \sqrt{x^2+y^2}\dd{x}\dd{y} \quad(\text{integrating with respect to }x\text{ first})\]
+        </div>
+        <p class="ntm">
+          It’s definitely a lot easier to perform this double integral in polar coordinates!
+        </p>
+        <p class="bold large-text">
+          Summary
+        </p>
+        <p>
+          Polar coordinates can be used to simplify some double integrals that would otherwise be difficult to perform in rectangular coordinates. To do this, we rewrite our function \(f(x, y)\) in terms of \(r\) and \(\theta\), determine the bounds of integration in terms of \(r\) and \(\theta\), and make the substitution \(\dd{A} = r\dd{\theta}\dd{r}\).
+        </p>
+      </div>
+    </div>
+  </div>
+  <hr class="heavy-hr">
+  <!-- <div class="unit" id="unit5Unit">
+    <h2 id="unit5Header">
+      <span onclick="showHideUnit('unit5')"><span class="gray">Unit 5:</span> Line and Surface Integrals</span>
+      <button id="unit5Button" onclick="showHideUnit('unit5')">Show</button>
+    </h2>
+    <div class="hidden-by-default" id="unit5">
+
+    </div>
+  </div>
+  <hr class="heavy-hr"> -->
   <!-- Guest Explanations -->
   <div class="unit" id="guestExplanationsUnit">
     <h2 id="guestExplanationsHeader">
@@ -1176,24 +3553,14 @@
       </div>
     </div>
   </div>
-  <!-- <div class="unit" id="unit3Unit">
-    <h2 id="unit3Header">
-      <span onclick="showHideUnit('unit3')"><span class="gray">Unit 3:</span></span>
-      <button id="unit1Button" onclick="showHideUnit('unit3')">Show</button>
-    </h2>
-    <div class="hidden-by-default" id="unit3">
-
-    </div>
+  <hr class="heavy-hr">
+  <h2 id="otherWebsitesHeader">
+    <span onclick="showHide('otherWebsites')">My Other Websites! (<a class="external-link" target="_blank" rel="noopener noreferrer" href="https://calculusgaming.com">calculusgaming.com</a>)</span>
+    <button id="otherWebsitesButton" onclick="showHide('otherWebsites')">Show</button>
+  </h2>
+  <div id="otherWebsites" class="hidden-by-default">
+    <p>I have other educational websites like this one available at <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://calculusgaming.com">https://calculusgaming.com</a>!</p>
   </div>
-  <div class="unit" id="unit4Unit">
-    <h2 id="unit4Header">
-      <span onclick="showHideUnit('unit4')"><span class="gray">Unit 4:</span></span>
-      <button id="unit1Button" onclick="showHideUnit('unit4')">Show</button>
-    </h2>
-    <div class="hidden-by-default" id="unit4">
-
-    </div>
-  </div> -->
   <hr class="heavy-hr">
   <!-- Credits / Special Thanks -->
   <h2 id="creditsHeader">
@@ -1306,7 +3673,7 @@ limitations under the License.
       document.getElementsByTagName('body')[0].appendChild(script);
     }
     document.getElementById('loading').innerText = 'Loading scripts (1/3)... Some features will not work properly until loading finishes.';
-    setTimeout(loadScript('multivar.js'));
+    setTimeout(() => loadScript('multivar.js?20250324'));
   </script>
 </body>
 </html>
