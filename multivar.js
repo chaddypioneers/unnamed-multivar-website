@@ -91,6 +91,10 @@ const customTextButtons = {
   'determinantExplanation': {
     'showText': 'What is a matrix? What is a determinant?',
     'hideText': 'Hide Explanation'
+  },
+  'license': {
+    'showText': 'Show License',
+    'hideText': 'Hide License'
   }
 };
 

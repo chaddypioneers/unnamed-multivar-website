@@ -6,12 +6,17 @@
   <meta name="format-detection" content="telephone=no">
   <meta property="og:title" content="unnamed multivar website">
   <meta property="og:description" content="Learn and study multivariable calculus for free with interactive tools and simple explanations!">
-  <meta property="og:image" content="https://chaddypratt.org/multivar/images/favicon.png">
+  <meta property="og:image" content="https://calculusgaming.com/multivar/images/favicon.png">
   <title>unnamed multivar website</title>
   <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="apple-touch-icon" type="image/png" href="images/favicon.png">
   <link rel="apple-touch-icon-precomposed" type="image/png" href="images/favicon.png">
-  <link rel="stylesheet" href="multivar.css?20250324">
+  <link rel="stylesheet" href="multivar.css?20250421">
+  <script>
+    if (window.location.href === 'https://calculusgaming.com/multivar') {
+      window.location.replace(window.location.href + '/');
+    }
+  </script>
 </head>
 <body id="body">
   <div id="backgroundImage"></div>
@@ -107,7 +112,7 @@
         <div class="popup-text">
           <h2 class="ntm">Welcome to unnamed multivar website!</h2>
           <p>
-            This is a website where I teach multivariable calculus concepts in easy-to-understand language. This is a continuation of my single-variable calculus website, <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://chaddypratt.org/calculus">unnamed calc website</a>.
+            This is a website where I teach multivariable calculus concepts in easy-to-understand language. This is a continuation of my single-variable calculus website, <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://calculusgaming.com/calc">unnamed calc website</a>.
           </p>
           <p>
             If you find this website useful, I would really appreciate it if you shared it with some of your friends! I created this website with my community in mind and I want to help as many calculus students as possible.
@@ -159,6 +164,13 @@
       <p class="sidebar-unit">Unit 4</p>
       <p class="sidebar-unit-text">Multiple Integrals</p>
     </button>
+    <button class="sidebar-button" onclick="jumpTo('unit5'); toggleSidebar()">
+      <p class="sidebar-unit">Unit 5</p>
+      <p class="sidebar-unit-text">Line and Surface Integrals</p>
+    </button>
+    <button class="sidebar-button" onclick="jumpTo('otherWebsites'); toggleSidebar()">
+      <p class="sidebar-unit-text">My Other Websites</p>
+    </button>
   </div>
   <!-- Website Header (title, subtitle, search bar) -->
   <div id="websiteHeader">
@@ -172,7 +184,7 @@
       <strong>unnamed <span class="red">multivar</span> website</strong>: Interactive and simple multivariable calculus explanations!
     </p>
     <p>
-      This is a work in progress, and a continuation of <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://chaddypratt.org/calculus">unnamed calc website</a>, my website for single-variable calculus explanations.
+      This is a work in progress, and a continuation of <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://calculusgaming.com/calc">unnamed calc website</a>, my website for single-variable calculus explanations.
     </p>
   </div>
   <hr class="heavy-hr">
@@ -195,10 +207,12 @@
         <li><a href="#unit2Header" onclick="jumpTo('unit2')"><strong>Unit 2</strong>: Vector-Valued Functions</a></li>
         <li><a href="#unit3Header" onclick="jumpTo('unit3')"><strong>Unit 3</strong>: Multivariable Derivatives</a></li>
         <li><a href="#unit4Header" onclick="jumpTo('unit4')"><strong>Unit 4</strong>: Multiple Integrals</a></li>
+        <li><a href="#unit5Header" onclick="jumpTo('unit5')"><strong>Unit 5</strong>: Line and Surface Integrals</a></li>
         <li><a href="#guestExplanationsHeader" onclick="jumpTo('guestExplanations')">Guest Explanations</a></li>
       </ul>
-      <h3 class="nm">Credits</h3>
+      <h3 class="nm">Other</h3>
       <ul class="ntm">
+        <li><a href="#otherWebsitesHeader" onclick="jumpTo('otherWebsites')">My Other Websites</a></li>
         <li><a href="#creditsHeader" onclick="jumpTo('credits')">Credits / Special Thanks</a></li>
       </ul>
     </div>
@@ -215,8 +229,77 @@
     <p>
       <strong>Important: You might have to refresh the tab to view the latest updates to this website.</strong>
     </p>
+    <h3>2025-04-21: “Line Integrals” Update <button id="update20250421Button" onclick="showHide('update20250421')">Hide</button></h3>
+    <div id="update20250421">
+      <p>
+        This update is all about line integrals: a way to integrate multivariable functions over any curve in the \(xy\)-plane! <a href="#progress" onclick="jumpTo('progress')">Current progress: 27/37 sections covered.</a>
+      </p>
+      <h4 class="nm">New Sections</h4>
+      <ul>
+        <li>
+          New Unit 5 sections added:
+          <ul class="link-ul">
+            <li><a href="#lineIntScalarHeader" onclick="jumpTo('lineIntScalar')">Line Integrals for Scalar Functions</a></li>
+            <li><a href="#vectorFieldsHeader" onclick="jumpTo('vectorFields')">Vector Fields</a></li>
+            <li><a href="#lineIntVectorHeader" onclick="jumpTo('lineIntVector')">Line Integrals for Vector-Valued Functions</a></li>
+            <li><a href="#ftcLineHeader" onclick="jumpTo('ftcLine')">The Fundamental Theorem of Line Integrals</a></li>
+            <li><a href="#curlHeader" onclick="jumpTo('curl')">Vector Fields: The Curl Operator</a></li>
+            <li><a href="#divergenceHeader" onclick="jumpTo('divergence')">Vector Fields: The Divergence Operator</a></li>
+            <li><a href="#greensTheoremHeader" onclick="jumpTo('greensTheorem')">Green’s Theorem</a></li>
+          </ul>
+        </li>
+        <li>
+          New Unit 3 section added:
+          <ul>
+            <li><a href="#multivarChain2Header" onclick="jumpTo('multivarChain2')">The Multivariable Chain Rule, Revisited</a></li>
+          </ul>
+        </li>
+      </ul>
+      <h4 class="nm">Minor Changes</h4>
+      <ul>
+        <li>Added “My Other Websites” button to sidebar</li>
+      </ul>
+    </div>
+    <h3>2025-04-09: “Triple Integrals” Update <button id="update20250409Button" onclick="showHide('update20250409')">Hide</button></h3>
+    <div id="update20250409" class="hidden-by-default">
+      <p>
+        This update features more sections in Unit 4 (Multiple Integrals), primarily focused on triple integrals. <a href="#progress" onclick="jumpTo('progress')">Current progress: 22/37 sections covered.</a>
+      </p>
+      <h4 class="nm">New Sections</h4>
+      <ul>
+        <li>
+          New sections added:
+          <ul class="link-ul">
+            <li><a href="#doubleIntIntroHeader" onclick="jumpTo('doubleIntIntro')">Intro to Double Integrals</a> (explains the limit definition of the double integral)</li>
+            <li><a href="#doubleIntOtherHeader" onclick="jumpTo('doubleIntOther')">Double Integrals: Finding Area and Mass</a></li>
+            <li><a href="#tripleIntHeader" onclick="jumpTo('tripleInt')">Triple Integrals: Finding Volume and Mass</a></li>
+            <li><a href="#cylindricalSphericalHeader" onclick="jumpTo('cylindricalSpherical')">Intro to Cylindrical and Spherical Coordinates</a></li>
+            <li><a href="#tripleIntCylindricalHeader" onclick="jumpTo('tripleIntCylindrical')">Triple Integrals in Cylindrical Coordinates</a></li>
+            <li><a href="#tripleIntSphericalHeader" onclick="jumpTo('tripleIntSpherical')">Triple Integrals in Spherical Coordinates</a></li>
+            <li><a href="#changeOfVarsHeader" onclick="jumpTo('changeOfVars')">Change of Variables for Multiple Integrals</a></li>
+            <li><a href="#doubleIntSurfaceAreaHeader" onclick="jumpTo('doubleIntSurfaceArea')">Double Integrals: Finding Surface Area</a></li>
+          </ul>
+        </li>
+        <li>
+          Explanation of matrices and determinants is now its own section: <a href="#matricesHeader" onclick="jumpTo('matrices')">Matrices and Determinants</a>
+        </li>
+      </ul>
+      <h4 class="nm">Section Improvements</h4>
+      <ul>
+        <li><strong>Unit 3: Lagrange Multipliers</strong>: mentioned that \(\lambda\) is known as the Lagrange multiplier</li>
+        <li><strong>Unit 4: Iterated Integrals and Double Integrals (Rectangular Regions)</strong>: mentioned that evaluating double integrals using two separate integrals is known as an iterated integral</li>
+      </ul>
+      <h4 class="nm">Minor Changes</h4>
+      <ul>
+        <li>Added copyright and license information for this website to the Credits / Special Thanks section. Feel free to modify and re-release this website as long as you follow the terms of this website’s license!</li>
+        <li>Renamed “Finding Volume Using Double Integrals (Rectangular Regions)” section to “Double Integrals: Iterated Integrals and Finding Volume Under Rectangular Regions”</li>
+        <li>Renamed “Finding Volume Using Double Integrals (General Regions)” section to “Double Integrals: Finding Volume Under General Regions”</li>
+        <li>Renamed “Finding Volume Using Double Integrals (Polar Coordinates)” section to “Double Integrals in Polar Coordinates”</li>
+        <li>This website is now hosted on calculusgaming.com/multivar instead of chaddypratt.org/multivar</li>
+      </ul>
+    </div>
     <h3>2025-03-24: “Double Integrals” Update <button id="update20250324Button" onclick="showHide('update20250324')">Hide</button></h3>
-    <div id="update20250324">
+    <div id="update20250324" class="hidden-by-default">
       <p>
         This update focuses on the different types of double integrals, as well as Lagrange multipliers, a technique to solve some types of optimization problems. <a href="#progress" onclick="jumpTo('progress')">Current progress: 16/37 sections covered.</a>
       </p>
@@ -342,7 +425,7 @@
       A note about links on this page: Internal links (links that bring you to another spot on this page) are colored in <a href="#" onclick="return false;">light blue</a>. External links (links that open a different website) are colored in <a class="external-link" href="#" onclick="return false;">dark blue</a>. External links will always open in a new tab.
     </p>
     <p>
-      This is a continuation of my single-variable calculus website, <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://chaddypratt.org/calculus">unnamed calc website</a>, but this time with multivariable calculus! You can look at that page for more information on what this website is and why I made it.
+      This is a continuation of my single-variable calculus website, <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://calculusgaming.com/calc">unnamed calc website</a>, but this time with multivariable calculus! You can look at that page for more information on what this website is and why I made it.
     </p>
     <p>
       The content on this page is heavily based on <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://www.khanacademy.org">Khan Academy</a> and <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://tutorial.math.lamar.edu/">Paul’s Online Notes</a>. I recommend visiting these sites for more detailed multivariable calculus explanations!
@@ -371,11 +454,11 @@
         </tr>
         <tr>
           <td>15. Multiple Integrals</td>
-          <td>3/10</td>
+          <td>9/10</td>
         </tr>
         <tr>
           <td>16. Vector Calculus</td>
-          <td>0/9</td>
+          <td>5/9</td>
         </tr>
         <tr class="bold">
           <td>All Units</td>
@@ -591,6 +674,137 @@
           </p>
         </div>
       </div>
+      <h3 class="section-header" id="matricesHeader">
+        Matrices and Determinants <button id="matricesButton" onclick="showHide('matrices')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="matrices">
+        <p class="nbm">
+          In multivariable calculus, we will sometimes be dealing with matrices. A <strong>matrix</strong> is a 2D grid of numbers. Here’s an example of a matrix:
+        </p>
+        <div class="mj">
+          \[ \begin{bmatrix} 
+          1 & 2 & 3 & 4\\
+          5 & 6 & 7 & 8\\
+          9 & 10 & 11 & 12
+          \end{bmatrix} \]
+        </div>
+        <p class="ntm">
+          A matrix that has \(m\) rows and \(n\) columns is known as an \(m \times n\) matrix. For example, the above matrix is a \(3 \times 4\) matrix.
+        </p>
+        <p>
+          Sometimes, we will be studying the determinants of matrices. The <strong>determinant</strong> is a special number you can calculate from a square matrix (a matrix with the same number of rows and columns). Here’s an example:
+        </p>
+        <p class="nbm">
+          Imagine we have this \(2 \times 2\) matrix:
+        </p>
+        <div class="mj">
+          \[ A = \begin{bmatrix} 
+          a & b \\
+          c & d
+          \end{bmatrix} \]
+        </div>
+        <p class="nm">
+          The determinant of this matrix, denoted by \(\det(A)\), is calculated as follows:
+        </p>
+        <div class="mj">
+          \[ \det(A) = ad - bc \]
+        </div>
+        <p class="nm">
+          The determinant of a \(3 \times 3\) matrix is more complicated:
+        </p>
+        <div class="mj">
+          \[ A = \begin{bmatrix} 
+          a_{11} & a_{12} & a_{13} \\
+          a_{21} & a_{22} & a_{23} \\
+          a_{31} & a_{32} & a_{33}
+          \end{bmatrix} \]
+          \[ \begin{flalign}
+          \det(A) &= a_{11}(-1)^{1+1}\det\begin{bmatrix} 
+          a_{22} & a_{23} \\
+          a_{32} & a_{33}
+          \end{bmatrix} + a_{12}(-1)^{1+2}\det\begin{bmatrix} 
+          a_{21} & a_{23} \\
+          a_{31} & a_{33}
+          \end{bmatrix} + a_{13}(-1)^{1+3}\det\begin{bmatrix} 
+          a_{21} & a_{22} \\
+          a_{31} & a_{32}
+          \end{bmatrix}\\
+          &= a_{11}\det\begin{bmatrix} 
+          a_{22} & a_{23} \\
+          a_{32} & a_{33}
+          \end{bmatrix} - a_{12}\det\begin{bmatrix} 
+          a_{21} & a_{23} \\
+          a_{31} & a_{33}
+          \end{bmatrix} + a_{13}\det\begin{bmatrix} 
+          a_{21} & a_{22} \\
+          a_{31} & a_{32}
+          \end{bmatrix}\\
+          \end{flalign} \]
+        </div>
+        <p class="ntm">
+          That just looks like a huge mess at first! Let’s break it down.
+        </p>
+        <p class="nbm">
+          The first term in the sum is:
+        </p>
+        <div class="mj">
+          \[ a_{\class{red}{1}\class{blue}{1}}(-1)^{\class{red}{1}+\class{blue}{1}}\det\begin{bmatrix} 
+          a_{22} & a_{23} \\
+          a_{32} & a_{33} 
+          \end{bmatrix} \] 
+        </div>
+        <p class="ntm">
+          Notice how the exponent on the -1 term is \(\class{red}{1} + \class{blue}{1}\), while the coefficient in front of it is \(a_{\class{red}{1}\class{blue}{1}}\), corresponding to the element on the <span class="red">1</span>st row and <span class="blue">1</span>st column of the matrix.
+        </p>
+        <p>
+          What about the determinant part? Notice how we’re finding the determinant of a smaller \(2 \times 2\) matrix. This matrix is just the \(3 \times 3\) matrix \(A\) but without the elements in the <span class="red">1</span>st row and the <span class="blue">1</span>st column.
+        </p>
+        <p class="nbm">
+          The next term is:
+        </p>
+        <div class="mj">
+          \[ a_{\class{red}{1}\class{blue}{2}}(-1)^{\class{red}{1}+\class{blue}{2}}\det\begin{bmatrix} 
+          a_{21} & a_{23} \\
+          a_{31} & a_{33} 
+          \end{bmatrix} \] 
+        </div>
+        <p class="ntm">
+          Once again, the exponent on the -1 term (\(\class{red}{1} + \class{blue}{2}\)) is the sum of the row and column number of the coefficient \(a_{\class{red}{1}\class{blue}{2}}\). We are multiplying these terms by the determinant of a \(2 \times 2\) matrix which is matrix \(A\) but without the <span class="red">1</span>st row and <span class="blue">2</span>nd column.
+        </p>
+        <p class="nbm">
+          Finally, we see this pattern continue with the last term:
+        </p>
+        <div class="mj">
+          \[ a_{\class{red}{1}\class{blue}{3}}(-1)^{\class{red}{1}+\class{blue}{3}}\det\begin{bmatrix} 
+          a_{21} & a_{22} \\
+          a_{31} & a_{32} 
+          \end{bmatrix} \] 
+        </div>
+        <p class="ntm">
+          The exponent on the -1 is the sum of the row and column number, and we are once again multiplying by a modified version of matrix \(A\) without the <span class="red">1</span>st row and <span class="blue">3</span>rd column.
+        </p>
+        <p>
+          However, this isn’t the only way we can calculate the determinant of \(A\). In the previous example, we used what’s known as the <strong>Laplace expansion</strong> along the first row of the matrix (since the coefficients \(a_{11}\), \(a_{12}\), \(a_{13}\) come from the first row of matrix \(A\)).
+        </p>
+        <p class="nbm">
+          The Laplace expansion works for any row or any column of the matrix! For example, here’s the expansion along the 2nd column:
+        </p>
+        <div class="mj">
+          \[ \det(A) = a_{12}(-1)^{1+2}\det\begin{bmatrix}
+          a_{21} & a_{23} \\
+          a_{31} & a_{33}
+          \end{bmatrix} + a_{22}(-1)^{2+2}\det\begin{bmatrix}
+          a_{11} & a_{13} \\
+          a_{31} & a_{33}
+          \end{bmatrix} + a_{32}(-1)^{3+2}\det\begin{bmatrix}
+          a_{11} & a_{13} \\
+          a_{21} & a_{23}
+          \end{bmatrix}\]
+        </div>
+        <p class="ntm">
+          When we find the determinant of a \(3\times 3\) matrix, we will most often use the Laplace expansion along the first row (although it’s not the only way to find the determinant).
+        </p>
+      </div>
       <h3 class="section-header" id="crossProductHeader">
         Vectors: Cross Product <button id="crossProductButton" onclick="showHide('crossProduct')">Show</button>
       </h3>
@@ -620,7 +834,7 @@
           \end{flalign} \]
         </div>
         <p class="ntm">
-          This is not an easy formula to remember! Luckily, there is an easier way to remember this, but it does require you to know a little bit about matrices.
+          This is not an easy formula to remember! Luckily, there is an easier way to remember this, but it does require you to be familiar with matrices and determinants.
         </p>
         <p class="nbm">
           This formula can be written as the determinant of a \(3\times 3\) matrix as follows:
@@ -633,132 +847,8 @@
           \end{bmatrix}\right)\]
         </div>
         <p class="ntm">
-          The first row of the matrix contains the unit vectors, the second row of the matrix contains the components of the first vector, and the third row contains the components of the second vector.
-        </p>
-        <button class="large-button" onclick="showHide('determinantExplanation')" id="determinantExplanationButton">What is a matrix? What is a determinant?</button>
-        <div id="determinantExplanation" class="hidden-by-default">
-          <p class="nbm">
-            A <strong>matrix</strong> is a 2D grid of numbers. Here’s an example of a matrix:
-          </p>
-          <div class="mj">
-            \[ \begin{bmatrix} 
-            1 & 2 & 3 \\
-            4 & 5 & 6 \\
-            7 & 8 & 9
-            \end{bmatrix} \]
-          </div>
-          <p class="ntm">
-            A matrix that has \(m\) rows and \(n\) columns is known as an \(m \times n\) matrix.
-          </p>
-          <p class="nbm">
-            Imagine we have this \(2 \times 2\) matrix:
-          </p>
-          <div class="mj">
-            \[ A = \begin{bmatrix} 
-            a & b \\
-            c & d
-            \end{bmatrix} \]
-          </div>
-          <p class="nm">
-            The <strong>determinant</strong> of this matrix, denoted by \(\det(A)\), is calculated as follows:
-          </p>
-          <div class="mj">
-            \[ \det(A) = ad - bc \]
-          </div>
-          <p class="nm">
-            The determinant of a \(3 \times 3\) matrix is more complicated:
-          </p>
-          <div class="mj">
-            \[ A = \begin{bmatrix} 
-            a_{11} & a_{12} & a_{13} \\
-            a_{21} & a_{22} & a_{23} \\
-            a_{31} & a_{32} & a_{33}
-            \end{bmatrix} \]
-            \[ \begin{flalign}
-            \det(A) &= a_{11}(-1)^{1+1}\det\begin{bmatrix} 
-            a_{22} & a_{23} \\
-            a_{32} & a_{33}
-            \end{bmatrix} + a_{12}(-1)^{1+2}\det\begin{bmatrix} 
-            a_{21} & a_{23} \\
-            a_{31} & a_{33}
-            \end{bmatrix} + a_{13}(-1)^{1+3}\det\begin{bmatrix} 
-            a_{21} & a_{22} \\
-            a_{31} & a_{32}
-            \end{bmatrix}\\
-            &= a_{11}\det\begin{bmatrix} 
-            a_{22} & a_{23} \\
-            a_{32} & a_{33}
-            \end{bmatrix} - a_{12}\det\begin{bmatrix} 
-            a_{21} & a_{23} \\
-            a_{31} & a_{33}
-            \end{bmatrix} + a_{13}\det\begin{bmatrix} 
-            a_{21} & a_{22} \\
-            a_{31} & a_{32}
-            \end{bmatrix}\\
-            \end{flalign} \]
-          </div>
-          <p class="ntm">
-            That just looks like a huge mess at first! Let’s break it down.
-          </p>
-          <p class="nbm">
-            The first term in the sum is:
-          </p>
-          <div class="mj">
-            \[ a_{\class{red}{1}\class{blue}{1}}(-1)^{\class{red}{1}+\class{blue}{1}}\det\begin{bmatrix} 
-            a_{22} & a_{23} \\
-            a_{32} & a_{33} 
-            \end{bmatrix} \] 
-          </div>
-          <p class="ntm">
-            Notice how the exponent on the -1 term is \(\class{red}{1} + \class{blue}{1}\), while the coefficient in front of it is \(a_{\class{red}{1}\class{blue}{1}}\), corresponding to the element on the <span class="red">1</span>st row and <span class="blue">1</span>st column of the matrix.
-          </p>
-          <p>
-            What about the determinant part? Notice how we’re finding the determinant of a smaller \(2 \times 2\) matrix. This matrix is just the \(3 \times 3\) matrix \(A\) but without the elements in the <span class="red">1</span>st row and the <span class="blue">1</span>st column.
-          </p>
-          <p class="nbm">
-            The next term is:
-          </p>
-          <div class="mj">
-            \[ a_{\class{red}{1}\class{blue}{2}}(-1)^{\class{red}{1}+\class{blue}{2}}\det\begin{bmatrix} 
-            a_{21} & a_{23} \\
-            a_{31} & a_{33} 
-            \end{bmatrix} \] 
-          </div>
-          <p class="ntm">
-            Once again, the exponent on the -1 term (\(\class{red}{1} + \class{blue}{2}\)) is the sum of the row and column number of the coefficient \(a_{\class{red}{1}\class{blue}{2}}\). We are multiplying these terms by the determinant of a \(2 \times 2\) matrix which is matrix \(A\) but without the <span class="red">1</span>st row and <span class="blue">2</span>nd column.
-          </p>
-          <p class="nbm">
-            Finally, we see this pattern continue with the last term:
-          </p>
-          <div class="mj">
-            \[ a_{\class{red}{1}\class{blue}{3}}(-1)^{\class{red}{1}+\class{blue}{3}}\det\begin{bmatrix} 
-            a_{21} & a_{22} \\
-            a_{31} & a_{32} 
-            \end{bmatrix} \] 
-          </div>
-          <p class="ntm">
-            The exponent on the -1 is the sum of the row and column number, and we are once again multiplying by a modified version of matrix \(A\) without the <span class="red">1</span>st row and <span class="blue">3</span>rd column.
-          </p>
-          <p>
-            However, this isn’t the only way we can calculate the determinant of \(A\). In the previous example, we used what’s known as the <strong>Laplace expansion</strong> along the first row of the matrix (since the coefficients \(a_{11}\), \(a_{12}\), \(a_{13}\) come from the first row of matrix \(A\)).
-          </p>
-          <p class="nbm">
-            The Laplace expansion works for any row or any column of the matrix! For example, here’s the expansion along the 2nd column:
-          </p>
-          <div class="mj">
-            \[ \det(A) = a_{12}(-1)^{1+2}\det\begin{bmatrix}
-            a_{21} & a_{23} \\
-            a_{31} & a_{33}
-            \end{bmatrix} + a_{22}(-1)^{2+2}\det\begin{bmatrix}
-            a_{11} & a_{13} \\
-            a_{31} & a_{33}
-            \end{bmatrix} + a_{32}(-1)^{3+2}\det\begin{bmatrix}
-            a_{11} & a_{13} \\
-            a_{21} & a_{23}
-            \end{bmatrix}\]
-          </div>
-          <hr>
-        </div>
+          The first row of the matrix contains the unit vectors \(\mathbf{i}\), \(\mathbf{j}\), and \(\mathbf{k}\), the second row of the matrix contains the components of the first vector, and the third row contains the components of the second vector.
+        </p>        
         <p class="bold large-text">
           The geometric meaning of the cross product
         </p>
@@ -1181,7 +1271,7 @@
     </h2>
     <div class="hidden-by-default" id="unit2">
       <p>
-        Vector-valued functions are already covered in some detail in Unit 9 of <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://chaddypratt.org/calculus">unnamed calc website</a>, so for now, I’m not going to add content to this unit.
+        Vector-valued functions are already covered in some detail in Unit 9 of <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://calculusgaming.com/calc">unnamed calc website</a>, so for now, I’m not going to add content to this unit.
       </p>
       <p>
         I recognize that there are some vector-valued function topics that aren’t covered yet on unnamed calc website (such as 3D vectors, tangent/normal vectors, and curvature), so I will eventually start working on this unit.
@@ -2280,6 +2370,66 @@
           These are some contour lines for the function \(f(x, y) = \ln(xy)\), as well as the gradient vectors at some points. Notice how the gradient vector at each point is perpendicular to the contour line that passes through that point.
         </p>
       </div>
+      <h3 class="section-header" id="multivarChain2Header">
+        The Multivariable Chain Rule, Revisited <button id="multivarChain2Button" onclick="showHide('multivarChain2')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="multivarChain2">
+        <p class="nbm">
+          We previously saw that the multivariable chain rule could be written in this form, if we have a function \(z = f(x(t), y(t))\), where \(x\) and \(y\) are both functions of \(t\):
+        </p>
+        <div class="mj">
+          \[ \dv{z}{t} = \pdv{f}{x}\cdot\dv{x}{t} + \pdv{f}{y}\cdot\dv{y}{t}\]
+        </div>
+        <p class="nm">
+          If we had a function of three variables, then the multivariable chain rule looks like this:
+        </p>
+        <div class="mj">
+          \[ \dv{w}{t} = \pdv{f}{x}\cdot\dv{x}{t} + \pdv{f}{y}\cdot\dv{y}{t} + \pdv{f}{z}\cdot\dv{z}{t} \]
+        </div>
+        <p class="nm">
+          Using the gradient, there is a simpler way to express the multivariable chain rule. Let’s first express the input of \(f\) as a vector-valued function \(\mathbf{v}(t)\):
+        </p>
+        <div class="mj">
+          \[ \mathbf{v}(t) = (x(t), y(t)) \]
+          \[ f(x(t), y(t)) = f(\mathbf{v}(t)) \]
+        </div>
+        <p class="nm">
+          Here, \(\mathbf{v}(t) = (x(t), y(t))\) is just a vector-valued function that we’ve defined to equal the inputs of \(f\). So \(f(\mathbf{v}(t))\) is just an alternative way to write \(f(x(t), y(t))\).
+        </p>
+        <p class="nbm">
+          In addition, notice that the right-hand side of the multivariable chain rule is a sum of products, meaning that it can be written as a dot product. Using this observation along with the vector-valued function notation results in:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \dv{z}{t} &= \pdv{f}{x}\cdot\dv{x}{t} + \pdv{f}{y}\cdot\dv{y}{t}\\
+          &= \left(\pdv{f}{x}, \pdv{f}{y}\right) \cdot \left(\dv{x}{t}, \dv{y}{t}\right)\\
+          &= \left(\pdv{f}{x}, \pdv{f}{y}\right) \cdot (x'(t), y'(t))\\
+          &= \nabla f \cdot \mathbf{v}'(t)
+          \end{flalign} \]
+        </div>
+        <p class="nm">
+          This observation also works when there are three or more variables. For example, in the three-variable case where we have \(w = f(x, y, z)\), the multivariable chain rule in this form looks like:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \dv{w}{t} &= \pdv{f}{x}\cdot\dv{x}{t} + \pdv{f}{y}\cdot\dv{y}{t} + \pdv{f}{z}\cdot\dv{z}{t}\\
+          &= \left(\pdv{f}{x}, \pdv{f}{y}, \pdv{f}{z}\right) \cdot (x'(t), y'(t), z'(t))\\
+          &= \nabla f \cdot \mathbf{v}'(t)
+          \end{flalign} \]
+        </div>
+        <p class="nm">
+          Therefore, the multivariable chain rule can be more concisely written as:
+        </p>
+        <div class="mj">
+          \[ \dv{t}f(\mathbf{v}(t)) = \nabla f(\mathbf{v}(t)) \cdot \mathbf{v}'(t)\]
+        </div>
+        <p class="nm">
+          You might notice that this looks very similar to the standard chain rule! For reference, here’s the standard chain rule:
+        </p>
+        <div class="mj">
+          \[ \dv{x}f(g(x)) = f'(g(x))g'(x) \]
+        </div>
+      </div>
       <h3 class="section-header" id="higherOrderDiffHeader">
         Higher-Order Partial Derivatives <button id="higherOrderDiffButton" onclick="showHide('higherOrderDiff')">Show</button>
       </h3>
@@ -2863,7 +3013,7 @@
           So if the contour lines for two functions are tangent at a point (in this case, \(f(x, y)\) and our constraint function \(g(x, y)\)), the gradient vectors for both functions at this point will be parallel to each other, meaning that one gradient is a constant multiple of the other. In this case, the gradients of \(f(x, y)\) and \(g(x, y)\) are constant multiples of each other.
         </p>
         <p class="nbm">
-          If we call \(\lambda\) (lambda) the ratio between the two vectors, we can mathematically write this relationship as:
+          If we call \(\lambda\) (lambda) the ratio between the two vectors (\(\lambda\) is known as the Lagrange multiplier), we can mathematically write this relationship as:
         </p>
         <div class="mj">
           \[ \nabla f(x, y) = \lambda \nabla g(x, y) \]
@@ -3079,6 +3229,7 @@
     </div>
   </div>
   <hr class="heavy-hr">
+  <!-- Unit 4 -->
   <div class="unit" id="unit4Unit">
     <h2 id="unit4Header">
       <span onclick="showHideUnit('unit4')"><span class="gray">Unit 4:</span> Multiple Integrals</span>
@@ -3090,15 +3241,61 @@
         <div class="button-spacing"></div>
         <button class="large-button" onclick="toggleAllSections('unit4', 'hide')">Hide All Sections</button>
       </div>
+      <h3 class="section-header" id="doubleIntIntroHeader">
+        Intro to Double Integrals <button id="doubleIntIntroButton" onclick="showHide('doubleIntIntro')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="doubleIntIntro">
+        <p>
+          You’ve learned about how you can use integrals to find the area under curves, and you most likely have seen how they can be used to find the volume of solids of revolution. But now we’re going to use integrals to find the volume under functions of two variables (i.e. under surfaces in 3D space).
+        </p>
+        <img class="graph" src="images/surface_volume.png">
+        <p class="ntm sn">
+          How can we use integrals to find the <span class="red">volume under this surface</span>?
+        </p>
+        <p>
+          When we find the volume under surfaces, we need to define a 2D region that we are integrating over.
+        </p>
+        <p>
+          Let’s say we have a surface defined by \(z = f(x, y)\) for some function of two variables \(f(x, y)\) and we want to find the volume under the surface. Just like how we used Riemann sums with rectangles to find areas, we can use Riemann sums with rectangular prisms to find volumes:
+        </p>
+        <img class="graph" src="images/double_integral_riemann.png">
+        <p class="ntm sn">
+          These rectangular prisms approximate the volume under this surface from \(0 \le x \le 5\) and \(0 \le y \le 5\).
+        </p>
+        <p class="nbm">
+          The volume of each rectangular prism is \(f(x_m, y_n) \Delta x \Delta y\), where \(x_m\) and \(y_n\) represent the coordinates of a point within each rectangle’s base and \(\Delta x\) and \(\Delta y\) are the length and width of each prism. Therefore, the sum of the volumes of these rectangular prisms can be calculated by:
+        </p>
+        <div class="mj">
+          \[ \sum_{j=1}^n\sum_{i=1}^m f(x_m, y_n) \Delta x \Delta y\]
+        </div>
+        <p class="ntm sn">
+          \(m\) represents the number of rectangular prisms in the \(x\)-direction, and \(n\) represents the number of rectangular prisms in the \(y\)-direction. Therefore, we are summing the volumes of \(mn\) rectangular prisms.
+        </p>
+        <p class="nm">
+          We can find the exact volume under the surface by making the rectangular prisms smaller and smaller. We can do this by taking the limit of our double summation as \(n\) and \(m\) approach infinity:
+        </p>
+        <div class="mj">
+          \[ V = \lim_{n\to\infty}\lim_{m\to\infty}\sum_{j=1}^n\sum_{i=1}^m f(x_m, y_n) \Delta x \Delta y\]
+        </div>
+        <p class="nm">
+          Just like how the limit of a Riemann sum can be converted into an integral, this double summation can be converted into a double integral, notated like this:
+        </p>
+        <div class="mj">
+          \[ V = \iint_R f(x, y) \dd{A} \]
+        </div>
+        <p class="ntm sn">
+          \(R\) is the region we’re integrating over.
+        </p>
+        <p>
+          In the next section, we’ll discuss how we can actually evaluate integrals like these!
+        </p>
+      </div>
       <h3 class="section-header" id="doubleIntHeader">
-        Finding Volume Using Double Integrals (Rectangular Regions) <button id="doubleIntButton" onclick="showHide('doubleInt')">Show</button>
+        Double Integrals: Iterated Integrals and Finding Volume Under Rectangular Regions <button id="doubleIntButton" onclick="showHide('doubleInt')">Show</button>
       </h3>
       <div class="hidden-by-default" id="doubleInt">
         <p>
-          You’ve learned about how you can use integrals to find the area under curves, and you most likely have seen how they can be used to find the volume of solids of revolution. But now we’re going to use integrals to find the volume under functions of two variables (i.e. under 3D curves).
-        </p>
-        <p>
-          Let’s start with an example problem:
+          Now we’re going to explore one technique to find double integrals without directly using the limit definition (since it would be really hard to evaluate integrals with that definition in practice). Let’s start with an example problem:
         </p>
         <p class="problem">
           <strong>Problem</strong>: What is the volume under \(f(x, y) = \sin(x)\cos(y) + 1\) over the rectangle defined by \(0 \le x \le \pi\) and \(0 \le y \le \frac{\pi}{2}\)?
@@ -3213,26 +3410,26 @@
           \end{flalign}\]
         </div>
         <p class="ntm">
-          Notice how we need to perform two integrals to find the volume. Because of this, we call these <strong>double integrals</strong>.
+          Notice how we need to perform two integrals to find the volume. We call this an <strong>iterated integral</strong>, which is when we evaluate a double integral by performing two separate integrations.
         </p>
         <p class="large-text bold">
           Double integral notation
         </p>
         <p class="nbm">
-          There is a more general notation for a double integral:
+          Let’s take a closer look at the general notation for a double integral:
         </p>
         <div class="mj">
-          \[ \iint_C f(x, y) \dd{A} \]
+          \[ \iint_R f(x, y) \dd{A} \]
         </div>
         <p class="ntm">
-          \(C\) represents the region we are integrating over, and \(\dd{A}\) represents an infinitesimal area (which in rectangular coordinates is equivalent to \(\dd{x}\dd{y}\) or \(\dd{y}\dd{x}\)).
+          \(R\) represents the region we are integrating over, and \(\dd{A}\) represents an infinitesimal area (which in rectangular/Cartesian coordinates is equivalent to \(\dd{x}\dd{y}\) or \(\dd{y}\dd{x}\)).
         </p>
         <p>
-          If we divide the region we are integrating over into a bunch of tiny squares, you can think of \(\dd{A}\) as representing the area of each of these squares. So the double integral \(\iint_C f(x, y) \dd{A}\) is multiplying the function’s value at each of these squares by the area of each square, then summing them up to calculate a volume. (To be more precise, the integral is the limit of this sum as the squares become infinitesimally small.)
+          If we divide the region we are integrating over into a bunch of tiny squares, you can think of \(\dd{A}\) as representing the area of each of these squares. So the double integral \(\iint_R f(x, y) \dd{A}\) is multiplying the function’s value at each of these squares by the area of each square, then summing them up to calculate a volume. (To be more precise, the integral is the limit of this sum as the squares become infinitesimally small.)
         </p>
         <img class="graph" src="images/square_regions.png">
         <p class="ntm sn">
-          An example of a region \(C\) divided into many small squares. \(\dd{A}\) represents the area of each of these tiny squares.
+          An example of a region \(R\) divided into many small squares. \(\dd{A}\) represents the area of each of these tiny squares.
         </p>
         <p class="large-text bold">
           Summary
@@ -3246,7 +3443,7 @@
         </ul>
       </div>
       <h3 class="section-header" id="doubleIntGeneralHeader">
-        Finding Volume Using Double Integrals (General Regions) <button id="doubleIntGeneralButton" onclick="showHide('doubleIntGeneral')">Show</button>
+        Double Integrals: Finding Volume Under General Regions <button id="doubleIntGeneralButton" onclick="showHide('doubleIntGeneral')">Show</button>
       </h3>
       <div class="hidden-by-default" id="doubleIntGeneral">
         <p>
@@ -3332,11 +3529,11 @@
         </p>
       </div>
       <h3 class="section-header" id="doubleIntPolarHeader">
-        Finding Volume Using Double Integrals (Polar Coordinates) <button id="doubleIntPolarButton" onclick="showHide('doubleIntPolar')">Show</button>
+        Double Integrals in Polar Coordinates <button id="doubleIntPolarButton" onclick="showHide('doubleIntPolar')">Show</button>
       </h3>
       <div class="hidden-by-default" id="doubleIntPolar">
         <p>
-          When we performed a double integral over a circular region in the last section, we had to write the bounds of the inner integral in terms of a variable, resulting in messy bounds like \(\sqrt{1-x^2}\) and \(\sqrt{1-y^2}\). However, there is an alternate way to do this, and it involves polar coordinates. <span class="sn">(You can review polar coordinates in Unit 9 of <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://chaddypratt.org/calculus">unnamed calc website</a>.)</span>
+          When we performed a double integral over a circular region in the last section, we had to write the bounds of the inner integral in terms of a variable, resulting in messy bounds like \(\sqrt{1-x^2}\) and \(\sqrt{1-y^2}\). However, there is an alternate way to do this, and it involves polar coordinates. <span class="sn">(You can review polar coordinates in Unit 9 of <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://calculusgaming.com/calc">unnamed calc website</a>.)</span>
         </p>
         <p class="problem">
           <strong>Problem</strong>: What is the volume under \(f(x, y) = \sqrt{x^2 + y^2}\) over the region \(x^2 + y^2 \le 4\)?
@@ -3355,7 +3552,7 @@
           Let’s go back to the general form of a double integral:
         </p>
         <div class="mj">
-          \[ \iint_C f \dd{A} \]
+          \[ \iint_R f \dd{A} \]
         </div>
         <p class="ntm">
           Normally, we would replace \(\dd{A}\) with either \(\dd{x}\dd{y}\) or \(\dd{y}\dd{x}\), but since we’re working with polar coordinates instead of rectangular coordinates, we can’t do that here. Instead, let’s consider what \(\dd{A}\) actually represents: a tiny area in the region we’re integrating over. How can we write this in terms of polar coordinates?
@@ -3391,7 +3588,7 @@
           So to perform a double integral in polar coordinates, we replace \(\dd{A}\) with \(r\dd{\theta}\dd{r}\):
         </p>
         <div class="mj">
-          \[ \iint_C f(r, \theta) r\dd{\theta}\dd{r} \]
+          \[ \iint_R f(r, \theta) r\dd{\theta}\dd{r} \]
         </div>
         <p class="ntm sn">
           Don’t forget about the additional \(r\) at the end! \(\dd{A}\) is <strong>not</strong> equal to \(\dd{\theta}\dd{r}\).
@@ -3450,20 +3647,1615 @@
         <p>
           Polar coordinates can be used to simplify some double integrals that would otherwise be difficult to perform in rectangular coordinates. To do this, we rewrite our function \(f(x, y)\) in terms of \(r\) and \(\theta\), determine the bounds of integration in terms of \(r\) and \(\theta\), and make the substitution \(\dd{A} = r\dd{\theta}\dd{r}\).
         </p>
+        <p>
+          Changing from rectangular coordinates to polar coordinates is an example of what’s known as a change of variables for multiple integrals, where we change what coordinate system we’re using in order to make an integral easier. You will learn more examples of this later on!
+        </p>
+      </div>
+      <h3 class="section-header" id="doubleIntOtherHeader">
+        Double Integrals: Finding Area and Mass <button id="doubleIntOtherButton" onclick="showHide('doubleIntOther')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="doubleIntOther">
+        <p>
+          Double integrals aren’t just limited to finding volume: they can also be used to find other things.
+        </p>
+        <p class="bold large-text">
+          Using double integrals to find area
+        </p>
+        <p class="nbm">
+          Remember that a double integral for volume over a region \(R\) looks like this:
+        </p>
+        <div class="mj">
+          \[ V = \iint_R f \dd{A} \]
+        </div>
+        <p class="ntm">
+          This integral is essentially saying, “chop up the region \(R\) into many small slices of area, multiply the area of each slice by the function value at that slice, then add these values all up.” How can we modify this definition to calculate the area of the region \(R\) instead?
+        </p>
+        <p class="nbm">
+          We can simply add up the areas of each slice instead of multiplying them by the function value (i.e. we don’t need to multiply \(\dd{A}\) by \(f\).) So this is what a double integral to find area looks like:
+        </p>
+        <div class="mj">
+          \[ A = \iint_R \dd{A} \]
+        </div>
+        <p class="ntm">
+          Here’s an example:
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: Show using a double integral that the area of a circle with radius \(R\) is \(\pi R^2\).
+        </p>
+        <p>
+          Just to make our lives easier, we’re going to use a polar double integral here (so we don’t have to deal with integral bounds like \(\sqrt{R^2 - x^2}\).) To integrate over this circle, the range of \(r\)-values we need to use is \(0 \le r \le R\), and the range of \(\theta\)-values is \(0 \le \theta \le 2\pi\).
+        </p>
+        <p class="nbm">
+          So if we call the region we are integrating over \(R_0\) (to avoid confusion with the radius \(R\)), our area double integral is:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          A &= \iint_{R_0}\dd{A}\\
+          &= \int_0^R\int_0^{2\pi}r\dd{\theta}\dd{r} \quad (\text{since }\dd{A} = r\dd{\theta}\dd{r})\\
+          &= \int_0^R r\theta\bigg|_{\theta=0}^{\theta=2\pi}\dd{r}\\
+          &= \int_0^R 2\pi r\dd{r}\\
+          &= 2\pi \frac{r^2}{2}\bigg|_0^R\\
+          &= \pi r^2\bigg|_0^R\\
+          &= \pi R^2
+          \end{flalign} \]
+        </div>
+        <p class="ntm sn">
+          Alternatively, we could integrate with respect to \(r\) first using the integral \(\int_0^{2\pi}\int_0^R r\dd{r}\dd{\theta}\).
+        </p>
+        <p class="large-text bold">
+          Double integrals to find mass
+        </p>
+        <p>
+          We can also use double integrals to find the mass of a sheet given its area density (two-dimensional density) at all points.
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: the area density of a plate in \(\text{kg/m}^2\) around a point \((x, y)\) is given by the function \(f(x, y) = 1 + xy\). What is the total mass of the plate over the region \(0 \le x \le 2\) and \(0 \le y \le 1\) (where \(x\) and \(y\) are in meters)?
+        </p>
+        <p class="nbm">
+          Once again, we can imagine chopping up the region into many small squares. The mass of each square is given by the density of that square times its area, which can be represented by \(f(x, y) \dd{A}\). So integrating this product over our region gives the total mass of the entire plate.
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          m &= \iint_R f(x,y) \dd{A} \\
+          &= \int_0^2\int_0^1 f(x, y) \dd{y}\dd{x}\\
+          &= \int_0^2\int_0^1 (1+xy)\dd{y}\dd{x}\\
+          &= \int_0^2\left(y + \frac{xy^2}{2}\right)\bigg|_{y=0}^{y=1}\dd{x}\\
+          &= \int_0^2\left(1 + \frac{x}{2}\right)\dd{x}\\
+          &= \left(x + \frac{x^2}{4}\right)\bigg|_0^2\\
+          &= \left(2 + \frac{2^2}{4}\right) - \left(0 + \frac{0^2}{4}\right)\\
+          &= 3 \text{ kg}
+          \end{flalign}\]
+        </div>
+        <p class="ntm sn">
+          Note that the unit for \(f(x, y)\) is \(\text{kg/m}^2\) and the unit for \(\dd{A}\) is \(\text{m}^2\), so our final answer is in terms of kilograms.
+        </p>
+      </div>
+      <h3 class="section-header" id="tripleIntHeader">
+        Triple Integrals: Finding Volume and Mass <button id="tripleIntButton" onclick="showHide('tripleInt')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="tripleInt">
+        <p>
+          We’ve seen that we can use double integrals to find volume, but they can also be used to the area and mass of two-dimensional objects. We can extend this idea to three dimensions - this time by using 3 integrals to find the volume and mass of three-dimensional objects.
+        </p>
+        <p>
+          Let’s start off with a density/mass problem.
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: What is the mass of a solid within a region defined by \(0 \le x \le 1\), \(0 \le y \le 2\), and \(0\le z \le \frac{\pi}{2}\) with density given by \(f(x, y, z) = xy\cos(z) + 1\)?
+        </p>
+        <p class="nbm">
+          Remember what a double integral looks like:
+        </p>
+        <div class="mj">
+          \[ \iint_R f \dd{A} \]
+        </div>
+        <p class="nm">
+          A triple integral is similar, except we have three integrals instead of two and the differential is now \(\dd{V}\), an infinitesimal volume:
+        </p>
+        <div class="mj">
+          \[ \iiint_R f \dd{V} \]
+        </div>
+        <p class="ntm">
+          You can think of \(\dd{V}\) as the volume of an infinitesimally small cube, so it can be written as \(\dd{x}\dd{y}\dd{z}\) (or any other combination of \(\dd{x}\), \(\dd{y}\), and \(\dd{z}\) in any order).
+        </p>
+        <img class="graph" src="images/volume_pieces.png">
+        <p class="ntm sn">
+          This is what it looks like when we chop up a volume into many smaller cubes. As the cubes get smaller and smaller, the volume of each cube can be represented by the differential \(\dd{V}\).
+        </p>
+        <p class="nbm">
+          Going back to our problem, we can imagine dividing our region into many tiny pieces with volume \(\dd{V}\). The mass of each piece is its density times its volume, or \(f(x, y, z) \dd{V}\). So the total mass of the solid can be found by integrating \(f(x, y, z) \dd{V}\) over our region:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          m &= \iiint_R f(x, y, z) \dd{V}\\
+          &= \class{purple}{\int_0^1}\class{blue}{\int_0^2}\class{red}{\int_0^{\pi/2}} f(x, y, z) \class{red}{\dd{z}}\class{blue}{\dd{y}}\class{purple}{\dd{x}}\\
+          \end{flalign} \]
+        </div>
+        <p class="ntm">
+          When you’re working out these integrals, make sure you’re putting the correct bounds on each integral! For this integral, the bounds for \(\class{purple}{x}\) are \(\class{purple}{0 \le x \le 1}\), the bounds for \(\class{blue}{y}\) are \(\class{blue}{0 \le y \le 2}\), and the bounds for \(\class{red}{z}\) are \(\class{red}{0 \le z \le \frac{\pi}{2}}\).
+        </p>
+        <p class="nbm">
+          Here is the work to evaluate this integral:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          m &= \int_0^1\int_0^2\int_0^{\pi/2} f(x, y, z) \dd{z}\dd{y}\dd{x}\\
+          &= \int_0^1\int_0^2\int_0^{\pi/2} (xy\cos(z) + 1) \dd{z}\dd{y}\dd{x}\\
+          &= \int_0^1\int_0^2\left(xy\sin(z) + z\right)\bigg|_0^{\pi/2}\dd{y}\dd{x}\\
+          &= \int_0^1\int_0^2\left[\left(xy\sin\left(\frac{\pi}{2}\right) + \frac{\pi}{2}\right) - \left(xy\sin\left(0\right) + 0\right)\right]\dd{y}\dd{x}\\
+          &= \int_0^1\int_0^2\left(xy + \frac{\pi}{2}\right)\dd{y}\dd{x}\\
+          &= \int_0^1\left(\frac{xy^2}{2} + \frac{\pi}{2}y\right)\bigg|_0^2\dd{x}\\
+          &= \int_0^1\left[\left(\frac{x(2)^2}{2} + \frac{\pi}{2}(2)\right) - \left(\frac{x(0)^2}{2} + \frac{\pi}{2}(0)\right)\right]\dd{x}\\
+          &= \int_0^1(2x + \pi)\dd{x}\\
+          &= (x^2 + \pi x)\bigg|_0^1\\
+          &= \pi + 1\\
+          &\approx 4.142
+          \end{flalign} \]
+        </div>
+        <p class="ntm">
+          Note that we’re essentially following the same steps as we would with a double integral, except that there’s a third integral for us to evaluate.
+        </p>
+        <p class="nbm">
+          We can also use triple integrals to find volume, just like how we used double integrals to find area. The integral in this case looks like this:
+        </p>
+        <div class="mj">
+          \[ V = \iiint_R \dd{V} \]
+        </div>
+        <p class="ntm problem">
+          <strong>Problem</strong>: Express the volume of a unit sphere (a sphere with radius 1) as a triple integral.
+        </p>
+        <p class="nbm">
+          Let’s first consider the range of \(z\)-values that the sphere covers. <span class="sn">(We can actually start with any coordinate, but I’m choosing to focus on the \(z\)-coordinate first.)</span> The range of \(z\)-values covered by the sphere is \(-1 \le z \le 1\). So our \(\dd{z}\) integral will have bounds of -1 to 1.
+        </p>
+        <div class="mj">
+          \[ V = \int_{-1}^1 \int_{?}^{?} \int_{?}^{?} \dd{x}\dd{y}\dd{z}\]
+        </div>
+        <p class="ntm">
+          Now we need to find the bounds for the two inner integrals. To do that, we need to consider which \(x\)- and \(y\)-values the sphere covers for a given \(z\)-value (let’s say \(z = z_0\)). Let’s focus on the \(y\)-values covered first.
+        </p>
+        <img class="graph" src="images/sphere_constant_z.png">
+        <p class="ntm sn">
+          What \(y\)-values are covered by this slice of the sphere (representing a constant \(z\)-value)?
+        </p>
+        <p>
+          Notice that the boundary of this slice lies on the outer edge of the sphere, which is represented by the equation \(x^2 + y^2 + z_0^2 = 1\). Therefore, by subtracting \(z_0^2\) from both sides, we find that this boundary can be defined by the equation \(x^2 + y^2 = 1-z_0^2\). This is a circle with radius \(\sqrt{1-z_0^2}\), so the bounds for \(y\) are \(-\sqrt{1-z_0^2} \le y \le \sqrt{1-z_0^2}\).
+        </p>
+        <p class="nbm">
+          So for each \(z\)-value, the boundaries of \(y\) are \(-\sqrt{1-z^2} \le y \le \sqrt{1-z^2}\), so those are the bounds of our \(\dd{y}\) integral.
+        </p>
+        <div class="mj">
+          \[ V = \int_{-1}^1 \int_{-\sqrt{1-z^2}}^{\sqrt{1-z^2}} \int_{?}^{?} \dd{x}\dd{y}\dd{z}\]
+        </div>
+        <p class="nm">
+          Finally, to find the bounds of the \(\dd{x}\) integral, we need to consider the \(x\)-values that the sphere covers given a fixed \(y\)- and \(z\)-value. To do this, we once again consider that the boundary lies on the equation \(x^2 + y^2 + z^2 = 1\). Given a fixed \(y = y_0\) and \(z = z_0\), we can solve for the \(x\)-values on this boundary:
+        </p>
+        <div class="mj">
+          \[ x^2 + y_0^2 + z_0^2 = 1 \]
+          \[ x^2 = 1 - y_0^2 - z_0^2 \]
+          \[ x = \pm\sqrt{1-y_0^2-z_0^2}\]
+        </div>
+        <p class="nm">
+          So for each \(y\)- and \(z\)-value, the bounds for \(x\) are \(-\sqrt{1-y^2-z^2}\) and \(\sqrt{1-y^2-z^2}\). Therefore, the final integral is:
+        </p>
+        <div class="mj">
+          \[ V = \int_{-1}^1 \int_{-\sqrt{1-z^2}}^{\sqrt{1-z^2}} \int_{-\sqrt{1-y^2-z^2}}^{\sqrt{1-y^2-z^2}} \dd{x}\dd{y}\dd{z}\]
+        </div>
+        <p class="ntm">
+          This is a very tough integral to do in rectangular coordinates, so I’m not going to evaluate it here. In the next few sections, we will learn about other coordinate systems that make this integral much more doable!
+        </p>
+      </div>
+      <h3 class="section-header" id="cylindricalSphericalHeader">
+        Intro to Cylindrical and Spherical Coordinates <button id="cylindricalSphericalButton" onclick="showHide('cylindricalSpherical')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="cylindricalSpherical">
+        <p>
+          In two dimensions, we had two main coordinate systems: rectangular (or Cartesian) coordinates and polar coordinates. In three dimensions, we also have other coordinate systems besides rectangular coordinates, and I’m going to introduce two of them here.
+        </p>
+        <p>
+          These coordinate systems will be useful to help us perform change of variables for triple integrals, similar to how we used polar coordinates for double integrals.
+        </p>
+        <p class="large-text bold">
+          Cylindrical coordinates
+        </p>
+        <p>
+          Cylindrical coordinates are like a mix of rectangular and polar coordinates. We use three variables to describe a point in space:
+        </p>
+        <ul>
+          <li>\(r\) (sometimes also denoted \(\rho\) (rho)): the two-dimensional distance between the point and the origin (i.e. if you set the point’s \(z\)-coordinate to 0, this is the distance from the point and the origin).</li>
+          <li>\(\theta\) (sometimes also denoted \(\varphi\) (phi)): the angle between the point and the positive \(x\)-axis on the \(xy\)-plane if you set the point’s \(z\)-coordinate to 0.</li>
+          <li>\(z\): this is the same as the rectangular coordinate \(z\) (i.e. the height of the point above the \(xy\)-plane).</li>
+        </ul>
+        <p>
+          Conversions between rectangular and cylindrical coordinates:
+        </p>
+        <ul>
+          <li>\(x^2 + y^2 = r^2\)</li>
+          <li>\(\tan(\theta) = \frac{y}{x}\)</li>
+          <li>\(x = r\cos(\theta)\)</li>
+          <li>\(y = r\sin(\theta)\)</li>
+          <li>\(z = z\) (i.e. \(z\) stays the same when converting between rectangular and cylindrical coordinates)</li>
+        </ul>
+        <img class="graph" src="images/cylindrical_coordinates.png">
+        <p class="large-text bold">
+          Spherical coordinates
+        </p>
+        <p>
+          Spherical coordinates are the natural extension of polar coordinates to three dimensions. Spherical coordinates involve these three variables:
+        </p>
+        <ul>
+          <li>\(r\) (sometimes also denoted \(\rho\) (rho)): the three-dimensional distance between the point and the origin <strong>(note that this is not the same as \(r\) in cylindrical coordinates)</strong>.</li>
+          <li>\(\theta\): the angle between the point and the positive \(x\)-axis on the \(xy\)-plane if you set the point’s \(z\)-coordinate to 0 (this is the same as \(\theta\) in cylindrical coordinates).</li>
+          <li>\(\varphi\) (phi): the angle between the \(z\)-axis and the radial line (the line from the origin to the point).</li>
+        </ul>
+        <p class="bold">
+          Warning: different texts might have different conventions (e.g. sometimes the values of \(\theta\) and \(\varphi\) are swapped). The above shows the convention I will use on this website.
+        </p>
+        <p>
+          Conversions between rectangular and spherical coordinates:
+        </p>
+        <ul>
+          <li>\(x^2 + y^2 + z^2 = r^2\)</li>
+          <li>\(x = r\cos(\theta)\sin(\varphi)\)</li>
+          <li>\(y = r\sin(\theta)\sin(\varphi)\)</li>
+          <li>\(z = r\cos(\varphi)\)</li>
+        </ul>
+        <img class="graph" src="images/spherical_coordinates.png">
+      </div>
+      <h3 class="section-header" id="tripleIntCylindricalHeader">
+        Triple Integrals in Cylindrical Coordinates <button id="tripleIntCylindricalButton" onclick="showHide('tripleIntCylindrical')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="tripleIntCylindrical">
+        <p>
+          Now that we know what cylindrical coordinates are, let’s see how we can use them to find some triple integrals.
+        </p>
+        <p class="nbm">
+          Let’s first go over the general form of a triple integral in cylindrical coordinates. Recall that in polar coordinates, we had to replace \(\dd{A}\) with \(r\dd{r}\dd{\theta}\). Cylindrical coordinates are like polar coordinates but with an extra \(z\)-coordinate thrown in, so with triple integrals in cylindrical coordinates, we replace \(\dd{V}\) with \(r\dd{r}\dd{\theta}\dd{z}\). Here’s what that looks like:
+        </p>
+        <div class="mj">
+          \[ \iiint_R f(r, \theta, z) r\dd{r}\dd{\theta}\dd{z} \]
+        </div>
+        <p class="ntm sn">
+          Note: We can write the differentials \(\dd{r}\), \(\dd{\theta}\), and \(\dd{z}\) in any order.
+        </p>
+        <img class="graph" src="images/cylindrical_slice.png">
+        <p class="ntm sn">
+          The volume of each tiny slice in cylindrical coordinates can be approximated by multiplying the side lengths, in this case \(\class{red}{\dd{r}}\), \(\class{blue}{r\dd{\theta}}\), and \(\class{purple}{\dd{z}}\). Therefore, \(\dd{V} = (\class{red}{\dd{r}})(\class{blue}{r\dd{\theta}})(\class{purple}{\dd{z}})\) \(= r \dd{r}\dd{\theta}\dd{z}\).
+        </p>
+        <p class="nbm">
+          When we’re finding volumes using triple integrals, we don’t need the function \(f(r, \theta, z)\):
+        </p>
+        <div class="mj">
+          \[ V = \iiint_R r\dd{r}\dd{\theta}\dd{z} \]
+        </div>
+        <p class="ntm">
+          Now let’s go back to our sphere problem from a few sections ago.
+        </p>
+        <p class="ntm problem">
+          <strong>Problem</strong>: Find the volume of a unit sphere (a sphere with radius 1) using a triple integral in cylindrical coordinates.
+        </p>
+        <p>
+          The easiest variable to set bounds for is \(\theta\). Since we are integrating over an entire sphere, the values of \(\theta\) will range from 0 to \(2\pi\).
+        </p>
+        <p>
+          Next, we can consider \(r\). Since our sphere is a unit sphere with radius 1, \(r\) will range from 0 to 1.
+        </p>
+        <p>
+          Finally, we need to consider \(z\). The values of \(z\) we are integrating over will actually depend on \(r\). So given a fixed \(r\)-value, what will our bounds of \(z\) be?
+        </p>
+        <p class="nbm">
+          Remember that the sphere is defined as \(x^2 + y^2 + z^2 = 1\), so our bounds will lie on this sphere. In cylindrical coordinates, \(r^2 = x^2 + y^2\), so by making this substitution, we can solve for the bounds of \(z\) given an \(r\)-value.
+        </p>
+        <div class="mj">
+          \[ x^2 + y^2 + z^2 = 1 \]
+          \[ r^2 + z^2 = 1 \]
+          \[ z^2 = 1 - r^2 \]
+          \[ z = \pm\sqrt{1-r^2} \]
+        </div>
+        <p class="ntm">
+          So the bounds of \(z\) are \(z = -\sqrt{1-r^2}\) and \(z = \sqrt{1-r^2}\). In conclusion:
+        </p>
+        <ul>
+          <li>The bounds of \(\theta\) are \(0 \le \theta \le 2\pi\).</li>
+          <li>The bounds of \(r\) are \(0 \le r \le 1\).</li>
+          <li>The bounds of \(z\) are \(-\sqrt{1-r^2} \le \theta \le \sqrt{1-r^2}\).</li>
+        </ul>
+        <p class="nbm">
+          Now we know enough to set up our triple integral and evaluate it!
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          V &= \iiint_R \dd{V}\\
+          &= \int_0^{2\pi}\int_0^1\int_{-\sqrt{1 - r^2}}^{\sqrt{1-r^2}} r\dd{z}\dd{r}\dd{\theta}\\
+          &= \int_0^{2\pi}\int_0^1 (rz)\bigg|_{z=-\sqrt{1 - r^2}}^{z=\sqrt{1-r^2}}\dd{r}\dd{\theta}\\
+          &= \int_0^{2\pi}\int_0^1 [r\sqrt{1-r^2} - (-r\sqrt{1-r^2})]\dd{r}\dd{\theta}\\
+          &= \int_0^{2\pi}\int_0^1 2r\sqrt{1-r^2} \dd{r}\dd{\theta}\\
+          &= \int_0^{2\pi}\left[-\frac{2}{3}(1-r^2)^{3/2}\right]\bigg|_0^1\dd{\theta}\\
+          &= \int_0^{2\pi}\left[-\frac{2}{3}(1-1^2)^{3/2} - \left(-\frac{2}{3}(1-0^2)^{3/2}\right)\right]\dd{\theta}\\
+          &= \int_0^{2\pi}\frac{2}{3}\dd{\theta}\\
+          &= \frac{2}{3}\theta\bigg|_0^{2\pi}\\
+          &= \frac{4\pi}{3}
+          \end{flalign} \]
+        </div>
+        <p class="ntm">
+          Using a triple integral, we just found that the volume of a unit sphere is \(\frac{4\pi}{3}\) (which agrees with the sphere volume formula \(V = \frac{4}{3}\pi r^3\)). In fact, it’s possible to derive this formula using a similar triple integral. 
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: Integrate the function \(f(x, y, z) = xy + z\) over the region defined by the inequalities \(x^2 + y^2 \le 9\), \(x\ge 0\), \(y\ge 0\), and \(2 \le z \le 4\).
+        </p>
+        <p>
+          We first need to rewrite our bounds in terms of cylindrical coordinates. Let’s visualize this region:
+        </p>
+        <img class="graph" src="images/triple_integral_cylindrical_region.png">
+        <p>
+          The bounds for \(z\) are straightforward: since \(z\) stays the same between rectangular and cylindrical coordinates, we can just use the given range for \(z\), which is \(2 \le z \le 4\).
+        </p>
+        <p>
+          We can get the bounds for \(r\) and \(\theta\) from the image. Our region covers the first quadrant of the \(xy\)-plane, so the range of \(\theta\) is \(0 \le \theta \le \frac{\pi}{2}\). In addition, if we project our region down to the \(xy\)-plane, we find that it is part of a circle with radius \(\sqrt{9} = 3\) (since \(x^2+y^2 \le 9\) is one of our restrictions),  so \(0 \le r \le 3\). Therefore, the bounds for all of our cylindrical variables are:
+        </p>
+        <ul>
+          <li>\(0 \le r \le 3\)</li>
+          <li>\(0 \le \theta \le \frac{\pi}{2}\)</li>
+          <li>\(2 \le z \le 4\)</li>
+        </ul>
+        <p class="nbm">
+          We also need to rewrite our function in terms of cylindrical coordinates. As a reminder, the conversions are \(x = r\cos(\theta)\) and \(y = r\sin(\theta)\), the same conversions as polar coordinates. (\(z\) stays the same between rectangular and cylindrical coordinates.)
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          xy + z &= [r\cos(\theta)][r\sin(\theta)] + z\\
+          &= r^2\sin(\theta)\cos(\theta) + z
+          \end{flalign}\]
+        </div>
+        <p class="nm">
+          Now we can set up our triple integral:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \iiint_R \class{red}{f} \class{blue}{\dd{V}} &= \int_2^4\int_0^{\pi/2}\int_0^3 \class{red}{(r^2\sin(\theta)\cos(\theta) + z)} \class{blue}{r \dd{r}\dd{\theta}\dd{z}}\\
+          &= \int_2^4 \int_0^{\pi/2} \int_0^3 (r^3\sin(\theta)\cos(\theta) + rz) \dd{r} \dd{\theta} \dd{z}\\
+          &= \int_2^4 \int_0^{\pi/2} \left[\frac{r^4}{4}\sin(\theta)\cos(\theta) + \frac{r^2}{2}z\right]\bigg|_{r=0}^{r=3} \dd{\theta} \dd{z}\\
+          &= \int_2^4 \int_0^{\pi/2} \left[\frac{81}{4}\sin(\theta)\cos(\theta) + \frac{9}{2}z\right] \dd{\theta} \dd{z}\\
+          &= \int_2^4 \int_0^{\pi/2} \left[\frac{81}{8}[2\sin(\theta)\cos(\theta)] + \frac{9}{2}z\right] \dd{\theta} \dd{z}\\
+          &= \int_2^4 \int_0^{\pi/2} \left[\frac{81}{8}\sin(2\theta) + \frac{9}{2}z\right] \dd{\theta} \dd{z}\\
+          &= \int_2^4\left[-\frac{81}{16}\cos(2\theta) + \frac{9}{2}\theta z\right]\bigg|_{\theta=0}^{\theta=\pi/2}\dd{z}\\
+          &= \int_2^4\left[-\frac{81}{16}\cos(\pi) + \frac{9}{2}\left(\frac{\pi}{2}\right)z\right] - \left[-\frac{81}{16}\cos(0) + \frac{9}{2}(0)z\right]\dd{z}\\
+          &= \int_2^4\left[\frac{81}{16} + \frac{9\pi}{4}z\right] - \left[-\frac{81}{16}\right]\dd{z}\\
+          &= \int_2^4\left[\frac{81}{8} + \frac{9\pi}{4}z\right]\dd{z}\\
+          &= \left[\frac{81}{8}z + \frac{9\pi}{4}\left(\frac{z^2}{2}\right)\right]\bigg|_2^4\\
+          &= \left[\frac{81}{8}(4) + \frac{9\pi}{4}\left(\frac{4^2}{2}\right)\right] - \left[\frac{81}{8}(2) + \frac{9\pi}{4}\left(\frac{2^2}{2}\right)\right]\\
+          &= \frac{81}{4} + \frac{27\pi}{2}\\
+          &\approx 62.662
+          \end{flalign}
+          \]
+        </div>
+      </div>
+      <h3 class="section-header" id="tripleIntSphericalHeader">
+        Triple Integrals in Spherical Coordinates <button id="tripleIntSphericalButton" onclick="showHide('tripleIntSpherical')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="tripleIntSpherical">
+        <p>
+          When performing a triple integral in spherical coordinates, we replace \(\dd{V}\) with \(r^2 \sin(\varphi)\dd{r}\dd{\theta}\dd{\varphi}\). This diagram shows why:
+        </p>
+        <img class="graph" src="images/spherical_slice.png">
+        <p class="ntm sn">
+          This is a slice of volume in spherical coordinates. As this slice gets smaller and smaller, the shape gets closer and closer to a cube. Therefore, the volume of each tiny slice in spherical coordinates can be approximated by multiplying the side lengths, in this case \(\class{red}{\dd{r}}\), \(\class{blue}{r\dd{\varphi}}\), and \(\class{purple}{r\sin(\varphi)\dd{\theta}}\). Therefore, \(\dd{V} = (\class{red}{\dd{r}})(\class{blue}{r\dd{\varphi}})(\class{purple}{r\sin(\varphi)\dd{\theta}})\) \(= r^2 \sin(\varphi)\dd{r}\dd{\theta}\dd{\varphi}\).
+        </p>
+        <p>
+          If you’re wondering where the length \(\class{purple}{r\sin(\varphi) \dd{\theta}}\) comes from, here’s another diagram that shows why:
+        </p>
+        <img class="graph" src="images/spherical_slice_radius.png">
+        <p class="ntm sn">
+          The <span class="purple">purple length</span> is an arc of a <span class="green">circle</span> with radius \(\class{red}{r\sin(\varphi)}\) and angle \(\dd{\theta}\), so its length is \(\class{purple}{r\sin(\varphi) \dd{\theta}}\).
+        </p>
+        <p class="nbm">
+          So this is what a triple integral in spherical coordinates looks like:
+        </p>
+        <div class="mj">
+          \[ \iiint_R f(r, \theta, \varphi) r^2 \sin(\varphi) \dd{r} \dd{\theta} \dd{\varphi}\]
+        </div>
+        <p class="ntm sn">
+          Note: We can write the differentials \(\dd{r}\), \(\dd{\theta}\), and \(\dd{\varphi}\) in any order.
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: Find the volume of a unit sphere (a sphere with radius 1) using a triple integral in spherical coordinates.
+        </p>
+        <p>
+          We need to find the bounds of this sphere in terms of \(r\), \(\theta\), and \(\varphi\). Because the sphere has a radius of 1, the bounds for \(r\) are simply \(0 \le r \le 1\). The bounds of \(\theta\) are \(0 \le \theta \le 2\pi\). You might think that the bounds of \(\varphi\) are \(0 \le \varphi \le 2\pi\), but this is incorrect.
+        </p>
+        <p>
+          The reason is because if we let \(\theta\) range from 0 to \(2\pi\), we only need to let \(\varphi\) range from 0 to \(\pi\) to cover the entire sphere. You can think of \(\theta\) as representing longitude and \(\varphi\) as representing latitude: on a sphere, there are 360 degrees of longitude (which is \(2\pi\) radians) but only 180 degrees of latitude (which is \(\pi\) radians).
+        </p>
+        <p>
+          Therefore, our integral bounds are:
+        </p>
+        <ul>
+          <li>\(0 \le r \le 1\)</li>
+          <li>\(0 \le \theta \le 2\pi\)</li>
+          <li>\(0 \le \varphi \le \pi\)</li>
+        </ul>
+        <p class="nbm">
+          Using these, we can set up our triple integral:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          V &= \iiint_R \dd{V}\\
+          &= \int_0^{\pi}\int_0^{2\pi}\int_{0}^{1} r^2\sin(\varphi)\dd{r}\dd{\theta}\dd{\varphi}\\
+          &= \int_0^{\pi}\int_0^{2\pi}\frac{r^3}{3}\sin(\varphi)\bigg|_{r=0}^{r=1} \dd{\theta}\dd{\varphi}\\
+          &= \int_0^{\pi}\int_0^{2\pi}\frac{1}{3}\sin(\varphi)\dd{\theta}\dd{\varphi}\\
+          &= \int_0^{\pi}\frac{\theta}{3}\sin(\varphi)\bigg|_{\theta=0}^{\theta=2\pi}\dd{\varphi}\\
+          &= \int_0^{\pi}\frac{2\pi}{3}\sin(\varphi)\dd{\varphi}\\
+          &= -\frac{2\pi}{3}\cos(\varphi)\bigg|_0^\pi\\
+          &= -\frac{2\pi}{3}\cos(\pi) - \left(-\frac{2\pi}{3}\cos(0)\right)\\
+          &= \frac{4\pi}{3}
+          \end{flalign} \]
+        </div>
+        <p class="ntm">
+          Now let’s do a problem that involves integrating a function.
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: Set up an integral for the function \(f(x, y, z) = xy + z\) over the region defined by the inequalities \(x^2 + y^2 + z^2 \le 16\), \(x \le 0\), \(y \le 0\), and \(z \le 0\).
+        </p>
+        <p>
+          We first need to rewrite our function \(f\) in terms of spherical coordinates. We can do that using the conversions from rectangular to spherical coordinates:
+        </p>
+        <ul>
+          <li>\(x = r\cos(\theta)\sin(\varphi)\)</li>
+          <li>\(y = r\sin(\theta)\sin(\varphi)\)</li>
+          <li>\(z = r\cos(\varphi)\)</li>
+        </ul>
+        <p class="nbm">
+          Here’s how we would express our function \(f(x, y, z) = xy + z\) in spherical coordinates:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          f(x, y, z) &= xy + z\\
+           &= [r\cos(\theta)\sin(\varphi)][r\sin(\theta)\sin(\varphi)] + r\cos(\varphi)\\
+          &= r^2\sin^2(\varphi)\sin(\theta)\cos(\theta) + r\cos(\varphi)
+          \end{flalign}\]
+        </div>
+        <p class="nm">
+          Therefore, our function in spherical coordinates is \(f(r, \theta, \varphi) = r^2\sin^2(\varphi)\sin(\theta)\cos(\theta) + r\cos(\varphi)\). 
+        </p>
+        <p>
+          Now we need to express the bounds of our region in terms of spherical coordinates. Here’s a diagram of this region:
+        </p>
+        <img class="graph" src="images/triple_integral_spherical_region.png">
+        <p>
+          This is part of a sphere with radius \(\sqrt{16} = 4\) (since one of our restrictions is \(x^2 + y^2 + z^2 = 16\)), so the bounds for \(r\) are \(0 \le r \le 4\). We can figure out from the diagram that \(\pi \le \theta \le \frac{3\pi}{2}\) and \(\frac{\pi}{2} \le \varphi \le \pi\).
+        </p>
+        <p class="nbm">
+          Therefore, this is what our integral looks like:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \iiint_R \class{red}{f} \class{blue}{\dd{V}} &= \int_{\pi/2}^\pi \int_{\pi}^{3\pi/2} \int_0^4 \class{red}{(r^2\sin^2(\varphi)\sin(\theta)\cos(\theta) + r\cos(\varphi))}\class{blue}{[r^2 \sin(\varphi)] \dd{r}\dd{\theta}\dd{\varphi}}\\
+          \end{flalign}\]
+        </div>
+      </div>
+      <h3 class="section-header" id="changeOfVarsHeader">
+        Change of Variables for Multiple Integrals <button id="changeOfVarsButton" onclick="showHide('changeOfVars')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="changeOfVars">
+        <p>
+          When we converted double integrals into polar coordinates and triple integrals into cylindrical and spherical coordinates, we performed a <strong>change of variables</strong>, which is when we change what variables we’re using (for example, using \(r\) and \(\theta\) instead of \(x\) and \(y\)) to make an integral easier.
+        </p>
+        <p>
+          For example, let’s say we’re integrating over the region \(x^2 + \frac{y^2}{4} \le 1\), an ellipse. If we could transform this region into a circle, that would make it very easy to integrate over in polar coordinates.
+        </p>
+        <p class="nbm">
+          In this case, the substitutions \(x = u\) and \(y = 2v\) will turn this equation into a circle. Let’s see what happens when we make these substitutions:
+        </p>
+        <div class="mj">
+          \[ x^2 + \frac{y^2}{4} \le 1 \]
+          \[ u^2 + \frac{(2v)^2}{4} \le 1 \]
+          \[ u^2 + v^2 \le 1 \]
+        </div>
+        <p class="ntm">
+          What we just performed is known as a <strong>transformation</strong>. Visually, what we are doing is changing from the \(xy\)-plane to a different coordinate plane (in this case, the \(uv\)-plane) using transformations that we can define ourselves. Each point in the \(xy\)-plane is mapped to a point on the \(uv\)-plane based on our equations. For example, the point \((\frac{1}{2}, 1)\) in the \(xy\)-plane is mapped to \((\frac{1}{2}, \frac{1}{2})\) in the \(uv\)-plane, since \(x = u\) and \(y = 2v\).
+        </p>
+        <img class="graph" src="images/change_of_vars_transformation_1.png">
+        <p class="ntm sn">
+          Our original region (notice how the coordinates are \(x\) and \(y\)).
+        </p>
+        <img class="graph" src="images/change_of_vars_transformation_2.png">
+        <p class="ntm sn">
+          Our new region with \(u\)- and \(v\)-coordinates.
+        </p>
+        <p>
+          However, notice that the area of our region is no longer the same after the transformation. Because of this, evaluating a double or triple integral using a change of variables isn’t as simple as just substituting the variables within the function we’re integrating. We also need to change how we express the differential \(\dd{A}\) or \(\dd{V}\) to correct for this change in area.
+        </p>
+        <p class="nbm">
+          To do that, we need to use what’s known as the <strong>Jacobian matrix</strong>. For a transformation \(x = g(u, v)\) and \(y = h(u, v)\), the Jacobian matrix is as follows:
+        </p>
+        <div class="mj">
+          \[ \text{Jacobian} = \begin{bmatrix}
+          \displaystyle\pdv{x}{u} & \displaystyle\pdv{x}{v} \\
+          \displaystyle\pdv{y}{u} & \displaystyle\pdv{y}{v}
+          \end{bmatrix}\]
+        </div>
+        <p class="nm">
+          When we perform a change of variables, what we’re interested in is the determinant of this matrix, also known as the <strong>Jacobian determinant</strong>. The Jacobian determinant is denoted as follows:
+        </p>
+        <div class="mj">
+          \[ \pdv{(x, y)}{(u, v)} = \det\begin{bmatrix}
+          \displaystyle\pdv{x}{u} & \displaystyle\pdv{x}{v} \\
+          \displaystyle\pdv{y}{u} & \displaystyle\pdv{y}{v}
+          \end{bmatrix} = \pdv{x}{u}\cdot\pdv{y}{v} - \pdv{x}{v}\cdot\pdv{y}{u}\]
+        </div>
+        <p class="nm">
+          When we perform a transformation \(x = g(u, v)\) and \(y = h(u, v)\) on a double integral, we rewrite the integral as follows:
+        </p>
+        <div class="mj">
+          \[ \iint_R f(x, y) \dd{A} = \iint_S f(g(u, v), h(u, v)) \left|\pdv{(x, y)}{(u, v)}\right| \dd{u}\dd{v} \]
+        </div>
+        <p class="ntm sn">
+          \(S\) is the region that we get after applying the transformation on the region \(R\). Note that we’re taking the absolute value of the Jacobian determinant \(\pdv{(x, y)}{(u, v)}\)!
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: Use the Jacobian determinant to show that \(\dd{A} = r\dd{r}\dd{\theta}\) when changing from rectangular to polar coordinates. 
+        </p>
+        <p>
+          Here is the Jacobian determinant for changing to polar coordinates. To actually find the elements of the matrix, we need to recall the conversions \(x = r\cos(\theta)\) and \(y = r\sin(\theta)\).
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \pdv{(x, y)}{(r, \theta)} &= \det\begin{bmatrix}
+          \displaystyle\pdv{x}{r} & \displaystyle\pdv{x}{\theta} \\
+          \displaystyle\pdv{y}{r} & \displaystyle\pdv{y}{\theta}
+          \end{bmatrix}\\
+          &= \det\begin{bmatrix}
+          \displaystyle\pdv{r}[r\cos(\theta)] & \displaystyle\pdv{\theta}[r\cos(\theta)] \\
+          \displaystyle\pdv{r}[r\sin(\theta)] & \displaystyle\pdv{\theta}[r\sin(\theta)]
+          \end{bmatrix}\\
+          &= \det\begin{bmatrix}
+          \cos(\theta) & -r\sin(\theta) \\
+          \sin(\theta) & r\cos(\theta)
+          \end{bmatrix}\\
+          &= [\cos(\theta)][r\cos(\theta)] - [-r\sin(\theta)][\sin(\theta)]\\
+          &= r\cos^2(\theta) + r\sin^2(\theta)\\
+          &= r[\cos^2(\theta) + \sin^2(\theta)]\\
+          &= r
+          \end{flalign}\]
+        </div>
+        <p class="nm">
+          The absolute value of this determinant tells us what we need to multiply \(\dd{r}\dd{\theta}\) by to find the correct substitution for \(\dd{A}\).
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \dd{A} &= \left|\pdv{(x, y)}{(r, \theta)}\right| \dd{r}\dd{\theta}\\
+          &= |r|\dd{r}\dd{\theta}\\
+          &= r\dd{r}\dd{\theta}
+          \end{flalign}\]
+        </div>
+        <p class="nm">
+          The Jacobian determinant can be extended to a transformation involving three variables.
+        </p>
+        <div class="mj">
+          \[ \pdv{(x, y, z)}{(u, v, w)} = \det\begin{bmatrix}
+          \displaystyle\pdv{x}{u} & \displaystyle\pdv{x}{v} & \displaystyle\pdv{x}{w}\\
+          \displaystyle\pdv{y}{u} & \displaystyle\pdv{y}{v} & \displaystyle\pdv{y}{w}\\
+          \displaystyle\pdv{z}{u} & \displaystyle\pdv{z}{v} & \displaystyle\pdv{z}{w}
+          \end{bmatrix}\]
+        </div>
+        <p class="nm">
+          When we perform a transformation with three variables \(x = g(u,v,w)\), \(y = h(u,v,w)\), and \(z = k(u,v,w)\), we rewrite the integral as follows:
+        </p>
+        <div class="mj">
+          \[ \iint_R f(x, y, z) \dd{V} = \iint_S f(g(u, v, w), h(u, v, w), k(u, v, w)) \left|\pdv{(x, y, z)}{(u, v, w)}\right| \dd{u}\dd{v}\dd{w} \]
+        </div>
+        <p class="nm problem">
+          <strong>Problem</strong>: Use the Jacobian determinant to show that \(\dd{V} = r\dd{r}\dd{\theta}\dd{z}\) when changing from rectangular to cylindrical coordinates. 
+        </p>
+        <p class="nbm">
+          The conversions for cylindrical coordinates are \(x = r\cos(\theta)\) and \(y = r\sin(\theta)\). Here’s the Jacobian determinant in this case:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \pdv{(x, y, z)}{(r, \theta, z)} &= \det\begin{bmatrix}
+          \displaystyle\pdv{x}{r} & \displaystyle\pdv{x}{\theta} & \displaystyle\pdv{x}{z}\\
+          \displaystyle\pdv{y}{r} & \displaystyle\pdv{y}{\theta} & \displaystyle\pdv{y}{z}\\
+          \displaystyle\pdv{z}{r} & \displaystyle\pdv{z}{\theta} & \displaystyle\pdv{z}{z}
+          \end{bmatrix}\\
+          &= \det\begin{bmatrix}
+          \cos(\theta) & -r\sin(\theta) & 0\\
+          \sin(\theta) & r\cos(\theta) & 0\\
+          0 & 0 & 1
+          \end{bmatrix}\\
+          &= \cos(\theta)[(r\cos(\theta))(1) - 0(0)] - [-r\sin(\theta)][1\sin(\theta) - 0(0)] + 0[0\sin(\theta) - 0r\cos(\theta)]\\
+          &= r\cos^2(\theta) + r\sin^2(\theta)\\
+          &= r[\cos^2(\theta) + \sin^2(\theta)]\\
+          &= r
+          \end{flalign}\]
+        </div>
+        <p class="nm">
+          This is how we would express the differential \(\dd{V}\):
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \dd{V} &= \left|\pdv{(x, y, z)}{(r, \theta, z)}\right| \dd{r}\dd{\theta}\dd{z}\\
+          &= |r|\dd{r}\dd{\theta}\dd{z}\\
+          &= r\dd{r}\dd{\theta}\dd{z}
+          \end{flalign} \]
+        </div>
+        <p class="nm problem">
+          <strong>Problem</strong>: Use the Jacobian determinant to show that \(\dd{V} = r^2\sin(\varphi)\dd{r}\dd{\theta}\dd{\varphi}\) when changing from rectangular to spherical coordinates. 
+        </p>
+        <p class="nbm">
+          The conversions to spherical coordinates are \(x = r\cos(\theta)\sin(\varphi)\), \(y = r\sin(\theta)\sin(\varphi)\), and \(z = r\cos(\varphi)\).
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \pdv{(x, y, z)}{(r, \theta, \varphi)} &= \det\begin{bmatrix}
+          \displaystyle\pdv{x}{r} & \displaystyle\pdv{x}{\theta} & \displaystyle\pdv{x}{\varphi}\\
+          \displaystyle\pdv{y}{r} & \displaystyle\pdv{y}{\theta} & \displaystyle\pdv{y}{\varphi}\\
+          \displaystyle\pdv{z}{r} & \displaystyle\pdv{z}{\theta} & \displaystyle\pdv{z}{\varphi}
+          \end{bmatrix}\\
+          &= \det\begin{bmatrix}
+          \cos(\theta)\sin(\varphi) & -r\sin(\theta)\sin(\varphi) & r\cos(\theta)\cos(\varphi)\\
+          \sin(\theta)\sin(\varphi) & r\cos(\theta)\sin(\varphi) & r\sin(\theta)\cos(\varphi)\\
+          \cos(\varphi) & 0 & -r\sin(\varphi)
+          \end{bmatrix}\\
+          &= \cos(\theta)\sin(\varphi)[(r\cos(\theta)\sin(\varphi))(-r\sin(\varphi)) - 0(r\sin(\theta)\cos(\varphi))]\\
+          &\quad - [-r\sin(\theta)\sin(\varphi)][\sin(\theta)\sin(\varphi)(-r\sin(\varphi)) - r\sin(\theta)\cos(\varphi)\cos(\varphi)]\\
+          &\quad + [r\cos(\theta)\cos(\varphi)][0\sin(\theta)\sin(\varphi) - r\cos(\theta)\sin(\varphi)\cos(\varphi)]\\
+          &= -r^2\cos^2(\theta)\sin^3(\varphi) - r^2\sin^2(\theta)\sin^3(\varphi) - r^2\sin^2(\theta)\sin(\varphi)\cos^2(\varphi) - r^2\cos^2(\theta)\sin(\varphi)\cos^2(\varphi)\\
+          &= -r^2[\cos^2(\theta)\sin^3(\varphi) + \sin^2(\theta)\sin^3(\varphi) + \sin^2(\theta)\sin(\varphi)\cos^2(\varphi) + \cos^2(\theta)\sin(\varphi)\cos^2(\varphi)]\\
+          &= -r^2[(\sin^3(\varphi))(\cos^2(\theta) + \sin^2(\theta)) + (\sin^2(\theta) + \cos^2(\theta))(\sin(\varphi)\cos^2(\varphi))]\\
+          &= -r^2[\sin^3(\varphi) + \sin(\varphi)\cos^2(\varphi)]\\
+          &= -r^2\sin(\varphi)[\sin^2(\varphi) + \cos^2(\varphi)]\\
+          &= -r^2\sin(\varphi)
+          \end{flalign}\]
+        </div>
+        <p class="nm">
+          Here’s what \(\dd{V}\) should be based on the Jacobian determinant:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \dd{V} &= \left|\pdv{(x, y, z)}{(r, \theta, \varphi)}\right| \dd{r}\dd{\theta}\dd{\varphi}\\
+          &= \lvert-r^2\sin(\varphi)|\dd{r}\dd{\theta}\dd{\varphi}\\
+          &= r^2\sin(\varphi)\dd{r}\dd{\theta}\dd{\varphi}\\
+          \end{flalign} \]
+        </div>
+        <p class="nm">
+          However, as we explored earlier in this section, change of variables isn’t just restricted to polar, spherical, and cylindrical coordinates. We can also create our own custom transformations to make specific integrals easier.
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: Evaluate the integral \(\displaystyle\iint_R xy \dd{A}\) over the region \(R\) defined by \(x^2 + \frac{y^2}{4} \le 1\) using the transformation \(x = u\) and \(y = 2v\).
+        </p>
+        <p class="nbm">
+          We showed before that this transformation changes our integration region to \(u^2 + v^2 \le 1\), which is an easy region to deal with in polar coordinates. Let’s first find the Jacobian determinant for this transformation:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \pdv{(x, y)}{(u, v)} &= \det\begin{bmatrix}
+          \pdv{x}{u} & \pdv{x}{v}\\
+          \pdv{y}{u} & \pdv{y}{v}
+          \end{bmatrix}\\
+          &= \det\begin{bmatrix}
+          \pdv{u}(u) & \pdv{v}(u)\\
+          \pdv{u}(2v) & \pdv{v}(2v)
+          \end{bmatrix}\\
+          &= \det\begin{bmatrix}
+          1 & 0\\
+          0 & 2
+          \end{bmatrix}\\
+          &= 2
+          \end{flalign}\]
+        </div>
+        <p class="nm">
+          Now let’s use this determinant to determine how to rewrite \(\dd{A}\):
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \dd{A} &= \left|\pdv{(x, y)}{(u, v)}\right| \dd{u}\dd{v}\\
+          &= |2|\dd{u}\dd{v}\\
+          &= 2\dd{u}\dd{v}
+          \end{flalign}\]
+        </div>
+        <p class="nm">
+          We also need to rewrite the function \(f(x, y) = xy\) in terms of \(u\) and \(v\), which is straightforward using our transformation equations \(x = u\) and \(y = 2v\).
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \iint_R \class{red}{xy} \class{blue}{\dd{A}} &= \iint_S \class{red}{u(2v)} \class{blue}{2\dd{u}\dd{v}}\\
+          &= \iint_S 4uv \dd{u}\dd{v}\\
+          \end{flalign}\]
+        </div>
+        <p class="ntm sn">
+          \(R\) is the original region \(x^2 + \frac{y^2}{4} \le 1\) and \(S\) is the region we get after the transformation, \(u^2 + v^2 \le 1\).
+        </p>
+        <p class="nm">
+          We’re almost ready to evaluate this integral! Just to make our lives easier, we will change to polar coordinates with the transformation \(u = r\cos(\theta)\) and \(v = r\sin(\theta)\).
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \iint_S 4uv \class{red}{\dd{u}\dd{v}} &= \int_0^{2\pi}\int_0^1 4r\cos(\theta)r\sin(\theta) \class{red}{r\dd{r}\dd{\theta}}\\
+          &= \int_0^{2\pi}\int_0^1 4r^3\cos(\theta)\sin(\theta) \dd{r}\dd{\theta}\\
+          &= \int_0^{2\pi}[r^4\cos(\theta)\sin(\theta)]\bigg|_{r=0}^{r=1}\dd{\theta}\\
+          &= \int_0^{2\pi}\cos(\theta)\sin(\theta)\dd{\theta}\\
+          &= \int_0^{2\pi}\frac{1}{2}\sin(2\theta)\dd{\theta}\\
+          &= \left[-\frac{1}{4}\cos(2\theta)\right]\bigg|_0^{2\pi}\\
+          &= -\frac{1}{4}\cos(4\pi) - \left(-\frac{1}{4}\cos(0)\right)\\
+          &= -\frac{1}{4} + \frac{1}{4}\\
+          &= 0
+          \end{flalign}\]
+        </div>
+      </div>
+      <h3 class="section-header" id="doubleIntSurfaceAreaHeader">
+        Double Integrals: Finding Surface Area <button id="doubleIntSurfaceAreaButton" onclick="showHide('doubleIntSurfaceArea')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="doubleIntSurfaceArea">
+        <p>
+          We can use double integrals to find the area of a surface created by a two-variable function.
+        </p>
+        <p class="nbm">
+          The area of the surface created by \(z = f(x, y)\) over the region \(R\) is given by:
+        </p>
+        <div class="mj">
+          \[ A = \iint_R \sqrt{(f_x)^2 + (f_y)^2 + 1} \dd{A} \]
+        </div>
+        <p class="ntm">
+          Let’s go over an example problem.
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: Set up an integral that gives the surface area of the solid created by \(z = x^2y^2\) over the region \(-1 \le x \le 1\) and \(0 \le y \le 1\).
+        </p>
+        <p class="nbm">
+          Let’s first find the partial derivatives of \(f(x, y)\):
+        </p>
+        <div class="mj">
+          \[ f(x, y) = x^2 y^2 \]
+          \[ f_x(x, y) = 2xy^2 \]
+          \[ f_y(x, y) = 2x^2y \]
+        </div>
+        <p class="nm">
+          Now we can use the surface area formula:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          A &= \iint_R \sqrt{(f_x)^2 + (f_y)^2 + 1} \dd{A}\\
+          &= \iint_R \sqrt{(2xy^2)^2 + (2x^2y)^2 + 1} \dd{A}\\
+          &= \int_0^1\int_{-1}^1 \sqrt{(2xy^2)^2 + (2x^2y)^2 + 1} \dd{x} \dd{y}\\
+          \end{flalign} \]
+        </div>
+        <p class="ntm">
+          Using a calculator, we can find that the integral is approximately equal to <strong>2.389</strong>.
+        </p>
+        <img class="graph" src="images/double_integral_surface_area.png">
+        <p class="ntm sn">
+          The surface area of this surface is about 2.389.
+        </p>
+        <p>
+          Let’s go over another problem now.
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: Find the surface area of the solid created by \(z = x^2 + y^2\) over the region \(x^2 + y^2 \le 1\).
+        </p>
+        <p class="nbm">
+          Here are the partial derivatives of \(f(x, y)\):
+        </p>
+        <div class="mj">
+          \[ f(x, y) = x^2 + y^2 \]
+          \[ f_x(x, y) = 2x \]
+          \[ f_y(x, y) = 2y \]
+        </div>
+        <p class="nm">
+          Plugging in these derivatives into the surface area formula:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          A &= \iint_R \sqrt{(2x)^2 + (2y)^2 + 1} \dd{A}\\
+          &= \iint_R \sqrt{(2x)^2 + (2y)^2 + 1} \dd{A}\\
+          &= \iint_R \sqrt{4x^2 + 4y^2 + 1} \dd{A}
+          \end{flalign} \]
+        </div>
+        <p class="nm">
+          At this point, you might notice that this integral would be easier to evaluate in polar coordinates. So let’s make that conversion:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          A &= \iint_R \sqrt{4x^2 + 4y^2 + 1} \dd{A}\\
+          &= \iint_R \sqrt{4(x^2 + y^2) + 1} \dd{A}\\
+          &= \int_0^{2\pi}\int_0^1 (\sqrt{4r^2 + 1}) r\dd{r}\dd{\theta}\\
+          &= \int_0^{2\pi} \left(\frac{1}{8}\cdot\frac{2}{3}(4r^2+1)^{3/2}\right)\bigg|_0^1\dd{\theta}\\
+          &= \int_0^{2\pi} \left(\frac{1}{12}(4r^2+1)^{3/2}\right)\bigg|_0^1\dd{\theta}\\
+          &= \int_0^{2\pi} \frac{1}{12}[5^{3/2} - 1]\dd{\theta}\\
+          &= \frac{1}{12}[5^{3/2} - 1]\theta\bigg|_0^{2\pi}\\
+          &= \frac{\pi}{6}[5^{3/2} - 1]\\
+          &\approx 5.330
+          \end{flalign} \]
+        </div>
+        <img class="graph" src="images/double_integral_surface_area_2.png">
+        <p class="ntm sn">
+          The surface area of this surface is about 5.330.
+        </p>
       </div>
     </div>
   </div>
   <hr class="heavy-hr">
-  <!-- <div class="unit" id="unit5Unit">
+  <div class="unit" id="unit5Unit">
     <h2 id="unit5Header">
       <span onclick="showHideUnit('unit5')"><span class="gray">Unit 5:</span> Line and Surface Integrals</span>
       <button id="unit5Button" onclick="showHideUnit('unit5')">Show</button>
     </h2>
     <div class="hidden-by-default" id="unit5">
-
+      <div>
+        <button class="large-button" onclick="toggleAllSections('unit5', 'show')">Show All Sections</button>
+        <div class="button-spacing"></div>
+        <button class="large-button" onclick="toggleAllSections('unit5', 'hide')">Hide All Sections</button>
+      </div>
+      <p class="bold">
+        This section is a work in progress!
+      </p>
+      <h3 class="section-header" id="lineIntScalarHeader">
+        Line Integrals for Scalar Functions <button id="lineIntScalarButton" onclick="showHide('lineIntScalar')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="lineIntScalar">
+        <p>
+          Standard integrals give us a way to find the area under a curve. However, in the context of multivariable functions, standard integrals typically only allow us to find the area under curves that are parallel to one of the axes.
+        </p>
+        <p>
+          For example, the integral \(\int_2^4 f(x, 1) \dd{x}\) represents the area under \(f(x, y)\) from \(x = 2\) to \(x = 4\) along a fixed \(y\)-value \(y = 1\).
+        </p>
+        <img class="graph" src="images/line_integral_intro.png">
+        <p class="ntm sn">
+          The integral \(\int_2^4 f(x, 1) \dd{x}\) represents this <span class="blue">area</span> under \(\class{red}{f(x)}\).
+        </p>
+        <p>
+          Is there a way to integrate along any curve, not just a line that is parallel to one of the axes? There is, and we need to use line integrals for this.
+        </p>
+        <p>
+          <strong>Line integrals</strong> are a way to integrate a function along a curve. Visually, they can be represented as the surface area under a function along a curve, as shown in this diagram:
+        </p>
+        <img class="graph" src="images/line_integral.png">
+        <p class="ntm sn">
+          What is the <span class="blue">surface area</span> under <span class="purple">this function</span> along <span class="red">this curve</span>?
+        </p>
+        <p class="nbm">
+          The formula for a line integral of a function \(f(x, y)\) where \(x\) and \(y\) are parametrically defined is:
+        </p>
+        <div class="mj">
+          \[ \int_a^b f(x(t), y(t))\dd{s} \]
+          \[ \dd{s} = \sqrt{[x'(t)]^2 + [y'(t)]^2} \dd{t} \]
+        </div>
+        <p class="nm">
+          The \(\dd{s}\) (which represents a small piece of arc length) might be familiar from arc length integrals. Line integrals are similar to arc length integrals, except now we’re multiplying \(\dd{s}\) by a function. When we perform a line integral, we’re essentially saying that as we walk along a curve, instead of just adding small pieces of arc length, we’re going to multiply these small pieces of arc length by the value of the function at each point.
+        </p>
+        <p class="nbm">
+          A line integral can also be notated as follows, where \(C\) is the curve we are integrating over:
+        </p>
+        <div class="mj">
+          \[ \int_C f \dd{s} \]
+        </div>
+        <p class="nm">
+          One useful way to write this line integral is with vector-valued functions. If we define \(\mathbf{r}(t) = (x(t), y(t))\) (i.e. \(\mathbf{r}(t)\) tells us where we are on our curve at time \(t\)), then we can write our integral like this:
+        </p>
+        <div class="mj">
+          \[ \int_C f(\mathbf{r}(t))||\mathbf{r}'(t)||\dd{t} \]
+        </div>
+        <p class="ntm">
+          Note that we’ve replaced \(\dd{s}\) with the magnitude of the velocity vector \(\mathbf{r}'(t)\) multiplied by \(\dd{t}\). That’s because they equal the same thing: in this case, \(\sqrt{[x'(t)]^2 + [y'(t)]^2}\dd{t}\).
+        </p>
+        <p class="ntm">
+          Now let’s actually evaluate a line integral!
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: Evaluate the line integral for the function \(f(x, y) = xy + 1\) along the curve defined by \(x(t) = \cos(t)\) and \(y(t) = \sin(t)\) for \(0 \le t \le \frac{\pi}{2}\).
+        </p>
+        <p class="nbm">
+          We first need to find \(\dd{s}\). This represents the amount of arc length that we cover when we change \(t\) by a tiny amount \(\dd{t}\).
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \dd{s} &= \sqrt{[x'(t)]^2 + [y'(t)]^2} \dd{t}\\
+          &= \sqrt{[-\sin(t)]^2 + [\cos(t)]^2}\dd{t}\\
+          &= \sqrt{\sin^2(t) + \cos^2(t)}\dd{t}\\
+          &= 1\dd{t}
+          \end{flalign}\]
+        </div>
+        <p class="nm">
+          Now, we need to write our function fully in terms of \(t\), since we’ll be integrating with respect to \(t\).
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          f(x(t), y(t)) &= f(\cos(t), \sin(t))\\
+          &= \cos(t)\sin(t) + 1
+          \end{flalign}\]
+        </div>
+        <p class="nm">
+          Now we’re ready to put everything together and evaluate the line integral!
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \int_a^b \class{red}{f(x(t), y(t))}\class{blue}{\dd{s}} &= \int_0^{\pi/2} \class{red}{(\cos(t)\sin(t) + 1)}\class{blue}{(1\dd{t})}\\
+          &= \int_0^{\pi/2} (\cos(t)\sin(t) + 1)\dd{t}\\
+          &= \int_0^{\pi/2} \left(\frac{1}{2}[2\cos(t)\sin(t)] + 1\right)\dd{t}\\
+          &= \int_0^{\pi/2} \left(\frac{1}{2}\sin(2t) + 1\right)\dd{t}\\
+          &= \left(-\frac{1}{4}\cos(2t) + t\right)\bigg|_0^{\pi/2}\\
+          &= \left(-\frac{1}{4}\cos(\pi) + \frac{\pi}{2}\right) - \left(-\frac{1}{4}\cos(0) + 0\right)\\
+          &=  \frac{\pi}{2} + \frac{1}{2}\\
+          &\approx 2.071
+          \end{flalign} \]
+        </div>
+        <img class="graph" src="images/line_integral.png">
+        <p class="ntm sn">
+          The <span class="blue">surface area</span> under <span class="purple">the surface</span> defined by \(f(x, y) = xy + 1\) along <span class="red">the curve</span> parametrically defined by \(x = \cos(t)\) and \(y = \sin(t)\) from \(t = 0\) to \(t = \frac{\pi}{2}\) is about 2.071.
+        </p>
+        <p class="ntm">
+          Let’s do one more example.
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: Set up a line integral for \(f(x, y) = e^{\sin(x) + \cos(y)}\) along the curve defined by \(x(t) = \ln(t)\) and \(y(t) = \frac{1}{t}\) for \(1 \le t \le 2\).
+        </p>
+        <p class="nbm">
+          Let’s once again find \(\dd{s}\) using the derivatives of \(x(t)\) and \(y(t)\):
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \dd{s} &= \sqrt{[x'(t)]^2 + [y'(t)]^2} \dd{t}\\
+          &= \sqrt{\left[\frac{1}{t}\right]^2 + \left[-\frac{1}{t^2}\right]^2}\dd{t}\\
+          &= \sqrt{\frac{1}{t^2} + \frac{1}{t^4}}\dd{t}\\
+          \end{flalign}\]
+        </div>
+        <p class="nm">
+          And now let’s write our function in terms of \(t\):
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          f(x(t), y(t)) &= f\left(\ln(t), \frac{1}{t}\right)\\
+          &= e^{\sin(\ln(t)) + \cos(1/t)}
+          \end{flalign}\]
+        </div>
+        <p class="nm">
+          These two parts are all we need to write down the line integral:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \int_a^b \class{red}{f(x(t), y(t))}\class{blue}{\dd{s}} &= \int_1^2 \class{red}{e^{\sin(\ln(t)) + \cos(1/t)}}\class{blue}{\sqrt{\frac{1}{t^2} + \frac{1}{t^4}}\dd{t}}\\
+          \end{flalign} \]
+        </div>
+        <img class="graph" src="images/line_integral_2.png">
+        <p class="ntm sn">
+          The above integral represents the <span class="blue">area</span> under <span class="purple">\(f(x, y)\)</span> along <span class="red">this curve</span>. (If you’re curious, this integral evaluates to about 2.57.)
+        </p>
+      </div>
+      <h3 class="section-header" id="vectorFieldsHeader">
+        Vector Fields <button id="vectorFieldsButton" onclick="showHide('vectorFields')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="vectorFields">
+        <p>
+          <strong>Vector fields</strong> are a way to visualize vector-valued functions, particularly functions with two inputs that output two-dimensional vectors. The idea is at each point in the \(xy\)-plane (which represents the inputs of our function), we draw a vector that represents the output of the function.
+        </p>
+        <p>
+          For example, consider the function \(\mathbf{F}(x, y) = (2x, y+1)\). Let’s first make a table of values for this function:
+        </p>
+        <table>
+          <tr>
+            <th>Input</th>
+            <th>Output</th>
+          </tr>
+          <tr>
+            <td>(1, 1)</td>
+            <td>(2, 2)</td>
+          </tr>
+          <tr>
+            <td>(2, 2)</td>
+            <td>(4, 3)</td>
+          </tr>
+          <tr>
+            <td>(-3, 3)</td>
+            <td>(-6, 4)</td>
+          </tr>
+        </table>
+        <p>
+          If we added many more rows to this table, then plotted these vectors on the \(xy\)-plane, we would get the vector field for \(\mathbf{F}(x,y)\).
+        </p>
+        <p>
+          Here is what its vector field looks like:
+        </p>
+        <img class="graph" src="images/vector_field.png">
+        <p class="ntm sn">
+          The vector field for \(\mathbf{F}(x, y) = (2x, y+1)\). (Note: the vectors are not drawn to scale, but the relative sizes of vectors compared to each other are preserved.)
+        </p>
+        <p>
+          Looking at the above vector field, we have the vector \((2, 2)\) at the point \((1, 1)\), the vector \((4, 3)\) at the point \((2, 2)\), the vector \((-6, 4)\) at the point \((-3, 3)\), and so on. This agrees with the table of values we made previously.
+        </p>
+        <p>
+          If we want to find the output vector of the function \(\mathbf{F}(x, y)\) at any point, we can just look for the corresponding vector at that point in the vector field.
+        </p>
+        <p>
+          Here’s another example of a vector field, this time for the function \(\mathbf{F}(x, y) = (\sin(x), \sin(y))\):
+        </p>
+        <img class="graph" src="images/sin_vector_field.png">
+        <p>
+          Here’s one final example, this time for \(\mathbf{F}(x, y) = (xy, y)\):
+        </p>
+        <img class="graph" src="images/another_vector_field.png">
+        <p class="ntm sn">
+          Notice how the \(x\)-components of the vectors are positive in the first and third quadrants and the \(y\)-components of the vectors are positive in the first and second quadrant. Why does this make sense?
+        </p>
+      </div>
+      <h3 class="section-header" id="lineIntVectorHeader">
+        Line Integrals for Vector-Valued Functions <button id="lineIntVectorButton" onclick="showHide('lineIntVector')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="lineIntVector">
+        <p class="nbm">
+          We can also perform line integrals on vector-valued functions, but there is a catch. Instead of adding the product of the distance traveled for each tiny step by the function’s value, we will add the dot product of the velocity vector multiplied by \(\dd{t}\) and the function’s value at each step. Here’s what that looks like:
+        </p>
+        <div class="mj">
+          \[ \int_C \mathbf{F}(\mathbf{r}(t)) \cdot \dd{\mathbf{s}}\]
+          \[ \dd{\mathbf{s}} = \mathbf{r}'(t) \dd{t} \]
+        </div>
+        <p class="ntm sn">
+          \(\mathbf{F}\) is our vector field - a vector-valued function that takes in a vector and outputs a vector. \(\mathbf{r}(t)\) is a vector-valued function that tells us where we are on the curve at time \(t\).
+        </p>
+        <p class="nm">
+          This notation for vector line integrals is sometimes shortened to:
+        </p>
+        <div class="mj">
+          \[ \int_C \mathbf{F} \cdot \dd{\mathbf{s}}\]
+        </div>
+        <p class="ntm">
+          Remember that the dot product measures how much two vectors point in the same direction. So if the velocity vectors along our curve mostly point in the same direction as the vector field’s vectors as we travel along our path, then the line integral will be positive. If the velocity vectors are mostly pointing in opposite directions as the vector field’s vectors, then the line integral will be negative.
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: Find the line integral over the vector field \(\mathbf{F}(x, y) = (-y, x)\) over the path traced out by \(x(t) = \cos(t)\) and \(y(t) = \sin(t)\) over \(0 \le t \le 2\pi\).
+        </p>
+        <p>
+          We can visualize this line integral with this diagram:
+        </p>
+        <img class="graph" src="images/line_integral_vector_field.png">
+        <p class="ntm sn">
+          This is the vector field represented by \(\mathbf{F}(x, y) = (-y, x)\). The <span class="red">circle</span> represents the path we are integrating over. Note that we are traveling along the circle in the counterclockwise direction as \(t\) increases.
+        </p>
+        <p class="nbm">
+          Let’s first find what \(\mathbf{F}(\mathbf{r}(t))\) equals:
+        </p>
+        <div class="mj">
+          \[ \mathbf{r}(t) = (x(t), y(t)) = (\cos(t), \sin(t))\]
+          \[ \begin{flalign}
+          \mathbf{F}(\mathbf{r}(t)) &= \mathbf{F}(\cos(t), \sin(t))\\
+          &= (-\sin(t), \cos(t))
+          \end{flalign} \]
+        </div>
+        <p class="nm">
+          Now let’s take the derivative of \(\mathbf{r}(t)\) to find \(\mathbf{r}'(t)\). As a reminder, to differentiate a vector-valued function, you just differentiate each component individually.
+        </p>
+        <div class="mj">
+          \[ \mathbf{r}'(t) = (x'(t), y'(t)) = (-\sin(t), \cos(t)) \]
+        </div>
+        <p class="nm">
+          Putting it all together, this is what our integral looks like:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \int_C\mathbf{F}(\mathbf{r}(t)) \cdot \dd{\mathbf{s}}
+          &= \int_0^{2\pi}(-\sin(t), \cos(t)) \cdot (-\sin(t), \cos(t)) \dd{t}\\
+          &= \int_0^{2\pi}[\sin^2(t) + \cos^2(t)] \dd{t}\\
+          &= \int_0^{2\pi}1 \dd{t}\\
+          &= 2\pi
+          \end{flalign}\]
+        </div>
+        <p class="ntm">
+          Now let’s do a very similar problem that will lead to an important observation.
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: Find the line integral over the vector field \(\mathbf{F}(x, y) = (-y, x)\) over the path traced out by \(x(t) = \cos(t)\) and \(y(t) = -\sin(t)\) over \(0 \le t \le 2\pi\).
+        </p>
+        <p>
+          Note that this line integral is identical to the previous problem except that we’re traveling along the circle in the clockwise direction instead of counterclockwise.
+        </p>
+        <p class="nbm">
+          Here’s \(\mathbf{r}(t)\) and \(\mathbf{r}'(t)\) for this problem:
+        </p>
+        <div class="mj">
+          \[ \mathbf{r}(t) = (x(t), y(t)) = (\cos(t), -\sin(t))\]
+          \[ \mathbf{r}'(t) = (x'(t), y'(t)) = (-\sin(t), -\cos(t))\]
+        </div>
+        <p class="nm">
+          This time, let’s jump straight to evaluating the integral.
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \int_C\mathbf{F}(\mathbf{r}(t)) \cdot \dd{\mathbf{s}} &= \int_C\mathbf{F}(\cos(t), -\sin(t)) \cdot \mathbf{r}'(t) \dd{t}\\
+          &= \int_0^{2\pi}(\sin(t), \cos(t)) \cdot (-\sin(t), -\cos(t)) \dd{t}\\
+          &= \int_0^{2\pi}[-\sin^2(t) - \cos^2(t)] \dd{t}\\
+          &= \int_0^{2\pi}[-1] \dd{t}\\
+          &= -2\pi
+          \end{flalign}\]
+        </div>
+        <p class="ntm">
+          Note that this example is the same as the last one, except now our curve is traveling along the circle in the clockwise direction instead of counterclockwise. In addition, notice how the line integral in the case is exactly -1 times our previous line integral.
+        </p>
+        <p>
+          In general, when you reverse the direction of a parametrically defined path, the corresponding line integral will get multiplied by -1 (i.e. it will switch signs). 
+        </p>
+        <p class="nbm">
+          Now let’s do one final example.
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: Find the line integral over the vector field \(\mathbf{F}(x, y) = (x + y, y - x)\) over the path traced out by \(x(t) = t^2\) and \(y(t) = t^3\) over \(1 \le t \le 2\).
+        </p>
+        <img class="graph" src="images/line_integral_vector_field_2.png">
+        <p class="ntm sn">
+          A visualization of the line integral. As \(t\) increases, we are traveling up and to the right along the curve.
+        </p>
+        <p class="nbm">
+          Here’s the expressions for \(\mathbf{r}(t)\) and \(\mathbf{r}'(t)\):
+        </p>
+        <div class="mj">
+          \[ \mathbf{r}(t) = (t^2, t^3) \]
+          \[ \mathbf{r}'(t) = (2t, 3t^2) \]
+        </div>
+        <p class="nm">
+          And here’s how we would evaluate the line integral:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \int_C\mathbf{F}(\mathbf{r}(t)) \cdot \dd{\mathbf{s}} &= \int_C\mathbf{F}(t^2, t^3) \cdot \mathbf{r}'(t) \dd{t}\\
+          &= \int_1^2(t^2 + t^3, t^3 - t^2) \cdot (2t, 3t^2) \dd{t}\\
+          &= \int_1^2[(2t^3 + 2t^4) + (3t^5 - 3t^4)] \dd{t}\\
+          &= \int_1^2[3t^5 - t^4 + 2t^3] \dd{t}\\
+          &= \left(\frac{t^6}{2} - \frac{t^5}{5} + \frac{t^4}{2}\right)\bigg|_1^2\\
+          &= \left(\frac{2^6}{2} - \frac{2^5}{5} + \frac{2^4}{2}\right) - \left(\frac{1^6}{2} - \frac{1^5}{5} + \frac{1^4}{2}\right)\\
+          &= 32.8
+          \end{flalign}\]
+        </div>
+      </div>
+      <h3 class="section-header" id="ftcLineHeader">
+        The Fundamental Theorem of Line Integrals <button id="ftcLineButton" onclick="showHide('ftcLine')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="ftcLine">
+        <p class="nbm">
+          In the <a href="#multivarChain2" onclick="jumpTo('multivarChain2')">Multivariable Chain Rule, Revisited</a> section, we went over how the multivariable chain rule could be written as:
+        </p>
+        <div class="mj">
+          \[ \dv{t}f(\mathbf{v}(t)) = \nabla f(\mathbf{v}(t)) \cdot \mathbf{v}'(t)\]
+        </div>
+        <p class="nm">
+          If we integrate both sides of this equation from \(t = a\) to \(t = b\), we get:
+        </p>
+        <div class="mj">
+          \[ \int_a^b\dv{t}f(\mathbf{v}(t))\dd{t} = \int_a^b\nabla f(\mathbf{v}(t)) \cdot \mathbf{v}'(t)\dd{t}\]
+          \[ f(\mathbf{v}(t))\bigg|_a^b = \int_a^b\nabla f(\mathbf{v}(t)) \cdot \mathbf{v}'(t)\dd{t}\]
+          \[ f(\mathbf{v}(b)) - f(\mathbf{v}(a)) = \int_a^b\nabla f(\mathbf{v}(t)) \cdot \mathbf{v}'(t)\dd{t}\]
+        </div>
+        <p class="nm">
+          The right-hand side might remind you of a line integral. Just to make this point more clear, let’s change \(\mathbf{v}(t)\) to \(\mathbf{r}(t)\):
+        </p>
+        <div class="mj">
+          \[ \int_a^b\nabla f(\mathbf{r}(t)) \cdot \mathbf{r}'(t)\dd{t} = f(\mathbf{r}(b)) - f(\mathbf{r}(a)) \]
+          \[ \int_a^b\nabla f(\mathbf{r}(t)) \cdot \dd{\mathbf{s}} = f(\mathbf{r}(b)) - f(\mathbf{r}(a))\]
+        </div>
+        <p class="ntm">
+          This is the <strong>fundamental theorem of line integrals</strong>, and it gives an easy way to evaluate line integrals given one condition: the vector field we’re integrating is a gradient field, meaning it is the gradient of some function.
+        </p>
+        <p>
+          One way to understand the fundamental theorem of line integrals is that \(\nabla f(\mathbf{r}(t)) \cdot \dd{\mathbf{s}}\) \( = \nabla f(\mathbf{r}(t)) \cdot \mathbf{r}'(t) \dd{t}\) represents the directional derivative of \(f\) in the direction of \(\mathbf{r}'(t)\), and so it represents the rate of change of \(f\) as we travel along the curve at any time \(t\). So if we integrate this value along the entire curve, we get the total change in \(f\), which is represented by \(f(\mathbf{r}(b)) - f(\mathbf{r}(a))\).
+        </p>
+        <p>
+          Let’s go over an example problem.
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: Evaluate the line integral of the gradient of \(f(x, y) = x^3 + y\) over the curve defined by \(x(t) = t^2\) and \(y(t) = \cos(t)\) from \(t = 0\) to \(t = 2\pi\).
+        </p>
+        <p class="nbm">
+          Let’s first see how we would evaluate this line integral normally. We would first need to find the gradient of \(f(x, y)\), as well as \(\mathbf{r}(t)\) and \(\mathbf{r}'(t)\):
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \nabla f(x, y) &= \left(\pdv{f}{x}, \pdv{f}{y}\right)\\
+          &= (3x^2, 1)
+          \end{flalign}\]
+          \[ \mathbf{r}(t) = (t^2, \cos(t)) \]
+          \[ \mathbf{r}'(t) = (2t, -\sin(t)) \]
+        </div>
+        <p class="nm">
+          Now let’s evaluate the line integral:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \int_a^b\nabla f(\mathbf{r}(t)) \cdot \dd{\mathbf{s}} &= \int_0^{2\pi}\nabla f(\mathbf{r}(t)) \cdot \mathbf{r}'(t) \dd{t}\\
+          &= \int_0^{2\pi}\nabla f(t^2, \cos(t)) \cdot (2t, -\sin(t)) \dd{t}\\
+          &= \int_0^{2\pi}(3(t^2)^2, 1) \cdot (2t, -\sin(t))\dd{t}\\
+          &= \int_0^{2\pi}(3t^4, 1) \cdot (2t, -\sin(t))\dd{t}\\
+          &= \int_0^{2\pi}[6t^5 - \sin(t)]\dd{t}\\
+          &= [t^6 + \cos(t)]\bigg|_0^{2\pi}\\
+          &= (2\pi)^6 + \cos(2\pi) - (0^6 + \cos(0))\\
+          &= 64\pi^6
+          \end{flalign}\]
+        </div>
+        <p class="nm">
+          However, using the fundamental theorem of line integrals, we can save ourselves a lot of work. We just need to find \(f(\mathbf{r}(b)) - f(\mathbf{r}(a))\): 
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          f(\mathbf{r}(b)) - f(\mathbf{r}(a)) &= f(x(b), y(b)) - f(x(a), y(a))\\
+          &= f(x(2\pi), y(2\pi)) - f(x(0), y(0))\\
+          &= f((2\pi)^2, \cos(2\pi)) - f(0^2, \cos(0))\\
+          &= f(4\pi^2, 1) - f(0, 1)\\
+          &= ((4\pi^2)^3 + 1) - (0^3 + 1)\\
+          &= 64\pi^6
+          \end{flalign} \]
+        </div>
+      </div>
+      <h3 class="section-header" id="curlHeader">
+        Vector Fields: The Curl Operator <button id="curlButton" onclick="showHide('curl')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="curl">
+        <p>
+          Sometimes, we are interested in the rotation within a vector field. In other words, we want to know, given a point in a vector field, how much rotation is there around it?
+        </p>
+        <p>
+          We can picture vector fields as representing fluid flow: how particles of water, air, etc. would move if placed in a vector field (where the vectors represent motion).
+        </p>
+        <p>
+          A great example of this concept is the vector field of \(\mathbf{F}(x, y) = (-y, x)\).
+        </p>
+        <img class="graph" src="images/curl_vector_field.png">
+        <p class="ntm sn">
+          The vector field of \(\mathbf{F}(x, y) = (-y, x)\).
+        </p>
+        <p>
+          Visually, you can tell that the vector field has counterclockwise rotation at every point. But is there a way to tell mathematically?
+        </p>
+        <p>
+          The key is to analyze what happens to the \(x\)- and \(y\)-components of our vectors as we increase the \(x\)- or \(y\)-value of our input. Looking at the vector field, as we increase our input \(x\)-value (while keeping \(y\) constant), what happens to the output vector? What if we keep \(x\) constant and increase \(y\)?
+        </p>
+        <p>
+          As we increase the \(x\)-value of our input (which corresponds to traveling to the right on our vector field), the \(y\)-component of the output vectors gets larger and larger. As we increase the \(y\)-value of our input (which corresponds to traveling up), the \(x\)-component of the vectors decreases.
+        </p>
+        <p>
+          What this means is that the partial derivative of the \(y\)-component of the output with respect to the input \(x\) is positive, and the partial derivative of the \(x\)-component of the output with respect to the input \(y\) is negative.
+        </p>
+        <p class="nbm">
+          It turns out that these two partial derivatives are all that we need to calculate <strong>curl</strong>, which is a measure of how much rotation there is around a point in a vector field. Here is the formula for curl in two dimensions for a vector field \(\mathbf{F}(x, y) = (v_1, v_2)\):
+        </p>
+        <div class="mj">
+          \[ \pdv{v_2}{x} - \pdv{v_1}{y}\]
+        </div>
+        <p class="ntm">
+          A positive value for two-dimensional curl means that there is counterclockwise rotation around a point, and a negative value indicates clockwise rotation.
+        </p>
+        <p class="nbm">
+          Let’s apply this formula to the function \(\mathbf{F}(x, y) = (-y, x)\):
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \pdv{v_2}{x} - \pdv{v_1}{y} &= \pdv{x}(x) - \pdv{y}(-y)\\
+          &= 1 - (-1)\\
+          &= 2
+          \end{flalign}\]
+        </div>
+        <p class="ntm">
+          Notice that this expression doesn’t have \(x\) or \(y\) in it, meaning that the two-dimensional curl is 2 regardless of what point we choose. This value of curl makes sense since there is counterclockwise rotation around all points in our vector field.
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: What is the curl at the point \((\frac{5}{2}, 0)\) for the vector field given by \(\mathbf{F}(x, y) = (\sin(\frac{\pi y}{5}), \cos(\frac{\pi x}{5}))\)?
+        </p>
+        <img class="graph" src="images/curl_vector_field_2.png">
+        <p class="ntm sn">
+          What is the curl at the point \(\class{red}{(\frac{5}{2}, 0)}\)?
+        </p>
+        <p class="nbm">
+          Let’s use the two-dimensional curl formula to determine the curl at any given point \((x, y)\) for this vector field:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \pdv{v_2}{x} - \pdv{v_1}{y} &= \pdv{x}\cos(\frac{\pi x}{5}) - \pdv{y}\sin(\frac{\pi y}{5})\\
+          &= -\frac{\pi}{5}\sin(\frac{\pi x}{5}) - \frac{\pi}{5}\cos(\frac{\pi y}{5})
+          \end{flalign}\]
+        </div>
+        <p class="nm">
+          Now let’s plug in the point \((\frac{5}{2}, 0)\) to find the curl at this point:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \pdv{v_2}{x} - \pdv{v_1}{y} &= -\frac{\pi}{5}\sin(\frac{5\pi/2}{5}) - \frac{\pi}{5}\cos(\frac{5\pi/2}{5})\\
+          &= -\frac{\pi}{5}\sin(\frac{\pi}{2}) - \frac{\pi}{5}\cos(\frac{\pi}{2})\\
+          &= -\frac{\pi}{5}
+          \end{flalign} \]
+        </div>
+        <p class="ntm">
+          This value is negative, which makes sense because looking at the vector field, there is clockwise rotation around the point \((\frac{5}{2}, 0)\).
+        </p>
+        <p>
+          The idea of curl can also be extended to three dimensions. However, to fully describe rotation in three dimensions, a scalar value won’t be enough. Instead, we need to use a vector to describe 3D rotation.
+        </p>
+        <p>
+          Rotation vectors in three dimensions are defined with the right-hand rule: if you curl your fingers in the direction of rotation and extend your thumb, it will point in the direction of the rotation vector.
+        </p>
+        <p class="nbm">
+          Curl in three dimensions is defined as:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \operatorname{curl}(\mathbf{F}) &= \left(\pdv{v_3}{y} - \pdv{v_2}{z}\right)\mathbf{i} + \left(\pdv{v_1}{z} - \pdv{v_3}{x}\right)\mathbf{j} + \left(\pdv{v_2}{x} - \pdv{v_1}{y}\right)\mathbf{k}
+          \end{flalign} \]
+        </div>
+        <p class="nm">
+          An alternate notation for curl that also serves as a way to remember the formula is:
+        </p>
+        <div class="mj">
+          \[ \operatorname{curl}(\mathbf{F}) = \nabla \times \mathbf{F} \]
+        </div>
+        <p class="nm">
+          Here, \(\nabla\) represents the partial derivative operators \((\pdv{x}, \pdv{y}, \pdv{z})\). So curl can be thought of as this cross product:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \operatorname{curl}(\mathbf{F}) &= \nabla \times \mathbf{F}\\
+          &= \det\begin{bmatrix}
+          \mathbf{i} & \mathbf{j} & \mathbf{k}\\
+          \pdv{x} & \pdv{y} & \pdv{z}\\
+          v_1 & v_2 & v_3\end{bmatrix}
+          \end{flalign}\]
+        </div>
+        <p class="nm">
+          You might find this determinant very strange, because the middle row of the matrix is filled with operators. So this isn’t really a determinant in the traditional sense, but if we define “multiplying” a partial derivative operator by something as evaluating the partial derivative of that thing, we can make sense of this determinant.
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \operatorname{curl}(\mathbf{F}) &= \nabla \times \mathbf{F}\\
+          &= \det\begin{bmatrix}
+          \mathbf{i} & \mathbf{j} & \mathbf{k}\\
+          \pdv{x} & \pdv{y} & \pdv{z}\\
+          v_1 & v_2 & v_3\end{bmatrix}\\
+          &= \left(\pdv{y}v_3 - \pdv{x}v_2\right)\mathbf{i} - \left(\pdv{x}v_3 - \pdv{z}v_1\right)\mathbf{j} + \left(\pdv{x}v_2 - \pdv{y}v_1\right)\mathbf{k}\\
+          &= \left(\pdv{v_3}{y} - \pdv{v_2}{x}\right)\mathbf{i} + \left(\pdv{v_1}{z} - \pdv{v_3}{x}\right)\mathbf{j} + \left(\pdv{v_2}{x} - \pdv{v_1}{y}\right)\mathbf{k}
+          \end{flalign}\]
+        </div>
+      </div>
+      <h3 class="section-header" id="divergenceHeader">
+        Vector Fields: The Divergence Operator <button id="divergenceButton" onclick="showHide('divergence')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="divergence">
+        <p>
+          There is another operation we can perform on points in vector fields, and it’s known as <strong>divergence</strong>. While curl tells us how much vectors rotate around a point, divergence tells us how much vectors are diverging from a point. If you imagine a vector field as describing fluid flow, divergence can give us a sense of how much fluid is leaving a point.
+        </p>
+        <p>
+          A great example of this is the vector field for the function \(\mathbf{F}(x, y) = (x, y)\):
+        </p>
+        <img class="graph" src="images/divergence_vector_field.png">
+        <p class="ntm sn">
+          The vector field for \(\mathbf{F}(x, y) = (x, y)\). Notice how the vectors are diverging from the origin.
+        </p>
+        <p>
+          Just like we did with curl, we can look at what happens to the vectors as we change one of the input variables. What happens to the vectors as we increase \(x\) and keep \(y\) constant, or increase \(y\) and keep \(x\) constant?
+        </p>
+        <p>
+          As we increase the input variable \(x\), the \(x\)-components of the vectors increase, and as we increase the input variable \(y\), the \(y\)-components of the vectors also increase.
+        </p>
+        <p class="nbm">
+          This means that both \(\pdv{v_1}{x}\) and \(\pdv{v_2}{y}\) are positive in our diverging vector field. In fact, divergence is calculated with this formula:
+        </p>
+        <div class="mj">
+          \[ \pdv{v_1}{x} + \pdv{v_2}{y} \]
+        </div>
+        <p class="nm">
+          Let’s calculate the divergence for the vector field \(\mathbf{F}(x, y) = (x, y)\):
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \pdv{v_1}{x} + \pdv{v_2}{y} &= \pdv{x}(x) + \pdv{y}(y)\\
+          &= 1 + 1\\
+          &= 2
+          \end{flalign}\]
+        </div>
+        <p class="ntm">
+          Looking back at our vector field, it makes sense that this value is positive, because if we imagine fluid flow in the vector field, more fluid is leaving the region around every point than entering it. A negative value of divergence would indicate that more fluid is entering the region around that point than leaving it.
+        </p>
+        <p>
+          Let’s do another example now.
+        </p>
+        <p class="ntm problem">
+          <strong>Problem</strong>: What is the divergence at the point \((2, 0)\) for the vector field given by \(\mathbf{F}(x, y) = (\cos(\frac{\pi x}{4}), -y)\)?
+        </p>
+        <img class="graph" src="images/divergence_vector_field_2.png">
+        <p class="ntm sn">
+          What is the divergence at the point \(\class{red}{(2, 0)}\)?
+        </p>
+        <p class="nbm">
+          The partial derivatives of our vector field is:
+        </p>
+        <div class="mj">
+          \[ \pdv{v_1}{x} = -\frac{\pi}{4}\sin\left(\frac{\pi x}{4}\right) \]
+          \[ \pdv{v_2}{y} = -1 \]
+        </div>
+        <p class="nm">
+          Now let’s plug these into the divergence formula:
+        </p>
+        <div class="mj">
+          \[ \pdv{v_1}{x} + \pdv{v_2}{y} = -\frac{\pi}{4}\sin\left(\frac{\pi x}{4}\right) - 1 \]
+        </div>
+        <p class="nm">
+          Now we can find the divergence value at \((2, 0)\):
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \pdv{v_1}{x} + \pdv{v_2}{y} &= -\frac{\pi}{4}\sin\left(\frac{2\pi}{4}\right) - 1\\
+          &= -\frac{\pi}{4}\sin\left(\frac{\pi}{2}\right) - 1\\
+          &= -\frac{\pi}{4} - 1\\
+          \end{flalign} \]
+        </div>
+        <p class="ntm">
+          Looking back at the vector field, the vectors are pointing towards the point \((2, 0)\), so we would expect the divergence to be negative. Using the fluid flow interpretation, fluid would be converging at this point, not diverging.
+        </p>
+        <p class="nm">
+          Divergence is generalizable to more dimensions. For example, in three dimensions, the divergence formula is:
+        </p>
+        <div class="mj">
+          \[ \operatorname{div}(\mathbf{F}) = \pdv{v_1}{x} + \pdv{v_2}{y} + \pdv{v_3}{z} \]
+        </div>
+        <p class="nm">
+          The divergence formula can also be written as follows, where \(\nabla\) represents the partial derivative operators \((\pdv{x}, \pdv{y}, \pdv{z})\):
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \operatorname{div}(\mathbf{F}) &= \nabla \cdot \mathbf{F}\\
+          &= \left(\pdv{x}, \pdv{y}, \pdv{z}\right) \cdot (v_1, v_2, v_3)\\
+          &= \pdv{v_1}{x} + \pdv{v_2}{y} + \pdv{v_3}{z}
+          \end{flalign} \]
+        </div>
+      </div>
+      <h3 class="section-header" id="greensTheoremHeader">
+        Green’s Theorem <button id="greensTheoremButton" onclick="showHide('greensTheorem')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="greensTheorem">
+        <p>
+          One way to interpret line integrals is that they tell you how much the vector field points in the same direction you are traveling in as you travel along the curve you’re integrating over.
+        </p>
+        <p>
+          An analogy is to imagine the vector field as representing wind. As you travel along the curve you’re integrating over, does the wind blow in the direction of your movement or against you? If the wind mostly blows in the same direction you’re moving in, then the line integral is positive, and if the wind mostly blows against you, the line integral is negative.
+        </p>
+        <p>
+          Now let’s say that we’re integrating over the boundary of some region, and we’ll call this boundary \(C\). We’ll also say that \(C\) is oriented counterclockwise, i.e. we’re traveling along \(C\) in the counterclockwise direction. We call this a <strong>closed line integral</strong>, since we’re starting and ending at the same point. <span class="sn">(Sometimes the symbol \(\oint\) is used instead of \(\int\) to emphasize that a line integral is a closed line integral. It’s evaluated the same way as a normal line integral however.)</span>
+        </p>
+        <img class="graph" src="images/greens_theorem_1.png">
+        <p class="ntm sn">
+          An example of a closed curve that is oriented counterclockwise.
+        </p>
+        <p>
+          If we mostly encounter vectors that are pointing counterclockwise while traveling along the curve \(C\), then our line integral will be positive. Likewise, if we mostly encounter vectors that are pointing clockwise while traveling along the curve \(C\), then our line integral will be negative.
+        </p>
+        <p>
+          What this means is that our line integral essentially measures how much our vectors are oriented counterclockwise along our curve.
+        </p>
+        <p>
+          Now let’s say that \(R\) is the region bounded by the curve \(C\). Imagine dividing the region \(R\) into two pieces and creating two different curves \(C_1\) and \(C_2\), both oriented counterclockwise. For example, this is what that might look like:
+        </p>
+        <img class="graph" src="images/greens_theorem_2.png">
+        <p>
+          Importantly, the sum of the line integrals \(\oint_{C_1}\mathbf{F} \cdot \mathbf{\dd{s}}\) and \(\oint_{C_2}\mathbf{F} \cdot \mathbf{\dd{s}}\) is equal to the original line integral \(\oint_C \mathbf{F}\cdot\mathbf{\dd{s}}\). This is because the two line integrals cancel out along the line that the two boundaries share.
+        </p>
+        <p>
+          We can divide our region again in a similar manner to create even more different line integrals. Once again, the sum of these line integrals is the same as the original line integral, as long as each integral is oriented counterclockwise. We can keep cutting up our region like this, and the sum of the line integrals will stay the same.
+        </p>
+        <p>
+          Eventually, we will have many line integrals over tiny regions. Remember how I said that a counterclockwise closed line integral measures how much the vector field is oriented counterclockwise along the curve? There is another concept that measures this, and that is two-dimensional curl. However, two-dimensional curl is only defined for points, not over entire curves.
+        </p>
+        <p>
+          Nevertheless, if the region bounded by a closed curve is very small, the line integral along that curve is approximately equal to the two-dimensional curl at a point in the region. As we make the regions smaller and smaller, this approximation becomes an equality.
+        </p>
+        <img class="graph" src="images/greens_theorem_small_region.png">
+        <p class="ntm sn">
+          The line integral around this boundary curve \(C_k\) (oriented counterclockwise) is approximately equal to the two-dimensional curl at a point in the region \(R_k\).
+        </p>
+        <p class="nbm">
+          What this means is that the line integral over the entire curve \(C\) is equal to the sum of the curl of the infinitely many small regions. To find this sum, we must integrate the curl over the entire region. The tool we need to do this is the double integral!
+        </p>
+        <p class="nbm">
+          Therefore, the line integral over the curve \(C\) is equal to the double integral of the curl of \(\mathbf{F}\) over the region \(R\). Here’s how you would write this fact in symbols:
+        </p>
+        <div class="mj">
+          \[ \oint_C \mathbf{F} \cdot \dd{\mathbf{s}} = \iint_R \operatorname{2D-curl}\mathbf{F} \dd{A} \]
+        </div>
+        <p class="ntm sn">
+          Note: the operator \(\operatorname{2D-curl}\) means that I’m using the two-dimensional definition of curl here, not the standard 3D definition.
+        </p>
+        <p class="nbm">
+          As a reminder, the two-dimensional curl of a vector-valued function \(\mathbf{F}(x, y) = (\class{red}{v_1}, \class{blue}{v_2})\) is defined as:
+        </p>
+        <div class="mj">
+          \[ \pdv{\class{blue}{v_2}}{x} - \pdv{\class{red}{v_1}}{y} \]
+        </div>
+        <p class="nm">
+          If we define our function \(\mathbf{F}(x, y)\) to output the vector \((\class{red}{P(x,y)}, \class{blue}{Q(x,y)})\) (i.e. \(\class{red}{P(x, y)}\) is the \(x\)-component of the output of \(\mathbf{F}\) and \(\class{blue}{Q(x, y)}\) is the \(y\)-component), then the two-dimensional curl of \(\mathbf{F}\) is:
+        </p>
+        <div class="mj">
+          \[ \pdv{\class{blue}{Q}}{x} - \pdv{\class{red}{P}}{y} \]
+        </div>
+        <p class="nm">
+           Therefore, we can write our observation that the line integral over the curve \(C\) is equal to the double integral of the curl of \(\mathbf{F}\) over the region \(R\) as:
+        </p>
+        <div class="mj">
+          \[ \oint_C \mathbf{F}\cdot\dd{\mathbf{s}} = \iint_R \left(\pdv{Q}{x} - \pdv{P}{y}\right) \dd{A} \]
+        </div>
+        <p class="ntm">
+          The left-hand side is our closed line integral over the curve \(C\), and the right-hand side is the double integral of the two-dimensional curl over the region \(R\). <span class="sn">(Remember, the symbol \(\oint\) just means that this is a closed line integral. We’re still evaluating the line integral the way we normally would.)</span>
+        </p>
+        <p class="nm">
+          Since the differential \(\dd{\mathbf{s}}\) represents a tiny step along the curve \(C\), so we can rewrite it as the vector \((\dd{x}, \dd{y})\). So our equation becomes:
+        </p>
+        <div class="mj">
+          \[ \oint_C \mathbf{F}\cdot\dd{\mathbf{s}} = \iint_R \left(\pdv{Q}{x} - \pdv{P}{y}\right) \dd{A} \]
+          \[ \oint_C (P(x, y), Q(x, y)) \cdot (\dd{x}, \dd{y}) = \iint_R \left(\pdv{Q}{x} - \pdv{P}{y}\right) \dd{A} \]
+          \[ \oint_C P \dd{x} +\, Q \dd{y} = \iint_R \left(\pdv{Q}{x} - \pdv{P}{y}\right) \dd{A} \]
+        </div>
+        <p class="ntm">
+          This equation is known as <strong>Green’s theorem</strong>. It’s useful because it allows us to convert line integrals into double integrals, and sometimes this can make solving line integrals easier.
+        </p>
+        <p class="bold">
+          Note that Green’s theorem in this form only works if the curve \(C\) is oriented counterclockwise. If it is oriented clockwise, we need to multiply our final answer by -1.
+        </p>
+        <p>
+          Here’s an example of us using Green’s theorem to turn a line integral into a double integral that is easier to evaluate.
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: Use Green’s theorem to evaluate the line integral \(\int_C \mathbf{F} \cdot \dd{\mathbf{s}}\) for \(\mathbf{F}(x, y) = (10y, -5x)\) over the curve defined by \((\cos(t), \sin(t))\) from \(t = 0\) to \(t = 2\pi\).
+        </p>
+        <p>
+          Notice that our curve is just a circle of radius 1 around the origin, oriented counterclockwise (this orientation is important, otherwise we would need to multiply our answer by -1). This is a closed line integral, so we can use Green’s theorem. <span class="sn">(There actually are a few more conditions required to use Green’s theorem, but they are met in this case.)</span>
+        </p>
+        <p class="nbm">
+          To use Green’s theorem, we need to get our line integral into the form \(\int_C P \dd{x}+\, Q \dd{y}\). To do this, we need to rewrite \(\dd{\mathbf{s}}\) as the vector \((\dd{x}, \dd{y})\).
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \int_C \mathbf{F} \cdot \dd{\mathbf{s}} &= \int_C(10y, -5x) \cdot (\dd{x}, \dd{y})\\
+          &= \int_C 10y \dd{x} -\, 5x \dd{y}
+          \end{flalign}\]
+        </div>
+        <p class="nm">
+          From here, we can tell that \(P = 10y\) and \(Q = -5x\). Now let’s find \(\pdv{Q}{x}\) and \(\pdv{P}{y}\):
+        </p>
+        <div class="mj">
+          \[ \pdv{Q}{x} = -5 \]
+          \[ \pdv{P}{y} = 10 \]
+        </div>
+        <p class="nm">
+          Now we’re ready to write our integral as a double integral using Green’s theorem:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \iint_R \left(\pdv{Q}{x} - \pdv{P}{y}\right) \dd{A} &= \iint_R \left(-5 - 10\right) \dd{A}\\
+          &= \iint_R -15 \dd{A}\\
+          &= -15\iint_R \dd{A}
+          \end{flalign} \]
+        </div>
+        <p class="ntm">
+          Note that our region here is just the interior of a circle with radius 1. Because of this, we know that the integral \(\iint_R \dd{A}\), which measures the area of this circle, is simply \(\pi\), meaning that our integral evaluates to \(-15\pi\). 
+        </p>
+        <p>
+          Doing this is a lot less work than performing the line integral normally, which would require us to integrate \(\sin^2(x)\) and \(\cos^2(x)\).
+        </p>
+        <p class="nbm">
+          Green’s theorem can also be used in reverse: to convert area integrals to line integrals. Let’s look back at Green’s theorem:
+        </p>
+        <div class="mj">
+          \[ \oint_C P \dd{x} +\, Q \dd{y} = \iint_R \left(\pdv{Q}{x} - \pdv{P}{y}\right) \dd{A} \]
+        </div>
+        <p class="nm">
+          If we have functions \(P\) and \(Q\) such that \(\pdv{Q}{x} - \pdv{P}{y} = 1\), then Green’s theorem simply becomes:
+        </p>
+        <div class="mj">
+          \[ \oint_C P \dd{x} +\, Q \dd{y} = \iint_R \dd{A} \]
+        </div>
+        <p class="nm">
+          One way we can make \(\pdv{Q}{x} - \pdv{P}{y} = 1\) is if we have \(P = -\frac{y}{2}\) and \(Q = \frac{x}{2}\). Therefore, we can write our equation as:
+        </p>
+        <div class="mj">
+          \[ \oint_C -\frac{y}{2} \dd{x} +\, \frac{x}{2} \dd{y} = \iint_R \dd{A} \]
+          \[ \frac{1}{2}\oint_C -y \dd{x} +\, x \dd{y} = \iint_R \dd{A} \]
+          \[ \iint_R \dd{A} = \frac{1}{2}\oint_C x \dd{y} -\, y\dd{x} \]
+        </div>
+        <p class="ntm">
+          The above is a way to convert area double integrals into line integrals.
+        </p>
+      </div>
     </div>
   </div>
-  <hr class="heavy-hr"> -->
+  <hr class="heavy-hr">
   <!-- Guest Explanations -->
   <div class="unit" id="guestExplanationsUnit">
     <h2 id="guestExplanationsHeader">
@@ -3559,7 +5351,12 @@
     <button id="otherWebsitesButton" onclick="showHide('otherWebsites')">Show</button>
   </h2>
   <div id="otherWebsites" class="hidden-by-default">
-    <p>I have other educational websites like this one available at <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://calculusgaming.com">https://calculusgaming.com</a>!</p>
+    <p>
+      I have other educational websites like this one available at <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://calculusgaming.com">https://calculusgaming.com</a>!
+    </p>
+    <p>
+      If you need to review single-variable calculus, <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://calculusgaming.com/calc">unnamed calc website</a> is my page for that.
+    </p>
   </div>
   <hr class="heavy-hr">
   <!-- Credits / Special Thanks -->
@@ -3570,6 +5367,9 @@
   <div id="credits">
     <p>
       All code, diagrams, and explanations (except those in the “Guest Explanations” section) were created by Eldrick Chen (also known as “calculus gaming”). This page is open-source - <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/chaddypioneers/unnamed-multivar-website">view the GitHub repository here.</a>
+    </p>
+    <p class="bold">
+      Feel free to modify this website in any way! If you have ideas for how to improve this website, feel free to make those changes and publish them yourself, as long as you follow the terms of the GNU General Public License v3.0 (scroll down to view this license).
     </p>
     <p>
       👋 Hello! I’m Eldrick, and I originally started making calculus websites as a passion project to help people at my school.
@@ -3656,6 +5456,706 @@ limitations under the License.
           </li>
         </ul>
       </li>
+      <li>
+        Copyright notice for this website:
+        <ul>
+          <li>Copyright © 2025 Eldrick Chen</li>
+          <li>This page is licensed under the GNU General Public License v3.0. Details:
+            <ul>
+              <li>
+                <div class="overflow">
+                  <pre>
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+                  </pre>
+                </div>
+                <button onclick="showHide('license')" id="licenseButton" class="large-button">Show License</button>
+                <div id="license" class="hidden-by-default overflow">
+                  <pre>
+          GNU GENERAL PUBLIC LICENSE
+              Version 3, 29 June 2007
+
+Copyright (C) 2007 Free Software Foundation, Inc. &lt;https://fsf.org/&gt;
+Everyone is permitted to copy and distribute verbatim copies
+of this license document, but changing it is not allowed.
+                  Preamble
+
+The GNU General Public License is a free, copyleft license for
+software and other kinds of works.
+
+The licenses for most software and other practical works are designed
+to take away your freedom to share and change the works.  By contrast,
+the GNU General Public License is intended to guarantee your freedom to
+share and change all versions of a program--to make sure it remains free
+software for all its users.  We, the Free Software Foundation, use the
+GNU General Public License for most of our software; it applies also to
+any other work released this way by its authors.  You can apply it to
+your programs, too.
+
+When we speak of free software, we are referring to freedom, not
+price.  Our General Public Licenses are designed to make sure that you
+have the freedom to distribute copies of free software (and charge for
+them if you wish), that you receive source code or can get it if you
+want it, that you can change the software or use pieces of it in new
+free programs, and that you know you can do these things.
+
+To protect your rights, we need to prevent others from denying you
+these rights or asking you to surrender the rights.  Therefore, you have
+certain responsibilities if you distribute copies of the software, or if
+you modify it: responsibilities to respect the freedom of others.
+
+For example, if you distribute copies of such a program, whether
+gratis or for a fee, you must pass on to the recipients the same
+freedoms that you received.  You must make sure that they, too, receive
+or can get the source code.  And you must show them these terms so they
+know their rights.
+
+Developers that use the GNU GPL protect your rights with two steps:
+(1) assert copyright on the software, and (2) offer you this License
+giving you legal permission to copy, distribute and/or modify it.
+
+For the developers' and authors' protection, the GPL clearly explains
+that there is no warranty for this free software.  For both users' and
+authors' sake, the GPL requires that modified versions be marked as
+changed, so that their problems will not be attributed erroneously to
+authors of previous versions.
+
+Some devices are designed to deny users access to install or run
+modified versions of the software inside them, although the manufacturer
+can do so.  This is fundamentally incompatible with the aim of
+protecting users' freedom to change the software.  The systematic
+pattern of such abuse occurs in the area of products for individuals to
+use, which is precisely where it is most unacceptable.  Therefore, we
+have designed this version of the GPL to prohibit the practice for those
+products.  If such problems arise substantially in other domains, we
+stand ready to extend this provision to those domains in future versions
+of the GPL, as needed to protect the freedom of users.
+
+Finally, every program is threatened constantly by software patents.
+States should not allow patents to restrict development and use of
+software on general-purpose computers, but in those that do, we wish to
+avoid the special danger that patents applied to a free program could
+make it effectively proprietary.  To prevent this, the GPL assures that
+patents cannot be used to render the program non-free.
+
+The precise terms and conditions for copying, distribution and
+modification follow.
+              TERMS AND CONDITIONS
+
+0. Definitions.
+
+"This License" refers to version 3 of the GNU General Public License.
+
+"Copyright" also means copyright-like laws that apply to other kinds of
+works, such as semiconductor masks.
+
+"The Program" refers to any copyrightable work licensed under this
+License.  Each licensee is addressed as "you".  "Licensees" and
+"recipients" may be individuals or organizations.
+
+To "modify" a work means to copy from or adapt all or part of the work
+in a fashion requiring copyright permission, other than the making of an
+exact copy.  The resulting work is called a "modified version" of the
+earlier work or a work "based on" the earlier work.
+
+A "covered work" means either the unmodified Program or a work based
+on the Program.
+
+To "propagate" a work means to do anything with it that, without
+permission, would make you directly or secondarily liable for
+infringement under applicable copyright law, except executing it on a
+computer or modifying a private copy.  Propagation includes copying,
+distribution (with or without modification), making available to the
+public, and in some countries other activities as well.
+
+To "convey" a work means any kind of propagation that enables other
+parties to make or receive copies.  Mere interaction with a user through
+a computer network, with no transfer of a copy, is not conveying.
+
+An interactive user interface displays "Appropriate Legal Notices"
+to the extent that it includes a convenient and prominently visible
+feature that (1) displays an appropriate copyright notice, and (2)
+tells the user that there is no warranty for the work (except to the
+extent that warranties are provided), that licensees may convey the
+work under this License, and how to view a copy of this License.  If
+the interface presents a list of user commands or options, such as a
+menu, a prominent item in the list meets this criterion.
+
+1. Source Code.
+
+The "source code" for a work means the preferred form of the work
+for making modifications to it.  "Object code" means any non-source
+form of a work.
+
+A "Standard Interface" means an interface that either is an official
+standard defined by a recognized standards body, or, in the case of
+interfaces specified for a particular programming language, one that
+is widely used among developers working in that language.
+
+The "System Libraries" of an executable work include anything, other
+than the work as a whole, that (a) is included in the normal form of
+packaging a Major Component, but which is not part of that Major
+Component, and (b) serves only to enable use of the work with that
+Major Component, or to implement a Standard Interface for which an
+implementation is available to the public in source code form.  A
+"Major Component", in this context, means a major essential component
+(kernel, window system, and so on) of the specific operating system
+(if any) on which the executable work runs, or a compiler used to
+produce the work, or an object code interpreter used to run it.
+
+The "Corresponding Source" for a work in object code form means all
+the source code needed to generate, install, and (for an executable
+work) run the object code and to modify the work, including scripts to
+control those activities.  However, it does not include the work's
+System Libraries, or general-purpose tools or generally available free
+programs which are used unmodified in performing those activities but
+which are not part of the work.  For example, Corresponding Source
+includes interface definition files associated with source files for
+the work, and the source code for shared libraries and dynamically
+linked subprograms that the work is specifically designed to require,
+such as by intimate data communication or control flow between those
+subprograms and other parts of the work.
+
+The Corresponding Source need not include anything that users
+can regenerate automatically from other parts of the Corresponding
+Source.
+
+The Corresponding Source for a work in source code form is that
+same work.
+
+2. Basic Permissions.
+
+All rights granted under this License are granted for the term of
+copyright on the Program, and are irrevocable provided the stated
+conditions are met.  This License explicitly affirms your unlimited
+permission to run the unmodified Program.  The output from running a
+covered work is covered by this License only if the output, given its
+content, constitutes a covered work.  This License acknowledges your
+rights of fair use or other equivalent, as provided by copyright law.
+
+You may make, run and propagate covered works that you do not
+convey, without conditions so long as your license otherwise remains
+in force.  You may convey covered works to others for the sole purpose
+of having them make modifications exclusively for you, or provide you
+with facilities for running those works, provided that you comply with
+the terms of this License in conveying all material for which you do
+not control copyright.  Those thus making or running the covered works
+for you must do so exclusively on your behalf, under your direction
+and control, on terms that prohibit them from making any copies of
+your copyrighted material outside their relationship with you.
+
+Conveying under any other circumstances is permitted solely under
+the conditions stated below.  Sublicensing is not allowed; section 10
+makes it unnecessary.
+
+3. Protecting Users' Legal Rights From Anti-Circumvention Law.
+
+No covered work shall be deemed part of an effective technological
+measure under any applicable law fulfilling obligations under article
+11 of the WIPO copyright treaty adopted on 20 December 1996, or
+similar laws prohibiting or restricting circumvention of such
+measures.
+
+When you convey a covered work, you waive any legal power to forbid
+circumvention of technological measures to the extent such circumvention
+is effected by exercising rights under this License with respect to
+the covered work, and you disclaim any intention to limit operation or
+modification of the work as a means of enforcing, against the work's
+users, your or third parties' legal rights to forbid circumvention of
+technological measures.
+
+4. Conveying Verbatim Copies.
+
+You may convey verbatim copies of the Program's source code as you
+receive it, in any medium, provided that you conspicuously and
+appropriately publish on each copy an appropriate copyright notice;
+keep intact all notices stating that this License and any
+non-permissive terms added in accord with section 7 apply to the code;
+keep intact all notices of the absence of any warranty; and give all
+recipients a copy of this License along with the Program.
+
+You may charge any price or no price for each copy that you convey,
+and you may offer support or warranty protection for a fee.
+
+5. Conveying Modified Source Versions.
+
+You may convey a work based on the Program, or the modifications to
+produce it from the Program, in the form of source code under the
+terms of section 4, provided that you also meet all of these conditions:
+
+  a) The work must carry prominent notices stating that you modified
+  it, and giving a relevant date.
+
+  b) The work must carry prominent notices stating that it is
+  released under this License and any conditions added under section
+  7.  This requirement modifies the requirement in section 4 to
+  "keep intact all notices".
+
+  c) You must license the entire work, as a whole, under this
+  License to anyone who comes into possession of a copy.  This
+  License will therefore apply, along with any applicable section 7
+  additional terms, to the whole of the work, and all its parts,
+  regardless of how they are packaged.  This License gives no
+  permission to license the work in any other way, but it does not
+  invalidate such permission if you have separately received it.
+
+  d) If the work has interactive user interfaces, each must display
+  Appropriate Legal Notices; however, if the Program has interactive
+  interfaces that do not display Appropriate Legal Notices, your
+  work need not make them do so.
+
+A compilation of a covered work with other separate and independent
+works, which are not by their nature extensions of the covered work,
+and which are not combined with it such as to form a larger program,
+in or on a volume of a storage or distribution medium, is called an
+"aggregate" if the compilation and its resulting copyright are not
+used to limit the access or legal rights of the compilation's users
+beyond what the individual works permit.  Inclusion of a covered work
+in an aggregate does not cause this License to apply to the other
+parts of the aggregate.
+
+6. Conveying Non-Source Forms.
+
+You may convey a covered work in object code form under the terms
+of sections 4 and 5, provided that you also convey the
+machine-readable Corresponding Source under the terms of this License,
+in one of these ways:
+
+  a) Convey the object code in, or embodied in, a physical product
+  (including a physical distribution medium), accompanied by the
+  Corresponding Source fixed on a durable physical medium
+  customarily used for software interchange.
+
+  b) Convey the object code in, or embodied in, a physical product
+  (including a physical distribution medium), accompanied by a
+  written offer, valid for at least three years and valid for as
+  long as you offer spare parts or customer support for that product
+  model, to give anyone who possesses the object code either (1) a
+  copy of the Corresponding Source for all the software in the
+  product that is covered by this License, on a durable physical
+  medium customarily used for software interchange, for a price no
+  more than your reasonable cost of physically performing this
+  conveying of source, or (2) access to copy the
+  Corresponding Source from a network server at no charge.
+
+  c) Convey individual copies of the object code with a copy of the
+  written offer to provide the Corresponding Source.  This
+  alternative is allowed only occasionally and noncommercially, and
+  only if you received the object code with such an offer, in accord
+  with subsection 6b.
+
+  d) Convey the object code by offering access from a designated
+  place (gratis or for a charge), and offer equivalent access to the
+  Corresponding Source in the same way through the same place at no
+  further charge.  You need not require recipients to copy the
+  Corresponding Source along with the object code.  If the place to
+  copy the object code is a network server, the Corresponding Source
+  may be on a different server (operated by you or a third party)
+  that supports equivalent copying facilities, provided you maintain
+  clear directions next to the object code saying where to find the
+  Corresponding Source.  Regardless of what server hosts the
+  Corresponding Source, you remain obligated to ensure that it is
+  available for as long as needed to satisfy these requirements.
+
+  e) Convey the object code using peer-to-peer transmission, provided
+  you inform other peers where the object code and Corresponding
+  Source of the work are being offered to the general public at no
+  charge under subsection 6d.
+
+A separable portion of the object code, whose source code is excluded
+from the Corresponding Source as a System Library, need not be
+included in conveying the object code work.
+
+A "User Product" is either (1) a "consumer product", which means any
+tangible personal property which is normally used for personal, family,
+or household purposes, or (2) anything designed or sold for incorporation
+into a dwelling.  In determining whether a product is a consumer product,
+doubtful cases shall be resolved in favor of coverage.  For a particular
+product received by a particular user, "normally used" refers to a
+typical or common use of that class of product, regardless of the status
+of the particular user or of the way in which the particular user
+actually uses, or expects or is expected to use, the product.  A product
+is a consumer product regardless of whether the product has substantial
+commercial, industrial or non-consumer uses, unless such uses represent
+the only significant mode of use of the product.
+
+"Installation Information" for a User Product means any methods,
+procedures, authorization keys, or other information required to install
+and execute modified versions of a covered work in that User Product from
+a modified version of its Corresponding Source.  The information must
+suffice to ensure that the continued functioning of the modified object
+code is in no case prevented or interfered with solely because
+modification has been made.
+
+If you convey an object code work under this section in, or with, or
+specifically for use in, a User Product, and the conveying occurs as
+part of a transaction in which the right of possession and use of the
+User Product is transferred to the recipient in perpetuity or for a
+fixed term (regardless of how the transaction is characterized), the
+Corresponding Source conveyed under this section must be accompanied
+by the Installation Information.  But this requirement does not apply
+if neither you nor any third party retains the ability to install
+modified object code on the User Product (for example, the work has
+been installed in ROM).
+
+The requirement to provide Installation Information does not include a
+requirement to continue to provide support service, warranty, or updates
+for a work that has been modified or installed by the recipient, or for
+the User Product in which it has been modified or installed.  Access to a
+network may be denied when the modification itself materially and
+adversely affects the operation of the network or violates the rules and
+protocols for communication across the network.
+
+Corresponding Source conveyed, and Installation Information provided,
+in accord with this section must be in a format that is publicly
+documented (and with an implementation available to the public in
+source code form), and must require no special password or key for
+unpacking, reading or copying.
+
+7. Additional Terms.
+
+"Additional permissions" are terms that supplement the terms of this
+License by making exceptions from one or more of its conditions.
+Additional permissions that are applicable to the entire Program shall
+be treated as though they were included in this License, to the extent
+that they are valid under applicable law.  If additional permissions
+apply only to part of the Program, that part may be used separately
+under those permissions, but the entire Program remains governed by
+this License without regard to the additional permissions.
+
+When you convey a copy of a covered work, you may at your option
+remove any additional permissions from that copy, or from any part of
+it.  (Additional permissions may be written to require their own
+removal in certain cases when you modify the work.)  You may place
+additional permissions on material, added by you to a covered work,
+for which you have or can give appropriate copyright permission.
+
+Notwithstanding any other provision of this License, for material you
+add to a covered work, you may (if authorized by the copyright holders of
+that material) supplement the terms of this License with terms:
+
+  a) Disclaiming warranty or limiting liability differently from the
+  terms of sections 15 and 16 of this License; or
+
+  b) Requiring preservation of specified reasonable legal notices or
+  author attributions in that material or in the Appropriate Legal
+  Notices displayed by works containing it; or
+
+  c) Prohibiting misrepresentation of the origin of that material, or
+  requiring that modified versions of such material be marked in
+  reasonable ways as different from the original version; or
+
+  d) Limiting the use for publicity purposes of names of licensors or
+  authors of the material; or
+
+  e) Declining to grant rights under trademark law for use of some
+  trade names, trademarks, or service marks; or
+
+  f) Requiring indemnification of licensors and authors of that
+  material by anyone who conveys the material (or modified versions of
+  it) with contractual assumptions of liability to the recipient, for
+  any liability that these contractual assumptions directly impose on
+  those licensors and authors.
+
+All other non-permissive additional terms are considered "further
+restrictions" within the meaning of section 10.  If the Program as you
+received it, or any part of it, contains a notice stating that it is
+governed by this License along with a term that is a further
+restriction, you may remove that term.  If a license document contains
+a further restriction but permits relicensing or conveying under this
+License, you may add to a covered work material governed by the terms
+of that license document, provided that the further restriction does
+not survive such relicensing or conveying.
+
+If you add terms to a covered work in accord with this section, you
+must place, in the relevant source files, a statement of the
+additional terms that apply to those files, or a notice indicating
+where to find the applicable terms.
+
+Additional terms, permissive or non-permissive, may be stated in the
+form of a separately written license, or stated as exceptions;
+the above requirements apply either way.
+
+8. Termination.
+
+You may not propagate or modify a covered work except as expressly
+provided under this License.  Any attempt otherwise to propagate or
+modify it is void, and will automatically terminate your rights under
+this License (including any patent licenses granted under the third
+paragraph of section 11).
+
+However, if you cease all violation of this License, then your
+license from a particular copyright holder is reinstated (a)
+provisionally, unless and until the copyright holder explicitly and
+finally terminates your license, and (b) permanently, if the copyright
+holder fails to notify you of the violation by some reasonable means
+prior to 60 days after the cessation.
+
+Moreover, your license from a particular copyright holder is
+reinstated permanently if the copyright holder notifies you of the
+violation by some reasonable means, this is the first time you have
+received notice of violation of this License (for any work) from that
+copyright holder, and you cure the violation prior to 30 days after
+your receipt of the notice.
+
+Termination of your rights under this section does not terminate the
+licenses of parties who have received copies or rights from you under
+this License.  If your rights have been terminated and not permanently
+reinstated, you do not qualify to receive new licenses for the same
+material under section 10.
+
+9. Acceptance Not Required for Having Copies.
+
+You are not required to accept this License in order to receive or
+run a copy of the Program.  Ancillary propagation of a covered work
+occurring solely as a consequence of using peer-to-peer transmission
+to receive a copy likewise does not require acceptance.  However,
+nothing other than this License grants you permission to propagate or
+modify any covered work.  These actions infringe copyright if you do
+not accept this License.  Therefore, by modifying or propagating a
+covered work, you indicate your acceptance of this License to do so.
+
+10. Automatic Licensing of Downstream Recipients.
+
+Each time you convey a covered work, the recipient automatically
+receives a license from the original licensors, to run, modify and
+propagate that work, subject to this License.  You are not responsible
+for enforcing compliance by third parties with this License.
+
+An "entity transaction" is a transaction transferring control of an
+organization, or substantially all assets of one, or subdividing an
+organization, or merging organizations.  If propagation of a covered
+work results from an entity transaction, each party to that
+transaction who receives a copy of the work also receives whatever
+licenses to the work the party's predecessor in interest had or could
+give under the previous paragraph, plus a right to possession of the
+Corresponding Source of the work from the predecessor in interest, if
+the predecessor has it or can get it with reasonable efforts.
+
+You may not impose any further restrictions on the exercise of the
+rights granted or affirmed under this License.  For example, you may
+not impose a license fee, royalty, or other charge for exercise of
+rights granted under this License, and you may not initiate litigation
+(including a cross-claim or counterclaim in a lawsuit) alleging that
+any patent claim is infringed by making, using, selling, offering for
+sale, or importing the Program or any portion of it.
+
+11. Patents.
+
+A "contributor" is a copyright holder who authorizes use under this
+License of the Program or a work on which the Program is based.  The
+work thus licensed is called the contributor's "contributor version".
+
+A contributor's "essential patent claims" are all patent claims
+owned or controlled by the contributor, whether already acquired or
+hereafter acquired, that would be infringed by some manner, permitted
+by this License, of making, using, or selling its contributor version,
+but do not include claims that would be infringed only as a
+consequence of further modification of the contributor version.  For
+purposes of this definition, "control" includes the right to grant
+patent sublicenses in a manner consistent with the requirements of
+this License.
+
+Each contributor grants you a non-exclusive, worldwide, royalty-free
+patent license under the contributor's essential patent claims, to
+make, use, sell, offer for sale, import and otherwise run, modify and
+propagate the contents of its contributor version.
+
+In the following three paragraphs, a "patent license" is any express
+agreement or commitment, however denominated, not to enforce a patent
+(such as an express permission to practice a patent or covenant not to
+sue for patent infringement).  To "grant" such a patent license to a
+party means to make such an agreement or commitment not to enforce a
+patent against the party.
+
+If you convey a covered work, knowingly relying on a patent license,
+and the Corresponding Source of the work is not available for anyone
+to copy, free of charge and under the terms of this License, through a
+publicly available network server or other readily accessible means,
+then you must either (1) cause the Corresponding Source to be so
+available, or (2) arrange to deprive yourself of the benefit of the
+patent license for this particular work, or (3) arrange, in a manner
+consistent with the requirements of this License, to extend the patent
+license to downstream recipients.  "Knowingly relying" means you have
+actual knowledge that, but for the patent license, your conveying the
+covered work in a country, or your recipient's use of the covered work
+in a country, would infringe one or more identifiable patents in that
+country that you have reason to believe are valid.
+
+If, pursuant to or in connection with a single transaction or
+arrangement, you convey, or propagate by procuring conveyance of, a
+covered work, and grant a patent license to some of the parties
+receiving the covered work authorizing them to use, propagate, modify
+or convey a specific copy of the covered work, then the patent license
+you grant is automatically extended to all recipients of the covered
+work and works based on it.
+
+A patent license is "discriminatory" if it does not include within
+the scope of its coverage, prohibits the exercise of, or is
+conditioned on the non-exercise of one or more of the rights that are
+specifically granted under this License.  You may not convey a covered
+work if you are a party to an arrangement with a third party that is
+in the business of distributing software, under which you make payment
+to the third party based on the extent of your activity of conveying
+the work, and under which the third party grants, to any of the
+parties who would receive the covered work from you, a discriminatory
+patent license (a) in connection with copies of the covered work
+conveyed by you (or copies made from those copies), or (b) primarily
+for and in connection with specific products or compilations that
+contain the covered work, unless you entered into that arrangement,
+or that patent license was granted, prior to 28 March 2007.
+
+Nothing in this License shall be construed as excluding or limiting
+any implied license or other defenses to infringement that may
+otherwise be available to you under applicable patent law.
+
+12. No Surrender of Others' Freedom.
+
+If conditions are imposed on you (whether by court order, agreement or
+otherwise) that contradict the conditions of this License, they do not
+excuse you from the conditions of this License.  If you cannot convey a
+covered work so as to satisfy simultaneously your obligations under this
+License and any other pertinent obligations, then as a consequence you may
+not convey it at all.  For example, if you agree to terms that obligate you
+to collect a royalty for further conveying from those to whom you convey
+the Program, the only way you could satisfy both those terms and this
+License would be to refrain entirely from conveying the Program.
+
+13. Use with the GNU Affero General Public License.
+
+Notwithstanding any other provision of this License, you have
+permission to link or combine any covered work with a work licensed
+under version 3 of the GNU Affero General Public License into a single
+combined work, and to convey the resulting work.  The terms of this
+License will continue to apply to the part which is the covered work,
+but the special requirements of the GNU Affero General Public License,
+section 13, concerning interaction through a network will apply to the
+combination as such.
+
+14. Revised Versions of this License.
+
+The Free Software Foundation may publish revised and/or new versions of
+the GNU General Public License from time to time.  Such new versions will
+be similar in spirit to the present version, but may differ in detail to
+address new problems or concerns.
+
+Each version is given a distinguishing version number.  If the
+Program specifies that a certain numbered version of the GNU General
+Public License "or any later version" applies to it, you have the
+option of following the terms and conditions either of that numbered
+version or of any later version published by the Free Software
+Foundation.  If the Program does not specify a version number of the
+GNU General Public License, you may choose any version ever published
+by the Free Software Foundation.
+
+If the Program specifies that a proxy can decide which future
+versions of the GNU General Public License can be used, that proxy's
+public statement of acceptance of a version permanently authorizes you
+to choose that version for the Program.
+
+Later license versions may give you additional or different
+permissions.  However, no additional obligations are imposed on any
+author or copyright holder as a result of your choosing to follow a
+later version.
+
+15. Disclaimer of Warranty.
+
+THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY
+APPLICABLE LAW.  EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT
+HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM "AS IS" WITHOUT WARRANTY
+OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO,
+THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+PURPOSE.  THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM
+IS WITH YOU.  SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF
+ALL NECESSARY SERVICING, REPAIR OR CORRECTION.
+
+16. Limitation of Liability.
+
+IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING
+WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MODIFIES AND/OR CONVEYS
+THE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY
+GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE
+USE OR INABILITY TO USE THE PROGRAM (INCLUDING BUT NOT LIMITED TO LOSS OF
+DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD
+PARTIES OR A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS),
+EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF
+SUCH DAMAGES.
+
+17. Interpretation of Sections 15 and 16.
+
+If the disclaimer of warranty and limitation of liability provided
+above cannot be given local legal effect according to their terms,
+reviewing courts shall apply local law that most closely approximates
+an absolute waiver of all civil liability in connection with the
+Program, unless a warranty or assumption of liability accompanies a
+copy of the Program in return for a fee.
+            END OF TERMS AND CONDITIONS
+  How to Apply These Terms to Your New Programs
+
+If you develop a new program, and you want it to be of the greatest
+possible use to the public, the best way to achieve this is to make it
+free software which everyone can redistribute and change under these terms.
+
+To do so, attach the following notices to the program.  It is safest
+to attach them to the start of each source file to most effectively
+state the exclusion of warranty; and each file should have at least
+the "copyright" line and a pointer to where the full notice is found.
+
+  &lt;one line to give the program's name and a brief idea of what it does.&gt;
+  Copyright (C) &lt;year&gt;  &lt;name of author&gt;
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
+
+Also add information on how to contact you by electronic and paper mail.
+
+If the program does terminal interaction, make it output a short
+notice like this when it starts in an interactive mode:
+
+  &lt;program&gt;  Copyright (C) &lt;year&gt;  &lt;name of author&gt;
+  This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.
+  This is free software, and you are welcome to redistribute it
+  under certain conditions; type `show c' for details.
+
+The hypothetical commands `show w' and `show c' should show the appropriate
+parts of the General Public License.  Of course, your program's commands
+might be different; for a GUI interface, you would use an "about box".
+
+You should also get your employer (if you work as a programmer) or school,
+if any, to sign a "copyright disclaimer" for the program, if necessary.
+For more information on this, and how to apply and follow the GNU GPL, see
+&lt;https://www.gnu.org/licenses/&gt;.
+
+The GNU General Public License does not permit incorporating your program
+        into proprietary programs.  If your program is a subroutine library, you
+        may consider it more useful to permit linking proprietary applications with
+        the library.  If this is what you want to do, use the GNU Lesser General
+        Public License instead of this License.  But first, please read
+        &lt;https://www.gnu.org/licenses/why-not-lgpl.html&gt;.
+                  </pre>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
     </ul>
   </div>
   <div id="footer" class="footer">
@@ -3673,7 +6173,7 @@ limitations under the License.
       document.getElementsByTagName('body')[0].appendChild(script);
     }
     document.getElementById('loading').innerText = 'Loading scripts (1/3)... Some features will not work properly until loading finishes.';
-    setTimeout(() => loadScript('multivar.js?20250324'));
+    setTimeout(() => loadScript('multivar.js?20250421'));
   </script>
 </body>
 </html>
