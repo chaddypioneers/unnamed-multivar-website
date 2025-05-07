@@ -11,7 +11,7 @@
   <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="apple-touch-icon" type="image/png" href="images/favicon.png">
   <link rel="apple-touch-icon-precomposed" type="image/png" href="images/favicon.png">
-  <link rel="stylesheet" href="multivar.css?20250421">
+  <link rel="stylesheet" href="multivar.css?20250507">
   <script>
     if (window.location.href === 'https://calculusgaming.com/multivar') {
       window.location.replace(window.location.href + '/');
@@ -127,7 +127,7 @@
   </div>
   <!-- Sidebar -->
   <div id="sidebar" class="sidebar sidebar-hidden">
-    <img id="sidebarLogo" class="top-margin" src="images/logo_transparent.png">
+    <img id="sidebarLogo" class="top-margin" src="images/new_logo_transparent.png">
     <button id="keyboardShortcutButton" class="sidebar-unit-text sidebar-button" onclick="keyboardShortcutButton()">
       <div class="button-container">
         <div class="icon-container">
@@ -166,7 +166,7 @@
     </button>
     <button class="sidebar-button" onclick="jumpTo('unit5'); toggleSidebar()">
       <p class="sidebar-unit">Unit 5</p>
-      <p class="sidebar-unit-text">Line and Surface Integrals</p>
+      <p class="sidebar-unit-text">Line & Surface Integrals</p>
     </button>
     <button class="sidebar-button" onclick="jumpTo('otherWebsites'); toggleSidebar()">
       <p class="sidebar-unit-text">My Other Websites</p>
@@ -174,7 +174,7 @@
   </div>
   <!-- Website Header (title, subtitle, search bar) -->
   <div id="websiteHeader">
-    <img id="logo" src="images/logo_transparent.png">
+    <img id="logo" src="images/new_logo_transparent.png">
     <noscript class="warning">
       <h2>
         JavaScript is required for this page to function and display properly. Please enable JavaScript in your browser settings.
@@ -184,7 +184,7 @@
       <strong>unnamed <span class="red">multivar</span> website</strong>: Interactive and simple multivariable calculus explanations!
     </p>
     <p>
-      This is a work in progress, and a continuation of <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://calculusgaming.com/calc">unnamed calc website</a>, my website for single-variable calculus explanations.
+      This is a continuation of <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://calculusgaming.com/calc">unnamed calc website</a>, my website for single-variable calculus explanations.
     </p>
   </div>
   <hr class="heavy-hr">
@@ -229,8 +229,77 @@
     <p>
       <strong>Important: You might have to refresh the tab to view the latest updates to this website.</strong>
     </p>
-    <h3>2025-04-21: “Line Integrals” Update <button id="update20250421Button" onclick="showHide('update20250421')">Hide</button></h3>
-    <div id="update20250421">
+    <h3>2025-05-07: “It Is Done!” Update <button id="update20250507Button" onclick="showHide('update20250507')">Hide</button></h3>
+    <div id="update20250507">
+      <p>
+        With this update, almost everything in a typical multivariable calculus class is covered on this website! There are still a few smaller topics I haven’t covered, but I consider this website to be complete as of now. There are still many improvements and smaller things I want to add on this website, so I will definitely continue updating it in the future.
+      </p>
+      <h4 class="nm">New Sections</h4>
+      <ul>
+        <li>
+          New Unit 2 section added:
+          <ul class="link-ul">
+            <li><a href="#accelerationHeader" onclick="jumpTo('acceleration')">Tangential and Normal Components of Acceleration</a></li>
+          </ul>
+        </li>
+        <li>
+          New Unit 5 section added:
+          <ul class="link-ul">
+            <li><a href="#stokesTheoremHeader" onclick="jumpTo('stokesTheorem')">Stokes’ Theorem</a></li>
+          </ul>
+        </li>
+      </ul>
+      <h4 class="nm">Minor Changes</h4>
+      <ul>
+        <li>The website logo has been changed to a 3D version of unnamed calc website’s logo (previously it was just the same as unnamed calc website but with “calc” crossed off and replaced with “multivar”).</li>
+        <li>Removed all “this is a work in progress” text</li>
+      </ul>
+    </div>
+    <h3>2025-05-05: “Surface Integrals” Update <button id="update20250505Button" onclick="showHide('update20250505')">Show</button></h3>
+    <div id="update20250505" class="hidden-by-default">
+      <p>
+        This update features a few sections about surface integrals (a way to integrate a function over a surface) as well as the divergence theorem, a way to write line or surface integrals as double or triple integrals of the divergence of a function. In addition, I’ve added a few sections about vector-valued functions. <a href="#progress" onclick="jumpTo('progress')">Current progress: 33/37 sections covered.</a>
+      </p>
+      <h4 class="nm">New Sections</h4>
+      <ul>
+        <li>
+          New Unit 2 sections added:
+          <ul class="link-ul">
+            <li><a href="#tangentNormalVectorsHeader" onclick="jumpTo('tangentNormalVectors')">Tangent and Normal Vectors</a></li>
+            <li><a href="#vectorArcLengthHeader" onclick="jumpTo('vectorArcLength')">Arc Length of Vector-Valued Functions</a></li>
+            <li><a href="#curvatureHeader" onclick="jumpTo('curvature')">Curvature of Parametric Graphs</a></li>
+          </ul>
+        </li>
+        <li>
+          New Unit 3 section added:
+          <ul class="link-ul">
+            <li><a href="#surfaceTangentHeader" onclick="jumpTo('surfaceTangent')">Tangent Planes and Normal Vectors of Surfaces</a></li>
+          </ul>
+        </li>
+        <li>
+          New Unit 5 sections added:
+          <ul class="link-ul">
+            <li><a href="#parametricSurfacesHeader" onclick="jumpTo('parametricSurfaces')">Parametric Surfaces</a></li>
+            <li><a href="#surfaceAreaIntHeader" onclick="jumpTo('surfaceAreaInt')">Surface Areas of Parametric Surfaces</a></li>
+            <li><a href="#surfaceIntHeader" onclick="jumpTo('surfaceInt')">Surface Integrals</a></li>
+            <li><a href="#surfaceNormalHeader" onclick="jumpTo('surfaceNormal')">Normal Vectors to Parametric Surfaces</a></li>
+            <li><a href="#fluxIntHeader" onclick="jumpTo('fluxInt')">Flux Integrals</a></li>
+            <li><a href="#divergenceTheoremHeader" onclick="jumpTo('divergenceTheorem')">The Divergence Theorem</a></li>
+          </ul>
+        </li>
+      </ul>
+      <h4 class="nm">Section Improvements</h4>
+      <ul>
+        <li>Added level surfaces to “Contour Maps and Level Curves” section and renamed it to “Contour Maps, Level Curves, and Level Surfaces”</li>
+      </ul>
+      <h4 class="nm">Minor Changes</h4>
+      <ul>
+        <li>“Contour Maps, Level Curves, and Level Surfaces” section moved from Unit 1 to Unit 3</li>
+        <li><strong>Unit 5: Curl Operator</strong>: fixed typo in 3D curl formula</li>
+      </ul>
+    </div>
+    <h3>2025-04-21: “Line Integrals” Update <button id="update20250421Button" onclick="showHide('update20250421')">Show</button></h3>
+    <div id="update20250421" class="hidden-by-default">
       <p>
         This update is all about line integrals: a way to integrate multivariable functions over any curve in the \(xy\)-plane! <a href="#progress" onclick="jumpTo('progress')">Current progress: 27/37 sections covered.</a>
       </p>
@@ -260,7 +329,7 @@
         <li>Added “My Other Websites” button to sidebar</li>
       </ul>
     </div>
-    <h3>2025-04-09: “Triple Integrals” Update <button id="update20250409Button" onclick="showHide('update20250409')">Hide</button></h3>
+    <h3>2025-04-09: “Triple Integrals” Update <button id="update20250409Button" onclick="showHide('update20250409')">Show</button></h3>
     <div id="update20250409" class="hidden-by-default">
       <p>
         This update features more sections in Unit 4 (Multiple Integrals), primarily focused on triple integrals. <a href="#progress" onclick="jumpTo('progress')">Current progress: 22/37 sections covered.</a>
@@ -298,7 +367,7 @@
         <li>This website is now hosted on calculusgaming.com/multivar instead of chaddypratt.org/multivar</li>
       </ul>
     </div>
-    <h3>2025-03-24: “Double Integrals” Update <button id="update20250324Button" onclick="showHide('update20250324')">Hide</button></h3>
+    <h3>2025-03-24: “Double Integrals” Update <button id="update20250324Button" onclick="showHide('update20250324')">Show</button></h3>
     <div id="update20250324" class="hidden-by-default">
       <p>
         This update focuses on the different types of double integrals, as well as Lagrange multipliers, a technique to solve some types of optimization problems. <a href="#progress" onclick="jumpTo('progress')">Current progress: 16/37 sections covered.</a>
@@ -446,7 +515,7 @@
         </tr>
         <tr>
           <td>13. Vector Functions</td>
-          <td>0/4</td>
+          <td>4/4</td>
         </tr>
         <tr>
           <td>14. Partial Derivatives</td>
@@ -458,7 +527,7 @@
         </tr>
         <tr>
           <td>16. Vector Calculus</td>
-          <td>5/9</td>
+          <td>9/9</td>
         </tr>
         <tr class="bold">
           <td>All Units</td>
@@ -515,6 +584,9 @@
         </p>
         <p>
           To find the magnitude (i.e. length) of a vector (denoted by \(||\mathbf{v}||\)), we can use the Pythagorean Theorem. Notice how in the diagram above, the \(x\)- and \(y\)-components form a right triangle with the vector. In this case, the magnitude of the vector \(\mathbf{v} = (3, 4)\) is \(||\mathbf{v}|| = \sqrt{3^2 + 4^2} = 5\).
+        </p>
+        <p>
+          The magnitude of a three-dimensional vector \((a, b, c)\) is equal to \(\sqrt{a^2 + b^2 + c^2}\). For a 4D vector \((a, b, c, d)\), the magnitude is equal to \(\sqrt{a^2+b^2+c^2+d^2}\), and the pattern continues for higher dimensions.
         </p>
         <p class="large-text bold">Vector operations</p>
         <p>
@@ -860,6 +932,19 @@
         </div>
         <p class="ntm sn">
           \(\theta\) is the angle between \(\mathbf{a}\) and \(\mathbf{b}\), and \(\mathbf{n}\) is a unit vector perpendicular to both \(\mathbf{a}\) and \(\mathbf{b}\) (the exact vector to use is based on the right-hand rule - more on that later).
+        </p>
+        <p class="nbm">
+          This means that the magnitude of the cross product of two vectors \(\mathbf{a}\) and \(\mathbf{b}\) is:
+        </p>
+        <div class="mj">
+          \[ ||\mathbf{a} \times \mathbf{b}|| = ||\mathbf{a}|| \: ||\mathbf{b}|| \: \lvert\sin(\theta)\rvert \]
+        </div>
+        <p class="ntm">
+          This can be interpreted as the area of the parallelogram formed by the vectors \(\mathbf{a}\) and \(\mathbf{b}\).
+        </p>
+        <img class="graph" src="images/cross_product_parallelogram.png">
+        <p class="ntm sn">
+          The area of the <span class="blue">parallelogram</span> is equal to \(||\mathbf{a}\times\mathbf{b}|| = ||\mathbf{a}|| \: ||\mathbf{b}|| \: \lvert\sin(\theta)\rvert\).
         </p>
         <p>
           The cross product of two vectors is a third vector that is perpendicular to both of them. However, in 3D space, there are two vectors that are perpendicular to any set of two nonzero vectors. How do we know which one to use?
@@ -1224,42 +1309,6 @@
         <img class="graph" src="images/quadric_hyperbolic_paraboloid.png">
         <p><a class="external-link" target="_blank" rel="noopener noreferrer" href="https://www.desmos.com/3d/fhvnums8p3">Explore these quadric surfaces on Desmos!</a></p>
       </div>
-      <h3 class="section-header" id="contourHeader">
-        Contour Maps and Level Curves <button id="contourButton" onclick="showHide('contour')">Show</button>
-      </h3>
-      <div class="hidden-by-default" id="contour">
-        <p>
-          Contour maps are an alternative to graphing functions of two variables. Instead of using three dimensions to graph both the inputs and outputs of the function, we use two dimensions and graph all input points that result in a certain output.
-        </p>
-        <p>
-          This will make more sense with an example. Here’s how we would create a contour map for the function \(f(x, y) = x^2 + y^2\).
-        </p>
-        <p>
-          First, we graph all of the input points that result in \(f(x, y)\) having a certain value (let’s say 1). Here’s what that looks like:
-        </p>
-        <img class="graph" src="images/contour_map_1.png">
-        <p class="ntm sn">
-          These are all of the input points \((x, y)\) which will cause \(f(x, y) = x^2 + y^2\) to equal 1. This is just the graph of \(x^2 + y^2 = 1\).
-        </p>
-        <p>
-          A curve like this is known as a <strong>level curve</strong>, <strong>contour line</strong>, or <strong>contour curve</strong>.
-        </p>
-        <p>
-          Now let’s do the same, but with a different value. Here’s what the graph looks like after adding the level curve for \(f(x, y) = 2\):
-        </p>
-        <img class="graph" src="images/contour_map_2.png">
-        <p class="ntm sn">
-          We’ve added the input points \((x, y)\) which will cause \(f(x, y) = x^2 + y^2\) to equal 2.
-        </p>
-        <p>
-          We can continue to add these level curves. Here’s the result after adding a few more level curves:
-        </p>
-        <img class="graph" src="images/contour_map.png">
-        <p>
-          This is just one of the possible contour maps we can create for the function \(f(x, y) = x^2 + y^2\). We can create different contour maps using different level curves. For example, here’s a contour map, this time going by intervals of 2 (so we have level curves for \(f(x, y) = 2\), \(f(x, y) = 4\), etc.)
-        </p>
-        <img class="graph" src="images/contour_map_3.png">
-      </div>
     </div>
   </div>
   <hr class="heavy-hr">
@@ -1270,12 +1319,350 @@
       <button id="unit2Button" onclick="showHideUnit('unit2')">Show</button>
     </h2>
     <div class="hidden-by-default" id="unit2">
+      <div>
+        <button class="large-button" onclick="toggleAllSections('unit2', 'show')">Show All Sections</button>
+        <div class="button-spacing"></div>
+        <button class="large-button" onclick="toggleAllSections('unit2', 'hide')">Hide All Sections</button>
+      </div>
       <p>
-        Vector-valued functions are already covered in some detail in Unit 9 of <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://calculusgaming.com/calc">unnamed calc website</a>, so for now, I’m not going to add content to this unit.
+        Unit 9 of <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://calculusgaming.com/calc/">unnamed calc website</a> covers the basics of vector-valued functions as well as differentiation and integration of vector-valued functions, so I won’t be including them here.
       </p>
-      <p>
-        I recognize that there are some vector-valued function topics that aren’t covered yet on unnamed calc website (such as 3D vectors, tangent/normal vectors, and curvature), so I will eventually start working on this unit.
-      </p>
+      <h3 class="section-header" id="tangentNormalVectorsHeader">
+        Tangent and Normal Vectors <button id="tangentNormalVectorsButton" onclick="showHide('tangentNormalVectors')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="tangentNormalVectors">
+        <p class="nbm">
+          When we differentiate a vector-valued function \(\mathbf{r}(t)\), we get another vector-valued function \(\mathbf{v}(t)\) that tells us the velocity vector at any time \(t\). This vector is tangent to the curve traced out by \(\mathbf{r}(t)\), so it’s also known as a <strong>tangent vector</strong>.
+        </p>
+        <div class="mj">
+          \[ \mathbf{v}(t) = \mathbf{r}'(t) \]
+        </div>
+        <p class="ntm sn">
+          Note that the magnitude of \(\mathbf{r}'(t)\) must be nonzero for it to be a tangent vector, because otherwise it wouldn’t have a direction.
+        </p>
+        <p class="nbm">
+          Sometimes we are interested in the <strong>unit tangent vector</strong> to a curve, which is the tangent vector of length 1. To find this unit tangent vector, we simply take the velocity/tangent vector and divide it by its magnitude.
+        </p>
+        <div class="mj">
+          \[ \mathbf{T}(t) = \frac{\mathbf{v}(t)}{||\mathbf{v}(t)||} = \frac{\mathbf{r}'(t)}{||\mathbf{r}'(t)||} \]
+        </div>
+        <p class="ntm">
+          Sometimes we also want to find a normal vector to a curve, or a vector that is perpendicular to the curve. It turns out there is a straightforward way to generate a normal vector: just differentiate the unit tangent vector function (i.e. \(\mathbf{T}'(t)\) will always be a normal vector, provided \(||\mathbf{T}'(t)|| \ne 0\)).
+        </p>
+        <p class="nbm">
+          If we want to get a <strong>unit normal vector</strong>, a normal vector of length 1, then we divide by the normal vector’s magnitude.
+        </p>
+        <div class="mj">
+          \[ \mathbf{N}(t) = \frac{\mathbf{T}'(t)}{||\mathbf{T}'(t)||} \]
+        </div>
+        <p class="ntm">
+          In two dimensions, there is an alternative way to find a unit normal vector that is usually simpler: take the unit tangent vector, swap the components, then make one of them negative. If you want to rotate counterclockwise, then you should make the first component negative after swapping, and if you want to rotate clockwise, you should make the second component negative. 
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: Find the unit tangent and unit normal vectors to the parametric curve defined by \(\mathbf{r}(t) = (t, t^2)\).
+        </p>
+        <p class="nbm">
+          Let’s first find the tangent vector \(\mathbf{v}(t)\).
+        </p>
+        <div class="mj">
+          \[ \mathbf{v}(t) = \mathbf{r}'(t) = (1, 2t) \]
+        </div>
+        <p class="nm">
+          We then need to normalize this vector to get a unit tangent vector. We do this by dividing by the magnitude of \(\mathbf{v}(t)\).
+        </p>
+        <div class="mj">
+          \[ ||\mathbf{v}(t)|| = \sqrt{1^2+(2t)^2} = \sqrt{4t^2+1}\]
+          \[ \begin{flalign}
+          \mathbf{T}(t) &= \frac{\mathbf{v}(t)}{||\mathbf{v}(t)||}\\
+          &= \frac{(1, 2t)}{\sqrt{4t^2+1}}\\
+          &= \left(\frac{1}{\sqrt{4t^2+1}}, \frac{2t}{\sqrt{4t^2+1}}\right)
+          \end{flalign}\]
+        </div>
+        <p class="nm">
+          To find the unit normal vector \(\mathbf{N}(t)\) the standard way, we first need to differentiate \(\mathbf{T}(t)\) and find the magnitude of \(\mathbf{T}'(t)\):
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \mathbf{T}'(t) &= \left(\dv{t}\left[\frac{1}{\sqrt{4t^2+1}}\right], \dv{t}\left[\frac{2t}{\sqrt{4t^2+1}}\right]\right)\\
+          &= \left(-\frac{4t}{(4t^2+1)^{3/2}}, \frac{2}{(4t^2+1)^{3/2}}\right)
+          \end{flalign}\]
+          \[ \begin{flalign}
+          ||\mathbf{T}'(t)|| &= \sqrt{\left(-\frac{4t}{(4t^2+1)^{3/2}}\right)^2 + \left(\frac{2}{(4t^2+1)^{3/2}}\right)^2}\\
+          &= \sqrt{\frac{16t^2}{(4t^2+1)^3} + \frac{4}{(4t^2+1)^3}}\\
+          &= \sqrt{\frac{16t^2+4}{(4t^2+1)^3}}\\
+          &= \frac{\sqrt{16t^2+4}}{(4t^2+1)^{3/2}}\\
+          &= \frac{2\sqrt{4t^2+1}}{(4t^2+1)^{3/2}}\\
+          &= \frac{2}{4t^2+1}
+          \end{flalign}\]
+        </div>
+        <p class="nm">
+          By dividing \(\mathbf{T}'(t)\) by its magnitude, we can get the unit normal vector \(\mathbf{N}(t)\):
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \mathbf{N}(t) &= \frac{\mathbf{T}'(t)}{||\mathbf{T}'(t)||}\\
+          &= \frac{\left(-4t/(4t^2+1)^{3/2}, 2/(4t^2+1)^{3/2}\right)}{2/(4t^2+1)}\\
+          &= \frac{4t^2+1}{2}\left(-\frac{4t}{(4t^2+1)^{3/2}}, \frac{2}{(4t^2+1)^{3/2}}\right)\\
+          &= \left(-\frac{2t}{\sqrt{4t^2+1}}, \frac{1}{\sqrt{4t^2+1}}\right)
+          \end{flalign} \]
+        </div>
+        <p class="ntm">
+          Notice how the unit normal vector \(\mathbf{N}(t)\) is just the unit tangent vector \(\mathbf{T}(t)\) but with the components swapped and one of the components made negative. This is a much simpler way to find the unit normal vector if we’re working in 2D.
+        </p>
+        <img class="graph" src="images/tangent_normal_vectors.png">
+        <p class="ntm sn">
+          The unit tangent and unit normal vectors to the parametric curve \(\mathbf{r}(t) = (t, t^2)\) at \(t = 1\).
+        </p>
+      </div>
+      <h3 class="section-header" id="vectorArcLengthHeader">
+        Arc Length of Vector-Valued Functions <button id="vectorArcLengthButton" onclick="showHide('vectorArcLength')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="vectorArcLength">
+        <p class="nbm">
+          As a reminder, the arc length of a parametric curve defined by \(x(t)\) and \(y(t)\) from \(t = a\) to \(t = b\) in two dimensions is:
+        </p>
+        <div class="mj">
+          \[ \int_a^b \sqrt{[x'(t)]^2 + [y'(t)]^2} \dd{t} \]
+        </div>
+        <p class="nm">
+          In three dimensions, if we have the parametric functions \(x(t)\), \(y(t)\), and \(z(t)\), the formula becomes:
+        </p>
+        <div class="mj">
+          \[ \int_a^b \sqrt{[x'(t)]^2 + [y'(t)]^2 + [z'(t)]^2} \dd{t} \]
+        </div>
+        <p class="nm">
+          If we instead use a vector valued function to represent the curve by defining \(\mathbf{r}(t) = (x(t), y(t), z(t))\), then this inner term \(\sqrt{[x'(t)]^2 + [y'(t)]^2 + [z'(t)]^2}\) turns out to be the magnitude of \(\mathbf{r}'(t)\). So we can write the arc length equation as simply:
+        </p>
+        <div class="mj">
+          \[ L = \int_a^b ||\mathbf{r}'(t)|| \dd{t} \]
+        </div>
+        <p class="ntm">
+          One way to intuitively understand this formula is that \(||\mathbf{r}'(t)|| \dd{t}\) represents the distance traveled when you change \(t\) by a tiny amount (the length of a tiny step along the curve), and if you sum up the lengths of all the steps from \(t = a\) to \(t = b\) by integrating, you get the total distance traveled along the entire journey.
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: Find the arc length of the curve defined by the vector-valued function \(\mathbf{r}(t) = (\cos(t), \sin(t), t)\) from \(t = 0\) to \(t = 2\pi\).
+        </p>
+        <p class="nbm">
+          Let’s find the velocity vector \(\mathbf{r}'(t)\) first:
+        </p>
+        <div class="mj">
+          \[ \mathbf{r}'(t) = (-\sin(t), \cos(t), 1) \]
+        </div>
+        <p class="nm">
+          And let’s find the magnitude of this velocity vector:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          ||\mathbf{r}'(t)|| &= \sqrt{[-\sin(t)]^2 + [\cos(t)]^2 + 1}\\
+          &= \sqrt{\sin^2(t) + \cos^2(t) + 1}\\
+          &= \sqrt{2}
+          \end{flalign}\]
+        </div>
+        <p class="nm">
+          Now, we can perform the final integral to find the total arc length:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          L &= \int_a^b ||\mathbf{r}'(t)|| \dd{t}\\
+          &= \int_0^{2\pi}\sqrt{2}\dd{t}\\
+          &= 2\pi\sqrt{2}
+          \end{flalign} \]
+        </div>
+      </div>
+      <h3 class="section-header" id="curvatureHeader">
+        Curvature of Parametric Graphs <button id="curvatureButton" onclick="showHide('curvature')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="curvature">
+        <p>
+          When we have a parametric graph, we can measure how much the graph curves at a point by calculating its <strong>curvature</strong>.
+        </p>
+        <p>
+          The curvature is equal to 1 divided by the radius of curvature at a point, which you can think of as being the radius of a circle that most closely fits the curve at a point.
+        </p>
+        <img class="graph" src="images/radius_of_curvature.png">
+        <p class="ntm sn">
+          The curvature at <span class="green">a point</span> on a parametric curve is equal to the reciprocal of the <span class="purple">radius</span> of a <span class="blue">circle that best fits</span> the curve.
+        </p>
+        <p>
+          If this circle is small, then the graph is curving a lot at that point, and if the circle is large, then the graph is not curving very much. This is why curvature is the reciprocal of the radius of curvature.
+        </p>
+        <p class="nbm">
+          The curvature \(\kappa\) (kappa) can also be defined as:
+        </p>
+        <div class="mj">
+          \[ \kappa = \left|\left|\dv{\mathbf{T}}{s}\right|\right| \]
+        </div>
+        <p class="ntm">
+          This is basically measuring how much the unit tangent vector to a curve changes with respect to arc length (not time!)
+        </p>
+        <p class="nbm">
+          The previous formula is hard to deal with, so here are some alternate formulas:
+        </p>
+        <div class="mj">
+          \[ \kappa = \frac{\displaystyle\left|\left|\dv{\mathbf{T}}{t}\right|\right|}{\displaystyle\left|\left|\dv{\mathbf{r}}{t}\right|\right|}\]
+        </div>
+        <p class="nm">
+          If we have a parametric curve in two dimensions defined by \(x(t)\) and \(y(t)\), we can use this formula:
+        </p>
+        <div class="mj">
+          \[ \kappa = \frac{|x'(t)y''(t) - y'(t)x''(t)|}{([x'(t)]^2 + [y'(t)]^2)^{3/2}}\]
+        </div>
+        <p class="nm">
+          And if we have a parametric curve in three dimensions defined by \(\mathbf{r}(t)\), we can use this:
+        </p>
+        <div class="mj">
+          \[ \kappa = \frac{||\mathbf{r}'(t) \times \mathbf{r}''(t)||}{||\mathbf{r}'(t)||^3}\]
+        </div>
+        <p class="ntm problem">
+          <strong>Problem</strong>: Find the curvature at time \(t\) for the parametric curve defined by \(x(t) = t-\sin(t)\) and \(y(t) = 1-\cos(t)\). What is the curvature at \(t = \pi\)?
+        </p>
+        <p class="nbm">
+          It’s easier for us to use the two-dimensional curvature formula in this case, so let’s use that.
+        </p>
+        <div class="mj">
+          \[ \kappa = \frac{|x'(t)y''(t) - y'(t)x''(t)|}{([x'(t)]^2 + [y'(t)]^2)^{3/2}}\]
+        </div>
+        <p class="nm">
+          First, we need to find the first and second derivatives of \(x(t)\) and \(y(t)\).
+        </p>
+        <div class="mj">
+          \[ x'(t) = 1-\cos(t) \]
+          \[ x''(t) = \sin(t) \]
+          \[ y'(t) = \sin(t) \]
+          \[ y''(t) = \cos(t) \]
+        </div>
+        <p class="nm">
+          Now we can plug in these values into the formula:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \kappa &= \frac{|[1-\cos(t)]\cos(t) - \sin(t)\sin(t)|}{([1-\cos(t)]^2 + [\sin(t)]^2)^{3/2}}\\
+          &= \frac{|\cos(t) - \cos^2(t) - \sin^2(t)|}{(1 - 2\cos(t) + \cos^2(t) + \sin^2(t))^{3/2}}\\
+          &= \frac{|\cos(t) - [\cos^2(t) + \sin^2(t)]|}{(2 - 2\cos(t))^{3/2}}\\
+          &= \frac{|\cos(t) - 1|}{(2 - 2\cos(t))^{3/2}}\\
+          &= \frac{1 - \cos(t)}{(2 - 2\cos(t))^{3/2}} \quad (\text{since }\cos(t)-1\text{ is never positive})
+          \end{flalign}\]
+        </div>
+        <p class="nm">
+          The curvature at \(t = \pi\) is equal to:
+        </p>
+        <div class="mj">
+          \[ \frac{1-\cos(\pi)}{(2-2\cos(\pi))^{3/2}} = \frac{2}{4^{3/2}} = \frac{1}{4}\]
+        </div>
+        <p class="ntm">
+          This means the radius of curvature at \(t = \pi\) is 4.
+        </p>
+        <img class="graph" src="images/radius_of_curvature_2.png">
+        <p class="ntm sn">
+          The curvature of the parametric graph defined by \(x(t) = t - \sin(t)\) and \(y(t) = 1-\cos(t)\) at \(t = \pi\) is \(\frac{1}{4}\), meaning that the radius of curvature is 4, as shown in the above diagram.
+        </p>
+      </div>
+      <h3 class="section-header" id="accelerationHeader">
+        Tangential and Normal Components of Acceleration <button id="accelerationButton" onclick="showHide('acceleration')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="acceleration">
+        <p>
+          We can find the acceleration of a particle moving in space by finding the second derivative of its position. If a particle’s position at time \(t\) is described by the function \(\mathbf{r}(t)\), then its acceleration at time \(t\) is \(\mathbf{a}(t) = \mathbf{r}''(t)\).
+        </p>
+        <p>
+          We can further break down this acceleration into its tangential and normal components. The <strong>tangential component</strong> \(a_T\) of acceleration tells us the part of the particle’s acceleration that is tangent to the path the particle is traveling along. The <strong>normal component</strong> \(a_N\) of acceleration tells us the portion of acceleration that is normal to the path. Note that \(a_T\) and \(a_N\) are both scalar values.
+        </p>
+        <p>
+          We can write the particle’s overall acceleration \(\mathbf{a}(t)\) as \(a_T \mathbf{T}(t) + a_N \mathbf{N}(t)\), where \(\mathbf{T}(t)\) is the particle’s unit tangent vector and \(\mathbf{N}(t)\) is the particle’s unit normal vector.
+        </p>
+        <p class="nbm">
+          The tangential component of acceleration \(a_T\) can be defined as the rate of change of the magnitude of the particle’s velocity:
+        </p>
+        <div class="mj">
+          \[ a_T = \dv{t}||\mathbf{v}(t)|| = \dv{t}||\mathbf{r}'(t)|| \]
+        </div>
+        <p class="nm">
+          The tangential component can also be calculated as follows:
+        </p>
+        <div class="mj">
+          \[ a_T = \mathbf{a}(t) \cdot \mathbf{T}(t) = \frac{\mathbf{r}'(t) \cdot \mathbf{r}''(t)}{||\mathbf{r}'(t)||}\]
+        </div>
+        <p class="ntm sn">
+          \(\mathbf{T}(t)\) is the unit tangent vector at time \(t\).
+        </p>
+        <p class="nm">
+          The normal component of acceleration can be calculated with this formula:
+        </p>
+        <div class="mj">
+          \[ a_N = \mathbf{a}(t) \cdot \mathbf{N}(t) = \frac{||\mathbf{r}'(t) \times \mathbf{r}''(t)||}{||\mathbf{r}'(t)||} \]
+        </div>
+        <p class="nm">
+          Alternatively, the normal component can be calculated like this:
+        </p>
+        <div class="mj">
+          \[ a_N = \sqrt{||\mathbf{a}(t)||^2 - a_T^2}\]
+        </div>
+        <p class="ntm sn">
+          \(\mathbf{N}(t)\) is the unit normal vector at time \(t\).
+        </p>
+        <p class="ntm problem">
+          <strong>Problem</strong>: Find the tangential and normal components of acceleration for a particle whose position is given by the function \(\mathbf{r}(t) = (t^3, t^2, t)\).
+        </p>
+        <p class="nbm">
+          We first need to find the velocity and acceleration vectors:
+        </p>
+        <div class="mj">
+          \[ \mathbf{r}'(t) = (3t^2, 2t, 1) \]
+          \[ \mathbf{r}''(t) = (6t, 2, 0) \]
+        </div>
+        <p class="nm">
+          Now let’s find the magnitude of the velocity vector, since we’ll need it to calculate both the tangential and normal components:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          ||\mathbf{r}'(t)|| &= \sqrt{(3t^2)^2 + (2t)^2 + 1^2} \\
+          &= \sqrt{9t^4 + 4t^2 + 1}
+          \end{flalign}\]
+        </div>
+        <p class="nm">
+          Now we’re ready to calculate the tangential component:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          a_T &= \frac{\mathbf{r}'(t) \cdot \mathbf{r}''(t)}{||\mathbf{r}'(t)||}\\
+          &= \frac{(3t^2, 2t, 1) \cdot (6t, 2, 0)}{\sqrt{9t^4 + 4t^2 + 1}}\\
+          &= \frac{18t^3 + 4t}{\sqrt{9t^4 + 4t^2 + 1}}\\
+          \end{flalign}\]
+        </div>
+        <p class="nm">
+          To calculate the normal component, we’re going to need the cross product of the velocity vector and acceleration vector:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \mathbf{r}'(t) \times \mathbf{r}''(t) &= \det\begin{bmatrix}
+          \mathbf{i} & \mathbf{j} & \mathbf{k}\\
+          3t^2 & 2t & 1\\
+          6t & 2 & 0
+          \end{bmatrix}\\
+          &= -2\mathbf{i} - (-6t)\mathbf{j} + (6t^2 - 12t^2)\mathbf{k}\\
+          &= (-2, 6t, -6t^2)
+          \end{flalign}\]
+        </div>
+        <p class="nm">
+          Now we need the magnitude of this cross product:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          ||\mathbf{r}'(t) \times \mathbf{r}''(t)|| &= \sqrt{(-2)^2 + (6t)^2 + (-6t^2)^2}\\
+          &= \sqrt{4 + 36t^2 + 36t^4}
+          \end{flalign}\]
+        </div>
+        <p class="nm">
+          We can put this all together to find the normal component of acceleration:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          a_N &= \frac{||\mathbf{r}'(t) \times \mathbf{r}''(t)||}{||\mathbf{r}'(t)||}\\
+          &= \frac{\sqrt{4 + 36t^2 + 36t^4}}{\sqrt{9t^4 + 4t^2 + 1}}\\
+          &= \frac{2\sqrt{9t^4 + 9t^2 + 1}}{\sqrt{9t^4 + 4t^2 + 1}}
+          \end{flalign}\]
+        </div>
+      </div>
     </div>
   </div>
   <hr class="heavy-hr">
@@ -1505,6 +1892,53 @@
         </p>
         <p>
           Graphing functions of 3 or more variables takes at least 4 dimensions this way, so we’re not going to be graphing these types of functions like this.
+        </p>
+      </div>
+      <h3 class="section-header" id="contourHeader">
+        Contour Maps, Level Curves, and Level Surfaces <button id="contourButton" onclick="showHide('contour')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="contour">
+        <p>
+          Contour maps are an alternative to graphing functions of two variables. Instead of using three dimensions to graph both the inputs and outputs of the function, we use two dimensions and graph all input points that result in a certain output.
+        </p>
+        <p>
+          This will make more sense with an example. Here’s how we would create a contour map for the function \(f(x, y) = x^2 + y^2\).
+        </p>
+        <p>
+          First, we graph all of the input points that result in \(f(x, y)\) having a certain value (let’s say 1). Here’s what that looks like:
+        </p>
+        <img class="graph" src="images/contour_map_1.png">
+        <p class="ntm sn">
+          These are all of the input points \((x, y)\) which will cause \(f(x, y) = x^2 + y^2\) to equal 1. This is just the graph of \(x^2 + y^2 = 1\).
+        </p>
+        <p>
+          A curve like this is known as a <strong>level curve</strong>, <strong>contour line</strong>, or <strong>contour curve</strong>.
+        </p>
+        <p>
+          Now let’s do the same, but with a different value. Here’s what the graph looks like after adding the level curve for \(f(x, y) = 2\):
+        </p>
+        <img class="graph" src="images/contour_map_2.png">
+        <p class="ntm sn">
+          We’ve added the input points \((x, y)\) which will cause \(f(x, y) = x^2 + y^2\) to equal 2.
+        </p>
+        <p>
+          We can continue to add these level curves. Here’s the result after adding a few more level curves:
+        </p>
+        <img class="graph" src="images/contour_map.png">
+        <p>
+          This is just one of the possible contour maps we can create for the function \(f(x, y) = x^2 + y^2\). We can create different contour maps using different level curves. For example, here’s a contour map, this time going by intervals of 2 (so we have level curves for \(f(x, y) = 2\), \(f(x, y) = 4\), etc.)
+        </p>
+        <img class="graph" src="images/contour_map_3.png">
+        <p>
+          The three-dimensional equivalent of a level curve is a <strong>level surface</strong>. It represents all points \((x, y, z)\) in 3D space where a function of three variables \(f(x, y, z)\) equals a constant \(c\). Here are some examples:
+        </p>
+        <img class="graph" src="images/level_surface_1.png">
+        <p class="ntm sn">
+          The level surface for \(f(x) = x + y + z = 1\).
+        </p>
+        <img class="graph" src="images/level_surface_2.png">
+        <p class="ntm sn">
+          The level surface for \(f(x) = x^2yz^3 = 4\).
         </p>
       </div>
       <h3 class="section-header" id="partialDiffHeader">
@@ -2368,6 +2802,67 @@
         <img class="graph" src="images/contour_gradient.png">
         <p class="ntm sn">
           These are some contour lines for the function \(f(x, y) = \ln(xy)\), as well as the gradient vectors at some points. Notice how the gradient vector at each point is perpendicular to the contour line that passes through that point.
+        </p>
+      </div>
+      <h3 class="section-header" id="surfaceTangentHeader">
+        Tangent Planes and Normal Vectors of Surfaces <button id="surfaceTangentButton" onclick="showHide('surfaceTangent')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="surfaceTangent">
+        <p>
+          Just like how the gradient vector of a function of two variables is perpendicular to the function’s contour lines, the gradient vector of a function of three variables is perpendicular/normal to the function’s level surfaces. Using this, we can find normal vectors to surfaces.
+        </p>
+        <p>
+          Remember that the equation of a plane can be given by \(a(x-x_0) + b(y-y_0) + c(z-z_0) = 0\), where \(\mathbf{n} = (a, b, c)\) is a normal vector to the plane and \((x_0, y_0, z_0)\) is any point on the plane.
+        </p>
+        <p class="nbm">
+          The normal vector to a surface defined by \(f(x, y, z) = c\) at a point \((x_0, y_0, z_0)\) is given by the gradient \(\nabla f(x, y, z) = \left(\pdv{f}{x}, \pdv{f}{y}, \pdv{f}{z}\right)\). Therefore, the tangent plane to a surface defined by \(f(x, y, z) = c\) at a point \((x_0, y_0, z_0)\) is:
+        </p>
+        <div class="mj">
+          \[ \pdv{f}{x}(x-x_0) + \pdv{f}{y}(y-y_0) + \pdv{f}{z}(z-z_0) = 0\]
+        </div>
+        <p class="nm">
+          We can also find the vector equations of lines normal to a surface, known as <strong>normal lines</strong>. Remember that the vector equation for a line that passes through \((x_0, y_0, z_0)\) and is parallel to the vector \((a, b, c)\) is \((x_0, y_0, z_0) + t(a, b, c)\). Since we know that \(\nabla f(x, y, z)\) is a normal vector to a surface \(f(x, y, z) = c\), this means that the normal line to a surface at \((x_0, y_0, z_0)\) is:
+        </p>
+        <div class="mj">
+          \[ (x_0, y_0, z_0) + t\nabla f(x_0, y_0, z_0) \]
+        </div>
+        <p class="ntm problem">
+          <strong>Problem</strong>: Find the tangent plane, normal vector, and normal line to the surface \(xy + z^2 = 3\) at \((-1, 1, 2)\).
+        </p>
+        <p class="nbm">
+          In this case, \(f(x, y, z) = xy + z^2\). Let’s find the gradient of \(f\) by first finding its partial derivatives:
+        </p>
+        <div class="mj">
+          \[ \pdv{f}{x} = y \]
+          \[ \pdv{f}{y} = x \]
+          \[ \pdv{f}{z} = 2z \]
+        </div>
+        <p class="nm">
+          Let’s evaluate these derivatives at the point \((-1, 1, 2)\):
+        </p>
+        <div class="mj">
+          \[ \pdv{f}{x} = 1 \]
+          \[ \pdv{f}{y} = -1 \]
+          \[ \pdv{f}{z} = 2(2) = 4 \]
+        </div>
+        <p class="nm">
+          Now we can plug into the formula for the tangent plane, using \((x_0, y_0, z_0) = (-1, 1, 2)\):
+        </p>
+        <div class="mj">
+          \[ \pdv{f}{x}(x-x_0) + \pdv{f}{y}(y-y_0) + \pdv{f}{z}(z-z_0) = 0\]
+          \[ 1(x-(-1)) + (-1)(y-1) + 4(z-2) = 0 \]
+          \[ (x+1) - (y-1) + 4(z-2) = 0\]
+        </div>
+        <p class="nm">
+          The gradient of \(f\) evaluated at \((-1, 1, 2)\) is \(\left(\pdv{f}{x}, \pdv{f}{y}, \pdv{f}{z}\right) = (1, -1, 4)\). Therefore, a normal vector to the surface at \((-1, 1, 2)\) is the vector \((1, -1, 4)\). We can use this to find the normal line:
+        </p>
+        <div class="mj">
+          \[ (x_0, y_0, z_0) + t\nabla f(x_0, y_0, z_0) \]
+          \[ (-1, 1, 2) + t(1, -1, 4) \]
+        </div>
+        <img class="graph" src="images/normal_line.png">
+        <p class="ntm sn">
+          The <span class="blue">tangent plane</span> and <span class="red">normal line</span> to the surface \(xy + z^2 = 3\) at \((-1, 1, 2)\).
         </p>
       </div>
       <h3 class="section-header" id="multivarChain2Header">
@@ -4473,6 +4968,7 @@
     </div>
   </div>
   <hr class="heavy-hr">
+  <!-- Unit 5 -->
   <div class="unit" id="unit5Unit">
     <h2 id="unit5Header">
       <span onclick="showHideUnit('unit5')"><span class="gray">Unit 5:</span> Line and Surface Integrals</span>
@@ -4484,9 +4980,6 @@
         <div class="button-spacing"></div>
         <button class="large-button" onclick="toggleAllSections('unit5', 'hide')">Hide All Sections</button>
       </div>
-      <p class="bold">
-        This section is a work in progress!
-      </p>
       <h3 class="section-header" id="lineIntScalarHeader">
         Line Integrals for Scalar Functions <button id="lineIntScalarButton" onclick="showHide('lineIntScalar')">Show</button>
       </h3>
@@ -5001,8 +5494,8 @@
           \mathbf{i} & \mathbf{j} & \mathbf{k}\\
           \pdv{x} & \pdv{y} & \pdv{z}\\
           v_1 & v_2 & v_3\end{bmatrix}\\
-          &= \left(\pdv{y}v_3 - \pdv{x}v_2\right)\mathbf{i} - \left(\pdv{x}v_3 - \pdv{z}v_1\right)\mathbf{j} + \left(\pdv{x}v_2 - \pdv{y}v_1\right)\mathbf{k}\\
-          &= \left(\pdv{v_3}{y} - \pdv{v_2}{x}\right)\mathbf{i} + \left(\pdv{v_1}{z} - \pdv{v_3}{x}\right)\mathbf{j} + \left(\pdv{v_2}{x} - \pdv{v_1}{y}\right)\mathbf{k}
+          &= \left(\pdv{y}v_3 - \pdv{z}v_2\right)\mathbf{i} - \left(\pdv{x}v_3 - \pdv{z}v_1\right)\mathbf{j} + \left(\pdv{x}v_2 - \pdv{y}v_1\right)\mathbf{k}\\
+          &= \left(\pdv{v_3}{y} - \pdv{v_2}{z}\right)\mathbf{i} + \left(\pdv{v_1}{z} - \pdv{v_3}{x}\right)\mathbf{j} + \left(\pdv{v_2}{x} - \pdv{v_1}{y}\right)\mathbf{k}
           \end{flalign}\]
         </div>
       </div>
@@ -5253,6 +5746,654 @@
           The above is a way to convert area double integrals into line integrals.
         </p>
       </div>
+      <h3 class="section-header" id="parametricSurfacesHeader">
+        Parametric Surfaces <button id="parametricSurfacesButton" onclick="showHide('parametricSurfaces')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="parametricSurfaces">
+        <p>
+          With normal parametric functions, we have one parametric variable \(t\) that draws out a curve in 2D space. We can do something similar in 3D: using two parametric variables \(s\) and \(t\), we can draw out surfaces in 3D space. I’m going to explain this with an example.
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: What is the parametric surface created by the parametric equations \(x(s, t) = 2st\), \(y(s, t) = s + t\), and \(z(s, t) = t\) for \(-1 \le s \le 1\) and \(-1 \le t \le 1\)?
+        </p>
+        <p>
+          Let’s first create a table of points. Every ordered pair of the parameters \((s, t)\) corresponds to a 3-dimensional point in space, and the parametric equations \(x(s, t)\), \(y(s, t)\), and \(z(s, t)\) are responsible for turning each 2-dimensional input into a 3-dimensional output.
+        </p>
+        <div class="table-div">
+          <table>
+            <tr>
+              <th>\((s, t)\)</th>
+              <th>\((x, y, z) = (2st, s+t, t)\)</th>
+            </tr>
+            <tr>
+              <td>(0, 0)</td>
+              <td>(0, 0, 0)</td>
+            </tr>
+            <tr>
+              <td>(1, 0)</td>
+              <td>(0, 1, 0)</td>
+            </tr>
+            <tr>
+              <td>(0.5, 0.8)</td>
+              <td>(0.8, 1.3, 0.8)</td>
+            </tr>
+            <tr>
+              <td>(-0.2, -0.4)</td>
+              <td>(0.16, -0.6, -0.4)</td>
+            </tr>
+          </table>
+        </div>
+        <p>
+          Here is what it looks like when we plot these points:
+        </p>
+        <img class="graph" src="images/parametric_surface_points.png">
+        <p>
+          If we extended our table into infinity, plotting all possible points corresponding to the region \(-1 \le s \le 1\) and \(-1 \le t \le 1\), then we would get a surface. This is what it would look like:
+        </p>
+        <img class="graph" src="images/parametric_surface.png">
+        <p>
+          We can also represent a parametric surface with a vector-valued function. For example, for this surface, we can say that it represents all outputs of the function \(\mathbf{r}(s, t) = (2st, s+t, t)\) for \(-1 \le s \le 1\) and \(-1 \le t \le 1\). 
+        </p>
+      </div>
+      <h3 class="section-header" id="surfaceAreaIntHeader">
+        Surface Areas of Parametric Surfaces <button id="surfaceAreaIntButton" onclick="showHide('surfaceAreaInt')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="surfaceAreaInt">
+        <p>
+          When we create a parametric surface, we are taking points in a 2D region and transforming them into a surface in 3D space. How can we find the surface area of one of these parametric surfaces?
+        </p>
+        <p>
+          We can imagine taking the input space (the values of \(s\) and \(t\) we are we are using as our inputs) and chopping it up into many small pieces.
+        </p>
+        <img class="graph" src="images/surface_integral_input.png">
+        <p>
+          Now we can imagine what happens as each of these regions gets mapped onto our surface. It might look something like this:
+        </p>
+        <img class="graph" src="images/parametric_surface_regions.png">
+        <p>
+          As you can see, the rectangular regions in the input space roughly become parallelograms on the surface. If the input rectangles are small enough, we can approximate these regions on the surface as parallelograms. Let’s take a look at just one of these regions.
+        </p>
+        <img class="graph" src="images/parametric_surface_region.png">
+        <p>
+          One of the rectangles in our input space gets mapped to this parallelogram. How can we find the area of this parallelogram? To do that, we first need to find the dimensions of this parallelogram.
+        </p>
+        <p>
+          This is what the input rectangle looks like:
+        </p>
+        <img class="graph" src="images/surface_integral_input_rectangle.png">
+        <p class="ntm sn">
+          Remember that this rectangle should be very small, so we’re saying that it has width \(\dd{s}\) and height \(\dd{t}\).
+        </p>
+        <p>
+          And this is what it looks like when our rectangle gets mapped onto the surface:
+        </p>
+        <img class="graph" src="images/parametric_surface_region_points.png">
+        <p>
+          Let’s think about these dimensions:
+        </p>
+        <p>
+          <li>The base of the parallelogram can be represented by the vector \(\mathbf{r}(s_1, t_0) - \mathbf{r}(s_0, t_0)\), which represents the change in \(\mathbf{r}\) when we change \(s\) by a tiny amount \(\dd{s}\).</li>
+          <li>The slant height of the parallelogram can be represented by the vector \(\mathbf{r}(s_0, t_1) - \mathbf{r}(s_0, t_0)\), which represents the change in \(\mathbf{r}\) when we change \(t\) by a tiny amount \(\dd{t}\).</li>
+        </p>
+        <p>
+          Remember that the dimensions of this parallelogram should be very small, since we’re cutting up our input space into many tiny rectangles. So we can approximate the dimensions as follows:
+        </p>
+        <p>
+          <li>The base of the parallelogram can be approximated by \(\pdv{\mathbf{r}}{s}\dd{s}\), because this is the change in \(\mathbf{r}\) when we change \(s\) by a tiny amount \(\dd{s}\).</li>
+          <li>The slant height of the parallelogram can be approximated by \(\pdv{\mathbf{r}}{t}\dd{t}\), because this is the change in \(\mathbf{r}\) when we change \(t\) by a tiny amount \(\dd{t}\).</li>
+        </p>
+        <p>
+          This is what this looks like visually:
+        </p>
+        <img class="graph" src="images/parametric_surface_region_derivatives.png">
+        <p class="ntm sn">
+          Note that \(\pdv{\mathbf{r}}{t} \dd{t}\) and \(\pdv{\mathbf{r}}{s} \dd{s}\) are both vector quantities, not scalars.
+        </p>
+        <p class="nbm">
+          Recall that the magnitude of the cross product of two vectors gives you the area of the parallelogram formed by them. Therefore, the area of this parallelogram on the surface is about:
+        </p>
+        <div class="mj">
+          \[ \left|\left|\left(\pdv{\mathbf{r}}{s}\dd{s}\right) \times \left(\pdv{\mathbf{r}}{t}\dd{t}\right) \right|\right|\]
+        </div>
+        <p class="nm">
+          To find the area of the entire parametric surface, we need to integrate this value over all of the values of \(s\) and \(t\) we’re using. We can do this with a double integral:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          A &= \iint_R\left|\left|\left(\pdv{\mathbf{r}}{s}\dd{s}\right) \times \left(\pdv{\mathbf{r}}{t}\dd{t}\right) \right|\right|\\
+          &= \iint_R\left|\left|\pdv{\mathbf{r}}{s} \times \pdv{\mathbf{r}}{t}\right|\right| \dd{s}\dd{t}\\
+          \end{flalign}\]
+        </div>
+        <p class="ntm">
+          This integral is known as a <strong>surface area integral</strong>, and can be used to find the surface areas of parametric surfaces!
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: Find the surface area of a unit sphere (a sphere of radius 1). <span class="sn">(This sphere can be parameterized with the function \(\mathbf{r}(s, t) = (\sin(s)\cos(t), \sin(s)\sin(t), \cos(s))\) for \(0 \le s \le \pi\) and \(0 \le t \le 2\pi\).)</span>
+        </p>
+        <p class="nbm">
+          Let’s first find the partial derivatives of \(\mathbf{r}(s, t)\):
+        </p>
+        <div class="mj">
+          \[ \pdv{\mathbf{r}}{s} = (\cos(s)\cos(t), \cos(s)\sin(t), -\sin(s)) \]
+          \[ \pdv{\mathbf{r}}{t} = (-\sin(s)\sin(t), \sin(s)\cos(t), 0) \]
+        </div>
+        <p class="nm">
+          Now let’s find the cross product of these two partial derivatives:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \pdv{\mathbf{r}}{s} \times \pdv{\mathbf{r}}{t} &= \det\begin{bmatrix}
+          \mathbf{i} & \mathbf{j} & \mathbf{k}\\
+          \cos(s)\cos(t) & \cos(s)\sin(t) & -\sin(s)\\
+          -\sin(s)\sin(t) & \sin(s)\cos(t) & 0
+          \end{bmatrix}\\
+          &= -\sin^2(s)\cos(t)\mathbf{i} - \sin^2(s)\sin(t)\mathbf{j} + [\cos(s)\sin(s)\cos^2(t) + \cos(s)\sin(s)\sin^2(t)]\mathbf{k}\\
+          &= -\sin^2(s)\cos(t)\mathbf{i} - \sin^2(s)\sin(t)\mathbf{j} + (\cos(s)\sin(s)[\cos^2(t) + \sin^2(t)])\mathbf{k}\\
+          &= -\sin^2(s)\cos(t)\mathbf{i} - \sin^2(s)\sin(t)\mathbf{j} + \cos(s)\sin(s)\mathbf{k}\\
+          \end{flalign}
+          \]
+        </div>
+        <p class="nm">
+          We then need to find the magnitude of this cross product:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \left|\left|\pdv{\mathbf{r}}{s} \times \pdv{\mathbf{r}}{t}\right|\right| &= \sqrt{[-\sin^2(s)\cos(t)]^2 + [-\sin^2(s)\sin(t)]^2 + [\cos(s)\sin(s)]^2}\\
+          &= \sqrt{\sin^4(s)\cos^2(t) + \sin^4(s)\sin^2(t) + \cos^2(s)\sin^2(s)}\\
+          &= \sqrt{\sin^2(s)[\sin^2(s)\cos^2(t) + \sin^2(s)\sin^2(t) + \cos^2(s)]}\\
+          &= \sqrt{\sin^2(s)[\sin^2(s)[\cos^2(t) + \sin^2(t)] + \cos^2(s)]}\\
+          &= \sqrt{\sin^2(s)[\sin^2(s) + \cos^2(s)]}\\
+          &= \sqrt{\sin^2(s)}\\
+          &= \sin(s)
+          \end{flalign}\]
+        </div>
+        <p class="ntm sn">
+          Typically \(\sqrt{\sin^2(s)}\) would need to be written as \(\lvert \sin(s) \rvert\), but since \(\sin(s)\) is never negative over the interval \(0 \le s \le \pi\), we don’t need the absolute value bars.
+        </p>
+        <p class="nbm">
+          Now that we’ve calculated \(\left|\left|\pdv{\mathbf{r}}{s} \times \pdv{\mathbf{r}}{t}\right|\right|\), we can finally evaluate the surface integral.
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          A &= \int_0^{2\pi}\int_0^{\pi}\left|\left|\pdv{\mathbf{r}}{s} \times \pdv{\mathbf{r}}{t}\right|\right|\dd{s}\dd{t}\\
+          &= \int_0^{2\pi}\int_0^{\pi}\sin(s)\dd{s}\dd{t}\\
+          &= \int_0^{2\pi}-\cos(s)\bigg|_0^\pi \dd{t}\\
+          &= \int_0^{2\pi}(-\cos(\pi) - [-\cos(0)])\dd{t}\\
+          &= \int_0^{2\pi} 2 \dd{t}\\
+          &= 2t\bigg|_0^{2\pi}\\
+          &= 4\pi
+          \end{flalign}\]
+        </div>
+        <p class="ntm">
+          We can use a similar argument to show that the surface area of a sphere with radius \(r\) is \(4\pi r^2\).
+        </p>
+      </div>
+      <h3 class="section-header" id="surfaceIntHeader">
+        Surface Integrals <button id="surfaceIntButton" onclick="showHide('surfaceInt')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="surfaceInt">
+        <p class="nbm">
+          Surface integrals are a way of integrating over a parametric surface, just like how line integrals are a way of integrating over a curve. Surface integrals are like surface area integrals, except you have an additional function inside the integral.
+        </p>
+        <div class="mj">
+          \[ \iint_S f(x, y, z) \dd{S} = \iint_R f(\mathbf{r}(s, t))\left|\left|\pdv{\mathbf{r}}{s} \times \pdv{\mathbf{r}}{t}\right|\right| \dd{s}\dd{t} \]
+        </div>
+        <p class="ntm sn">
+          We use \(\dd{S}\) to represent a tiny piece of area on our surface.
+        </p>
+        <p>
+          Let’s go over an example of a surface integral.
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: Evaluate the surface integral \(\iint_S f(x, y, z) \dd{S}\) for \(f(x, y, z) = x + y + z\) and the surface \(S\) defined by \(\mathbf{r}(s, t) = (s^2, t^2, st)\) for \(0 \le s \le 2\) and \(-2 \le v \le 2\).
+        </p>
+        <p class="nbm">
+          To evaluate a surface integral, we first need to find the value of \(\left|\left|\pdv{\mathbf{r}}{s} \times \pdv{\mathbf{r}}{t}\right|\right|\).
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \pdv{\mathbf{r}}{s} \times \pdv{\mathbf{r}}{t} &= (2s, 0, t) \times (0, 2t, s)\\
+          &= \det\begin{bmatrix}
+          \mathbf{i} & \mathbf{j} & \mathbf{k}\\
+          2s & 0 & t\\
+          0 & 2t & s\\
+          \end{bmatrix}\\
+          &= (-2t^2)\mathbf{i} - (2s^2)\mathbf{j} + (4st)\mathbf{k}\\
+          &= (-2t^2, -2s^2, 4st)\\
+          \end{flalign}\]
+        </div>
+        <div class="mj">
+          \[ \begin{flalign}
+          \left|\left|\pdv{\mathbf{r}}{s} \times \pdv{\mathbf{r}}{t}\right|\right| &= \sqrt{(-2t^2)^2 + (-2s^2)^2 + (4st)^2}\\
+          &= \sqrt{4t^4 + 4s^4 + 16s^2t^2}
+          \end{flalign}\]
+        </div>
+        <p class="nm">
+          Now we can use this value of \(\left|\left|\pdv{\mathbf{r}}{s} \times \pdv{\mathbf{r}}{t}\right|\right|\) to evaluate the surface integral.
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \iint_S f(x, y, z) \dd{S} &= \iint_R f(\mathbf{r}(s, t))\left|\left|\pdv{\mathbf{r}}{s} \times \pdv{\mathbf{r}}{t}\right|\right| \dd{s}\dd{t}\\
+          &= \iint_R f(s^2, t^2, st) \sqrt{4t^4 + 4s^4 + 16s^2t^2} \dd{s}\dd{t}\\
+          &= \iint_R (s^2 + t^2 + st)\sqrt{4t^4 + 4s^4 + 16s^2t^2} \dd{s}\dd{t}\\
+          \end{flalign} \]
+        </div>
+        <p class="nm">
+          Our surface was parameterized for \(0 \le s \le 2\) and \(-2 \le t \le 2\), so those are the bounds of this double integral.
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \iint_S f(x, y, z) \dd{S} &= \iint_R (s^2 + t^2 + st)\sqrt{4t^4 + 4s^4 + 16s^2t^2} \dd{s}\dd{t}\\
+          &= \int_{-2}^2\int_0^2 (s^2 + t^2 + st)\sqrt{4t^4 + 4s^4 + 16s^2t^2} \dd{s}\dd{t}\\
+          \end{flalign} \]
+        </div>
+        <p class="ntm">
+          This is our final double integral. This integral is very hard to work out, so I’ll just give you the approximate value you can get from a calculator: <strong>185.21</strong>.
+        </p>
+      </div>
+      <h3 class="section-header" id="surfaceNormalHeader">
+        Normal Vectors to Parametric Surfaces <button id="surfaceNormalButton" onclick="showHide('surfaceNormal')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="surfaceNormal">
+        <p>
+          When we have a parametric surface, sometimes we want a way to generate normal vectors to the surface (vectors that are perpendicular to the surface).
+        </p>
+        <p>
+          To do this, we can first find two vectors that are tangent to a point on the surface, then take the cross product to get a vector that is perpendicular to both of these vectors. But how can we find these two vectors?
+        </p>
+        <p>
+          If we have a function \(\mathbf{r}(s, t)\) that defines the parametric surface, and we evaluate the partial derivatives with respect to \(s\) and \(t\) at a point, we get two vectors that are tangent to the surface a point. In other words, for a point \((x_0, y_0)\) on the surface, the vectors \(\pdv{\mathbf{r}}{s}(x_0, y_0)\) and \(\pdv{\mathbf{r}}{t}(x_0, y_0)\) are tangent to the surface.
+        </p>
+        <img class="graph" src="images/surface_tangent_vectors.png">
+        <p class="ntm sn">
+          The vectors \(\class{red}{\pdv{\mathbf{r}}{s}}\) and \(\class{blue}{\pdv{\mathbf{r}}{t}}\) are tangent to the surface.
+        </p>
+        <p>
+          To get a vector that’s normal to the surface, all we have to do is find the cross product of these two vectors, which will give us a vector that is perpendicular to both of these tangent vectors.
+        </p>
+        <p class="nbm">
+          Therefore, a normal vector to a surface at a point \(\mathbf{r}(s, t)\) is:
+        </p>
+        <div class="mj">
+          \[ \pdv{s}\mathbf{r}(s, t) \times \pdv{t}\mathbf{r}(s, t)\]
+        </div>
+        <p class="ntm sn">
+          We can also multiply this vector by -1 to get a normal vector pointing in the opposite direction.
+        </p>
+        <img class="graph" src="images/surface_normal_vectors.png">
+        <p class="ntm sn">
+          The cross product of the two tangent vectors \(\class{red}{\pdv{\mathbf{r}}{s}}\) and \(\class{blue}{\pdv{\mathbf{r}}{t}}\) is a <span class="purple">normal vector</span> to the surface.
+        </p>
+        <p class="nm">
+          To find a unit normal vector to a surface (a normal vector with magnitude 1), we divide by this vector’s magnitude:
+        </p>
+        <div class="mj">
+          \[ \frac{\pdv{s}\mathbf{r}(s, t) \times \pdv{t}\mathbf{r}(s, t)}{||\pdv{s}\mathbf{r}(s, t) \times \pdv{t}\mathbf{r}(s, t)||} \]
+        </div>
+        <p class="ntm sn">
+          Once again, we can multiply this vector by -1 to get another unit normal vector but in the opposite direction.
+        </p>
+      </div>
+      <h3 class="section-header" id="fluxIntHeader">
+        Flux Integrals <button id="fluxIntButton" onclick="showHide('fluxInt')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="fluxInt">
+        <p>
+          <strong>Flux integrals</strong> are a specific type of closed line integral over a vector field. If we imagine a vector field as representing fluid flow (with each vector representing the velocity of a fluid particle), a flux integral tells us how much fluid mass is leaving the region per unit of time.
+        </p>
+        <img class="graph" src="images/flux_integral_region.png">
+        <p class="ntm sn">
+          How much fluid is leaving <span class="red">this region</span> per unit of time?
+        </p>
+        <p>
+          The way we can find this is by considering tiny pieces of the boundary of the region, which we’ll call \(C\). Let’s zoom into a tiny region of the boundary and consider the fluid flow over a tiny period of time \(\dd{t}\):
+        </p>
+        <img class="graph" src="images/flux_integral_tiny_region.png">
+        <p class="ntm sn">
+          The <span class="red">red vectors</span> represent the vector field for \(\mathbf{F}\), and the <span class="blue">blue vector \(\mathbf{n}\)</span> is an outward-facing unit normal vector to the curve. 
+        </p>
+        <p>
+          The dot product \((\mathbf{F} \dd{t})\cdot \mathbf{n}\) tells us the component of \(\mathbf{F} \dd{t}\) that is parallel to the normal vector \(\mathbf{n}\), which is the height of the parallelogram. The base of the parallelogram is \(\dd{s}\).
+        </p>
+        <p>
+          Therefore, the amount of fluid that is leaving this parallelogram over this tiny amount of time \(\dd{t}\) can be approximated as \(((\mathbf{F} \dd{t})\cdot \mathbf{n})\dd{s} = (\mathbf{F} \cdot \mathbf{n}) \dd{s} \dd{t}\). The amount of fluid leaving per unit of time (which we can find by dividing by \(\dd{t}\)) can be approximated as \((\mathbf{F}\cdot\mathbf{n})\dd{s}\).
+        </p>
+        <p class="nbm">
+          To find the total amount of fluid that is leaving the entire region per unit of time, we need to integrate this value along the entire curve. This is known as <strong>flux</strong>, and the two-dimensional flux integral looks like:
+        </p>
+        <div class="mj">
+          \[ \oint_C \mathbf{F} \cdot \mathbf{n} \dd{s} \]
+        </div>
+        <p class="ntm sn">
+          As a reminder, \(\dd{s} = ||\mathbf{r}'(t)|| \dd{t}\) for scalar line integrals (this is a scalar line integral because the dot product \(\mathbf{F} \cdot \mathbf{n}\) is a scalar).
+        </p>
+        <p>
+          Note that the unit normal vectors must be facing outward in order for this flux integral to give the correct result.
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: Evaluate the flux integral \(\oint_C \mathbf{F}\cdot\mathbf{n} \dd{s}\) for the curve \(C\) parameterized by \(\mathbf{r}(t) = (5\cos(t), 5\sin(t))\) for \(0 \le t \le 2\pi\) and the vector field \(\mathbf{F} = (x+y, y-x)\).
+        </p>
+        <p>
+          We first need to find a formula for the unit normal vector \(\mathbf{n}\). There is a trick we can use here: notice that the curve \(C\) is a circle with radius 5. Now consider this diagram:
+        </p>
+        <img class="graph" src="images/circle_normal_vector.png">
+        <p>
+          The diagram shows that at a point \((x, y)\) on the circle, the vector \((x, y)\) is an outward-facing normal vector to the circle. To get a unit normal vector, we divide this vector by its magnitude to get \(\frac{1}{\sqrt{x^2+y^2}}(x, y)\). Because we know that \(\sqrt{x^2+y^2}\) is equal to 5 for all points on the circle, we get that the unit normal vector at a point \((x, y)\) on the circle is \(\frac{1}{5}(x, y) = (\frac{x}{5}, \frac{y}{5})\).
+        </p>
+        <p class="nbm">
+          Knowing that \(\mathbf{n} = (\frac{x}{5}, \frac{y}{5})\), we can set up the flux integral:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \oint_C \mathbf{F} \cdot \mathbf{n} \dd{s} &= \int_0^{2\pi} (x+y, y-x) \cdot \left(\frac{x}{5}, \frac{y}{5}\right) ||\mathbf{r}'(t)||\dd{t}\\
+          &= \int_0^{2\pi} \left(\frac{x^2}{5} + \frac{xy}{5} + \frac{y^2}{5} - \frac{xy}{5}\right) \sqrt{[-5\sin(t)]^2 + [5\cos(t)]^2} \dd{t}\\
+          &= \int_0^{2\pi} \left(\frac{x^2}{5} + \frac{y^2}{5}\right) \sqrt{25\sin^2(t) + 25\cos^2(t)} \dd{t}\\
+          &= \int_0^{2\pi} \left(\frac{[5\cos(t)]^2}{5} + \frac{[5\sin(t)]^2}{5}\right) \sqrt{25[\sin^2(t) + \cos^2(t)]} \dd{t}\\
+          &= \int_0^{2\pi} (5\cos^2(t) + 5\sin^2(t)) \cdot 5 \dd{t}\\
+          &= \int_0^{2\pi} 5\cdot 5 \dd{t}\\
+          &= \int_0^{2\pi} 25\dd{t}\\
+          &= 50\pi
+          \end{flalign}\]
+        </div>
+        <p class="ntm">
+          Flux integrals can also be computed in three dimensions, and they represent the amount of fluid flowing out of a three-dimensional region per unit of time.
+        </p>
+        <p class="nbm">
+          The concept is similar to two-dimensional flux, but this time we have a surface instead of a curve that encloses the region. To find the total fluid flow coming out of the region, we need to integrate over the surface, and this means we need to use a surface integral. Here’s what that surface integral looks like:
+        </p>
+        <div class="mj">
+          \[ \iint_S \mathbf{F} \cdot \mathbf{n} \dd{S} \]
+        </div>
+        <p class="ntm sn">
+          Once again, the unit normal vectors represented by \(\mathbf{n}\) must be outward-facing.
+        </p>
+        <p class="nm">
+          By substituting the formula for a unit normal vector to a surface, we can rewrite this integral as follows:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \iint_S \mathbf{F} \cdot \mathbf{n} \dd{S} &= \iint_R \left(\mathbf{F}(\mathbf{r}(s, t)) \cdot \frac{\pdv{\mathbf{r}}{s} \times \pdv{\mathbf{r}}{t}}{||\pdv{\mathbf{r}}{s} \times \pdv{\mathbf{r}}{t}||}\right) \left|\left|\pdv{\mathbf{r}}{s} \times \pdv{\mathbf{r}}{t}\right|\right| \dd{s}\dd{t}\\
+          &= \iint_R \mathbf{F}(\mathbf{r}(s, t)) \cdot \left(\pdv{\mathbf{r}}{s} \times \pdv{\mathbf{r}}{t}\right) \dd{s}\dd{t}
+          \end{flalign}\]
+        </div>
+      </div>
+      <h3 class="section-header" id="divergenceTheoremHeader">
+        The Divergence Theorem <button id="divergenceTheoremButton" onclick="showHide('divergenceTheorem')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="divergenceTheorem">
+        <p>
+          Flux integrals might remind you of the idea of divergence. In fact, these two are related through the <strong>divergence theorem</strong>. Let’s take a look at the divergence theorem for two dimensions.
+        </p>
+        <p class="large-text bold">The 2D divergence theorem</p>
+        <p>
+          A flux integral \(\oint_C \mathbf{F} \cdot \mathbf{n} \dd{s}\) tells you the total amount of fluid mass that is leaving a region bounded by the closed curve \(C\) per unit of time. Meanwhile, the divergence at a point tells you how much fluid mass is leaving a point (or more accurately, a tiny region around that point) per unit of time.
+        </p>
+        <p class="nbm">
+          So if we integrate the divergence over an entire region, it makes sense that that value will be equal to the flux integral over the boundary of the region. This fact is known as the divergence theorem:
+        </p>
+        <div class="mj">
+          \[ \oint_C \mathbf{F} \cdot \mathbf{n} \dd{s} = \iint_R \operatorname{div}(\mathbf{F}) \dd{A} \]
+        </div>
+        <p class="ntm">
+          Just like with Green’s theorem, \(C\) must be oriented counterclockwise.
+        </p>
+        <p>
+          Let’s try to find an alternate way of writing this equation. We’ll first write \(\mathbf{F}\) as the vector \((P(x, y), Q(x, y))\). In addition, we need to find the unit normal vector \(\mathbf{n}\).
+        </p>
+        <p>
+          To do that, we first must find the tangent vector to \(C\) at time \(t\). This can be written as the vector \((\dd{x}, \dd{y})\), since this vector represents a tiny step along the curve.
+        </p>
+        <p>
+          If we assume \(C\) is oriented counterclockwise, then an outward facing normal vector to \(C\) is \((\dd{y}, -\dd{x})\). To normalize this vector, we divide by its magnitude, giving us \(\frac{1}{\sqrt{(\dd{y})^2 + (-\dd{x})^2}} = \frac{1}{\dd{s}}\). Therefore, the unit normal vector to the curve \(C\) is \(\frac{1}{\dd{s}}(\dd{y}, -\dd{x})\).
+        </p>
+        <img class="graph" src="images/divergence_vectors.png">
+        <p class="ntm sn">
+          The <span class="blue">tangent vector \((\dd{x}, \dd{y})\)</span> to the <span class="red">curve \(C\)</span> and the <span class="purple">normal vector \((\dd{y}, -\dd{x})\)</span>.
+        </p>
+        <p class="nm">
+          Putting it all together, we can write the 2D divergence theorem as:
+        </p>
+        <div class="mj">
+          \[ \oint_C (P(x, y), Q(x, y)) \cdot \frac{1}{\dd{s}}(\dd{y}, -\dd{x})\dd{s} = \iint_R \left(\pdv{P}{x} + \pdv{Q}{y}\right) \dd{A} \]
+          \[ \oint_C (P(x, y), Q(x, y)) \cdot (\dd{y}, -\dd{x}) = \iint_R \left(\pdv{P}{x} + \pdv{Q}{y}\right) \dd{A} \]
+          \[ \oint_C P \dd{y} -\, Q \dd{x} = \iint_R \left(\pdv{P}{x} + \pdv{Q}{y}\right) \dd{A} \]
+        </div>
+        <p class="ntm">
+          Looking at this formula, you might realize that this looks very similar to Green’s theorem. In fact, the 2D divergence theorem is actually just a special case of Green’s theorem!
+        </p>
+        <p class="nbm">
+          To show this, let’s start with Green’s theorem:
+        </p>
+        <div class="mj">
+          \[ \oint_C P \dd{x} +\, Q \dd{y} = \iint_R \left(\pdv{Q}{x} - \pdv{P}{y}\right) \dd{A} \]
+        </div>
+        <p class="nm">
+          Now let’s replace \(P\) with \(-Q\) and \(Q\) with \(P\):
+        </p>
+        <div class="mj">
+          \[ \oint_C -Q \dd{x} + \, P \dd{y} = \iint_R \left(\pdv{P}{x} - \pdv{(-Q)}{y}\right) \dd{A} \]
+          \[ \oint_C P \dd{y} - \, Q \dd{x} = \iint_R \left(\pdv{P}{x} + \pdv{Q}{y}\right) \dd{A} \]
+        </div>
+        <p class="ntm">
+          Therefore, the 2D divergence theorem can be derived from Green’s theorem!
+        </p>
+        <p class="large-text bold">The 3D divergence theorem</p>
+        <p class="nbm">
+          The divergence theorem can also be generalized to three dimensions. It says that the flux integral of a closed surface is equal to the triple integral of the divergence over the region that the surface encloses.
+        </p>
+        <div class="mj">
+          \[ \iint_S \mathbf{F} \cdot \mathbf{n} \dd{S} = \iiint_R \operatorname{div}(\mathbf{F}) \dd{V} \]
+        </div>
+        <p class="ntm">
+          The divergence theorem can be useful if we have a surface integral that is tough to evaluate and the corresponding divergence triple integral is easier to work out. Here’s an example:
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: Evaluate the surface integral \(\iint_S \mathbf{F} \cdot \mathbf{n} \dd{S}\), where \(S\) is the surface of a cube with side length 2 centered at the origin and \(\mathbf{F}(x, y, z) = (2x^2, 3y, 5z)\).
+        </p>
+        <p>
+          Evaluating this surface integral normally would be quite a lot of work, since we would have to calculate separate surface integrals for each of the cube’s 6 faces. Instead, we could use the divergence theorem to turn this surface integral into a single triple integral! This is especially useful since triple-integrating over a cube is straightforward (all of the bounds are constants in rectangular coordinates).
+        </p>
+        <p class="nbm">
+          To use the divergence theorem, we first need to find the divergence of \(\mathbf{F}\).
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \operatorname{div}(\mathbf{F}) &= \dv{x}(2x^2) + \dv{y}(3y) + \dv{z}(5z)\\
+          &= 4x + 3 + 5\\
+          &= 4x+8
+          \end{flalign} \]
+        </div>
+        <p class="nm">
+          Now let’s use the divergence theorem:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \iint_S \mathbf{F} \cdot \mathbf{n} \dd{S} &= \iiint_R \operatorname{div}(\mathbf{F}) \dd{V}\\
+          &= \iiint_R (4x+8) \dd{V}\\
+          \end{flalign} \]
+        </div>
+        <p class="nm">
+          The bounds of our cube are \(-1 \le x \le 1\), \(-1 \le y \le 1\), and \(-1 \le z \le 1\). These are the bounds of our triple integral:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \iint_S \mathbf{F} \cdot \mathbf{n} \dd{S} &= \iiint_R (4x+8) \dd{V}\\
+          &= \int_{-1}^1 \int_{-1}^1 \int_{-1}^1 (4x+8) \dd{x}\dd{y}\dd{z}\\
+          &= \int_{-1}^1 \int_{-1}^1 (2x^2 + 8x)\bigg|_{-1}^1 \dd{y}\dd{z}\\
+          &= \int_{-1}^1 \int_{-1}^1 16 \dd{y}\dd{z}\\
+          &= \int_{-1}^1 16y\bigg|_{-1}^1 \dd{z}\\
+          &= \int_{-1}^1 32 \dd{z}\\
+          &= 32z\bigg|_{-1}^1\\
+          &= 64
+          \end{flalign} \]
+        </div>
+      </div>
+      <h3 class="section-header" id="stokesTheoremHeader">
+        Stokes’ Theorem <button id="stokesTheoremButton" onclick="showHide('stokesTheorem')">Show</button>
+      </h3>
+      <div class="hidden-by-default" id="stokesTheorem">
+        <p>
+          Green’s theorem is a way to rewrite a line integral as the double integral of curl in two dimensions. Now we’re going to see how we can do something similar in three dimensions.
+        </p>
+        <p>
+          If we have a closed line integral \(\oint_C \mathbf{F} \cdot \dd{\mathbf{s}}\) over a three-dimensional curve \(C\), just like in two dimensions, this line integral tells us how much the vector field \(\mathbf{F}\) is rotating along the curve. If this line integral is positive, the vector field rotation tends to line up with how we oriented the curve, and if it is negative, the rotation tends to be in the opposite direction to how we oriented the curve.
+        </p>
+        <p>
+          Let’s say that the curve \(C\) is a boundary of a surface \(S\). We can use a similar trick to what we did with Green’s theorem to write this line integral as the sum of many smaller line integrals over the surface. Each of these tiny line integrals can be approximated by the curl of the vector field over a tiny piece of the surface.
+        </p>
+        <p>
+          Therefore, to find the total curl, we would need to use a surface integral. However, we can’t just directly integrate the curl of \(\mathbf{F}\), since that would result in a vector, and our original line integral \(\oint_C \mathbf{F} \cdot \dd{\mathbf{s}}\) is a scalar. So we instead have to calculate how much of the rotation on each piece is perpendicular to the surface. That amount is \(\operatorname{curl}(\mathbf{F}) \cdot \mathbf{n}\), where \(\mathbf{n}\) is the unit normal vector to the surface.
+        </p>
+        <img class="graph" src="images/surface_normal_vector.png">
+        <p class="ntm sn">
+          To get the amount of curl that is perpendicular to this <span class="red">tiny piece of the surface</span>, we need to take the curl of \(\mathbf{F}\) at some point on this piece and find the dot product of this curl with the <span class="blue">unit normal vector</span>.
+        </p>
+        <p class="nbm">
+          To calculate the total amount of rotation over the entire surface (which is what’s given by the line integral \(\oint_C \mathbf{F} \cdot \dd{\mathbf{s}}\)), we sum up the rotation of the many small pieces using a surface integral. Doing this, we get Stokes’ theorem, which looks like this:
+        </p>
+        <div class="mj">
+          \[ \oint_C \mathbf{F} \cdot \dd{\mathbf{s}} = \iint_S \operatorname{curl}(\mathbf{F}) \cdot \mathbf{n} \dd{S} \]
+        </div>
+        <p class="ntm">
+          Note that in order to use Stokes’ theorem, the orientation of the curve \(C\) and the surface’s normal vectors \(\mathbf{n}\) must match up in a certain way. One way to describe this is that if you’re looking at the surface and the surface’s normal vectors are pointing toward your face, the curve should be oriented counterclockwise.
+        </p>
+        <p class="ntm">
+          We can use Stokes’ theorem to convert closed line integrals to surface integrals of a function’s curl and vice versa. Here’s an example:
+        </p>
+        <p class="problem">
+          <strong>Problem</strong>: Evaluate the line integral \(\oint_C \mathbf{F} \cdot \dd{\mathbf{s}}\) where \(C\) is the boundary of the surface \(S\) defined by \(\mathbf{r}(s, t) = (s, t, t^2)\) for \(-1 \le s \le 1\) and \(0 \le t \le 2\) and \(\mathbf{F}(x, y, z) = (y, z, x)\). \(C\) is oriented in the correct orientation for Stokes’ theorem.
+        </p>
+        <img class="graph" src="images/stokes_surface.png">
+        <p class="ntm sn">
+          <span class="red">The surface \(S\)</span> and <span class="blue">its boundary \(C\)</span> that we are integrating over. The arrows represent the orientation of \(C\).
+        </p>
+        <p class="nbm">
+          Using Stokes’ theorem, we can rewrite this line integral as the surface integral \(\iint_S \operatorname{curl}(\mathbf{F}) \cdot \mathbf{n} \dd{S}\). Before we do any calculations, we can actually simplify this surface integral, just like we did with flux integrals:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \iint_S \operatorname{curl}(\mathbf{F}) \cdot \mathbf{n} \dd{S} &= \iint_S \left(\operatorname{curl}(\mathbf{F}) \cdot \frac{\pdv{\mathbf{r}}{s} \times \pdv{\mathbf{r}}{t}}{||\pdv{\mathbf{r}}{s} \times \pdv{\mathbf{r}}{t}||}\right) \left|\left|\pdv{\mathbf{r}}{s} \times \pdv{\mathbf{r}}{t}\right|\right| \dd{s}\dd{t}\\
+          &= \iint_S \operatorname{curl}(\mathbf{F}) \cdot \left(\pdv{\mathbf{r}}{s} \times \pdv{\mathbf{r}}{t}\right) \dd{s}\dd{t}
+          \end{flalign}\]
+        </div>
+        <p class="nm">
+          Now let’s find the curl of \(\mathbf{F}\):
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \operatorname{curl}(\mathbf{F}) &= \det\begin{bmatrix}
+          \mathbf{i} & \mathbf{j} & \mathbf{k}\\
+          \pdv{x} & \pdv{y} & \pdv{z}\\
+          y & z & x
+          \end{bmatrix}\\
+          &= \left(\pdv{y}(x) - \pdv{z}(z)\right)\mathbf{i} - \left(\pdv{x}(x) - \pdv{z}(y)\right)\mathbf{j} + \left(\pdv{x}(z) - \pdv{y}(y)\right)\mathbf{k}\\
+          &= -1\mathbf{i} - 1\mathbf{j} - 1\mathbf{k}\\
+          &= (-1, -1, -1)
+          \end{flalign}\]
+        </div>
+        <p class="nm">
+          And now let’s find this cross product:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \pdv{\mathbf{r}}{s} \times \pdv{\mathbf{r}}{t} &= (1, 0, 0) \times (0, 1, 2t)\\
+          &= \det\begin{bmatrix}
+          \mathbf{i} & \mathbf{j} & \mathbf{k}\\
+          1 & 0 & 0\\
+          0 & 1 & 2t
+          \end{bmatrix}\\
+          &= 0\mathbf{i} - 2t\mathbf{j} + 1\mathbf{k}\\
+          &= (0, -2t, 1)
+          \end{flalign}\]
+        </div>
+        <p class="ntm">
+          This cross product represents the normal vectors to the surface. By plotting some of these normal vectors, we can confirm that our surface and boundary are oriented correctly.
+        </p>
+        <img class="graph" src="images/stokes_surface_normals.png">
+        <p class="ntm sn">
+          When you look at this surface in such a way that the <span class="purple">normal vectors</span> are pointing towards your face, the <span class="blue">curve \(C\)</span> is oriented counterclockwise, so the orientation is correct for Stokes’ theorem.
+        </p>
+        <p class="nm">
+          Now let’s evaluate the surface integral:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \iint_S \operatorname{curl}(\mathbf{F}) \cdot \mathbf{n} \dd{S} &= \iint_S \operatorname{curl}(\mathbf{F}) \cdot \left(\pdv{\mathbf{r}}{s} \times \pdv{\mathbf{r}}{t}\right) \dd{s}\dd{t}\\
+          &= \int_0^2 \int_{-1}^1 (-1, -1, -1) \cdot (0, -2t, 1) \dd{s} \dd{t}\\
+          &= \int_0^2 \int_{-1}^1 (2t - 1) \dd{s} \dd{t}\\
+          &= \int_0^2 (2t - 1)s\bigg|_{s=-1}^{s=1} \dd{s} \dd{t}\\
+          &= \int_0^2 (4t-2) \dd{t}\\
+          &= (2t^2 - 2t)\bigg|_0^2 \\
+          &= 4
+          \end{flalign}\]
+        </div>
+        <p class="ntm">
+          Instead of using Stokes’ theorem, we could also evaluate the line integral directly. We could do this by breaking down our curve \(C\) into 4 separate curves.
+        </p>
+        <img class="graph" src="images/stokes_surface_labeled.png">
+        <p class="nbm">
+          We can parameterize the curve \(C_1\) with the function \(\mathbf{r}(t) = (t, 0, 0)\) for \(-1 \le t \le 1\). Therefore, \(\mathbf{r}'(t) = (1, 0, 0)\), and we can use this to evaluate the line integral over \(C_1\):
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \int_{C_1} \mathbf{F} \cdot \dd{\mathbf{s}} &= \int_{-1}^1 (y, z, x) \cdot \mathbf{r}'(t) \dd{t}\\
+          &= \int_{-1}^1 (y, z, x) \cdot (1, 0, 0) \dd{t}\\
+          &= \int_{-1}^1 y \dd{t}\\
+          &= \int_{-1}^1 0 \dd{t}\\
+          &= 0
+          \end{flalign}\]
+        </div>
+        <p class="nm">
+          We can parameterize \(C_2\) with \(\mathbf{r}(t) = (1, t, t^2)\) for \(0 \le t \le 2\). Therefore, \(\mathbf{r}'(t) = (0, 1, 2t)\).
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \int_{C_2} \mathbf{F} \cdot \dd{\mathbf{s}} &= \int_0^2 (y, z, x) \cdot \mathbf{r}'(t) \dd{t}
+          \int_0^2 (y, z, x) \cdot (0, 1, 2t) \dd{t}\\
+          &= \int_0^2 (z + 2tx) \dd{t}\\
+          &= \int_0^2 (t^2 + 2t) \dd{t}\\
+          &= \left(\frac{t^3}{3} + t^2\right)\bigg|_0^2\\
+          &= \frac{8}{3} + 4\\
+          &= \frac{20}{3}
+          \end{flalign}\]
+        </div>
+        <p class="nm">
+          We can parameterize \(C_3\) with \(\mathbf{r}(t) = (t, 2, 4)\) for \(-1 \le t \le 1\). However, notice that as we travel along the curve in the direction it’s oriented in, the \(x\)-coordinate is decreasing, so \(t\) will actually decrease from 1 to -1. We can represent this by having the lower bound of the integral be 1 and the upper bound be -1.
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \int_{C_3} \mathbf{F} \cdot \dd{\mathbf{s}} &= \int_1^{-1} (y, z, x) \cdot (1, 0, 0) \dd{t}\\
+          &= \int_1^{-1} y \dd{t}\\
+          &= \int_1^{-1} 2 \dd{t}\\
+          &= -4
+          \end{flalign}\]
+        </div>
+        <p class="nm">
+          We can parameterize \(C_2\) with \(\mathbf{r}(t) = (-1, t, t^2)\) for \(0 \le t \le 2\). However, just like with \(C_3\), to match the orientation of the curve, we need \(t\) to decrease from 2 to 0, so the lower bound of the integral needs to be 2 and the upper bound needs to be 0.
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \int_{C_4} \mathbf{F} \cdot \dd{\mathbf{s}} &= \int_2^0 (y, z, x) \cdot (0, 1, 2t) \dd{t}\\
+          &= \int_2^0 (z-2tx) \dd{t}\\
+          &= \int_2^0 (t^2-2t) \dd{t}\\
+          &= \left(\frac{t^3}{3} - t^2\right)\bigg|_2^0\\
+          &= \frac{4}{3}
+          \end{flalign}\]
+        </div>
+        <p class="nm">
+          We can find the overall line integral \(\oint_C \mathbf{F} \cdot \dd{\mathbf{s}}\) by adding these four line integrals:
+        </p>
+        <div class="mj">
+          \[ \begin{flalign}
+          \oint_C \mathbf{F} \cdot \dd{\mathbf{s}} &= \int_{C_1} \mathbf{F} \cdot \dd{\mathbf{s}} + \int_{C_2} \mathbf{F} \cdot \dd{\mathbf{s}} + \int_{C_3} \mathbf{F} \cdot \dd{\mathbf{s}} + \int_{C_4} \mathbf{F} \cdot \dd{\mathbf{s}}\\
+          &= 0 + \frac{20}{3} - 4 + \frac{4}{3}\\
+          &= 4
+          \end{flalign}\]
+        </div>
+        <p class="ntm">
+          This result is the same as the result we got by using Stokes’ theorem!
+        </p>
+      </div>
     </div>
   </div>
   <hr class="heavy-hr">
@@ -5415,7 +6556,7 @@
         <span class="bold">Resources that I used to learn calculus:</span> Huge thanks to <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://www.khanacademy.org">Khan Academy</a> and <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://tutorial.math.lamar.edu/">Paul’s Online Notes</a> for providing multivariable calculus lessons for free, allowing me to create this website in the first place!
       </li>
       <li>
-        Thanks to the creators of the <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Fast_inverse_square_root">Fast Inverse Square Root</a> algorithm. I was inspired to create calculus websites after creating <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://chaddypratt.org/fisr.html">a page explaining this algorithm</a>. Researching this algorithm ignited my passion for calculus and inspired me to create calculus websites!
+        Thanks to the creators of the <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Fast_inverse_square_root">Fast Inverse Square Root</a> algorithm. I was inspired to create calculus websites after creating <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://calculusgaming.com/fisr/">a page explaining this algorithm</a>. Researching this algorithm ignited my passion for calculus and inspired me to create calculus websites!
         <ul>
           <li>
             Thanks to YouTuber <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/@Nemean/videos">Nemean</a> for introducing me to the Fast Inverse Square Root algorithm with his <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://youtu.be/p8u_k2LIZyo">amazing video on the subject</a>.
@@ -6173,7 +7314,7 @@ The GNU General Public License does not permit incorporating your program
       document.getElementsByTagName('body')[0].appendChild(script);
     }
     document.getElementById('loading').innerText = 'Loading scripts (1/3)... Some features will not work properly until loading finishes.';
-    setTimeout(() => loadScript('multivar.js?20250421'));
+    setTimeout(() => loadScript('multivar.js?20250507'));
   </script>
 </body>
 </html>

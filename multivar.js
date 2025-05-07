@@ -1990,7 +1990,12 @@ function updateFooter() {
   if (newUnit !== currentUnit && newUnit !== undefined) {
     currentUnit = newUnit;
     get('footerLink').href = '#' + newUnit;
-    get('footerLink').innerText = `Top of Unit ${unitElementIDs.indexOf(newUnit) + 1}`;
+    if (newUnit === 'guestExplanationsUnit') {
+      get('footerLink').innerText = `Guest Explanations`;
+    }
+    else {
+      get('footerLink').innerText = `Top of Unit ${unitElementIDs.indexOf(newUnit) + 1}`;
+    }
   }
 }
 
